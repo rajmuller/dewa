@@ -5,7 +5,12 @@ landing:
   cim: Mi festjük a jövőt
   leiras: Magyarország piacvezető festékipari megoldásai
   kep: "/public/uploads/hero.png"
-referenciak: []
+referenciak:
+- template: referenciak
+  nev: Referenciák
+  ugyfelszam: 2500
+  gomb-szoveg: Megnyitás
+  szovegtest: ugyfelnek tettuk szinesebbe a vallalkozasat.
 rolunk:
 - template: rolunk
   nev: Rólunk

@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Tartalom
 - type: directory
   path: cms/cikkek
   label: Cikkek
@@ -11,8 +13,6 @@ sections:
   match: "**/*"
   templates:
   - cikk-withbigcontentarea-template
-- type: heading
-  label: Tartalom
 - type: heading
   label: Oldalak
 upload_dir: public/uploads

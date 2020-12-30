@@ -34,3 +34,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- cms/oldalak/landing.md

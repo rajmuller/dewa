@@ -13,6 +13,13 @@ sections:
   match: "**/*"
   templates:
   - cikk-withbigcontentarea-template
+- type: directory
+  path: cms/referenciak
+  label: Referenciak
+  create: all
+  match: "**/*"
+  templates:
+  - referencia
 - type: heading
   label: Oldalak
 - type: directory

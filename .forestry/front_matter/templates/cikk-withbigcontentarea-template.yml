@@ -1,4 +1,53 @@
 ---
 label: cikk-withBigContentArea-Template
 hide_body: false
-fields: []
+fields:
+- name: id
+  type: text
+  config:
+    required: true
+  label: id
+- name: datum
+  type: datetime
+  label: datum
+  description: ''
+  config:
+    required: false
+    date_format: YYYY/MM/DD
+    time_format: YYYY/MM/DD
+    display_utc: true
+    export_format: YYYY/MM/DD
+- name: datumszam
+  type: number
+  label: datum
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: bevezeto
+  type: text
+  config:
+    required: true
+  label: bevezeto
+- name: bevezetoarea
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: bevezetoarea
+- name: szovegtest
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: szovegtest

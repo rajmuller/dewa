@@ -47,3 +47,5 @@ fields:
     schema:
       format: markdown
   label: bevezeto
+pages:
+- cms/referenciak/aquacomet.md

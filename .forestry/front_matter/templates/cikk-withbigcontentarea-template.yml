@@ -1,6 +1,7 @@
 ---
 label: cikk-withBigContentArea-Template
 hide_body: false
+display_field: id
 fields:
 - name: id
   type: text

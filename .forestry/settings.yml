@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Tartalom
 - type: directory
-  path: ''
+  path: ".forestry/cikkek"
   label: Cikkek
   create: all
   match: "**/*"

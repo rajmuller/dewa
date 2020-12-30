@@ -1,4 +1,18 @@
 ---
 label: termekeink
 hide_body: true
-fields: []
+fields:
+- name: nev
+  type: text
+  config:
+    required: true
+  label: nev
+- name: leiras
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: leiras

@@ -20,6 +20,7 @@ sections:
   match: "**/*"
   templates:
   - referencia
+  - referencia
 - type: heading
   label: Oldalak
 - type: directory

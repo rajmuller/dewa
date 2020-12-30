@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: cms/cikkek
+  label: Cikkek
+  create: all
+  match: "**/*"
+  templates:
+  - cikk-withbigcontentarea-template
 - type: heading
   label: Tartalom
 - type: heading

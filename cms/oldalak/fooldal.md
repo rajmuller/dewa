@@ -28,6 +28,9 @@ rolunk:
   vizio-masodik: |-
     War is God’s way of teaching Americans geography.
     - Ambrose Pierce
-termekeink: []
+termekeink:
+- template: termekeink
+  nev: Termékeink
+  leiras: Bongessze termekeink diviziok szerint
 
 ---

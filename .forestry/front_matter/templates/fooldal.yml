@@ -10,19 +10,19 @@ fields:
   config:
     min: 
     max: 
-- name: referenciak
-  type: blocks
-  label: referenciak
-  template_types:
-  - referenciak
-  config:
-    min: 
-    max: 
 - name: rolunk
   type: blocks
   label: rolunk
   template_types:
   - rolunk
+  config:
+    min: 
+    max: 
+- name: referenciak
+  type: blocks
+  label: referenciak
+  template_types:
+  - referenciak
   config:
     min: 
     max: 

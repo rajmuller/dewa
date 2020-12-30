@@ -21,3 +21,5 @@ fdfhdfhdfhdfh
 * asd
 * asd
 * asd
+
+[test cikk 2](/cikkek/test-cikk-2 "test cikk 2")

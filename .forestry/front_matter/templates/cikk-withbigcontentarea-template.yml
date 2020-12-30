@@ -18,11 +18,6 @@ fields:
     time_format: YYYY/MM/DD
     display_utc: true
     export_format: YYYY/MM/DD
-- name: bevezeto
-  type: text
-  config:
-    required: true
-  label: bevezeto
 - name: bevezetoarea
   type: textarea
   default: ''

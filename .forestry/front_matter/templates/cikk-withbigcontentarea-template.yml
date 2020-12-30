@@ -27,12 +27,8 @@ fields:
     schema:
       format: markdown
   label: bevezetoarea
-- name: szovegtest
-  type: textarea
-  default: ''
+- name: boritokep
+  type: file
   config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: szovegtest
+    maxSize: 64
+  label: boritokep

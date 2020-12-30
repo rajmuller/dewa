@@ -1,4 +1,11 @@
 ---
 label: fooldal
 hide_body: true
-fields: []
+fields:
+- name: landing
+  type: blocks
+  label: landing
+  template_types: []
+  config:
+    min: 
+    max: 

@@ -5,7 +5,8 @@ fields:
 - name: landing
   type: blocks
   label: landing
-  template_types: []
+  template_types:
+  - landing
   config:
     min: 
     max: 

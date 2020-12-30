@@ -1,4 +1,49 @@
 ---
 label: referencia
 hide_body: false
-fields: []
+fields:
+- name: cim
+  type: text
+  config:
+    required: true
+  label: cim
+- name: tipus
+  type: select
+  default: galeria
+  config:
+    required: true
+    options:
+    - buszkesegfal
+    - galeria
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: tipus
+  description: buszkesegfal vagy csak galeria
+- name: datum
+  type: datetime
+  label: datum
+  description: ''
+  config:
+    required: true
+    date_format: YYYY/MM/DD
+    time_format: YYYY/MM/DD
+    display_utc: true
+    export_format: YYYY/MM/DD
+  default: now
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: bevezeto
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: bevezeto

@@ -2,6 +2,12 @@
 label: rolunk
 hide_body: true
 fields:
+- name: nev
+  type: text
+  config:
+    required: true
+  label: nev
+  default: Rólunk
 - name: cim
   type: text
   config:
@@ -61,9 +67,3 @@ fields:
     schema:
       format: markdown
   label: vizio-masodik
-- name: nev
-  type: text
-  config:
-    required: true
-  label: nev
-  default: Rólunk

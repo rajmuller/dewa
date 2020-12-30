@@ -6,20 +6,8 @@ webhook_url:
 sections:
 - type: heading
   label: Tartalom
-- type: directory
-  path: ".forestry/cikkek"
-  label: Cikkek
-  create: all
-  match: "**/*"
 - type: heading
   label: Oldalak
-- type: directory
-  path: fooldal
-  label: Fooldal
-  create: all
-  match: "**/*"
-- type: heading
-  label: Fooldal
 upload_dir: public/uploads
 public_path: "/public/uploads"
 front_matter_path: ''

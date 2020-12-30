@@ -15,6 +15,10 @@ sections:
   - cikk-withbigcontentarea-template
 - type: heading
   label: Oldalak
+- type: document
+  path: cms/oldalak
+  label: Fooldal
+  match: "**/*"
 upload_dir: public/uploads
 public_path: "/public/uploads"
 front_matter_path: ''

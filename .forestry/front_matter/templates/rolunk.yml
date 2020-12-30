@@ -1,4 +1,63 @@
 ---
 label: rolunk
 hide_body: true
-fields: []
+fields:
+- name: cim
+  type: text
+  config:
+    required: true
+  label: cim
+- name: leiras
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: leiras
+- name: kep
+  type: file
+  config:
+    maxSize: 64
+  label: kep
+- name: tapasztalat
+  type: number
+  label: tapasztalat
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: divizio
+  type: number
+  label: divizio
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: vizio-elso
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: vizio-elso
+- name: vizio-masodik
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: vizio-masodik

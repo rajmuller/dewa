@@ -18,17 +18,6 @@ fields:
     time_format: YYYY/MM/DD
     display_utc: true
     export_format: YYYY/MM/DD
-- name: datumszam
-  type: number
-  label: datum
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-    required: true
 - name: bevezeto
   type: text
   config:

@@ -57,6 +57,3 @@ fields:
     template: seo
     label: seo
   label: seo
-pages:
-- cms/referenciak/aquacomet.md
-- cms/referenciak/pick.md

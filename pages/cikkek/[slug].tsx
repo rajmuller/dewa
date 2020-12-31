@@ -6,6 +6,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
+import { markdownToHtml } from "../../util";
+
 type PostProps = {
   content: string;
   data: { [key: string]: any };
@@ -16,9 +18,6 @@ const Post: FC<PostProps> = ({ content, data }) => {
   // if (!router.isFallback && !post?.slug) {
   //   return <div>kell errorpage</div>;
   // }
-  console.log({ content });
-  console.log({ data });
-  console.log("seo.description: ", data.seo.description);
 
   return (
     <>
@@ -54,10 +53,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMeta = fs
-    .readFileSync(path.join("cms/cikkek", `${slug}.md`))
-    .toString();
-  const { content, data } = matter(markdownWithMeta);
+  const markdownWithMeta = fs.readFileSync(
+    path.join("cms/cikkek", `${slug}.md`),
+    "utf-8"
+  );
+  const { content: contentMarkdown, data } = matter(markdownWithMeta);
+  const content = await markdownToHtml(contentMarkdown);
 
   return {
     props: {

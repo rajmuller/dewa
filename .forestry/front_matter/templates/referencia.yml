@@ -1,5 +1,5 @@
 ---
-label: referenciak
+label: referencia
 hide_body: false
 fields:
 - name: cim
@@ -7,6 +7,14 @@ fields:
   config:
     required: true
   label: cim
+- name: seo
+  type: blocks
+  label: seo
+  template_types:
+  - seo
+  config:
+    min: 
+    max: 
 - name: tipus
   type: select
   default: galeria
@@ -22,6 +30,15 @@ fields:
       path: 
   label: tipus
   description: buszkesegfal vagy csak galeria
+- name: kivonat
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: kivonat
 - name: datum
   type: datetime
   label: datum
@@ -38,15 +55,6 @@ fields:
   config:
     maxSize: 64
   label: boritokep
-- name: bevezeto
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: bevezeto
 pages:
 - cms/referenciak/aquacomet.md
 - cms/referenciak/pick.md

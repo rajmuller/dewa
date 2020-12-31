@@ -7,14 +7,6 @@ fields:
   config:
     required: true
   label: cim
-- name: seo
-  type: blocks
-  label: seo
-  template_types:
-  - seo
-  config:
-    min: 
-    max: 
 - name: tipus
   type: select
   default: galeria
@@ -55,6 +47,14 @@ fields:
   config:
     maxSize: 64
   label: boritokep
+- name: seo
+  type: blocks
+  label: seo
+  template_types:
+  - seo
+  config:
+    min: 
+    max: 
 pages:
 - cms/referenciak/aquacomet.md
 - cms/referenciak/pick.md

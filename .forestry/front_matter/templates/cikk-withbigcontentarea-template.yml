@@ -42,3 +42,5 @@ fields:
     template: seo
     label: seo
   label: seo
+pages:
+- cms/cikkek/test-cikk.md

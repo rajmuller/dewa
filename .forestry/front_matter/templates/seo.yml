@@ -1,4 +1,18 @@
 ---
 label: seo
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+    max: 60
+    min: 20
+  label: title
+- name: description
+  type: text
+  config:
+    required: true
+    min: 100
+    max: 160
+  label: description

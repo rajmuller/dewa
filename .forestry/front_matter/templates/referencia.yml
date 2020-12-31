@@ -48,9 +48,14 @@ fields:
     maxSize: 64
   label: boritokep
 - name: seo
-  type: include
+  type: field_group
   config: {}
-  template: seo
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: seo
   label: seo
 pages:
 - cms/referenciak/aquacomet.md

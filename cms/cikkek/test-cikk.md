@@ -6,6 +6,13 @@ bevezetoarea: |-
 
   ez a bevezeto szovegez a bevezeto szovegez a bevezeto szovegez a bevezeto szovegez a bevezeto szovegez a bevezeto szovegez a bevezeto szoveg
 boritokep: "/public/uploads/akasha.jpg"
+cim: test cikk
+kivonat: ez a "kivonat" bevezeto
+seo:
+- template: seo
+  title: Legjobb test cikk! Top 10
+  description: Ez a pelda description, ahoj lofaszjoska, kell ide irni boven hogy
+    kitotlse a 100 karaktert te uristen mikor lesz neki eleg
 
 ---
 # ez a rendes cim

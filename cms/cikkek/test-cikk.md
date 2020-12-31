@@ -9,10 +9,14 @@ boritokep: "/public/uploads/akasha.jpg"
 cim: test cikk
 kivonat: ez a "kivonat" bevezeto
 seo:
-- template: seo
-  title: Legjobb test cikk! Top 10
-  description: Ez a pelda description, ahoj lofaszjoska, kell ide irni boven hogy
-    kitotlse a 100 karaktert te uristen mikor lesz neki eleg
+  '0':
+    template: seo
+    title: Legjobb test cikk! Top 10
+    description: Ez a pelda description, ahoj lofaszjoska, kell ide irni boven hogy
+      kitotlse a 100 karaktert te uristen mikor lesz neki eleg
+  title: Best Cikk ever, minumum 20 chars
+  description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
+    iopadfubn piodosdfij nopjsdfnb opjisdfnb '
 
 ---
 # ez a rendes cim

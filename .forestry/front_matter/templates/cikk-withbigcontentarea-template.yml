@@ -32,5 +32,13 @@ fields:
   config:
     maxSize: 64
   label: boritokep
+- name: seo
+  type: blocks
+  label: seo
+  template_types:
+  - seo
+  config:
+    min: 
+    max: 
 pages:
 - cms/cikkek/test-cikk.md

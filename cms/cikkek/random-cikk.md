@@ -1,7 +1,7 @@
 ---
-cim: test cikk cim
-datum: 2021/01/02
-kivonat: ez a test cikk kivonat
+cim: random cikk cim
+datum: 2021/01/01
+kivonat: ez a random cikk kivonat
 boritokep: "/public/uploads/jap_garden.jpg"
 seo:
   title: Best Cikk ever, minumum 20 chars
@@ -9,7 +9,7 @@ seo:
     iopadfubn piodosdfij nopjsdfnb opjisdfnb '
 
 ---
-# Test Cikk Cim
+# Random Cikk Cim
 
 kis bevezeto szoveg asdasdasdasdasdasdassda
 

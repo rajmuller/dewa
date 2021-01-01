@@ -8,6 +8,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/no-named-as-default": "off",
     "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "import/prefer-default-export": "off",
     "react/jsx-pascal-case": "off",
     "jsx-a11y/anchor-is-valid": [

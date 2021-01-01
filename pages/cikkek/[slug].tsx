@@ -2,11 +2,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 // import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
+import Markdown from "../../components/Markdown";
 
-import { markdownToHtml } from "../../util";
+import { getAllContents, getContentBySlug } from "../../util";
 
 type PostProps = {
   content: string;
@@ -25,27 +23,20 @@ const Post: FC<PostProps> = ({ content, data }) => {
         <title>{data.seo.title}</title>
         <meta name="description" content={data.seo.description} />
       </Head>
-      <div>
-        <div>contents below</div>
-        <pre>{content}</pre>
-
-        <div>data.seo.description</div>
-        <pre>{data.seo.description}</pre>
-      </div>
+      <Markdown>{content}</Markdown>
     </>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const postsDirectory = path.join(process.cwd(), "cms/cikkek");
-  const posts = fs.readdirSync(postsDirectory);
-  const paths = posts.map((file) => {
-    return {
-      params: {
-        slug: file.replace(".md", ""),
-      },
-    };
-  });
+  const posts = getAllContents("posts", ["slug"]);
+
+  const paths = posts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+  }));
+
   return {
     paths,
     fallback: false,
@@ -53,12 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("cms/cikkek", `${slug}.md`),
-    "utf-8"
-  );
-  const { content: contentMarkdown, data } = matter(markdownWithMeta);
-  const content = await markdownToHtml(contentMarkdown);
+  const { content, data } = getContentBySlug("posts", slug as string);
 
   return {
     props: {

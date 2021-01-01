@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Button } from "@chakra-ui/react";
 
 import { ArrowLeftIcon } from "../components/icons";
-import { getPostSlugs } from "../util";
+import { getContentSlugs } from "../util";
 
 type IndexProps = {
   slugs: string[];
@@ -12,7 +12,6 @@ type IndexProps = {
 
 const Index: FC<IndexProps> = ({ slugs }) => {
   const router = useRouter();
-  console.log(slugs);
 
   return (
     <>
@@ -39,7 +38,7 @@ const Index: FC<IndexProps> = ({ slugs }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const files = getPostSlugs();
+  const files = getContentSlugs("posts");
   return {
     props: {
       slugs: files.map((filename) => filename.replace(".md", "")),

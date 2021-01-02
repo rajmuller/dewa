@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: cms/test
+  label: test
+  create: all
+  match: "**/*"
+  templates:
+  - test
 - type: heading
   label: Tartalom
 - type: directory

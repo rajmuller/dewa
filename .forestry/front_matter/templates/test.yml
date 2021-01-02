@@ -1,4 +1,22 @@
 ---
 label: test
 hide_body: true
-fields: []
+fields:
+- name: no_wyiswyg
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: no_wyiswyg
+- name: wysiwyg
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: wysiwyg

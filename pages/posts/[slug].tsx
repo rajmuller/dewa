@@ -28,6 +28,8 @@ type PostProps = {
 };
 
 const Post: FC<PostProps> = ({ post: initialPost }) => {
+  console.log({ initialPost });
+
   const formConfig: FormOptions<any> = {
     id: initialPost.slug, // a unique identifier for this instance of the form
     label: "Blog Post", // name of the form to appear in the sidebar

@@ -1,26 +1,46 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
-import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";
+import { getGithubPreviewProps } from "next-tinacms-github";
 import { usePlugin } from "tinacms";
 import { useGithubMarkdownForm } from "react-tinacms-github";
+import { useWYSIWYG } from "../hooks";
+import { getContentBySlug, parseMarkdown } from "../util";
 
 type TinaProps = {
   file: any;
 };
 
-const Tina: FC<TinaProps> = ({ file }) => {
+const Tina: FC<TinaProps> = (props) => {
+  console.log({ props });
+
+  const { file } = props;
+
   const formOptions = {
     label: "Tina Page",
     fields: [
+      // define fields to appear in the form
       {
-        name: "title",
-        component: "text",
+        name: "title", // field name maps to the corresponding key in initialValues
+        label: "Title", // label that appears above the field
+        component: "text", // the component used to handle UI and input to the field
+      },
+      {
+        name: "excerpt", // field name maps to the corresponding key in initialValues
+        label: "Excerpt", // label that appears above the field
+        component: "text", // the component used to handle UI and input to the field
+      },
+      {
+        name: "content", // remember we want `rawMarkdownBody`, not `content` here
+        label: "Content",
+        component: "markdown", // `component` accepts a predefined components or a custom React component
       },
     ],
   };
 
+  useWYSIWYG();
   const [data, form] = useGithubMarkdownForm(file, formOptions);
+
   usePlugin(form);
 
   return (
@@ -54,6 +74,8 @@ export const getStaticProps: GetStaticProps = async ({
     });
   }
 
+  const post = getContentBySlug("posts", "test-cikk");
+
   return {
     props: {
       sourceProvider: null,
@@ -61,8 +83,7 @@ export const getStaticProps: GetStaticProps = async ({
       preview: false,
       file: {
         fileRelativePath: "/cms/posts/test-cikk.md",
-        // @ts-ignore
-        data: (await import("../cms/posts/test-cikk.md")).default,
+        data: post,
       },
     },
   };

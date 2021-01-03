@@ -61,6 +61,7 @@ export const getStaticProps: GetStaticProps = async ({
       preview: false,
       file: {
         fileRelativePath: "/cms/posts/test-cikk.md",
+        // @ts-ignore
         data: (await import("../cms/posts/test-cikk.md")).default,
       },
     },

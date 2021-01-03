@@ -7,24 +7,32 @@ sections:
   - type: heading
     label: Tartalom
   - type: directory
-    path: cms/posts
-    label: Posts
+    path: cms/cikkek
+    label: Cikkek
     create: all
     match: "**/*"
     templates:
       - cikk-withbigcontentarea-template
   - type: directory
-    path: cms/references
-    label: References
+    path: cms/referenciak
+    label: Referenciak
     create: all
     match: "**/*"
     templates:
-      - reference
-  - type: heading
-    label: Pages
+      - referencia
+      - referencia
   - type: directory
-    path: cms/pages
-    label: Home
+    path: cms/test
+    label: test
+    create: all
+    match: "**/*"
+    templates:
+      - test
+  - type: heading
+    label: Oldalak
+  - type: directory
+    path: cms/oldalak
+    label: Fooldal
     create: all
     match: "**/*"
 upload_dir: public/uploads

@@ -5,8 +5,6 @@ import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";
 import { usePlugin } from "tinacms";
 import { useGithubMarkdownForm } from "react-tinacms-github";
 
-import { getContentBySlug } from "../util";
-
 type TinaProps = {
   file: any;
 };
@@ -56,8 +54,6 @@ export const getStaticProps: GetStaticProps = async ({
     });
   }
 
-  const post = getContentBySlug("posts", "test-cikk");
-
   return {
     props: {
       sourceProvider: null,
@@ -65,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({
       preview: false,
       file: {
         fileRelativePath: "/cms/posts/test-cikk.md",
-        data: post,
+        data: (await import("../cms/posts/test-cikk.md")).default,
       },
     },
   };

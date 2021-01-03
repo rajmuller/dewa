@@ -1,19 +1,17 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
-import {
-  getGithubPreviewProps,
-  parseMarkdown,
-  parseJson,
-} from "next-tinacms-github";
+import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";
 import { usePlugin } from "tinacms";
-import { useGithubJsonForm } from "react-tinacms-github";
+import { useGithubMarkdownForm } from "react-tinacms-github";
+
+import { getContentBySlug } from "../util";
 
 type TinaProps = {
-  post: any;
+  file: any;
 };
 
-const Tina: FC<TinaProps> = ({ post }) => {
+const Tina: FC<TinaProps> = ({ file }) => {
   const formOptions = {
     label: "Tina Page",
     fields: [
@@ -24,9 +22,7 @@ const Tina: FC<TinaProps> = ({ post }) => {
     ],
   };
 
-  console.log({ post });
-
-  const [data, form] = useGithubJsonForm(post, formOptions);
+  const [data, form] = useGithubMarkdownForm(file, formOptions);
   usePlugin(form);
 
   return (
@@ -56,22 +52,20 @@ export const getStaticProps: GetStaticProps = async ({
     return getGithubPreviewProps({
       ...previewData,
       fileRelativePath: "data/asd.json",
-      parse: parseJson,
-      post: {
-        fileRelativePath: "/cms/posts/asd.json",
-        data: (await import("../data/asd.json")).default,
-      },
+      parse: parseMarkdown,
     });
   }
+
+  const post = getContentBySlug("posts", "test-cikk");
 
   return {
     props: {
       sourceProvider: null,
       error: null,
       preview: false,
-      post: {
-        fileRelativePath: "/cms/posts/asd.json",
-        data: (await import("../data/asd.json")).default,
+      file: {
+        fileRelativePath: "/cms/posts/test-cikk.md",
+        data: post,
       },
     },
   };

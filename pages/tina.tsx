@@ -57,6 +57,10 @@ export const getStaticProps: GetStaticProps = async ({
       ...previewData,
       fileRelativePath: "data/asd.json",
       parse: parseJson,
+      post: {
+        fileRelativePath: "/cms/posts/asd.json",
+        data: (await import("../data/asd.json")).default,
+      },
     });
   }
 

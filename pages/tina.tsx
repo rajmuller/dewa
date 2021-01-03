@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: "data/asd.json",
+      fileRelativePath: "cms/posts/test-cikk.md",
       parse: parseMarkdown,
     });
   }

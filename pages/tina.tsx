@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
 import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";

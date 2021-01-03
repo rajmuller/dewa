@@ -52,7 +52,7 @@ const Post: FC<PostProps> = ({ post: initialPost }) => {
   };
 
   useWYSIWYG();
-  const [modifiedValues, form] = useForm(formConfig);
+  const [, form] = useForm(formConfig);
   usePlugin(form);
 
   const router = useRouter();

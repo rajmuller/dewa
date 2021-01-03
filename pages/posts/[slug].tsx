@@ -2,10 +2,12 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";
-import { useForm, usePlugin, FormOptions } from "tinacms";
-import PageBody from "../../components/PageBody";
+import { usePlugin, FormOptions } from "tinacms";
+import { useGithubMarkdownForm } from "react-tinacms-github";
+import { getGithubPreviewProps } from "next-tinacms-github";
 
-import { getAllContents, getContentBySlug } from "../../util";
+import PageBody from "../../components/PageBody";
+import { getAllContents, getContentBySlug, parseMarkdown } from "../../util";
 import { useWYSIWYG } from "../../hooks";
 
 type SeoType = {
@@ -25,24 +27,26 @@ export type PostType = {
 
 type PostProps = {
   post: PostType;
+  file: any;
 };
 
-const Post: FC<PostProps> = ({ post: initialPost }) => {
-  console.log({ initialPost });
+const Post: FC<PostProps> = ({ file }) => {
+  console.log({ file });
 
-  const formConfig: FormOptions<any> = {
-    id: initialPost.slug, // a unique identifier for this instance of the form
+  const formOptions = {
+    id: file.initialPost.slug, // a unique identifier for this instance of the form
     label: "Blog Post", // name of the form to appear in the sidebar
-    initialValues: { ...initialPost, kivonat: initialPost.excerpt }, // populate the form with starting values
-    onSubmit: (values) => {
-      // do something with the data when the form is submitted
-      alert(`Submitting ${values.title}`);
-    },
+    initialValues: { ...file.initialPost, kivonat: file.initialPost.excerpt }, // populate the form with starting values
     fields: [
       // define fields to appear in the form
       {
-        name: "kivonat", // field name maps to the corresponding key in initialValues
-        label: "Description", // label that appears above the field
+        name: "title", // field name maps to the corresponding key in initialValues
+        label: "Title", // label that appears above the field
+        component: "text", // the component used to handle UI and input to the field
+      },
+      {
+        name: "excerpt", // field name maps to the corresponding key in initialValues
+        label: "Excerpt", // label that appears above the field
         component: "text", // the component used to handle UI and input to the field
       },
       {
@@ -54,11 +58,11 @@ const Post: FC<PostProps> = ({ post: initialPost }) => {
   };
 
   useWYSIWYG();
-  const [, form] = useForm(formConfig);
+  const [data, form] = useGithubMarkdownForm(file, formOptions);
   usePlugin(form);
 
   const router = useRouter();
-  if (!router.isFallback && !initialPost?.slug) {
+  if (!router.isFallback && !file) {
     return <div>kell errorpage</div>;
   }
 
@@ -74,6 +78,32 @@ const Post: FC<PostProps> = ({ post: initialPost }) => {
   );
 };
 
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
+  if (preview) {
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: "cms/posts/test-cikk.md",
+      parse: parseMarkdown,
+    });
+  }
+
+  const data = getContentBySlug("posts", "test-cikk");
+  return {
+    props: {
+      sourceProvider: null,
+      error: null,
+      preview: false,
+      file: {
+        fileRelativePath: "/cms/posts/test-cikk.md",
+        data,
+      },
+    },
+  };
+};
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllContents("posts", ["slug"]);
 
@@ -86,16 +116,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths,
     fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
-  const post = getContentBySlug("posts", slug as string);
-
-  return {
-    props: {
-      post,
-    },
   };
 };
 

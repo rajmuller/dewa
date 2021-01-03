@@ -51,7 +51,6 @@ const buttonStyle = {
   // The default size and variant values
   defaultProps: {
     size: "lg",
-    variant: "primary",
   },
 };
 

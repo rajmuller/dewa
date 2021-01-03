@@ -7,9 +7,9 @@ type ContentType = "posts" | "references";
 const getDirectory = (type: ContentType) => {
   switch (type) {
     case "posts":
-      return path.join(process.cwd(), "cms/cikkek");
+      return path.join(process.cwd(), "cms/posts");
     case "references":
-      return path.join(process.cwd(), "cms/referenciak");
+      return path.join(process.cwd(), "cms/references");
 
     default:
       return null;
@@ -35,7 +35,7 @@ export function getContentBySlug(
   // Ensure only the minimal needed data is exposed
   if (!fields) {
     return {
-      data,
+      ...data,
       content,
       slug: realSlug,
     };

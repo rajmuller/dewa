@@ -24,9 +24,12 @@
     "target": "esnext"
   },
   "exclude": [
-    "node_modules"
+    "dist",
+    ".next",
+    "out",
   ],
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ]

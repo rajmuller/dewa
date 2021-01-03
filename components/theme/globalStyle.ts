@@ -23,7 +23,6 @@ const globalStyle = {
     "h1,h2,h3,h4,h5,h6,p": {
       marginTop: 0,
       marginBottom: "1rem",
-      fontFamily: "inherit",
       fontWeight: 400,
       lineHeight: 1.5,
     },

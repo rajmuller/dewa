@@ -5,8 +5,13 @@ import styles from "./globalStyle";
 import colors from "./colors";
 import space from "./space";
 import buttonStyle from "./buttonStyle";
+import { headingStyles, textStyles } from "./typoStyles";
 
-const fonts = { mono: `'Menlo', monospace` };
+const fonts = {
+  body: `'Montserrat', sans-serif`,
+  heading: `'Montserrat', sans-serif`,
+  mono: `'Montserrat', sans-serif`,
+};
 
 const breakpoints = createBreakpoints({
   sm: "640px",
@@ -22,10 +27,10 @@ const theme = extendTheme({
   styles,
   components: {
     Button: buttonStyle,
+    Heading: headingStyles,
+    Text: textStyles,
   },
   fontSizes: {
-    "3xs": "8px",
-    "2xs": "10px",
     xs: "12px",
     sm: "14px",
     md: "16px",

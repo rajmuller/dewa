@@ -2,7 +2,7 @@
   "name": "with-typescript-styled-components",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next -p 3003",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
@@ -14,16 +14,20 @@
     "@emotion/react": "11.1.2",
     "@emotion/styled": "11.0.0",
     "@reduxjs/toolkit": "^1.5.0",
+    "dotenv": "^8.2.0",
     "framer-motion": "^2.9.4",
     "gray-matter": "^4.0.2",
     "next": "latest",
+    "next-tinacms-github": "^0.35.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
     "react-redux": "^7.2.2",
-    "remark": "^13.0.0",
-    "remark-parse": "^9.0.0",
-    "remark-react": "^8.0.0",
-    "unified": "^9.2.0"
+    "react-tinacms-editor": "^0.35.0",
+    "react-tinacms-github": "^0.35.0",
+    "react-tinacms-inline": "^0.35.0",
+    "styled-components": "^5.2.1",
+    "tinacms": "^0.34.0"
   },
   "devDependencies": {
     "@types/node": "14.14.14",
@@ -32,6 +36,7 @@
     "@types/react-redux": "^7.1.12",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-typescript-prettier": "^4.1.0",
+    "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
     "prettier": "^2.2.1",
     "typescript": "4.1.3"
   },

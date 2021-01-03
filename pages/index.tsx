@@ -24,7 +24,7 @@ const Index: FC<IndexProps> = ({ slugs }) => {
             rightIcon={<ArrowLeftIcon ml={20} boxSize={4} />}
             onClick={() => {
               router.push({
-                pathname: "/cikkek/[slug]",
+                pathname: "/posts/[slug]",
                 query: { slug },
               });
             }}

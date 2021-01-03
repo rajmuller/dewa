@@ -1,9 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
-import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";
+import {
+  getGithubPreviewProps,
+  parseMarkdown,
+  parseJson,
+} from "next-tinacms-github";
 import { usePlugin } from "tinacms";
-import { useGithubMarkdownForm } from "react-tinacms-github";
+import { useGithubJsonForm } from "react-tinacms-github";
 
 type TinaProps = {
   post: any;
@@ -22,7 +26,7 @@ const Tina: FC<TinaProps> = ({ post }) => {
 
   console.log({ post });
 
-  const [data, form] = useGithubMarkdownForm(post, formOptions);
+  const [data, form] = useGithubJsonForm(post, formOptions);
   usePlugin(form);
 
   return (
@@ -51,8 +55,8 @@ export const getStaticProps: GetStaticProps = async ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: "cms/posts/test-cikk.md",
-      parse: parseMarkdown,
+      fileRelativePath: "data/asd.json",
+      parse: parseJson,
     });
   }
 
@@ -62,8 +66,8 @@ export const getStaticProps: GetStaticProps = async ({
       error: null,
       preview: false,
       post: {
-        fileRelativePath: "cms/posts/test-cikk.md",
-        data: (await import("../cms/posts/test-cikk.md")).default,
+        fileRelativePath: "/cms/posts/asd.json",
+        data: (await import("../data/asd.json")).default,
       },
     },
   };

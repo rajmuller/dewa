@@ -1,16 +1,30 @@
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
-import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
+import { getGithubPreviewProps, parseMarkdown } from "next-tinacms-github";
+import { usePlugin } from "tinacms";
+import { useGithubMarkdownForm } from "react-tinacms-github";
+import { getAllContents, getContentBySlug } from "../util";
 
 type TinaProps = {
-  file: any;
+  post: any;
 };
 
-const Tina: FC<TinaProps> = ({ file }) => {
-  console.log({ file });
+const Tina: FC<TinaProps> = ({ post }) => {
+  const formOptions = {
+    label: "Tina Page",
+    fields: [
+      {
+        name: "title",
+        component: "text",
+      },
+    ],
+  };
 
-  const { data } = file;
+  console.log({ post });
+
+  const [data, form] = useGithubMarkdownForm(post, formOptions);
+  usePlugin(form);
 
   return (
     <div className="container">
@@ -21,7 +35,7 @@ const Tina: FC<TinaProps> = ({ file }) => {
       <main>
         <h1 className="title">
           {/**
-           * Render the title from `home.json`
+           * Render the title from `home.md`
            */}
           - Welcome to <a href="https://nextjs.org">Next.js!</a>
           {data.title}
@@ -31,8 +45,6 @@ const Tina: FC<TinaProps> = ({ file }) => {
   );
 };
 
-export default Tina;
-
 export const getStaticProps: GetStaticProps = async ({
   preview,
   previewData,
@@ -40,20 +52,39 @@ export const getStaticProps: GetStaticProps = async ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: "data/home.json",
-      parse: parseJson,
+      fileRelativePath: "cms/posts/test-cikk.md",
+      parse: parseMarkdown,
     });
   }
+
+  const post = getContentBySlug("posts", "test-cikk");
 
   return {
     props: {
       sourceProvider: null,
       error: null,
       preview: false,
-      file: {
-        fileRelativePath: "content/home.json",
-        data: (await import("../data/home.json")).default,
+      post: {
+        fileRelativePath: "cms/posts/test-cikk.md",
+        data: { ...post },
       },
     },
   };
 };
+
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const posts = getAllContents("posts", ["slug"]);
+
+//   const paths = posts.map((post) => ({
+//     params: {
+//       slug: post.slug,
+//     },
+//   }));
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
+
+export default Tina;

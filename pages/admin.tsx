@@ -1,18 +1,26 @@
-import { ChangeEvent, FC, useCallback, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { Flex, Switch } from "@chakra-ui/react";
+import {
+  editableSiteSelector,
+  setEditableSiteSelector,
+  useStore,
+} from "../store";
 
 const Admin: FC = () => {
-  let editableToken: boolean;
-  if (typeof localStorage !== "undefined") {
-    editableToken = !!localStorage.getItem("siteEditable");
-  }
+  const editableSite = useStore(editableSiteSelector);
+  const [checked, setChecked] = useState<boolean>(false);
 
-  const [checked, setChecked] = useState(editableToken);
+  const setEditableSite = useStore(setEditableSiteSelector);
 
   const onChange = useCallback(() => {
-    setChecked((previous) => !previous);
-    localStorage.setItem("siteEditable", !checked.toString);
-  }, []);
+    setEditableSite(!editableSite);
+  }, [editableSite, setEditableSite]);
+
+  useEffect(() => {
+    if (checked !== editableSite) {
+      setChecked(editableSite);
+    }
+  }, [checked, editableSite]);
 
   return (
     <Flex pt={20}>

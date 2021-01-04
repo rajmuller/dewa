@@ -1,16 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-
-import testFeature from "./testFeature";
-
-export { testFeature };
-
-export { testFeatureSelector, asdSelector } from "./testFeature";
-
-const store = configureStore({
-  reducer: {
-    testFeature: testFeature.reducer,
-  },
-  devTools: true,
-});
-
-export default store;
+export * from "./init";
+export {
+  useStore,
+  editableSiteSelector,
+  setEditableSiteSelector,
+} from "./store";
+export * from "./zustandProvider";

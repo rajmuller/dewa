@@ -3,10 +3,9 @@ import { useMemo } from "react";
 import { TinaProvider, TinaCMS } from "tinacms";
 import { NextGithubMediaStore } from "next-tinacms-github";
 import { TinacmsGithubProvider, GithubClient } from "react-tinacms-github";
-import { Provider } from "react-redux";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import store from "../store";
+import { useHydrate, StoreProvider } from "../store";
 import theme from "../components/theme";
 import EditButton from "../components/EditButton";
 
@@ -32,6 +31,8 @@ const onLogout = () => {
 };
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const store = useHydrate(pageProps.initialZustandState);
+
   const { preview, error } = pageProps;
   const github = useMemo(
     () =>
@@ -63,7 +64,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 
   return (
-    <Provider store={store}>
+    <StoreProvider store={store}>
       <ChakraProvider theme={theme}>
         <TinaProvider cms={cms}>
           <TinacmsGithubProvider
@@ -76,7 +77,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           </TinacmsGithubProvider>
         </TinaProvider>
       </ChakraProvider>
-    </Provider>
+    </StoreProvider>
   );
 };
 

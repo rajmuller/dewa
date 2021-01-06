@@ -10,20 +10,7 @@ import PageBody from "../../components/PageBody";
 import { getAllContents, getContentBySlug, parseMarkdown } from "../../util";
 import { useWYSIWYG } from "../../hooks";
 
-type SeoType = {
-  title: string;
-  description: string;
-};
-
-export type PostType = {
-  slug: string;
-  title: string;
-  date: string;
-  coverImage: string;
-  excerpt: string;
-  content: string;
-  seo: SeoType;
-};
+import { PostType } from "./types";
 
 type PostProps = {
   post: PostType;
@@ -63,17 +50,17 @@ const Post: FC<PostProps> = ({ file }) => {
 
   const router = useRouter();
   if (!router.isFallback && !file) {
-    return <div>kell errorpage</div>;
+    return <div>ERRORPAGE</div>;
   }
 
   return (
     <>
       <Head>
-        <title>{initialPost.seo.title}</title>
-        <meta name="description" content={initialPost.seo.description} />
+        {/* <title>{initialPost.seo.title}</title> */}
+        {/* <meta name="description" content={initialPost.seo.description} /> */}
       </Head>
-      <PageBody content={initialPost.content} />
-      <div>{initialPost.excerpt}</div>
+      {/* <PageBody content={initialPost.content} /> */}
+      {/* <div>{initialPost.excerpt}</div> */}
     </>
   );
 };

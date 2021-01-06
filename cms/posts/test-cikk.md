@@ -2,7 +2,7 @@
 title: test cikk cim
 date: 2021/01/02
 excerpt: ez a test cikk kivonat
-coverImage: /public/uploads/jap_garden.jpg
+coverImage: /uploads/jap_garden.jpg
 seo:
   title: 'Best Cikk ever, minumum 20 chars'
   description: >-

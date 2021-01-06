@@ -1,15 +1,21 @@
 ---
-cim: random cikk cim
-datum: 2021/01/01
-kivonat: ez a random cikk kivonat
-boritokep: "/public/uploads/jap_garden.jpg"
+title: random cikk cim
+date: 2021/01/02
+excerpt: ez a random cikk kivonat
+coverImage: /uploads/jap_garden.jpg
 seo:
-  title: Best Cikk ever, minumum 20 chars
-  description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
-    iopadfubn piodosdfij nopjsdfnb opjisdfnb '
-
+  title: 'Best Cikk ever, minumum 20 chars'
+  description: >-
+    Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
+    iopadfubn piodosdfij nopjsdfnb opjisdfnb 
 ---
-# Random Cikk Cim
+# random Cikk Cim1
+
+## random Cikk Cim2
+
+### random Cikk Cim2
+
+## random Cikk Cim4
 
 kis bevezeto szoveg asdasdasdasdasdasdassda
 

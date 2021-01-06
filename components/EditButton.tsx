@@ -2,6 +2,8 @@ import { FC } from "react";
 import { Box, IconButton } from "@chakra-ui/react";
 import { TinaCMS } from "tinacms";
 
+import { editableSiteSelector, useStore } from "../store";
+
 import { EditIcon } from "./icons";
 
 type EditButtonProps = {
@@ -9,6 +11,12 @@ type EditButtonProps = {
 };
 
 const EditButton: FC<EditButtonProps> = ({ cms }) => {
+  const editableSite = useStore(editableSiteSelector);
+
+  if (!editableSite) {
+    return null;
+  }
+
   return (
     <Box position="fixed" bottom={4} right={4}>
       <IconButton

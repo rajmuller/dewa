@@ -8,9 +8,9 @@ import buttonStyle from "./buttonStyle";
 import { headingStyles, textStyles } from "./typoStyles";
 
 const fonts = {
-  body: `'Montserrat', sans-serif`,
-  heading: `'Montserrat', sans-serif`,
-  mono: `'Montserrat', sans-serif`,
+  body: "'Montserrat', sans-serif",
+  heading: "'Montserrat', sans-serif",
+  mono: "'Montserrat', sans-serif",
 };
 
 const breakpoints = createBreakpoints({
@@ -21,6 +21,7 @@ const breakpoints = createBreakpoints({
 });
 
 const theme = extendTheme({
+  fonts,
   // @ts-ignore
   colors,
   space,
@@ -42,7 +43,6 @@ const theme = extendTheme({
     "5xl": "48px",
     "6xl": "64px",
   },
-  fonts,
   breakpoints,
 });
 

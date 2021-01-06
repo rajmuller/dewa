@@ -4,16 +4,16 @@ const globalStyle = {
       boxSizing: "border-box",
     },
 
-    "*, *:before, *:after": {
-      boxSizing: "inherit",
-      margin: 0,
-      padding: 0,
-    },
-
     body: {
       margin: 0,
       padding: "0",
       background: "background",
+    },
+
+    "*, *:before, *:after": {
+      boxSizing: "inherit",
+      margin: 0,
+      padding: 0,
     },
 
     "input, textarea, button": {

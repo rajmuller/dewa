@@ -64,8 +64,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 
   return (
-    <StoreProvider store={store}>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <StoreProvider store={store}>
         <TinaProvider cms={cms}>
           <TinacmsGithubProvider
             onLogin={onLogin}
@@ -76,8 +76,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <Component {...pageProps} />
           </TinacmsGithubProvider>
         </TinaProvider>
-      </ChakraProvider>
-    </StoreProvider>
+      </StoreProvider>
+    </ChakraProvider>
   );
 };
 

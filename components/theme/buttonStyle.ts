@@ -4,26 +4,22 @@ const buttonStyle = {
     fontWeight: "semibold",
     textTransform: "capitalize",
     borderRadius: "lg",
+    padding: ["18px", "18px", "20px", "24px"],
   },
   sizes: {
     sm: {
-      fontSize: "14px",
-      padding: "18px",
       h: "auto",
     },
     md: {
-      fontSize: "16px",
-      padding: "20px",
       h: "auto",
     },
     lg: {
-      fontSize: "20px",
-      padding: "24px",
       h: "auto",
     },
   },
   variants: {
     primary: {
+      fontSize: ["14px", "14px", "16px", "20px"],
       color: "#fff",
       bg: "primary.700",
       _hover: {
@@ -34,23 +30,23 @@ const buttonStyle = {
       },
     },
     secondary: {
-      bg: "secondary.500",
-      color: "white",
+      fontSize: ["14px", "14px", "16px", "20px"],
+      borderRadius: "none",
+      paddingBottom: 2,
+      color: "secondary.500",
+      bg: "transparent",
       _hover: {
-        bg: "secondary.600",
+        bg: "transparent",
       },
       _active: {
-        bg: "secondary.700",
+        bg: "transparent",
       },
     },
     tertiary: {
+      fontSize: ["14px", "14px", "16px", "20px"],
       bg: "green.500",
-      color: "white",
+      color: "#fff",
     },
-  },
-  // The default size and variant values
-  defaultProps: {
-    size: "lg",
   },
 };
 

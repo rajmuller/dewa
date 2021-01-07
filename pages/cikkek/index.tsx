@@ -1,10 +1,13 @@
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { FC } from "react";
 
 import { getAllContents } from "../../util";
+import { Button } from "../../components/uikit";
+import { ChevronLeftIcon } from "../../components/icons";
+
 import { PostType } from "./types";
 
 type CikkekType = {
@@ -23,17 +26,35 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
     <>
       {posts.map((post) => {
         return (
-          <Flex direction="column" px={4}>
-            <Flex
+          <Flex direction="column" align="flex-start" px={4} my={16}>
+            <AspectRatio
+              ratio={1}
               position="relative"
               overflow="hidden"
+              d="flex"
               w="100%"
-              borderRadius="xl"
-              pt="100%"
+              mb={3}
+              borderRadius="lg"
             >
-              <Image src={post.coverImage} layout="fill" objectFit="cover" />
-            </Flex>
-            <Box>{post.title}</Box>
+              <Image
+                src={post.coverImage}
+                alt={`image of ${post.title}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </AspectRatio>
+            <Heading variant="title" mb={3}>
+              {post.title}
+            </Heading>
+            <Text variant="meta" mb={3}>
+              {post.date}
+            </Text>
+            <Text mb={3} color="grey.iron">
+              {post.excerpt}
+            </Text>
+            <Button variant="secondary" side="right">
+              Elolvasom
+            </Button>
           </Flex>
         );
       })}

@@ -1,7 +1,7 @@
 ---
-title: test cikk cim
+title: Az ipari festes, mint onkifejezes
 date: 2021/01/02
-excerpt: ez a test cikk kivonat
+excerpt: I'm not afraid to take a stand. Everybody, come take my hand. We'll walk this road together, through the storm. Whatever weather, cold or warm. Just lettin' you know that you're not alone. Holla if you feel like you've been down the same road.
 coverImage: /uploads/jap_garden.jpg
 seo:
   title: 'Best Cikk ever, minumum 20 chars'

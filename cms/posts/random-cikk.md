@@ -1,7 +1,7 @@
 ---
 title: random cikk cim
 date: 2021/01/02
-excerpt: ez a random cikk kivonat
+excerpt: When you walked through the door. It was clear to me (Clear to me). You’re the one they adore. Who they came to see (Who they came to see). You’re a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really blame you? (Who can really blame you?). We’re the ones who made you.
 coverImage: /uploads/jap_garden.jpg
 seo:
   title: 'Best Cikk ever, minumum 20 chars'

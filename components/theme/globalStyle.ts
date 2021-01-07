@@ -20,13 +20,6 @@ const globalStyle = {
       fontFamily: "inherit",
     },
 
-    "h1,h2,h3,h4,h5,h6,p": {
-      marginTop: 0,
-      marginBottom: "1rem",
-      fontWeight: 400,
-      lineHeight: 1.5,
-    },
-
     "p > code": {
       background: "#fff",
       padding: "2px 4px",

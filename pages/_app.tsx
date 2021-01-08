@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { TinaProvider, TinaCMS } from "tinacms";
 import { NextGithubMediaStore } from "next-tinacms-github";
 import { TinacmsGithubProvider, GithubClient } from "react-tinacms-github";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 
 import { useHydrate, StoreProvider } from "../store";
 import theme from "../components/theme";
@@ -73,7 +73,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             error={error}
           >
             <EditButton cms={cms} />
-            <Component {...pageProps} />
+            <Box px={[4, 4, 16, 32]}>
+              <Component {...pageProps} />
+            </Box>
           </TinacmsGithubProvider>
         </TinaProvider>
       </StoreProvider>

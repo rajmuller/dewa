@@ -1,12 +1,11 @@
-import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { FC } from "react";
+import { Flex, AspectRatio, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
 import { Button } from "../../components/uikit";
-import { ChevronLeftIcon } from "../../components/icons";
 
 import { PostType } from "./types";
 
@@ -15,18 +14,21 @@ type CikkekType = {
 };
 
 const Cikkek: FC<CikkekType> = ({ posts }) => {
-  console.log({ posts });
-
   const router = useRouter();
   if (router.isFallback || !posts) {
     return <div>ERRORPAGE</div>;
   }
 
   return (
-    <>
+    <SimpleGrid
+      justify="center"
+      columns={[1, 2, 2, 3]}
+      my={16}
+      spacing={[16, 16, 16, 20]}
+    >
       {posts.map((post) => {
         return (
-          <Flex direction="column" align="flex-start" px={4} my={16}>
+          <Flex direction="column" align="flex-start">
             <AspectRatio
               ratio={1}
               position="relative"
@@ -43,22 +45,32 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
                 objectFit="cover"
               />
             </AspectRatio>
-            <Heading variant="title" mb={3}>
-              {post.title}
-            </Heading>
-            <Text variant="meta" mb={3}>
-              {post.date}
-            </Text>
-            <Text mb={3} color="grey.iron">
-              {post.excerpt}
-            </Text>
-            <Button variant="secondary" side="right">
-              Elolvasom
-            </Button>
+            <Flex
+              direction="column"
+              justify="space-between"
+              minH={[null, 64, 72, 72]}
+            >
+              <Heading variant="title" mb={[3, null, null, null]} noOfLines={2}>
+                {post.title}
+              </Heading>
+              <Text variant="meta" mb={[3, null, null, null]}>
+                {post.date}
+              </Text>
+              <Text
+                noOfLines={[100, 4, 4, 4]}
+                mb={[3, null, null, null]}
+                color="grey.iron"
+              >
+                {post.excerpt}
+              </Text>
+              <Button variant="secondary" side="right">
+                Elolvasom
+              </Button>
+            </Flex>
           </Flex>
         );
       })}
-    </>
+    </SimpleGrid>
   );
 };
 

@@ -1,16 +1,15 @@
 ---
-label: cikk
+label: post
 hide_body: false
-display_field: id
 fields:
-- name: cim
+- name: title
   type: text
   config:
     required: true
-  label: cim
-- name: datum
+  label: title
+- name: date
   type: datetime
-  label: datum
+  label: date
   description: ''
   config:
     required: false
@@ -18,20 +17,20 @@ fields:
     time_format: YYYY/MM/DD
     display_utc: true
     export_format: YYYY/MM/DD
-- name: kivonat
+- name: excerpt
   type: textarea
   default: ''
   config:
     required: true
-    wysiwyg: true
+    wysiwyg: false
     schema:
       format: markdown
-  label: kivonat
-- name: boritokep
+  label: excerpt
+- name: coverImage
   type: file
   config:
     maxSize: 64
-  label: boritokep
+  label: coverImage
 - name: seo
   type: field_group
   config: {}

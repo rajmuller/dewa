@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";
-import { usePlugin, FormOptions } from "tinacms";
 import { useGithubMarkdownForm } from "react-tinacms-github";
 import { getGithubPreviewProps } from "next-tinacms-github";
 
@@ -61,6 +60,7 @@ const Post: FC<PostProps> = ({ file }) => {
       </Head>
       {/* <PageBody content={initialPost.content} /> */}
       {/* <div>{initialPost.excerpt}</div> */}
+      <EditButton />
     </>
   );
 };
@@ -68,6 +68,7 @@ const Post: FC<PostProps> = ({ file }) => {
 export const getStaticProps: GetStaticProps = async ({
   preview,
   previewData,
+  params: { slug },
 }) => {
   if (preview) {
     return getGithubPreviewProps({

@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { Flex, AspectRatio, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
@@ -15,6 +15,16 @@ type CikkekType = {
 
 const Cikkek: FC<CikkekType> = ({ posts }) => {
   const router = useRouter();
+  const onOpen = useCallback(
+    (slug: string) => {
+      router.push({
+        pathname: "/cikkek/[slug]",
+        query: { slug },
+      });
+    },
+    [router]
+  );
+
   if (router.isFallback || !posts) {
     return <div>ERRORPAGE</div>;
   }
@@ -28,7 +38,7 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
     >
       {posts.map((post) => {
         return (
-          <Flex direction="column" align="flex-start">
+          <Flex direction="column" align="flex-start" key={post.slug}>
             <AspectRatio
               ratio={1}
               position="relative"
@@ -63,7 +73,11 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
               >
                 {post.excerpt}
               </Text>
-              <Button variant="secondary" side="right">
+              <Button
+                onClick={() => onOpen(post.slug)}
+                variant="secondary"
+                side="right"
+              >
                 Elolvasom
               </Button>
             </Flex>

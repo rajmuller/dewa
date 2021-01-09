@@ -3,7 +3,7 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@chakra-ui/react";
 
-import { ArrowLeftIcon } from "../components/icons";
+import { ChevronLeftIcon } from "../components/icons";
 import { getContentSlugs } from "../util";
 
 type IndexProps = {
@@ -21,7 +21,7 @@ const Index: FC<IndexProps> = ({ slugs }) => {
           <Button
             key={slug}
             m="4"
-            rightIcon={<ArrowLeftIcon ml={20} boxSize={4} />}
+            rightIcon={<ChevronLeftIcon ml={20} boxSize={4} />}
             onClick={() => {
               router.push({
                 pathname: "/posts/[slug]",

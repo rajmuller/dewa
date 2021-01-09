@@ -1,1 +1,1 @@
-export * from "./parser";
+export { getAllContents, getContentBySlug, getContentSlugs } from "./parser";

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { PostTypeKeys } from "../pages/cikkek/types";
 
 type ContentType = "posts" | "references";
 
@@ -20,19 +21,10 @@ export function getContentSlugs(type: ContentType) {
   return fs.readdirSync(getDirectory(type));
 }
 
-export const parseMarkdown = (fileContents: string) => {
-  const { data, content } = matter(fileContents);
-
-  return {
-    ...data,
-    content,
-  };
-};
-
 export function getContentBySlug(
   type: ContentType,
   slug: string,
-  fields?: string[]
+  fields: PostTypeKeys[]
 ) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(getDirectory(type), `${realSlug}.md`);
@@ -42,13 +34,6 @@ export function getContentBySlug(
   const items: { [key: string]: string } = {};
 
   // Ensure only the minimal needed data is exposed
-  if (!fields) {
-    return {
-      ...data,
-      content,
-      slug: realSlug,
-    };
-  }
   fields.forEach((field) => {
     if (field === "slug") {
       items[field] = realSlug;
@@ -65,13 +50,12 @@ export function getContentBySlug(
   return items;
 }
 
-export function getAllContents(type: ContentType, fields?: string[]) {
+export function getAllContents(type: ContentType, fields: PostTypeKeys[]) {
   const slugs = getContentSlugs(type);
 
   const posts = slugs
     .map((slug) => getContentBySlug(type, slug, fields))
     // sort posts by date in descending order
-    // @ts-ignore
-    .sort((post1, post2) => (post1.datum > post2.datum ? "-1" : "1"));
+    .sort((post1, post2) => (post1.datum > post2.datum ? -1 : 1));
   return posts;
 }

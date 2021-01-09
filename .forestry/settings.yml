@@ -10,7 +10,7 @@ sections:
   path: cms/posts
   label: Posts
   create: all
-  match: "**/*"
+  match: "**/*.md"
   templates:
   - cikk-withbigcontentarea-template
 - type: directory

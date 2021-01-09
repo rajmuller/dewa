@@ -41,9 +41,8 @@ const Secondary: FC<ButtonProps> = ({ side, ...props }) => {
   if (side === "left") {
     return (
       <ChakraButton
-        w="100%"
-        justifyContent="flex-end"
-        pr={[0, 0, 0, 0]}
+        justifyContent="flex-start"
+        pl={[0, 0, 0, 0]}
         pb={[2, 2, 2, 2]}
         borderBottom="1px solid"
         borderBottomColor="secondary.500"

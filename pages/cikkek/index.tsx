@@ -58,7 +58,7 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
             <Flex
               direction="column"
               justify="space-between"
-              minH={[null, 64, 72, 72]}
+              minH={[null, 64, 72, 80]}
             >
               <Heading variant="title" mb={[3, null, null, null]} noOfLines={2}>
                 {post.title}

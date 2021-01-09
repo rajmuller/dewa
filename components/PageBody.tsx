@@ -37,26 +37,18 @@ const Img: FC<ImgProps> = ({ src: fullPath }) => {
 
 const H1: FC = ({ children }) => {
   return (
-    <Heading variant="hero" as="h2" ml={4}>
+    <Heading variant="hero" as="h2">
       {children}
     </Heading>
   );
 };
 
 const H2: FC = ({ children }) => {
-  return (
-    <Heading as="h2" ml={4}>
-      {children}
-    </Heading>
-  );
+  return <Heading as="h2">{children}</Heading>;
 };
 
 const H3: FC = ({ children }) => {
-  return (
-    <Heading as="h3" ml={4}>
-      {children}
-    </Heading>
-  );
+  return <Heading as="h3">{children}</Heading>;
 };
 
 type PageBodyProps = {

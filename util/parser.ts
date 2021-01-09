@@ -21,15 +21,6 @@ export function getContentSlugs(type: ContentType) {
   return fs.readdirSync(getDirectory(type));
 }
 
-export const parseMarkdown = (fileContents: string) => {
-  const { data, content } = matter(fileContents);
-
-  return {
-    ...data,
-    content,
-  };
-};
-
 export function getContentBySlug(
   type: ContentType,
   slug: string,

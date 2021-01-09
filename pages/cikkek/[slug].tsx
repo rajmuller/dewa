@@ -2,12 +2,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";
-import { useGithubMarkdownForm } from "react-tinacms-github";
-import { getGithubPreviewProps } from "next-tinacms-github";
 
 import PageBody from "../../components/PageBody";
-import { getAllContents, getContentBySlug, parseMarkdown } from "../../util";
-import { useWYSIWYG } from "../../hooks";
+import { getAllContents, getContentBySlug } from "../../util";
 
 import { PostType } from "./types";
 
@@ -17,36 +14,6 @@ type PostProps = {
 };
 
 const Post: FC<PostProps> = ({ file }) => {
-  console.log({ file });
-
-  const formOptions = {
-    id: file.initialPost.slug, // a unique identifier for this instance of the form
-    label: "Blog Post", // name of the form to appear in the sidebar
-    initialValues: { ...file.initialPost, kivonat: file.initialPost.excerpt }, // populate the form with starting values
-    fields: [
-      // define fields to appear in the form
-      {
-        name: "title", // field name maps to the corresponding key in initialValues
-        label: "Title", // label that appears above the field
-        component: "text", // the component used to handle UI and input to the field
-      },
-      {
-        name: "excerpt", // field name maps to the corresponding key in initialValues
-        label: "Excerpt", // label that appears above the field
-        component: "text", // the component used to handle UI and input to the field
-      },
-      {
-        name: "content", // remember we want `rawMarkdownBody`, not `content` here
-        label: "Content",
-        component: "markdown", // `component` accepts a predefined components or a custom React component
-      },
-    ],
-  };
-
-  useWYSIWYG();
-  const [data, form] = useGithubMarkdownForm(file, formOptions);
-  usePlugin(form);
-
   const router = useRouter();
   if (!router.isFallback && !file) {
     return <div>ERRORPAGE</div>;
@@ -60,25 +27,12 @@ const Post: FC<PostProps> = ({ file }) => {
       </Head>
       {/* <PageBody content={initialPost.content} /> */}
       {/* <div>{initialPost.excerpt}</div> */}
-      <EditButton />
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({
-  preview,
-  previewData,
-  params: { slug },
-}) => {
-  if (preview) {
-    return getGithubPreviewProps({
-      ...previewData,
-      fileRelativePath: "cms/posts/test-cikk.md",
-      parse: parseMarkdown,
-    });
-  }
-
-  const data = getContentBySlug("posts", "test-cikk");
+export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
+  const data = getContentBySlug("posts", slug as string, ["slug"]);
   return {
     props: {
       sourceProvider: null,

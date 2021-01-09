@@ -97,6 +97,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "seo",
     "slug",
   ]);
+
   return {
     props: {
       posts,

@@ -1,6 +1,1 @@
-export {
-  getAllContents,
-  getContentBySlug,
-  getContentSlugs,
-  parseMarkdown,
-} from "./parser";
+export { getAllContents, getContentBySlug, getContentSlugs } from "./parser";

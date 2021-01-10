@@ -21,7 +21,11 @@ Ki lehet emelni szoveget: **kiemelt szoveg**
 
 > Itt valami nagyon okos hangzik eppen el es te brutal kiemeled (blockquote)
 >
+> I I I be on it all day Like my nigga Big Boy said That's the only thing that keeps me level Up in my crazy head Stoned on the run, run No fun if not It's Scotty from the hate mail read Man I swear to keep it 1 hundred If I ain't have it then I'd be dead My souls been fed tonight Everything that I choose Still can't forget Grey Goose Converse covered with mixer juice 
+>
 > lehet tobbsoros is
+>
+> * lehet benne golyo is
 
 ***
 

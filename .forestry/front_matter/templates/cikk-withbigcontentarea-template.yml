@@ -41,3 +41,5 @@ fields:
     template: seo
     label: seo
   label: seo
+pages:
+- cms/posts/sema-egy-jo-blog-postra.md

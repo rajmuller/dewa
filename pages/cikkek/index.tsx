@@ -7,7 +7,7 @@ import { Flex, AspectRatio, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { getAllContents } from "../../util";
 import { Button } from "../../components/uikit";
 
-import { PostType } from "./types";
+import { PostType } from "../../types/postTypes";
 
 type CikkekType = {
   posts: PostType[];

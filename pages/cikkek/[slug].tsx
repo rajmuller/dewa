@@ -8,7 +8,7 @@ import PageBody from "../../components/PageBody";
 import PageHeader from "../../components/PageHeader";
 import { getAllContents, getContentBySlug } from "../../util";
 
-import { PostType } from "./types";
+import { PostType } from "../../types/postTypes";
 import { Button } from "../../components/uikit";
 
 type PostProps = {

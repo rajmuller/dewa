@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { PostTypeKeys } from "../pages/cikkek/types";
+import { PostTypeKeys } from "../types/postTypes";
 
 type ContentType = "posts" | "references";
 

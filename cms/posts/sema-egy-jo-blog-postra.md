@@ -1,5 +1,5 @@
 ---
-title: Sema egy jo blog postra
+title: Sema egy jo blog postra. Tudd meg mitol doglik a Pěty!
 date: 2021/01/11
 excerpt: Nyiss meg, hogy megtudd, hogyan lehet jol tagolni, szerkezteni egy cikket.
   Peldak, otletek, formazas, tiszta vizualis kaland.

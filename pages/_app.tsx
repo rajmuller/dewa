@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
       <StoreProvider store={store}>
-        <Box px={[4, 4, 32, 32]} maxW="1536px" margin="auto">
+        <Box px={[4, 4, 16, 32]} maxW="1536px" margin="auto">
           <Component {...pageProps} />
         </Box>
       </StoreProvider>

@@ -5,6 +5,10 @@ import { PostTypeKeys } from "../pages/cikkek/types";
 
 type ContentType = "posts" | "references";
 
+const getRealSrc = (coverImage: string) => {
+  return coverImage.replace("/public", "");
+};
+
 const getDirectory = (type: ContentType) => {
   switch (type) {
     case "posts":
@@ -42,7 +46,11 @@ export function getContentBySlug(
       items[field] = content;
     }
 
-    if (data[field]) {
+    if (field === "coverImage") {
+      const realSrc = getRealSrc(data[field]);
+
+      items[field] = realSrc;
+    } else if (data[field]) {
       items[field] = data[field];
     }
   });
@@ -56,6 +64,6 @@ export function getAllContents(type: ContentType, fields: PostTypeKeys[]) {
   const posts = slugs
     .map((slug) => getContentBySlug(type, slug, fields))
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1.datum > post2.datum ? -1 : 1));
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }

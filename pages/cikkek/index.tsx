@@ -37,8 +37,10 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
       spacing={[16, 16, 16, 20]}
     >
       {posts.map((post) => {
+        const { slug, coverImage, title, date, excerpt } = post;
+
         return (
-          <Flex direction="column" align="flex-start" key={post.slug}>
+          <Flex direction="column" align="flex-start" key={slug}>
             <AspectRatio
               ratio={1}
               position="relative"
@@ -49,8 +51,8 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
               borderRadius="lg"
             >
               <Image
-                src={post.coverImage}
-                alt={`image of ${post.title}`}
+                src={coverImage}
+                alt={`image of ${title}`}
                 layout="fill"
                 objectFit="cover"
               />
@@ -61,20 +63,20 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
               minH={[null, 64, 72, 80]}
             >
               <Heading variant="title" mb={[3, null, null, null]} noOfLines={2}>
-                {post.title}
+                {title}
               </Heading>
               <Text variant="meta" mb={[3, null, null, null]}>
-                {post.date}
+                {date}
               </Text>
               <Text
                 noOfLines={[100, 4, 4, 4]}
                 mb={[3, null, null, null]}
                 color="grey.iron"
               >
-                {post.excerpt}
+                {excerpt}
               </Text>
               <Button
-                onClick={() => onOpen(post.slug)}
+                onClick={() => onOpen(slug)}
                 variant="secondary"
                 side="right"
               >

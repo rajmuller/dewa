@@ -17,7 +17,7 @@ const PageHeader: FC<PageHeaderProps> = ({
         direction="column"
         align="flex-start"
         justify={[null, "space-between", "space-between", "space-between"]}
-        maxW={[null, "50%", "40%", "40%"]}
+        maxW={[null, "50%", "40%", "35%"]}
       >
         <Heading variant="title" mb={[3, null, null, null]}>
           {title}

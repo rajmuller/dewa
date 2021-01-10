@@ -2,7 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
-import { Box, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  UnorderedList,
+  OrderedList,
+  ListItem,
+  ListIcon,
+  AspectRatio,
+} from "@chakra-ui/react";
+
+import { TriangleIcon } from "./icons";
 
 type AProps = {
   href: string;
@@ -10,6 +21,8 @@ type AProps = {
 
 type ImgProps = {
   src: string;
+  alt: string;
+  title: string;
 };
 
 const A: FC<AProps> = ({ children, href }) => {
@@ -24,15 +37,29 @@ const A: FC<AProps> = ({ children, href }) => {
   );
 };
 
-const Img: FC<ImgProps> = ({ src: fullPath }) => {
+const Img: FC<ImgProps> = ({ src: fullPath, alt, title }) => {
   const src = fullPath.replace("/public", "");
 
   return (
-    <Box width="70vw" pt={`${(9 / 16) * 100}%`} position="relative">
-      <Image src={src} alt="asd" layout="fill" objectFit="cover" />;
-    </Box>
+    <AspectRatio
+      // pt={`${(9 / 16) * 100}%`}
+      ratio={16 / 9}
+      mx={-16}
+      position="relative"
+      borderRadius="2xl"
+      overflow="hidden"
+    >
+      <a target="_blank" href={src} rel="noreferrer">
+        <Image
+          src={src}
+          alt={alt}
+          title={title}
+          layout="fill"
+          objectFit="cover"
+        />
+      </a>
+    </AspectRatio>
   );
-  // return <Image src={src} alt="asd" height={600} width={1600} />;
 };
 
 const H1: FC = ({ children }) => {
@@ -44,11 +71,70 @@ const H1: FC = ({ children }) => {
 };
 
 const H2: FC = ({ children }) => {
-  return <Heading as="h2">{children}</Heading>;
+  return (
+    <Heading as="h2" mb={4}>
+      {children}
+    </Heading>
+  );
 };
 
 const H3: FC = ({ children }) => {
   return <Heading as="h3">{children}</Heading>;
+};
+
+const P: FC = ({ children }) => {
+  return <Text mb={4}>{children}</Text>;
+};
+
+const Ul: FC = ({ children }) => {
+  return (
+    <UnorderedList ml={0} listStyleType="none" spacing={2} mb={4}>
+      {children}
+    </UnorderedList>
+  );
+};
+
+const Ol: FC = ({ children }) => {
+  return (
+    <OrderedList spacing={3} mb={6}>
+      {children}
+    </OrderedList>
+  );
+};
+
+const Li: FC = ({ children }) => {
+  return (
+    <ListItem>
+      <ListIcon
+        mr={5}
+        verticalAlign="initial"
+        color="grey.shadow"
+        fontSize="xs"
+        as={TriangleIcon}
+      />
+      {children}
+    </ListItem>
+  );
+};
+
+const Blockqoute: FC = ({ children }) => {
+  return (
+    <Box
+      as="blockquote"
+      bg="blockquote"
+      borderLeftWidth="5px"
+      borderLeftStyle="solid"
+      borderLeftColor="secondary.500"
+      borderRadius="3xl"
+      borderTopLeftRadius="0"
+      color="#000"
+      px={6}
+      py={8}
+      my={6}
+    >
+      {children}
+    </Box>
+  );
 };
 
 type PageBodyProps = {
@@ -70,11 +156,47 @@ const PageBody: FC<PageBodyProps> = ({ content }) => {
       }
     },
 
-    image: Img,
+    paragraph: P,
+    image: ({
+      title,
+      alt,
+      src,
+    }: {
+      title: string;
+      alt: string;
+      src: string;
+    }) => {
+      return <Img title={title} alt={alt} src={src} />;
+    },
     link: A,
+    list: ({
+      ordered,
+      children,
+    }: {
+      ordered: boolean;
+      children: ReactNode;
+    }) => {
+      if (ordered) {
+        return <Ol>{children}</Ol>;
+      }
+      return <Ul>{children}</Ul>;
+    },
+    listItem: Li,
+    blockquote: Blockqoute,
   };
 
-  return <ReactMarkdown renderers={renderers}>{content}</ReactMarkdown>;
+  return (
+    <Box
+      as="article"
+      maxW="2xl"
+      color="grey.charcoal"
+      fontSize="lg"
+      margin="0 auto"
+      lineHeight="2"
+    >
+      <ReactMarkdown renderers={renderers}>{content}</ReactMarkdown>
+    </Box>
+  );
 };
 
 export default PageBody;

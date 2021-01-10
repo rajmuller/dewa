@@ -4,7 +4,6 @@ import { createBreakpoints } from "@chakra-ui/theme-tools";
 import styles from "./globalStyle";
 import colors from "./colors";
 import space from "./space";
-import buttonStyle from "./buttonStyle";
 import { headingStyles, textStyles } from "./typoStyles";
 
 const fonts = {
@@ -27,7 +26,6 @@ const theme = extendTheme({
   space,
   styles,
   components: {
-    Button: buttonStyle,
     Heading: headingStyles,
     Text: textStyles,
   },

@@ -16,19 +16,26 @@ type PostProps = {
 };
 
 const Post: FC<PostProps> = ({ post }) => {
-  const router = useRouter();
-  if (!router.isFallback && !post.slug) {
+  const { seo, content, slug } = post;
+
+  const { isFallback, back: onBack } = useRouter();
+  if (!isFallback && !slug) {
     return <div>ERRORPAGE</div>;
   }
 
   return (
     <>
       <Head>
-        <title>{post.seo.title}</title>
-        <meta name="description" content={post.seo.description} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
       </Head>
 
-      <Button variant="secondary" side="left">
+      <Button
+        variant="secondary"
+        mb={[8, 8, 12, 16]}
+        side="left"
+        onClick={onBack}
+      >
         Vissza
       </Button>
       <PageHeader post={post} />
@@ -39,7 +46,7 @@ const Post: FC<PostProps> = ({ post }) => {
         borderBottomWidth="2px"
         orientation="horizontal"
       />
-      <PageBody content={post.content} />
+      <PageBody content={content} />
       <Divider
         my={12}
         borderBottomColor="grey.metal"

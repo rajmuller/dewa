@@ -43,6 +43,7 @@ const colors = {
   background: "#F1F5FF",
   footer: "#0F162A",
   backdrop: "rgba(0, 0, 0, 0.8)",
+  blockquote: "#ffefef",
 };
 
 export default colors;

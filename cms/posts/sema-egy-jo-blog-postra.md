@@ -36,4 +36,4 @@ lista pelda
 * **First Meaningful Paint (FMP)** - because it influences potential user engagement,
 * **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
 
-![](/public/uploads/ptrick.jpg)
+![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/public/uploads/ptrick.jpg "Kezfogasa a ratyiknak")

@@ -10,6 +10,11 @@ export const headingStyles = {
       fontWeight: "semibold",
       color: "#000",
     },
+    articleTitle: {
+      fontSize: "2xl",
+      fontWeight: "semibold",
+      color: "#000",
+    },
   },
 };
 
@@ -25,11 +30,6 @@ export const textStyles = {
     },
     title: {
       fontSize: ["2xl", "2xl", "2xl", "4xl"],
-      fontWeight: "semibold",
-      color: "#000",
-    },
-    articleTitle: {
-      fontSize: "2xl",
       fontWeight: "semibold",
       color: "#000",
     },

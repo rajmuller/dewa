@@ -62,7 +62,11 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
               justify="space-between"
               minH={[null, 64, 72, 80]}
             >
-              <Heading variant="title" mb={[3, null, null, null]} noOfLines={2}>
+              <Heading
+                variant="articleTitle"
+                mb={[3, null, null, null]}
+                noOfLines={2}
+              >
                 {title}
               </Heading>
               <Text variant="meta" mb={[3, null, null, null]}>

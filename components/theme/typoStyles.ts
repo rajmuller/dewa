@@ -28,5 +28,10 @@ export const textStyles = {
       fontWeight: "semibold",
       color: "#000",
     },
+    articleTitle: {
+      fontSize: "2xl",
+      fontWeight: "semibold",
+      color: "#000",
+    },
   },
 };

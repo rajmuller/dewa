@@ -1,5 +1,5 @@
 ---
-label: reference-hall-of-fame
+label: reference
 hide_body: false
 fields:
 - name: title
@@ -9,19 +9,19 @@ fields:
   label: title
 - name: type
   type: select
-  default: galeria
+  default: gallery
   config:
     required: true
     options:
-    - buszkesegfal
-    - galeria
+    - gallery
+    - hall-of-fame
     source:
       type: simple
       section: 
       file: 
       path: 
   label: type
-  description: buszkesegfal vagy csak galeria
+  description: hall-of-fame project or jsut gallery
 - name: kivonat
   type: textarea
   default: ''

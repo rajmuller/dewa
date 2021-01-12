@@ -30,8 +30,8 @@ sections:
   match: "**/*"
 upload_dir: public/uploads
 public_path: "/public/uploads"
-front_matter_path: ''
-use_front_matter_path: false
+front_matter_path: "/uploads"
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: ".next"

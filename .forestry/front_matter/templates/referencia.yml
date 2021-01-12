@@ -22,15 +22,15 @@ fields:
       path: 
   label: type
   description: hall-of-fame project or jsut gallery
-- name: kivonat
+- name: excerpt
   type: textarea
   default: ''
   config:
-    required: false
-    wysiwyg: true
+    required: true
+    wysiwyg: false
     schema:
       format: markdown
-  label: kivonat
+  label: excerpt
 - name: date
   type: datetime
   label: date

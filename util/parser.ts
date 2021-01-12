@@ -5,10 +5,6 @@ import { PostTypeKeys } from "../types/postTypes";
 
 type ContentType = "posts" | "references";
 
-const getRealSrc = (coverImage: string) => {
-  return coverImage.replace("/public", "");
-};
-
 const getDirectory = (type: ContentType) => {
   switch (type) {
     case "posts":
@@ -46,11 +42,7 @@ export function getContentBySlug(
       items[field] = content;
     }
 
-    if (field === "coverImage") {
-      const realSrc = getRealSrc(data[field]);
-
-      items[field] = realSrc;
-    } else if (data[field]) {
+    if (data[field]) {
       items[field] = data[field];
     }
   });

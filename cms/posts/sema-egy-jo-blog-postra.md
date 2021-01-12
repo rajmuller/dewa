@@ -3,7 +3,7 @@ title: Sema egy jo blog postra. Tudd meg mitol doglik a Pěty!
 date: 2021/01/11
 excerpt: Nyiss meg, hogy megtudd, hogyan lehet jol tagolni, szerkezteni egy cikket.
   Peldak, otletek, formazas, tiszta vizualis kaland.
-coverImage: "/public/uploads/mountain.jpg"
+coverImage: "/uploads/mountain.jpg"
 seo:
   title: Google searchnel megjeleno resz | Dewa | Ipari festes
   description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
@@ -40,4 +40,4 @@ lista pelda
 * **First Meaningful Paint (FMP)** - because it influences potential user engagement,
 * **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
 
-![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/public/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")

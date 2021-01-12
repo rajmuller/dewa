@@ -8,13 +8,13 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   scrambled it to make a type specimen book. It has survived not only five centuries,
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
-coverImage: "/public/uploads/medence_fujas.jpg"
+coverImage: "/uploads/medence_fujas.jpg"
 gallery:
-- "/public/uploads/hero.png"
-- "/public/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
-- "/public/uploads/spray.png"
-- "/public/uploads/mountain.jpg"
-- "/public/uploads/ptrick.jpg"
+- "/uploads/hero.png"
+- "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
+- "/uploads/spray.png"
+- "/uploads/mountain.jpg"
+- "/uploads/ptrick.jpg"
 seo:
   title: Aquacomet pimpeles | Dewa | Ipari festes
   description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
@@ -57,4 +57,4 @@ lista pelda
 * **First Meaningful Paint (FMP)** - because it influences potential user engagement,
 * **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
 
-![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/public/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")

@@ -37,12 +37,9 @@ const A: FC<AProps> = ({ children, href }) => {
   );
 };
 
-const Img: FC<ImgProps> = ({ src: fullPath, alt, title }) => {
-  const src = fullPath.replace("/public", "");
-
+const Img: FC<ImgProps> = ({ src, alt, title }) => {
   return (
     <AspectRatio
-      // pt={`${(9 / 16) * 100}%`}
       ratio={16 / 9}
       mx={-16}
       position="relative"
@@ -166,6 +163,8 @@ const PageBody: FC<PageBodyProps> = ({ content }) => {
       alt: string;
       src: string;
     }) => {
+      console.log("SRC: ", src);
+
       return <Img title={title} alt={alt} src={src} />;
     },
     link: A,

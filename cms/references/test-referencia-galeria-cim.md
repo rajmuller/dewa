@@ -7,13 +7,13 @@ excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting indust
   typesetting, remaining essentially unchanged. It was popularised in the 1960s with
   the release of Letrase
 date: 2021/01/12
-coverimage: "/public/uploads/hero.png"
+coverImage: "/uploads/hero.png"
 gallery:
-- "/public/uploads/jap_garden.jpg"
-- "/public/uploads/spray.png"
-- "/public/uploads/pick_fujas.jpg"
-- "/public/uploads/mountain.jpg"
-- "/public/uploads/ptrick.jpg"
+- "/uploads/jap_garden.jpg"
+- "/uploads/spray.png"
+- "/uploads/pick_fujas.jpg"
+- "/uploads/mountain.jpg"
+- "/uploads/ptrick.jpg"
 seo:
   title: Best Cikk ever, minumum 20 chars
   description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es

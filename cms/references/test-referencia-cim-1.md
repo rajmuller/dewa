@@ -7,7 +7,7 @@ excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting indust
   typesetting, remaining essentially unchanged. It was popularised in the 1960s with
   the release of Letrase
 date: 2021/01/30
-coverimage: "/uploads/hero.png"
+coverImage: "/uploads/hero.png"
 gallery:
 - "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
 - "/uploads/mountain.jpg"

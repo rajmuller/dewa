@@ -64,3 +64,5 @@ fields:
     template: seo
     label: seo
   label: seo
+pages:
+- cms/references/test-referencia-cim.md

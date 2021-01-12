@@ -6,7 +6,7 @@ export const headingStyles = {
       color: "#000",
     },
     title: {
-      fontSize: ["2xl", "2xl", "3xl", "4xl"],
+      fontSize: ["2xl", "2xl", "3xl", "5xl"],
       fontWeight: "semibold",
       color: "#000",
     },

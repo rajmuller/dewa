@@ -18,5 +18,6 @@ seo:
   title: Best Cikk ever, minumum 20 chars
   description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
     rasiklik a szeme valakinek, meg is akarja nyitni!
+coverImage: "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
 
 ---

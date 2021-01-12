@@ -15,5 +15,6 @@ seo:
   title: Best Cikk ever, minumum 20 chars
   description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
     iopadfubn piodosdfij nopjsdfnb opjisdfnb '
+coverImage: "/uploads/jap_garden.jpg"
 
 ---

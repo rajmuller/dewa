@@ -33,7 +33,12 @@ fields:
     maxSize: 64
   label: gallery
 - name: seo
-  type: include
+  type: field_group
   config: {}
-  template: seo
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: seo
   label: seo

@@ -28,9 +28,8 @@ fields:
     maxSize: 64
   label: coverImage
 - name: gallery
-  type: file
-  config:
-    maxSize: 64
+  type: image_gallery
+  config: {}
   label: gallery
 - name: seo
   type: field_group

@@ -50,4 +50,5 @@ fields:
     label: seo
   label: seo
 pages:
+- cms/references/test-referencia-cim-2.md
 - cms/references/test-referencia-cim.md

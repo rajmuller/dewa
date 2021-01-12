@@ -1,5 +1,5 @@
 ---
-label: reference
+label: reference-hall-of-fame
 hide_body: false
 fields:
 - name: title
@@ -7,21 +7,6 @@ fields:
   config:
     required: true
   label: title
-- name: type
-  type: select
-  default: gallery
-  config:
-    required: true
-    options:
-    - gallery
-    - hall-of-fame
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: type
-  description: hall-of-fame project or jsut gallery
 - name: excerpt
   type: textarea
   default: ''

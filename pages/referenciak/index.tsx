@@ -1,13 +1,13 @@
 import { GetStaticProps } from "next";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { FC, useCallback } from "react";
-import { Flex, AspectRatio, Heading, Text, SimpleGrid } from "@chakra-ui/react";
+import { Grid, Heading } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
-import { Button } from "../../components/uikit";
-
 import { PostType } from "../../types/postTypes";
+
+import Reference from "../../components/Reference";
+import Gallery from "../../components/Gallery";
 
 type PostProps = {
   references: PostType[];
@@ -18,7 +18,7 @@ const Cikkek: FC<PostProps> = ({ references }) => {
   const onOpen = useCallback(
     (slug: string) => {
       router.push({
-        pathname: "/cikkek/[slug]",
+        pathname: "/referenciak/[slug]",
         query: { slug },
       });
     },
@@ -29,68 +29,47 @@ const Cikkek: FC<PostProps> = ({ references }) => {
     return <div>ERRORPAGE</div>;
   }
 
-  return (
-    <SimpleGrid
-      justify="center"
-      columns={[1, 2, 2, 3]}
-      my={16}
-      spacing={[16, 16, 16, 20]}
-    >
-      {references.map((reference) => {
-        const { slug, coverImage, title, date, excerpt } = reference;
+  const hallOfFames = references.filter((reference) => reference.content);
+  const galleries = references.filter((reference) => !reference.content);
 
-        return (
-          <Flex direction="column" align="flex-start" key={slug}>
-            <AspectRatio
-              ratio={1}
-              position="relative"
-              overflow="hidden"
-              d="flex"
-              w="100%"
-              mb={3}
-              borderRadius="lg"
-            >
-              <Image
-                src={coverImage}
-                alt={`image of ${title}`}
-                layout="fill"
-                objectFit="cover"
-              />
-            </AspectRatio>
-            <Flex
-              direction="column"
-              justify="space-between"
-              minH={[null, 64, 72, 80]}
-            >
-              <Heading
-                variant="articleTitle"
-                mb={[3, null, null, null]}
-                noOfLines={2}
-              >
-                {title}
-              </Heading>
-              <Text variant="meta" mb={[3, null, null, null]}>
-                {date}
-              </Text>
-              <Text
-                noOfLines={[100, 4, 4, 4]}
-                mb={[3, null, null, null]}
-                color="grey.iron"
-              >
-                {excerpt}
-              </Text>
-              <Button
-                onClick={() => onOpen(slug)}
-                variant="secondary"
-                side="right"
-              >
-                Elolvasom
-              </Button>
-            </Flex>
-          </Flex>
-        );
-      })}
-    </SimpleGrid>
+  return (
+    <>
+      <Heading textAlign="center">Büszkeségfal</Heading>
+      <Grid
+        mt={16}
+        justifyContent="center"
+        gridTemplateColumns={[
+          "1fr",
+          "repeat(2, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(2, 536px)",
+        ]}
+        columnGap={[16, 16, 16, 8]}
+        rowGap={[16, 16, 16, 20]}
+      >
+        {hallOfFames.map((hallOfFame) => {
+          return <Reference post={hallOfFame} onOpen={onOpen} />;
+        })}
+      </Grid>
+
+      <Heading textAlign="center" my={16}>
+        Galériák
+      </Heading>
+      <Grid
+        justify="space-between"
+        gridTemplateColumns={[
+          "1fr",
+          "repeat(2, 1fr)",
+          "repeat(2, 1fr)",
+          "repeat(3, 1fr)",
+        ]}
+        gap={[16, 16, 16, 20]}
+      >
+        {galleries.map((gallery) => {
+          return <Gallery post={gallery} onOpen={onOpen} />;
+        })}
+      </Grid>
+    </>
   );
 };
 
@@ -99,8 +78,10 @@ export const getStaticProps: GetStaticProps = async () => {
     "title",
     "excerpt",
     "coverImage",
+    "content",
     "gallery",
     "date",
+    "companyName",
     "seo",
     "slug",
   ]);

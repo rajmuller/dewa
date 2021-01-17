@@ -9,6 +9,7 @@ export type PostType = {
   date: string;
   coverImage: string;
   gallery?: string;
+  companyName?: string;
   excerpt: string;
   content: string;
   seo: SeoType;

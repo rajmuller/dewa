@@ -7,7 +7,7 @@ excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting indust
   typesetting, remaining essentially unchanged. It was popularised in the 1960s with
   the release of Letrase
 date: 2021/01/12
-coverImage: "/uploads/hero.png"
+coverImage: "/uploads/mountain.jpg"
 gallery:
 - "/uploads/jap_garden.jpg"
 - "/uploads/spray.png"
@@ -18,6 +18,5 @@ seo:
   title: Best Cikk ever, minumum 20 chars
   description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
     rasiklik a szeme valakinek, meg is akarja nyitni!
-coverImage: "/uploads/mountain.jpg"
 
 ---

@@ -22,9 +22,11 @@ const Article: FC<ArticleProps> = ({
       align="flex-start"
       key={slug}
       p={[null, null, null, 9]}
-      borderRadius={[null, null, null, "xl"]}
+      borderRadius={[null, null, null, "3xl"]}
       shadow={[null, null, null, "bigCard"]}
-      background={["transparentm", "transparentm", "transparentm", "#fff"]}
+      background={["transparent", "transparent", "transparent", "#fff"]}
+      onClick={() => onOpen(slug)}
+      cursor="pointer"
     >
       <Heading variant="title" mb={6} noOfLines={2}>
         {companyName}
@@ -36,7 +38,7 @@ const Article: FC<ArticleProps> = ({
         d="flex"
         w="100%"
         mb={6}
-        borderRadius="lg"
+        borderRadius="2xl"
       >
         <Image
           src={coverImage}
@@ -67,7 +69,7 @@ const Article: FC<ArticleProps> = ({
         >
           {excerpt}
         </Text>
-        <Button onClick={() => onOpen(slug)} variant="secondary" side="right">
+        <Button variant="secondary" side="right">
           Elolvasom
         </Button>
       </Flex>

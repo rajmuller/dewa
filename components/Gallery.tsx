@@ -23,6 +23,7 @@ const Gallery: FC<GalleryProps> = ({
       key={slug}
       background="#fff"
       borderRadius="xl"
+      overflow="hidden"
     >
       <AspectRatio
         ratio={16 / 9}
@@ -31,7 +32,6 @@ const Gallery: FC<GalleryProps> = ({
         d="flex"
         w="100%"
         mb={3}
-        borderRadius="lg"
       >
         <Image
           src={coverImage}

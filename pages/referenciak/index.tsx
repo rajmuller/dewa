@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { FC, useCallback } from "react";
+import { FC, useCallback, useMemo } from "react";
 import { Grid, Heading } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
@@ -25,12 +25,19 @@ const Cikkek: FC<PostProps> = ({ references }) => {
     [router]
   );
 
+  const hallOfFames = useMemo(
+    () => references.filter((reference) => reference.content),
+    [references]
+  );
+
+  const galleries = useMemo(
+    () => references.filter((reference) => !reference.content),
+    [references]
+  );
+
   if (router.isFallback || !references) {
     return <div>ERRORPAGE</div>;
   }
-
-  const hallOfFames = references.filter((reference) => reference.content);
-  const galleries = references.filter((reference) => !reference.content);
 
   return (
     <>

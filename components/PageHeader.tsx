@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { AspectRatio, Text, Heading, Flex } from "@chakra-ui/react";
+import { Text, Heading, Flex, Box } from "@chakra-ui/react";
 
 import { PostType } from "../types/postTypes";
 
@@ -12,12 +12,16 @@ const PageHeader: FC<PageHeaderProps> = ({
   post: { coverImage, date, excerpt, title },
 }) => {
   return (
-    <Flex direction={["column", "row", "row", "row"]} justify="space-between">
+    <Flex
+      direction={["column", "row", "row", "row"]}
+      align="center"
+      justify="space-between"
+    >
       <Flex
         direction="column"
         align="flex-start"
-        justify={[null, "space-between", "space-between", "space-between"]}
-        maxW={[null, "50%", "40%", "35%"]}
+        justify={[null, "center", "center", "center"]}
+        maxW={[null, "40%", "40%", "40%"]}
       >
         <Heading variant="title" mb={[3, null, null, null]}>
           {title}
@@ -33,14 +37,15 @@ const PageHeader: FC<PageHeaderProps> = ({
           {date}
         </Text>
       </Flex>
-      <AspectRatio
-        ratio={1}
+      <Box
         position="relative"
         overflow="hidden"
-        d="flex"
-        w={["100%", "40%", "35%", "35%"]}
-        mb={3}
+        h={["auto", "250px", "350px", "450px"]}
+        pt={["100%", "initial", "initial", "initial"]}
+        w={["100%", "250px", "350px", "450px"]}
         borderRadius="lg"
+        mb={6}
+        ml={[0, 16, 24, 32]}
       >
         <Image
           src={coverImage}
@@ -48,7 +53,7 @@ const PageHeader: FC<PageHeaderProps> = ({
           layout="fill"
           objectFit="cover"
         />
-      </AspectRatio>
+      </Box>
     </Flex>
   );
 };

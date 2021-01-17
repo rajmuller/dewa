@@ -41,7 +41,7 @@ const Img: FC<ImgProps> = ({ src, alt, title }) => {
   return (
     <AspectRatio
       ratio={16 / 9}
-      mx={-16}
+      mx={[0, 0, -16, -16]}
       position="relative"
       borderRadius="2xl"
       overflow="hidden"

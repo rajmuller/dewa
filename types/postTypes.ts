@@ -8,7 +8,7 @@ export type PostType = {
   title: string;
   date: string;
   coverImage: string;
-  gallery?: string;
+  gallery?: string[];
   companyName?: string;
   excerpt: string;
   content: string;

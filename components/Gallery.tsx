@@ -12,7 +12,7 @@ type GalleryProps = {
 };
 
 const Gallery: FC<GalleryProps> = ({
-  post: { slug, coverImage, title, date, excerpt },
+  post: { slug, coverImage, title },
   onOpen,
 }) => {
   return (
@@ -24,6 +24,8 @@ const Gallery: FC<GalleryProps> = ({
       background="#fff"
       borderRadius="xl"
       overflow="hidden"
+      onClick={() => onOpen(slug)}
+      cursor="pointer"
     >
       <AspectRatio
         ratio={16 / 9}
@@ -56,7 +58,6 @@ const Gallery: FC<GalleryProps> = ({
           {title}
         </Heading>
         <Button
-          onClick={() => onOpen(slug)}
           variant="secondary"
           p={0}
           fontSize={["12px", "12px", "14px", "16px"]}

@@ -40,6 +40,12 @@ const colors = {
     charcoal: "#333333",
     midnight: "#141414",
   },
+  curtain: {
+    "1": "rgba(0, 0, 0, 0.1)",
+    "2": "rgba(0, 0, 0, 0.2)",
+    "4": "rgba(0, 0, 0, 0.4)",
+    "6": "rgba(0, 0, 0, 0.6)",
+  },
   background: "#F1F5FF",
   footer: "#0F162A",
   backdrop: "rgba(0, 0, 0, 0.8)",

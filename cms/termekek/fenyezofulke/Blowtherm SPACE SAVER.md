@@ -8,7 +8,8 @@ leiras: "A Space Saver kialakítása a műhelyek akadálymentesítésére lett f
   Így a lehető legkevesebb hasznos térről kell lemondani a műhelyen belül, ezzel is
   elősegítve az akadálytalanul menő munkafolyamatokat.\nAz innovatív Blowpower™ rendszer
   felgyorsítja a szárítási folyamatokat és egyben költséghatékonyabbá teszi a fülke
-  működtetését."
+  működtetését.\nAz elérhető belméretek személyre szabott igények szerint alakíthatóak
+  - ebben a  témában bátran keresse szakembereinket! "
 boritokep: "/uploads/blowtherm-space-saver-ipari.jpg"
 
 ---

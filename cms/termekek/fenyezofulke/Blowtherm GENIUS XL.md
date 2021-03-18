@@ -6,7 +6,7 @@ leiras: "Kezelje a legforgalmasabb napokat is egyszerűen a különböző méret
   változatos Genius előkészítő állásokkal!\nHőszigetelt és magas minőségű oldalfalak,
   manuális vagy automatikusan elhúzható függönyök és kapuk, szárítást segítő infravörös
   lámpák, ergonomikus liftek, beépített füstgázelszívók és egyszerű érintőképernyés
-  vezérlések csak pár a lehetséges extrák közül.  "
+  vezérlések - ezek csak pár a lehetséges extrák közül!  "
 boritokep: "/uploads/blowtherm-genius-xl-ipari-elokeszito.jpg"
 
 ---

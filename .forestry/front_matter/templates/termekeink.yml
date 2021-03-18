@@ -1,5 +1,5 @@
 ---
-label: termek
+label: fenyezofulke termek
 hide_body: true
 fields:
 - name: nev
@@ -16,3 +16,32 @@ fields:
     schema:
       format: markdown
   label: leiras
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: divizio
+  type: text
+  config:
+    required: false
+  label: divizio
+  default: FÉNYEZŐFÜLKE
+- name: alkategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Személyautó fényezőfülkék
+    - Ipari fényezőfülkék
+    - Vasúti fényezőfülkék
+    - Előkészítő állások és festékkonyhák
+    - Fülkék és autójavító szervizek kiegészítő berendezései
+    - Szűrők és pormentesítők
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: alkategoria

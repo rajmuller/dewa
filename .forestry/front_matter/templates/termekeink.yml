@@ -45,3 +45,5 @@ fields:
       file: 
       path: 
   label: alkategoria
+pages:
+- cms/termekek/fenyezofulke/Blowtherm EXTRA.md

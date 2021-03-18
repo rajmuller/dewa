@@ -1,4 +1,47 @@
 ---
 label: tuzelestechnika termek
 hide_body: true
-fields: []
+fields:
+- name: nev
+  type: text
+  config:
+    required: false
+  label: nev
+- name: leiras
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: leiras
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: divizio
+  type: text
+  config:
+    required: false
+  label: divizio
+  default: TÜZELÉSTECHNIKA
+- name: alk
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Hőlégfúvók
+    - Melegvizes és gőzkazánok
+    - Blokkégők
+    - Fan-coilok
+    - Hőcserélők
+    - Hősugárzók
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: alkategoria

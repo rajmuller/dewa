@@ -1,4 +1,49 @@
 ---
 label: ipari feluletkezeles termek
 hide_body: true
-fields: []
+fields:
+- name: nev
+  type: text
+  config:
+    required: false
+  label: nev
+- name: leiras
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: leiras
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: divizio
+  type: text
+  config:
+    required: false
+  label: divizio
+  default: IPARI FELÜLETKEZELÉS
+- name: alkategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Szárító kemencék
+    - Felületkezelők
+    - Szennyvízkezelő berendezések
+    - Porszóró berendezések
+    - Anyagmozgató berendezések
+    - Ipari automata robotok, festőberendezések
+    - KTL festősorok
+    - Egyedi tervezésű festőberendezések
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: alkategoria

@@ -1,6 +1,6 @@
 ---
 divizio: FÉNYEZŐFÜLKE
-alkategoria: ''
+alkategoria: Előkészítő állások és festékkonyhák
 nev: BLOWTHERM GENIUS
 leiras: "Kezelje a legforgalmasabb napokat is a különböző méretű és beállításaiban
   változatos Genius előkészítő állásokkal!\n Hőszigetelt és magas minőségű oldalfalak,

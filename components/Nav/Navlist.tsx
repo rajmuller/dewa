@@ -1,11 +1,11 @@
 import { FC, useState, useCallback } from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import Link from "next/link";
-
 import { useRouter } from "next/router";
-import BaseButton from "./uikit/Button/BaseButton";
-import { OutsideIcon } from "./icons/OutsideIcon";
-import { getRemovedAccents } from "../util/removeAccents";
+
+import { getRemovedAccents } from "../../util/removeAccents";
+import BaseButton from "../uikit/Button/BaseButton";
+import { OutsideIcon, ChevronDownIcon } from "../icons";
 
 type LinkItemProps = {
   currentPage?: boolean;
@@ -52,31 +52,37 @@ const ProductCategories: FC<ProductCategoriesProps> = ({
   if (!show) {
     return null;
   }
+
   return (
     <Box
-      p={4}
-      zIndex={1}
+      pt={2}
       position="absolute"
       top={6}
       left={-4}
-      borderBottomRadius="lg"
+      borderBottomRadius="2xl"
       bg="background"
     >
       {productCategories.map((category, i) => {
         const lowcase = category.toLowerCase();
         const href = `termekek/${getRemovedAccents(lowcase)}`;
         return (
-          <LinkItem
-            key={category}
-            href={href}
-            currentPage={currentPage}
-            css={{
-              marginBottom:
-                i + 1 < productCategories.length ? "24px" : "initial",
-            }}
-          >
-            {category}
-          </LinkItem>
+          <Box key={category}>
+            <LinkItem
+              href={href}
+              currentPage={currentPage}
+              css={{
+                paddingTop: "12px",
+                paddingBottom: "12px",
+                paddingLeft: "16px",
+                paddingRight: "16px",
+              }}
+            >
+              {category}
+            </LinkItem>
+            {i + 1 < productCategories.length && (
+              <Box height={0.25} width="100%" backgroundColor="curtain.2" />
+            )}
+          </Box>
         );
       })}
     </Box>
@@ -98,15 +104,14 @@ const Products: FC<ProductsProps> = ({ children, currentPage }) => {
 
   return (
     <Box
+      mr={12}
       position="relative"
+      zIndex={1}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      mr={12}
-      _hover={{
-        transform: "scale(1.02)",
-      }}
     >
       {children}
+      <ChevronDownIcon ml={1} fill="none" width={3} />
       <ProductCategories show={show} currentPage={currentPage} />
     </Box>
   );
@@ -120,8 +125,8 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
   const { pathname } = useRouter();
   const currentPage = pathname.includes(href);
   // TODO: remove & check red active links on products
-  console.log(href);
-  console.log(pathname);
+  console.log({ href });
+  console.log({ pathname });
 
   if (children === "Karrier") {
     return (

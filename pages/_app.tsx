@@ -3,7 +3,7 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 
 import { useHydrate, StoreProvider } from "../store";
 import theme from "../components/theme";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Nav/Navbar";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const store = useHydrate(pageProps.initialZustandState);

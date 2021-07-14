@@ -5,13 +5,15 @@ import Link from "next/link";
 
 import Navlist from "./Navlist";
 
+export const navbarPY = 2;
+
 const Navbar: FC = () => {
   return (
     <Flex
       align="center"
       justify="space-between"
       px={[4, 4, 16, 32]}
-      py={2}
+      py={navbarPY}
       maxW="1536px"
     >
       <Box cursor="pointer" h={10} w={32} position="relative">

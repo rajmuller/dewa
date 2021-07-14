@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";
 
-import { Divider, SimpleGrid, Box } from "@chakra-ui/react";
+import { Divider } from "@chakra-ui/react";
 
 import { Button } from "../../components/uikit";
 import PageBody from "../../components/PageBody";

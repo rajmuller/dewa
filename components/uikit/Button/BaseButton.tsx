@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { FC } from "react";
 import { Box } from "@chakra-ui/react";
 
@@ -29,7 +30,6 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       color="#fff"
       _hover={{ bg: `${variant}.700` }}
       _active={{
-        bg: `${variant}.900`,
         transform: "scale(0.98)",
       }}
       _focus={{
@@ -38,7 +38,9 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       }}
       {...props}
     >
-      {side === "left" ? (
+      {!side ? (
+        <>{children}</>
+      ) : side === "left" ? (
         <>
           <ChevronLeftIcon fontSize={[10, 10, 12, 15]} mr={m} />
           {children}

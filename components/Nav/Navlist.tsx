@@ -1,11 +1,31 @@
 import { FC, useState, useCallback } from "react";
-import { Box, Flex } from "@chakra-ui/react";
-import Link from "next/link";
+import {
+  Box,
+  useDisclosure,
+  Link as ChakraLink,
+  MenuItem,
+  IconButton,
+  Flex,
+  Stack,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
 import BaseButton from "../uikit/Button/BaseButton";
-import { OutsideIcon, ChevronDownIcon } from "../icons";
+import {
+  ChevronDownIcon,
+  OutsideIcon,
+  HamburgerIcon,
+  CloseIcon,
+} from "../icons";
+
+import { headerPX } from "./consts";
 
 type LinkItemProps = {
   currentPage?: boolean;
@@ -15,12 +35,13 @@ type LinkItemProps = {
 
 const LinkItem: FC<LinkItemProps> = ({ children, currentPage, href, css }) => {
   return (
-    <Link href={href}>
+    <NextLink href={href} passHref>
       <a>
         <Box
-          color={currentPage ? "secondary.500" : "black"}
+          color={
+            currentPage ? "secondary.500" : ["white", "white", "white", "black"]
+          }
           cursor="pointer"
-          mr={12}
           css={css}
           _hover={{
             transform: "scale(1.02)",
@@ -29,7 +50,7 @@ const LinkItem: FC<LinkItemProps> = ({ children, currentPage, href, css }) => {
           {children}
         </Box>
       </a>
-    </Link>
+    </NextLink>
   );
 };
 
@@ -104,7 +125,6 @@ const Products: FC<ProductsProps> = ({ children, currentPage }) => {
 
   return (
     <Box
-      mr={12}
       position="relative"
       zIndex={1}
       onMouseEnter={onMouseEnter}
@@ -130,19 +150,20 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
 
   if (children === "Karrier") {
     return (
-      <Box
-        color={currentPage ? "secondary.500" : "black"}
+      <ChakraLink
+        isExternal
+        href={href}
+        color={
+          currentPage ? "secondary.500" : ["white", "white", "white", "black"]
+        }
         cursor="pointer"
-        mr={12}
         _hover={{
           transform: "scale(1.02)",
         }}
       >
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          {children}
-          <OutsideIcon />
-        </a>
-      </Box>
+        {children}
+        <OutsideIcon />
+      </ChakraLink>
     );
   }
 
@@ -158,25 +179,52 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
 };
 
 const Navlist: FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <Flex align="center">
-      <NavItem href="/termekek">Termékek</NavItem>
-      <NavItem href="/referenciak">Referenciák</NavItem>
-      <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
-        Karrier
-      </NavItem>
-      <NavItem href="/cikkek">Cikkek</NavItem>
-      <NavItem href="/kapcsolat">Kapcsolat</NavItem>
-      <BaseButton
-        variant="primary"
-        px={[3, 3, 3, 3]}
-        py={[2, 2, 2, 2]}
-        fontSize="normal"
-        borderRadius="base"
-      >
-        Írjon Nekünk
-      </BaseButton>
-    </Flex>
+    <>
+      <IconButton
+        alignSelf="flex-end"
+        bg="transparent !important"
+        aria-label="Menu"
+        onClick={onOpen}
+        icon={<HamburgerIcon w="36px" h="21px" />}
+      />
+      <Drawer size="xs" onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent bg="primary.9 00" color="white">
+          <DrawerHeader d="flex" justifyContent="flex-end" px={headerPX}>
+            <IconButton
+              alignSelf="flex-end"
+              bg="transparent !important"
+              aria-label="Menu"
+              onClick={onClose}
+              icon={<CloseIcon boxSize="21px" />}
+            />
+          </DrawerHeader>
+          <DrawerBody fontSize="2xl">
+            <Stack spacing={12} align="center" pt={8} direction="column">
+              <NavItem href="/termekek">Termékek</NavItem>
+              <NavItem href="/referenciak">Referenciák</NavItem>
+              <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
+                Karrier
+              </NavItem>
+              <NavItem href="/cikkek">Cikkek</NavItem>
+              <NavItem href="/kapcsolat">Kapcsolat</NavItem>
+              <BaseButton
+                variant="primary"
+                px={[3, 3, 3, 3]}
+                py={[2, 2, 2, 2]}
+                fontSize="normal"
+                borderRadius="base"
+              >
+                Írjon Nekünk
+              </BaseButton>
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </>
   );
 };
 

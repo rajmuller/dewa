@@ -14,10 +14,10 @@ const fonts = {
 };
 
 const breakpoints = createBreakpoints({
-  sm: "640px",
-  md: "832px",
-  lg: "1280px",
-  xl: "1280px",
+  sm: "40em", // 640px
+  md: "52em", // 832px
+  lg: "75em", // 1200px
+  xl: "75em",
 });
 
 const theme = extendTheme({

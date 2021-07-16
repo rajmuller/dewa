@@ -163,8 +163,6 @@ const PageBody: FC<PageBodyProps> = ({ content }) => {
       alt: string;
       src: string;
     }) => {
-      console.log("SRC: ", src);
-
       return <Img title={title} alt={alt} src={src} />;
     },
     link: A,

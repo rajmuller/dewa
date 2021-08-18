@@ -3,20 +3,20 @@ import {
   Box,
   useDisclosure,
   Link as ChakraLink,
-  MenuItem,
   IconButton,
-  Flex,
   Stack,
   Drawer,
   DrawerOverlay,
   DrawerContent,
   DrawerHeader,
   DrawerBody,
+  Flex,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
+import { useBreakpoints } from "../../hooks";
 import BaseButton from "../uikit/Button/BaseButton";
 import {
   ChevronDownIcon,
@@ -42,10 +42,10 @@ const LinkItem: FC<LinkItemProps> = ({ children, currentPage, href, css }) => {
             currentPage ? "secondary.500" : ["white", "white", "white", "black"]
           }
           cursor="pointer"
-          css={css}
           _hover={{
             transform: "scale(1.02)",
           }}
+          {...css}
         >
           {children}
         </Box>
@@ -53,6 +53,13 @@ const LinkItem: FC<LinkItemProps> = ({ children, currentPage, href, css }) => {
     </NextLink>
   );
 };
+
+const productCategories = [
+  "Felületkezelés",
+  "Festőfülkék",
+  "Tüzeléstechnika",
+  "Szórástechnika",
+];
 
 type ProductCategoriesProps = {
   currentPage?: boolean;
@@ -63,50 +70,71 @@ const ProductCategories: FC<ProductCategoriesProps> = ({
   show,
   currentPage,
 }) => {
-  const productCategories = [
-    "Felületkezelés",
-    "Festőfülkék",
-    "Tüzeléstechnika",
-    "Szórástechnika",
-  ];
+  const { lg } = useBreakpoints();
 
   if (!show) {
     return null;
   }
 
+  if (lg) {
+    return (
+      <Box
+        pt={2}
+        position="absolute"
+        top={6}
+        left={-4}
+        borderBottomRadius="2xl"
+        bg="background"
+      >
+        {productCategories.map((category, i) => {
+          const lowcase = category.toLowerCase();
+          const href = `termekek/${getRemovedAccents(lowcase)}`;
+          return (
+            <Box key={category}>
+              <LinkItem
+                href={href}
+                currentPage={currentPage}
+                css={{
+                  paddingTop: "12px",
+                  paddingBottom: "12px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                }}
+              >
+                {category}
+              </LinkItem>
+              {i + 1 < productCategories.length && (
+                <Box height={0.25} width="100%" backgroundColor="curtain.2" />
+              )}
+            </Box>
+          );
+        })}
+      </Box>
+    );
+  }
+
   return (
-    <Box
-      pt={2}
-      position="absolute"
-      top={6}
-      left={-4}
-      borderBottomRadius="2xl"
-      bg="background"
-    >
+    <Stack alignItems="flex-end" mt={6}>
       {productCategories.map((category, i) => {
         const lowcase = category.toLowerCase();
         const href = `termekek/${getRemovedAccents(lowcase)}`;
         return (
-          <Box key={category}>
-            <LinkItem
-              href={href}
-              currentPage={currentPage}
-              css={{
-                paddingTop: "12px",
-                paddingBottom: "12px",
-                paddingLeft: "16px",
-                paddingRight: "16px",
-              }}
-            >
-              {category}
-            </LinkItem>
-            {i + 1 < productCategories.length && (
-              <Box height={0.25} width="100%" backgroundColor="curtain.2" />
-            )}
-          </Box>
+          <LinkItem
+            key={category}
+            href={href}
+            currentPage={currentPage}
+            css={{
+              paddingTop: "12px",
+              paddingBottom: "12px",
+              paddingLeft: "16px",
+              fontSize: "lg",
+            }}
+          >
+            {category}
+          </LinkItem>
         );
       })}
-    </Box>
+    </Stack>
   );
 };
 
@@ -115,25 +143,40 @@ type ProductsProps = {
 };
 
 const Products: FC<ProductsProps> = ({ children, currentPage }) => {
+  const { lg } = useBreakpoints();
   const [show, setShow] = useState(false);
-  const onMouseEnter = useCallback(() => {
+  const onOpen = useCallback(() => {
     setShow(true);
   }, []);
-  const onMouseLeave = useCallback(() => {
+  const onClose = useCallback(() => {
     setShow(false);
   }, []);
 
+  const toggleShow = useCallback(() => {
+    setShow(!show);
+  }, [show]);
+
   return (
-    <Box
+    <Flex
+      direction="column"
       position="relative"
       zIndex={1}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onClick={!lg ? toggleShow : null}
+      onMouseEnter={lg ? onOpen : null}
+      onMouseLeave={lg ? onClose : null}
     >
-      {children}
-      <ChevronDownIcon ml={1} fill="none" width={3} />
+      <Flex align="center" justify="flex-end">
+        {children}
+        <ChevronDownIcon
+          ml={3}
+          transform={show ? "rotate(180deg)" : "none"}
+          transitionDuration="0.2s"
+          fill="none"
+          width={3}
+        />
+      </Flex>
       <ProductCategories show={show} currentPage={currentPage} />
-    </Box>
+    </Flex>
   );
 };
 
@@ -191,8 +234,8 @@ const Navlist: FC = () => {
         icon={<HamburgerIcon w="36px" h="21px" />}
       />
       <Drawer size="xs" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent bg="primary.9 00" color="white">
+        <DrawerOverlay background="backdrop" />
+        <DrawerContent borderLeftRadius="xl" bg="primary.700" color="white">
           <DrawerHeader d="flex" justifyContent="flex-end" px={headerPX}>
             <IconButton
               alignSelf="flex-end"
@@ -202,8 +245,8 @@ const Navlist: FC = () => {
               icon={<CloseIcon boxSize="21px" />}
             />
           </DrawerHeader>
-          <DrawerBody fontSize="2xl">
-            <Stack spacing={12} align="center" pt={8} direction="column">
+          <DrawerBody fontSize="2xl" px={12}>
+            <Stack spacing={12} align="flex-end" pt={8} direction="column">
               <NavItem href="/termekek">Termékek</NavItem>
               <NavItem href="/referenciak">Referenciák</NavItem>
               <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
@@ -213,10 +256,11 @@ const Navlist: FC = () => {
               <NavItem href="/kapcsolat">Kapcsolat</NavItem>
               <BaseButton
                 variant="primary"
-                px={[3, 3, 3, 3]}
-                py={[2, 2, 2, 2]}
+                width="100%"
+                py={[3, 3, 3, 2]}
                 fontSize="normal"
-                borderRadius="base"
+                borderRadius="md"
+                mb={[12, 12, 12, 0]}
               >
                 Írjon Nekünk
               </BaseButton>

@@ -6,6 +6,7 @@ import colors from "./colors";
 import space from "./space";
 import shadows from "./shadows";
 import { headingStyles, textStyles } from "./typoStyles";
+import Breakpoints from "../../util/breakpoints";
 
 const fonts = {
   body: "'Montserrat', sans-serif",
@@ -13,11 +14,13 @@ const fonts = {
   mono: "'Montserrat', sans-serif",
 };
 
+const { sm, md, lg, xl } = Breakpoints;
+
 const breakpoints = createBreakpoints({
-  sm: "40em", // 640px
-  md: "52em", // 832px
-  lg: "75em", // 1200px
-  xl: "75em",
+  sm,
+  md,
+  lg,
+  xl,
 });
 
 const theme = extendTheme({

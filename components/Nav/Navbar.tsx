@@ -4,11 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Navlist from "./Navlist";
-import { headerPX } from "./consts";
+import { headerMaxW, headerPX } from "./consts";
 
 const Navbar: FC = () => {
   return (
-    <Flex align="center" justify="space-between" px={headerPX} maxW="1536px">
+    <Flex
+      align="center"
+      justify="space-between"
+      px={headerPX}
+      py={4}
+      maxW={headerMaxW}
+    >
       <Box cursor="pointer" h={10} w={20} position="relative">
         <Link href="/">
           <a>

@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { FC } from "react";

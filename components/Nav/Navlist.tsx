@@ -1,4 +1,4 @@
-import { FC, useState, useCallback } from "react";
+import React, { FC, useState, useCallback } from "react";
 import {
   Box,
   useDisclosure,
@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
 import { useCurrentBreakpoint } from "../../hooks";
-import BaseButton from "../uikit/Button/BaseButton";
+
 import {
   ChevronDownIcon,
   OutsideIcon,
@@ -26,6 +26,7 @@ import {
 } from "../icons";
 
 import { headerPX } from "./consts";
+import Contact from "./Contact";
 
 type LinkItemProps = {
   href: string;
@@ -189,18 +190,20 @@ type NavItemProps = {
 const NavItem: FC<NavItemProps> = ({ children, href }) => {
   if (children === "Karrier") {
     return (
-      <ChakraLink
-        isExternal
-        href={href}
-        color={["white", "white", "white", "black"]}
-        cursor="pointer"
-        _hover={{
-          transform: "scale(1.02)",
-        }}
-      >
-        {children}
+      <Flex align="center">
+        <ChakraLink
+          isExternal
+          href={href}
+          color={["white", "white", "white", "black"]}
+          cursor="pointer"
+          _hover={{
+            transform: "scale(1.02)",
+          }}
+        >
+          {children}
+        </ChakraLink>
         <OutsideIcon />
-      </ChakraLink>
+      </Flex>
     );
   }
 
@@ -211,31 +214,31 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
   return <LinkItem href={href}>{children}</LinkItem>;
 };
 
+const NavItems: FC = () => {
+  return (
+    <Stack
+      spacing={12}
+      align={["flex-end", "flex-end", "flex-end", "baseline"]}
+      direction={["column", "column", "column", "row"]}
+    >
+      <NavItem href="/termekek">Termékek</NavItem>
+      <NavItem href="/referenciak">Referenciák</NavItem>
+      <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
+        Karrier
+      </NavItem>
+      <NavItem href="/cikkek">Cikkek</NavItem>
+      <NavItem href="/kapcsolat">Kapcsolat</NavItem>
+      <Contact />
+    </Stack>
+  );
+};
+
 const Navlist: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { lg } = useCurrentBreakpoint();
 
   if (lg) {
-    return (
-      <Stack spacing={12} align="baseline" direction="row">
-        <NavItem href="/termekek">Termékek</NavItem>
-        <NavItem href="/referenciak">Referenciák</NavItem>
-        <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
-          Karrier
-        </NavItem>
-        <NavItem href="/cikkek">Cikkek</NavItem>
-        <NavItem href="/kapcsolat">Kapcsolat</NavItem>
-        <BaseButton
-          variant="primary"
-          py={[3, 3, 3, 2]}
-          fontSize="normal"
-          borderRadius="md"
-          mb={[12, 12, 12, 0]}
-        >
-          Írjon Nekünk
-        </BaseButton>
-      </Stack>
-    );
+    return <NavItems />;
   }
   return (
     <>
@@ -259,25 +262,7 @@ const Navlist: FC = () => {
             />
           </DrawerHeader>
           <DrawerBody fontSize="2xl" px={12}>
-            <Stack spacing={12} align="flex-end" pt={8} direction="column">
-              <NavItem href="/termekek">Termékek</NavItem>
-              <NavItem href="/referenciak">Referenciák</NavItem>
-              <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
-                Karrier
-              </NavItem>
-              <NavItem href="/cikkek">Cikkek</NavItem>
-              <NavItem href="/kapcsolat">Kapcsolat</NavItem>
-              <BaseButton
-                variant="primary"
-                width="100%"
-                py={[3, 3, 3, 2]}
-                fontSize="normal"
-                borderRadius="md"
-                mb={[12, 12, 12, 0]}
-              >
-                Írjon Nekünk
-              </BaseButton>
-            </Stack>
+            <NavItems />
           </DrawerBody>
         </DrawerContent>
       </Drawer>

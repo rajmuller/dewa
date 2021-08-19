@@ -6,3 +6,5 @@ export * from "./ChevronDownIcon";
 export * from "./OutsideIcon";
 export * from "./HamburgerIcon";
 export * from "./CloseIcon";
+export * from "./DewaIcon";
+export * from "./DotsIcon";

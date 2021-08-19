@@ -1,29 +1,13 @@
 import { FC } from "react";
 
-import { ChevronLeftIcon, ChevronRightIcon } from "../../icons";
-
 import BaseButton from "./BaseButton";
-
 import { ButtonProps } from "./types";
 
-const Primary: FC<ButtonProps> = ({ side, ...props }) => {
-  if (side === "left") {
-    return (
-      <BaseButton
-        borderBottomColor="secondary.500"
-        leftIcon={<ChevronLeftIcon fontSize={[10, 10, 12, 15]} />}
-        {...props}
-      />
-    );
-  }
-
+const Primary: FC<ButtonProps> = ({ children, ...props }) => {
   return (
-    <BaseButton
-      borderBottom="1px solid"
-      borderBottomColor="secondary.500"
-      rightIcon={<ChevronRightIcon fontSize={[10, 10, 12, 15]} />}
-      {...props}
-    />
+    <BaseButton bg="primary.700" _hover={{ bg: "primary.800" }} {...props}>
+      {children}
+    </BaseButton>
   );
 };
 
@@ -58,3 +42,5 @@ const Button: FC<ButtonProps> = ({ side, ...props }) => {
 };
 
 export default Button;
+
+export { BaseButton };

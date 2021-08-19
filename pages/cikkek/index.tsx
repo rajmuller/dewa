@@ -38,7 +38,7 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
         spacing={[16, 16, 16, 20]}
       >
         {posts.map((post) => {
-          return <Article post={post} onOpen={onOpen} />;
+          return <Article key={post.slug} post={post} onOpen={onOpen} />;
         })}
       </SimpleGrid>
     </>

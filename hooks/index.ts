@@ -1,1 +1,1 @@
-export { default as useBreakpoints } from "./useBreakpoints";
+export { default as useCurrentBreakpoint } from "./useCurrentBreakpoint";

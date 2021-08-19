@@ -16,7 +16,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
-import { useBreakpoints } from "../../hooks";
+import { useCurrentBreakpoint } from "../../hooks";
 import BaseButton from "../uikit/Button/BaseButton";
 import {
   ChevronDownIcon,
@@ -28,12 +28,17 @@ import {
 import { headerPX } from "./consts";
 
 type LinkItemProps = {
-  currentPage?: boolean;
   href: string;
   css?: any;
 };
 
-const LinkItem: FC<LinkItemProps> = ({ children, currentPage, href, css }) => {
+const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
+  const { pathname } = useRouter();
+  const currentPage = pathname.includes(href);
+  // TODO: remove & check red active links on products
+  console.log({ href });
+  console.log({ pathname });
+
   return (
     <NextLink href={href} passHref>
       <a>
@@ -62,15 +67,11 @@ const productCategories = [
 ];
 
 type ProductCategoriesProps = {
-  currentPage?: boolean;
   show: boolean;
 };
 
-const ProductCategories: FC<ProductCategoriesProps> = ({
-  show,
-  currentPage,
-}) => {
-  const { lg } = useBreakpoints();
+const ProductCategories: FC<ProductCategoriesProps> = ({ show }) => {
+  const { lg } = useCurrentBreakpoint();
 
   if (!show) {
     return null;
@@ -93,7 +94,6 @@ const ProductCategories: FC<ProductCategoriesProps> = ({
             <Box key={category}>
               <LinkItem
                 href={href}
-                currentPage={currentPage}
                 css={{
                   paddingTop: "12px",
                   paddingBottom: "12px",
@@ -115,14 +115,13 @@ const ProductCategories: FC<ProductCategoriesProps> = ({
 
   return (
     <Stack alignItems="flex-end" mt={6}>
-      {productCategories.map((category, i) => {
+      {productCategories.map((category) => {
         const lowcase = category.toLowerCase();
         const href = `termekek/${getRemovedAccents(lowcase)}`;
         return (
           <LinkItem
             key={category}
             href={href}
-            currentPage={currentPage}
             css={{
               paddingTop: "12px",
               paddingBottom: "12px",
@@ -138,16 +137,18 @@ const ProductCategories: FC<ProductCategoriesProps> = ({
   );
 };
 
-type ProductsProps = {
-  currentPage?: boolean;
-};
+const Products: FC = ({ children }) => {
+  const { pathname } = useRouter();
+  const currentPage = pathname.includes("termekek");
 
-const Products: FC<ProductsProps> = ({ children, currentPage }) => {
-  const { lg } = useBreakpoints();
+  const { lg } = useCurrentBreakpoint();
+
   const [show, setShow] = useState(false);
+
   const onOpen = useCallback(() => {
     setShow(true);
   }, []);
+
   const onClose = useCallback(() => {
     setShow(false);
   }, []);
@@ -173,9 +174,10 @@ const Products: FC<ProductsProps> = ({ children, currentPage }) => {
           transitionDuration="0.2s"
           fill="none"
           width={3}
+          color={currentPage && "secondary.500"}
         />
       </Flex>
-      <ProductCategories show={show} currentPage={currentPage} />
+      <ProductCategories show={show} />
     </Flex>
   );
 };
@@ -185,20 +187,12 @@ type NavItemProps = {
 };
 
 const NavItem: FC<NavItemProps> = ({ children, href }) => {
-  const { pathname } = useRouter();
-  const currentPage = pathname.includes(href);
-  // TODO: remove & check red active links on products
-  console.log({ href });
-  console.log({ pathname });
-
   if (children === "Karrier") {
     return (
       <ChakraLink
         isExternal
         href={href}
-        color={
-          currentPage ? "secondary.500" : ["white", "white", "white", "black"]
-        }
+        color={["white", "white", "white", "black"]}
         cursor="pointer"
         _hover={{
           transform: "scale(1.02)",
@@ -211,19 +205,38 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
   }
 
   if (children === "Termékek") {
-    return <Products currentPage={currentPage}>{children}</Products>;
+    return <Products>{children}</Products>;
   }
 
-  return (
-    <LinkItem currentPage={currentPage} href={href}>
-      {children}
-    </LinkItem>
-  );
+  return <LinkItem href={href}>{children}</LinkItem>;
 };
 
 const Navlist: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { lg } = useCurrentBreakpoint();
 
+  if (lg) {
+    return (
+      <Stack spacing={12} align="baseline" direction="row">
+        <NavItem href="/termekek">Termékek</NavItem>
+        <NavItem href="/referenciak">Referenciák</NavItem>
+        <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
+          Karrier
+        </NavItem>
+        <NavItem href="/cikkek">Cikkek</NavItem>
+        <NavItem href="/kapcsolat">Kapcsolat</NavItem>
+        <BaseButton
+          variant="primary"
+          py={[3, 3, 3, 2]}
+          fontSize="normal"
+          borderRadius="md"
+          mb={[12, 12, 12, 0]}
+        >
+          Írjon Nekünk
+        </BaseButton>
+      </Stack>
+    );
+  }
   return (
     <>
       <IconButton

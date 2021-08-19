@@ -6,12 +6,12 @@ import { PostType } from "../types/postTypes";
 
 import { Button } from "./uikit";
 
-type ArticleProps = {
+type ReferenceProps = {
   post: PostType;
   onOpen: (slug: string) => void;
 };
 
-const Article: FC<ArticleProps> = ({
+const Reference: FC<ReferenceProps> = ({
   post: { slug, coverImage, title, date, excerpt, companyName },
   onOpen,
 }) => {
@@ -77,4 +77,4 @@ const Article: FC<ArticleProps> = ({
   );
 };
 
-export default Article;
+export default Reference;

@@ -11,6 +11,7 @@ const Navbar: FC = () => {
     <Flex
       align="center"
       justify="space-between"
+      m="auto"
       px={headerPX}
       py={4}
       maxW={headerMaxW}

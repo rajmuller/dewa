@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC, MouseEvent } from "react";
+import { FC } from "react";
 import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
 
 import { PostType } from "../types/postTypes";
@@ -16,7 +16,7 @@ const Article: FC<ArticleProps> = ({
   onOpen,
 }) => {
   return (
-    <Flex direction="column" as="article" align="flex-start" key={slug}>
+    <Flex direction="column" as="article" align="flex-start">
       <AspectRatio
         ratio={1}
         position="relative"

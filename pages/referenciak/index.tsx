@@ -13,7 +13,7 @@ type PostProps = {
   references: PostType[];
 };
 
-const Cikkek: FC<PostProps> = ({ references }) => {
+const References: FC<PostProps> = ({ references }) => {
   const router = useRouter();
   const onOpen = useCallback(
     (slug: string) => {
@@ -55,7 +55,13 @@ const Cikkek: FC<PostProps> = ({ references }) => {
         rowGap={[16, 16, 16, 20]}
       >
         {hallOfFames.map((hallOfFame) => {
-          return <Reference post={hallOfFame} onOpen={onOpen} />;
+          return (
+            <Reference
+              key={hallOfFame.slug}
+              post={hallOfFame}
+              onOpen={onOpen}
+            />
+          );
         })}
       </Grid>
 
@@ -73,7 +79,7 @@ const Cikkek: FC<PostProps> = ({ references }) => {
         gap={[16, 16, 16, 20]}
       >
         {galleries.map((gallery) => {
-          return <Gallery post={gallery} onOpen={onOpen} />;
+          return <Gallery key={gallery.slug} post={gallery} onOpen={onOpen} />;
         })}
       </Grid>
     </>
@@ -100,4 +106,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Cikkek;
+export default References;

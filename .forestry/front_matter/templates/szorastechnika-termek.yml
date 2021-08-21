@@ -1,0 +1,48 @@
+---
+label: szorastechnika termek
+hide_body: true
+fields:
+- name: nev
+  type: text
+  config:
+    required: false
+  label: nev
+- name: leiras
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: leiras
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: divizio
+  type: text
+  config:
+    required: false
+  label: divizio
+  default: SZÓRÁSTECHNIKA
+- name: alkategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Sűrített levegős berendezések
+    - Airmix berendezések
+    - Airless berendezések
+    - Elektrosztatikus pisztolyok
+    - 2 és 3 komponenses berendezések
+    - Keverők és emelők
+    - Alkatrészek
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: alkategoria

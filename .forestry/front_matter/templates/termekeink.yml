@@ -1,5 +1,5 @@
 ---
-label: termekeink
+label: fenyezofulke termek
 hide_body: true
 fields:
 - name: nev
@@ -12,7 +12,49 @@ fields:
   default: ''
   config:
     required: true
-    wysiwyg: true
+    wysiwyg: false
     schema:
       format: markdown
   label: leiras
+- name: boritokep
+  type: file
+  config:
+    maxSize: 64
+  label: boritokep
+- name: divizio
+  type: text
+  config:
+    required: false
+  label: divizio
+  default: FÉNYEZŐFÜLKE
+- name: alkategoria
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Személyautó fényezőfülkék
+    - Ipari fényezőfülkék
+    - Vasúti fényezőfülkék
+    - Előkészítő állások és festékkonyhák
+    - Fülkék és autójavító szervizek kiegészítő berendezései
+    - Szűrők és pormentesítők
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: alkategoria
+pages:
+- cms/termekek/fenyezofulke/Blowtherm EXTRA.md
+- cms/termekek/fenyezofulke/Blowtherm GENIUS XL.md
+- cms/termekek/fenyezofulke/Blowtherm GENIUS.md
+- cms/termekek/fenyezofulke/Blowtherm GREEN UNIT.md
+- cms/termekek/fenyezofulke/Blowtherm MIXING BOX.md
+- cms/termekek/fenyezofulke/Blowtherm SPACE SAVER.md
+- cms/termekek/fenyezofulke/Blowtherm SPACE.md
+- cms/termekek/fenyezofulke/Blowtherm WORLD S.md
+- cms/termekek/fenyezofulke/Blowtherm WORLD.md
+- cms/termekek/fenyezofulke/Blowtherm WORLD/S.md
+- cms/termekek/fenyezofulke/Blowtherm mosófülke.md
+- cms/termekek/fenyezofulke/Vonatfestő fülke.md

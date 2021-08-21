@@ -5,6 +5,36 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: heading
+  label: Termekek
+- type: directory
+  path: cms/termekek/fenyezofulke
+  label: Fenyezofulke termekek
+  create: all
+  match: "**/*"
+  templates:
+  - termekeink
+- type: directory
+  path: cms/termekek/feluletkezeles
+  label: Ipari feluletkezeles termekek
+  create: all
+  match: "**/*"
+  templates:
+  - ipari-feluletkezeles-termek
+- type: directory
+  path: cms/termekek/tuzelestechnika
+  label: Tuzelestechnika
+  create: all
+  match: "**/*"
+  templates:
+  - tuzelestechnika-termek
+- type: directory
+  path: csm/termekek/szorastechnika
+  label: Szorastechnika
+  create: all
+  match: "**/*"
+  templates:
+  - szorastechnika-termek
+- type: heading
   label: Content
 - type: directory
   path: cms/posts

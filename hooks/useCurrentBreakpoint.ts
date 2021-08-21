@@ -12,10 +12,10 @@ const useCurrentBreakpoint = () => {
 
   return {
     currentBreakPoint,
-    mobile: currentBreakPoint === "mobile",
-    sm: currentBreakPoint === "sm",
-    md: currentBreakPoint === "md",
-    lg: currentBreakPoint === "lg",
+    isMobile: currentBreakPoint === "mobile",
+    isSm: currentBreakPoint === "sm",
+    isMd: currentBreakPoint === "md",
+    isLg: currentBreakPoint === "lg",
   };
 };
 

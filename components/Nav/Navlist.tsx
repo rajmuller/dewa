@@ -72,13 +72,13 @@ type ProductCategoriesProps = {
 };
 
 const ProductCategories: FC<ProductCategoriesProps> = ({ show }) => {
-  const { lg } = useCurrentBreakpoint();
+  const { isLg } = useCurrentBreakpoint();
 
   if (!show) {
     return null;
   }
 
-  if (lg) {
+  if (isLg) {
     return (
       <Box
         pt={2}
@@ -142,7 +142,7 @@ const Products: FC = ({ children }) => {
   const { pathname } = useRouter();
   const currentPage = pathname.includes("termekek");
 
-  const { lg } = useCurrentBreakpoint();
+  const { isLg } = useCurrentBreakpoint();
 
   const [show, setShow] = useState(false);
 
@@ -163,9 +163,9 @@ const Products: FC = ({ children }) => {
       direction="column"
       position="relative"
       zIndex={1}
-      onClick={!lg ? toggleShow : null}
-      onMouseEnter={lg ? onOpen : null}
-      onMouseLeave={lg ? onClose : null}
+      onClick={!isLg ? toggleShow : null}
+      onMouseEnter={isLg ? onOpen : null}
+      onMouseLeave={isLg ? onClose : null}
     >
       <Flex align="center" justify="flex-end">
         {children}
@@ -235,9 +235,9 @@ const NavItems: FC = () => {
 
 const Navlist: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { lg } = useCurrentBreakpoint();
+  const { isLg } = useCurrentBreakpoint();
 
-  if (lg) {
+  if (isLg) {
     return <NavItems />;
   }
   return (

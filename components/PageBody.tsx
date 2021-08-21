@@ -191,6 +191,7 @@ const PageBody: FC<PageBodyProps> = ({ content }) => {
       margin="0 auto"
       lineHeight="2"
     >
+      {/* ts-nocheck */}
       <ReactMarkdown renderers={renderers}>{content}</ReactMarkdown>
     </Box>
   );

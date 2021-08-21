@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { PostTypeKeys } from "../types/postTypes";
 
-type ContentType = "posts" | "references";
+import { ProductKeys, ContentType, PostTypeKeys } from "../types";
 
 const getDirectory = (type: ContentType) => {
   switch (type) {
@@ -11,11 +10,21 @@ const getDirectory = (type: ContentType) => {
       return path.join(process.cwd(), "cms/posts");
     case "references":
       return path.join(process.cwd(), "cms/references");
+    case "feluletkezeles":
+      return path.join(process.cwd(), "cms/termekek/feluletkezeles");
+    case "fenyezofulkek":
+      return path.join(process.cwd(), "cms/termekek/fenyezofulkek");
+    case "tuzelestechnika":
+      return path.join(process.cwd(), "cms/termekek/tuzelestechnika");
+    case "szorastechnika":
+      return path.join(process.cwd(), "cms/termekek/szorastechnika");
 
     default:
       return null;
   }
 };
+
+type Fields = PostTypeKeys[] | ProductKeys[];
 
 export function getContentSlugs(type: ContentType) {
   return fs.readdirSync(getDirectory(type));
@@ -24,7 +33,7 @@ export function getContentSlugs(type: ContentType) {
 export function getContentBySlug(
   type: ContentType,
   slug: string,
-  fields: PostTypeKeys[]
+  fields: Fields
 ) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(getDirectory(type), `${realSlug}.md`);
@@ -50,7 +59,7 @@ export function getContentBySlug(
   return items;
 }
 
-export function getAllContents(type: ContentType, fields: PostTypeKeys[]) {
+export function getAllContents(type: ContentType, fields: Fields) {
   const slugs = getContentSlugs(type);
 
   const posts = slugs

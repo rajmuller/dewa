@@ -5,7 +5,7 @@ import { Heading, SimpleGrid } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
 
-import { PostType } from "../../types/postTypes";
+import { PostType } from "../../types";
 import Article from "../../components/Article";
 
 type CikkekType = {

@@ -11,10 +11,10 @@ type ProductProps = {
   onOpen: (slug: string) => void;
 };
 
-const ProductType: FC<ProductProps> = ({
-  product: { slug, description, image, name },
-  onOpen,
-}) => {
+const Product: FC<ProductProps> = ({ product, onOpen }) => {
+  console.log({ product });
+
+  const { nev, leiras, boritokep, slug } = product;
   return (
     <Flex direction="column" as="article" align="flex-start">
       <AspectRatio
@@ -27,8 +27,8 @@ const ProductType: FC<ProductProps> = ({
         borderRadius="lg"
       >
         <Image
-          src={image}
-          alt={`image of ${name}`}
+          src={boritokep}
+          alt={`image of ${nev}`}
           layout="fill"
           objectFit="cover"
         />
@@ -43,21 +43,17 @@ const ProductType: FC<ProductProps> = ({
           mb={[3, null, null, null]}
           noOfLines={2}
         >
-          {name}
+          {nev}
         </Heading>
-        <Text
-          noOfLines={[100, 4, 4, 4]}
-          mb={[3, null, null, null]}
-          color="grey.iron"
-        >
-          {description}
+        <Text noOfLines={8} mb={[3, null, null, null]} color="grey.iron">
+          {leiras}
         </Text>
         <Button onClick={() => onOpen(slug)} variant="secondary" side="right">
-          Elolvasom
+          Megnyitás
         </Button>
       </Flex>
     </Flex>
   );
 };
 
-export default ProductType;
+export default Product;

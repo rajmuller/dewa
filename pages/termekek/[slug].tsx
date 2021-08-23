@@ -1,29 +1,30 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useState } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { Flex, Heading, Select, SimpleGrid, Text } from "@chakra-ui/react";
 
-import { GetStaticPaths, GetStaticProps } from "next";
 import { ChevronDownIcon } from "../../components/icons";
 import { ProductType, ContentType } from "../../types";
 import { getAllContents } from "../../util";
+import Product from "../../components/Product";
 
 type ProductProps = {
   products: ProductType[];
   slug: string;
 };
 
-const Feluletkezeles: FC<ProductProps> = ({ slug, products }) => {
+const Products: FC<ProductProps> = ({ slug, products }) => {
   console.log({ slug });
   console.log({ products });
 
-  const {
-    nev,
-    divizio,
-    boritokep,
-    alkategoria,
-    slug: slugProduct,
-    leiras,
-  } = products[0];
+  const alkategoriak = products.map(({ alkategoria }) => {
+    const uniqueCatgories: string[] = [];
+    if (!uniqueCatgories.includes(alkategoria)) {
+      uniqueCatgories.push(alkategoria);
+    }
+    return alkategoria;
+  });
+
   const router = useRouter();
   const onOpen = useCallback(
     (slugString: string) => {
@@ -35,33 +36,49 @@ const Feluletkezeles: FC<ProductProps> = ({ slug, products }) => {
     [router, slug]
   );
 
+  const [currentSubcategory, setcurrentSubcategory] = useState("");
+  const currentSubProducts = products.filter(
+    (product) => product.alkategoria === currentSubcategory
+  );
+  const selectedProducts =
+    currentSubcategory === "" ? products : currentSubProducts;
+
+  const onSubcategoryChange = useCallback((e) => {
+    setcurrentSubcategory(e.target.value);
+  }, []);
+
   if (router.isFallback || !products) {
     return <div>ERRORPAGE</div>;
   }
 
   return (
-    <Flex px={4} direction="column">
+    <Flex direction="column" overflow="hidden">
       <Heading>
         {slug} ({products.length})
       </Heading>
-      {/* <Text>{products.}</Text> */}
       <Select
-        icon={<ChevronDownIcon />}
+        onChange={onSubcategoryChange}
+        bg="primary.100"
+        icon={<ChevronDownIcon fill="none" />}
         variant="filled"
-        placeholder="Válassz alkategóriát..."
-      />
-      {/* <SimpleGrid
+        placeholder="Összes alkategória"
+      >
+        {alkategoriak.map((alkategoria) => {
+          return <option value={alkategoria}>{alkategoria}</option>;
+        })}
+      </Select>
+      <SimpleGrid
         mt={16}
         justify="center"
-        columns={[1, 2, 2, 3]}
+        columns={[2, 2, 2, 3]}
         spacing={[16, 16, 16, 20]}
       >
-        {products.map((product) => {
+        {selectedProducts.map((product) => {
           return (
             <Product key={product.slug} product={product} onOpen={onOpen} />
           );
         })}
-      </SimpleGrid> */}
+      </SimpleGrid>
     </Flex>
   );
 };
@@ -118,4 +135,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default Feluletkezeles;
+export default Products;

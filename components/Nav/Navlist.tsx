@@ -36,9 +36,6 @@ type LinkItemProps = {
 const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
   const { pathname } = useRouter();
   const currentPage = pathname.includes(href);
-  // TODO: remove & check red active links on products
-  console.log({ href });
-  console.log({ pathname });
 
   return (
     <NextLink href={href} passHref>

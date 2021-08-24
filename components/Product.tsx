@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
+import { Flex, AspectRatio, Text } from "@chakra-ui/react";
 
 import { ProductType } from "../types";
 
@@ -16,7 +16,14 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
 
   const { nev, leiras, boritokep, slug } = product;
   return (
-    <Flex direction="column" as="article" align="flex-start">
+    <Flex
+      direction="column"
+      as="article"
+      align="flex-start"
+      shadow="smallCard"
+      background="#fff"
+      p={4}
+    >
       <AspectRatio
         ratio={1}
         position="relative"
@@ -38,14 +45,15 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
         justify="space-between"
         minH={[null, 64, 72, 80]}
       >
-        <Heading
-          variant="articleTitle"
-          mb={[3, null, null, null]}
-          noOfLines={2}
-        >
+        <Text fontWeight="semibold" mb={[3, null, null, null]} noOfLines={2}>
           {nev}
-        </Heading>
-        <Text noOfLines={8} mb={[3, null, null, null]} color="grey.iron">
+        </Text>
+        <Text
+          fontSize="xs"
+          noOfLines={8}
+          mb={[3, null, null, null]}
+          color="grey.iron"
+        >
           {leiras}
         </Text>
         <Button onClick={() => onOpen(slug)} variant="secondary" side="right">

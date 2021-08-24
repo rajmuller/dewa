@@ -10,7 +10,22 @@ import Product from "../../components/Product";
 
 type ProductProps = {
   products: ProductType[];
-  slug: string;
+  slug: ContentType;
+};
+
+const getDivisionName = (slug: ContentType) => {
+  switch (slug) {
+    case "feluletkezeles":
+      return "Felületkezelés";
+    case "fenyezofulkek":
+      return "Fényezőfülkék";
+    case "tuzelestechnika":
+      return "Tüzeléstechnika";
+    case "szorastechnika":
+      return "Szórástechnika";
+    default:
+      return null;
+  }
 };
 
 const Products: FC<ProductProps> = ({ slug, products }) => {
@@ -53,15 +68,17 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
 
   return (
     <Flex direction="column" overflow="hidden">
-      <Heading>
-        {slug} ({products.length})
+      <Heading mt={4} mb={12} variant="title" fontWeight="medium">
+        {getDivisionName(slug)} ({products.length})
       </Heading>
       <Select
-        onChange={onSubcategoryChange}
+        h="48px"
+        mb={3.5}
         bg="primary.100"
-        icon={<ChevronDownIcon fill="none" />}
+        icon={<ChevronDownIcon fontSize={12} fill="none" />}
         variant="filled"
         placeholder="Összes alkategória"
+        onChange={onSubcategoryChange}
       >
         {alkategoriak.map((alkategoria) => {
           return <option value={alkategoria}>{alkategoria}</option>;
@@ -69,8 +86,9 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
       </Select>
       <SimpleGrid
         mt={16}
+        columnGap={6}
         justify="center"
-        columns={[2, 2, 2, 3]}
+        columns={[1, 1, 2, 2]}
         spacing={[16, 16, 16, 20]}
       >
         {selectedProducts.map((product) => {

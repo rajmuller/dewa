@@ -1,21 +1,32 @@
 import { useBreakpointValue } from "@chakra-ui/react";
 
-type BreakPoints = "mobile" | "sm" | "md" | "lg";
+enum Breakpoints {
+  mobile = 1,
+  sm = 2,
+  md = 3,
+  lg = 4,
+}
 
 const useCurrentBreakpoint = () => {
-  const currentBreakPoint: BreakPoints = useBreakpointValue({
-    base: "mobile",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
+  const currentBreakPoint: Breakpoints = useBreakpointValue({
+    base: Breakpoints.mobile,
+    sm: Breakpoints.sm,
+    md: Breakpoints.md,
+    lg: Breakpoints.lg,
   });
 
   return {
     currentBreakPoint,
-    isMobile: currentBreakPoint === "mobile",
-    isSm: currentBreakPoint === "sm",
-    isMd: currentBreakPoint === "md",
-    isLg: currentBreakPoint === "lg",
+    isMobile: currentBreakPoint === Breakpoints.mobile,
+    isMobilePlus: currentBreakPoint > Breakpoints.mobile,
+    isSm: currentBreakPoint === Breakpoints.sm,
+    isSmPlus: currentBreakPoint > Breakpoints.sm,
+    isMd: currentBreakPoint === Breakpoints.md,
+    isMdPlus: currentBreakPoint > Breakpoints.md,
+    isMdMinus: currentBreakPoint < Breakpoints.md,
+    isLg: currentBreakPoint === Breakpoints.lg,
+    isLgPlus: currentBreakPoint > Breakpoints.lg,
+    isLgMinus: currentBreakPoint < Breakpoints.lg,
   };
 };
 

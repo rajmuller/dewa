@@ -7,6 +7,7 @@ import { ChevronDownIcon } from "../../components/icons";
 import { ProductType, ContentType } from "../../types";
 import { getAllContents } from "../../util";
 import Product from "../../components/Product";
+import { useCurrentBreakpoint } from "../../hooks";
 
 type ProductProps = {
   products: ProductType[];
@@ -29,8 +30,9 @@ const getDivisionName = (slug: ContentType) => {
 };
 
 const Products: FC<ProductProps> = ({ slug, products }) => {
-  console.log({ slug });
-  console.log({ products });
+  // console.log({ slug });
+  // console.log({ products });
+  const { isMdMinus } = useCurrentBreakpoint();
 
   const alkategoriak = products.map(({ alkategoria }) => {
     const uniqueCatgories: string[] = [];
@@ -67,29 +69,32 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
   }
 
   return (
-    <Flex direction="column" overflow="hidden">
+    <Flex direction="column">
       <Heading mt={4} mb={12} variant="title" fontWeight="medium">
         {getDivisionName(slug)} ({products.length})
       </Heading>
-      <Select
-        h="48px"
-        mb={3.5}
-        bg="primary.100"
-        icon={<ChevronDownIcon fontSize={12} fill="none" />}
-        variant="filled"
-        placeholder="Összes alkategória"
-        onChange={onSubcategoryChange}
-      >
-        {alkategoriak.map((alkategoria) => {
-          return <option value={alkategoria}>{alkategoria}</option>;
-        })}
-      </Select>
+      {isMdMinus ? (
+        <Select
+          h="48px"
+          mb={3.5}
+          bg="primary.100"
+          icon={<ChevronDownIcon fontSize={12} fill="none" />}
+          variant="filled"
+          placeholder="Összes alkategória"
+          onChange={onSubcategoryChange}
+        >
+          {alkategoriak.map((alkategoria) => {
+            return <option value={alkategoria}>{alkategoria}</option>;
+          })}
+        </Select>
+      ) : (
+        <Flex>asd</Flex>
+      )}
       <SimpleGrid
         mt={16}
-        columnGap={6}
         justify="center"
-        columns={[1, 1, 2, 2]}
-        spacing={[16, 16, 16, 20]}
+        columns={[1, 2, 2, 2]}
+        spacing={[16, 12, 16, 20]}
       >
         {selectedProducts.map((product) => {
           return (

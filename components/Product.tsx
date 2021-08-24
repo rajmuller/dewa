@@ -20,8 +20,9 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
       direction="column"
       as="article"
       align="flex-start"
-      shadow="smallCard"
-      background="#fff"
+      shadow="lg"
+      // background="#fff"
+      borderRadius="lg"
       p={4}
     >
       <AspectRatio
@@ -49,14 +50,20 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
           {nev}
         </Text>
         <Text
-          fontSize="xs"
+          fontSize="s"
           noOfLines={8}
           mb={[3, null, null, null]}
           color="grey.iron"
         >
           {leiras}
         </Text>
-        <Button onClick={() => onOpen(slug)} variant="secondary" side="right">
+        <Button
+          alignSelf="flex-start"
+          onClick={() => onOpen(slug)}
+          variant="secondary"
+          side="right"
+          fontSize="md"
+        >
           Megnyitás
         </Button>
       </Flex>

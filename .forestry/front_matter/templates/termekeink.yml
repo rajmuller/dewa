@@ -37,8 +37,8 @@ fields:
     - Ipari fényezőfülkék
     - Vasúti fényezőfülkék
     - Előkészítő állások és festékkonyhák
-    - Fülkék és autójavító szervizek kiegészítő berendezései
     - Szűrők és pormentesítők
+    - Kiegészítő berendezések
     source:
       type: simple
       section: 

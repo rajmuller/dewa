@@ -1,6 +1,6 @@
 ---
 divizio: FÉNYEZŐFÜLKE
-alkategoria: Fülkék és autójavító szervizek kiegészítő berendezései
+alkategoria: Kiegészítő berendezések
 nev: MOSÓFÜLKE
 leiras: "Emelje műhelyének termelékenységét a Blowtherm mosófülkéivel!\nA különböző
   méretben építhető mosó kombinált, két funkciós működésével bármely vállalkozás biztos

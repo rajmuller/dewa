@@ -36,6 +36,7 @@ type LinkItemProps = {
 const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
   const { pathname } = useRouter();
   const currentPage = pathname.includes(href);
+  console.log({ pathname });
 
   return (
     <NextLink href={href} passHref>
@@ -87,7 +88,7 @@ const ProductCategories: FC<ProductCategoriesProps> = ({ show }) => {
       >
         {productCategories.map((category, i) => {
           const lowcase = category.toLowerCase();
-          const href = `termekek/${getRemovedAccents(lowcase)}`;
+          const href = `/termekek/${getRemovedAccents(lowcase)}`;
           return (
             <Box key={category}>
               <LinkItem
@@ -115,7 +116,7 @@ const ProductCategories: FC<ProductCategoriesProps> = ({ show }) => {
     <Stack alignItems="flex-end" mt={6}>
       {productCategories.map((category) => {
         const lowcase = category.toLowerCase();
-        const href = `termekek/${getRemovedAccents(lowcase)}`;
+        const href = `/termekek/${getRemovedAccents(lowcase)}`;
         return (
           <LinkItem
             key={category}

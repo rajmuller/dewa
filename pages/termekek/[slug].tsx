@@ -1,7 +1,14 @@
 import React, { FC, useCallback, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { Flex, Heading, Select, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Select,
+  SimpleGrid,
+  Stack,
+  Button,
+} from "@chakra-ui/react";
 
 import { ChevronDownIcon } from "../../components/icons";
 import { ProductType, ContentType } from "../../types";
@@ -29,17 +36,44 @@ const getDivisionName = (slug: ContentType) => {
   }
 };
 
+type SubCategoryProps = {
+  currentSubcategory: string;
+  value: string;
+  onClick: (e: any) => void;
+};
+
+const SubCategory: FC<SubCategoryProps> = ({
+  currentSubcategory,
+  value,
+  children,
+  onClick,
+}) => {
+  return (
+    <Button
+      color={currentSubcategory === value ? "secondary.500" : "black"}
+      py={4}
+      value={value}
+      justifyContent="flex-start"
+      outline="none"
+      border="none"
+      variant="link"
+      onClick={onClick}
+    >
+      {children}
+    </Button>
+  );
+};
+
 const Products: FC<ProductProps> = ({ slug, products }) => {
   // console.log({ slug });
   // console.log({ products });
-  const { isMdMinus } = useCurrentBreakpoint();
+  const { isLgMinus } = useCurrentBreakpoint();
 
-  const alkategoriak = products.map(({ alkategoria }) => {
-    const uniqueCatgories: string[] = [];
-    if (!uniqueCatgories.includes(alkategoria)) {
-      uniqueCatgories.push(alkategoria);
+  const uniqueCategories: string[] = [];
+  products.forEach(({ alkategoria }) => {
+    if (!uniqueCategories.includes(alkategoria)) {
+      uniqueCategories.push(alkategoria);
     }
-    return alkategoria;
   });
 
   const router = useRouter();
@@ -61,6 +95,8 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
     currentSubcategory === "" ? products : currentSubProducts;
 
   const onSubcategoryChange = useCallback((e) => {
+    console.log({ e });
+
     setcurrentSubcategory(e.target.value);
   }, []);
 
@@ -70,38 +106,73 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
 
   return (
     <Flex direction="column">
-      <Heading mt={4} mb={12} variant="title" fontWeight="medium">
-        {getDivisionName(slug)} ({products.length})
-      </Heading>
-      {isMdMinus ? (
-        <Select
-          h="48px"
-          mb={3.5}
-          bg="primary.100"
-          icon={<ChevronDownIcon fontSize={12} fill="none" />}
-          variant="filled"
-          placeholder="Összes alkategória"
-          onChange={onSubcategoryChange}
-        >
-          {alkategoriak.map((alkategoria) => {
-            return <option value={alkategoria}>{alkategoria}</option>;
-          })}
-        </Select>
-      ) : (
-        <Flex>asd</Flex>
-      )}
-      <SimpleGrid
-        mt={16}
-        justify="center"
-        columns={[1, 2, 2, 2]}
-        spacing={[16, 12, 16, 20]}
+      <Heading
+        display="flex"
+        alignItems="center"
+        mt={[6, 8, 12, 16]}
+        fontSize={["xl", "xl", "2xl", "2xl"]}
+        mb={12}
+        variant="title"
+        fontWeight="medium"
       >
-        {selectedProducts.map((product) => {
-          return (
-            <Product key={product.slug} product={product} onOpen={onOpen} />
-          );
-        })}
-      </SimpleGrid>
+        {getDivisionName(slug)}
+        <Flex ml={1} color="secondary.500">
+          ({selectedProducts.length}){" "}
+        </Flex>
+      </Heading>
+      <Stack
+        mt={16}
+        spacing={16}
+        direction={["column", "column", "column", "row"]}
+      >
+        {isLgMinus ? (
+          <Select
+            h="48px"
+            mb={3.5}
+            bg="primary.100"
+            icon={<ChevronDownIcon fontSize={12} fill="none" />}
+            variant="filled"
+            placeholder="Összes alkategória"
+            onChange={onSubcategoryChange}
+          >
+            {uniqueCategories.map((category) => {
+              return <option value={category}>{category}</option>;
+            })}
+          </Select>
+        ) : (
+          <Stack>
+            <SubCategory
+              currentSubcategory={currentSubcategory}
+              value=""
+              onClick={onSubcategoryChange}
+            >
+              Összes alkategória
+            </SubCategory>
+            {uniqueCategories.map((category) => {
+              return (
+                <SubCategory
+                  currentSubcategory={currentSubcategory}
+                  value={category}
+                  onClick={onSubcategoryChange}
+                >
+                  {category}
+                </SubCategory>
+              );
+            })}
+          </Stack>
+        )}
+        <SimpleGrid
+          justify="center"
+          columns={[1, 2, 2, 2]}
+          spacing={[16, 12, 8, 12]}
+        >
+          {selectedProducts.map((product) => {
+            return (
+              <Product key={product.slug} product={product} onOpen={onOpen} />
+            );
+          })}
+        </SimpleGrid>
+      </Stack>
     </Flex>
   );
 };

@@ -21,7 +21,6 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
       as="article"
       align="flex-start"
       shadow="lg"
-      // background="#fff"
       borderRadius="lg"
       p={4}
     >
@@ -46,8 +45,13 @@ const Product: FC<ProductProps> = ({ product, onOpen }) => {
         justify="space-between"
         minH={[null, 64, 72, 80]}
       >
-        <Text fontWeight="semibold" mb={[3, null, null, null]} noOfLines={2}>
-          {nev}
+        <Text
+          textTransform="capitalize"
+          fontWeight="semibold"
+          mb={[3, null, null, null]}
+          noOfLines={2}
+        >
+          {nev.toLowerCase()}
         </Text>
         <Text
           fontSize="s"

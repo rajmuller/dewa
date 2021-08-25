@@ -161,11 +161,7 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             })}
           </Stack>
         )}
-        <SimpleGrid
-          justify="center"
-          columns={[1, 2, 2, 2]}
-          spacing={[16, 12, 8, 12]}
-        >
+        <SimpleGrid minChildWidth="250px" spacing={[16, 12, 8, 8]}>
           {selectedProducts.map((product) => {
             return (
               <Product key={product.slug} product={product} onOpen={onOpen} />

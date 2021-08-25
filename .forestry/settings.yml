@@ -9,7 +9,7 @@ sections:
 - type: directory
   path: cms/termekek/fenyezofulkek
   label: Fenyezofulke termekek
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - termekeink

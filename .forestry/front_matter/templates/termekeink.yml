@@ -37,8 +37,8 @@ fields:
     - Ipari fényezőfülkék
     - Vasúti fényezőfülkék
     - Előkészítő állások és festékkonyhák
-    - Fülkék és autójavító szervizek kiegészítő berendezései
     - Szűrők és pormentesítők
+    - Kiegészítő berendezések
     source:
       type: simple
       section: 
@@ -46,15 +46,8 @@ fields:
       path: 
   label: alkategoria
 pages:
-- cms/termekek/fenyezofulke/Blowtherm EXTRA.md
 - cms/termekek/fenyezofulke/Blowtherm GENIUS XL.md
-- cms/termekek/fenyezofulke/Blowtherm GENIUS.md
 - cms/termekek/fenyezofulke/Blowtherm GREEN UNIT.md
 - cms/termekek/fenyezofulke/Blowtherm MIXING BOX.md
 - cms/termekek/fenyezofulke/Blowtherm SPACE SAVER.md
 - cms/termekek/fenyezofulke/Blowtherm SPACE.md
-- cms/termekek/fenyezofulke/Blowtherm WORLD S.md
-- cms/termekek/fenyezofulke/Blowtherm WORLD.md
-- cms/termekek/fenyezofulke/Blowtherm WORLD/S.md
-- cms/termekek/fenyezofulke/Blowtherm mosófülke.md
-- cms/termekek/fenyezofulke/Vonatfestő fülke.md

@@ -1,6 +1,6 @@
 ---
 divizio: FÉNYEZŐFÜLKE
-alkategoria: Fülkék és autójavító szervizek kiegészítő berendezései
+alkategoria: Kiegészítő berendezések
 nev: BLOWTHERM GREEN UNIT
 leiras: "Az aktívszenes Green unit utószűrő a legjobb választás a levegőbe jutó oldószerek
   megállítására és a környezettudatos ipari megoldások támogatására. Az egység bármelyik

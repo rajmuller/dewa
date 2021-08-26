@@ -110,8 +110,8 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
         display="flex"
         alignItems="center"
         mt={[6, 8, 12, 16]}
+        mb={[null, null, 12, 12]}
         fontSize={["xl", "xl", "2xl", "2xl"]}
-        mb={12}
         variant="title"
         fontWeight="medium"
       >
@@ -121,7 +121,7 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
         </Flex>
       </Heading>
       <Stack
-        mt={16}
+        mt={[8, 8, null, null]}
         spacing={16}
         direction={["column", "column", "column", "row"]}
       >
@@ -161,7 +161,7 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             })}
           </Stack>
         )}
-        <SimpleGrid minChildWidth="250px" spacing={[16, 12, 8, 8]}>
+        <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={8}>
           {selectedProducts.map((product) => {
             return (
               <Product key={product.slug} product={product} onOpen={onOpen} />

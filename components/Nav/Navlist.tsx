@@ -34,9 +34,8 @@ type LinkItemProps = {
 };
 
 const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
-  const { pathname } = useRouter();
-  const currentPage = pathname.includes(href);
-  console.log({ pathname });
+  const { asPath } = useRouter();
+  const currentPage = asPath.includes(href);
 
   return (
     <NextLink href={href} passHref>
@@ -82,6 +81,7 @@ const ProductCategories: FC<ProductCategoriesProps> = ({ show }) => {
         pt={2}
         position="absolute"
         top={6}
+        shadow="sm"
         left={-4}
         borderBottomRadius="2xl"
         bg="background"

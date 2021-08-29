@@ -59,7 +59,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: cms/kapcsolat/**/*
+  path: cms/kapcsolat
   label: Kapcsolat
   create: all
   match: "**/*"

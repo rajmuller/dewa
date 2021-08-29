@@ -1,0 +1,57 @@
+---
+label: Kapcsolat Egyen
+hide_body: true
+fields:
+- name: nev
+  type: text
+  config:
+    required: true
+  label: Nev
+- name: helyszin
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - budaors
+    - bekescsaba
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: helyszin
+- name: reszleg
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - kozpont
+    - szerviz
+    - tuzelestechnika
+    - raktar
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: reszleg
+- name: email
+  type: text
+  config:
+    required: false
+  label: email
+- name: telefonszam
+  type: text
+  config:
+    required: true
+  label: telefonszam
+pages:
+- cms/kapcsolat/bucilaci.md
+- cms/kapcsolat/kozponti1.md
+- cms/kapcsolat/test2.md
+- cms/kapcsolat/test3.md
+- cms/kapcsolat/test4.md
+- cms/kapcsolat/test5.md
+- cms/kapcsolat/test6.md

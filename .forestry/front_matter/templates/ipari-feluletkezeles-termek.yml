@@ -38,9 +38,9 @@ fields:
     - Szennyvízkezelő berendezések
     - Porszóró berendezések
     - Anyagmozgató berendezések
-    - Ipari automata robotok, festőberendezések
     - KTL festősorok
     - Egyedi tervezésű festőberendezések
+    - Automata robotok, festőberendezések
     source:
       type: simple
       section: 

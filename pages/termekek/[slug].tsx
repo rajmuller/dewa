@@ -95,8 +95,6 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
     currentSubcategory === "" ? products : currentSubProducts;
 
   const onSubcategoryChange = useCallback((e) => {
-    console.log({ e });
-
     setcurrentSubcategory(e.target.value);
   }, []);
 

@@ -48,4 +48,5 @@ fields:
     required: true
   label: telefonszam
 pages:
+- cms/kapcsolat/bucilaci.md
 - cms/kapcsolat/kozponti1.md

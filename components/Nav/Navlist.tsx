@@ -1,7 +1,6 @@
 import React, { FC, useState, useCallback } from "react";
 import {
   Box,
-  useDisclosure,
   Link as ChakraLink,
   IconButton,
   Stack,
@@ -11,12 +10,14 @@ import {
   DrawerHeader,
   DrawerBody,
   Flex,
+  useDisclosure,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
-import { useCurrentBreakpoint } from "../../hooks";
+import { useCurrentBreakpoint, useMenu } from "../../hooks";
+import { MenuContext } from "../../contexts";
 
 import {
   ChevronDownIcon,
@@ -34,6 +35,7 @@ type LinkItemProps = {
 };
 
 const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
+  const { onClose } = useMenu();
   const { asPath } = useRouter();
   const currentPage = asPath.includes(href);
 
@@ -41,6 +43,7 @@ const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
     <NextLink href={href} passHref>
       <a>
         <Box
+          onClick={onClose}
           color={
             currentPage ? "secondary.500" : ["white", "white", "white", "black"]
           }
@@ -186,10 +189,13 @@ type NavItemProps = {
 };
 
 const NavItem: FC<NavItemProps> = ({ children, href }) => {
+  const { onClose } = useMenu();
+
   if (children === "Karrier") {
     return (
       <Flex align="center">
         <ChakraLink
+          onClick={onClose}
           isExternal
           href={href}
           color={["white", "white", "white", "black"]}
@@ -199,8 +205,8 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
           }}
         >
           {children}
+          <OutsideIcon />
         </ChakraLink>
-        <OutsideIcon />
       </Flex>
     );
   }
@@ -232,14 +238,14 @@ const NavItems: FC = () => {
 };
 
 const Navlist: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
   const { isLg } = useCurrentBreakpoint();
 
   if (isLg) {
     return <NavItems />;
   }
   return (
-    <>
+    <MenuContext.Provider value={{ isOpen, onClose, onOpen, onToggle }}>
       <IconButton
         alignSelf="flex-end"
         bg="transparent !important"
@@ -264,7 +270,7 @@ const Navlist: FC = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </>
+    </MenuContext.Provider>
   );
 };
 

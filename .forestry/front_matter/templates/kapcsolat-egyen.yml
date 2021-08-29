@@ -48,4 +48,4 @@ fields:
     required: true
   label: telefonszam
 pages:
-- cms/kapcsolat/**/*/kozponti1.md
+- cms/kapcsolat/kozponti1.md

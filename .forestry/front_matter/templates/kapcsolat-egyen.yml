@@ -47,3 +47,5 @@ fields:
   config:
     required: true
   label: telefonszam
+pages:
+- cms/kapcsolat/**/*/kozponti1.md

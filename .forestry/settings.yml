@@ -63,6 +63,8 @@ sections:
   label: Kapcsolat
   create: all
   match: "**/*"
+  templates:
+  - kapcsolat-egyen
 upload_dir: public/uploads
 public_path: "/public/uploads"
 front_matter_path: "/uploads"

@@ -58,6 +58,13 @@ sections:
   label: Home
   create: all
   match: "**/*"
+- type: directory
+  path: cms/kapcsolat
+  label: Kapcsolat
+  create: all
+  match: "**/*"
+  templates:
+  - kapcsolat-egyen
 upload_dir: public/uploads
 public_path: "/public/uploads"
 front_matter_path: "/uploads"

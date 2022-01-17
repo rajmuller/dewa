@@ -21,12 +21,14 @@
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.2",
     "react-responsive-carousel": "^3.2.19",
+    "react-table": "^7.7.0",
     "zustand": "^3.5.7"
   },
   "devDependencies": {
     "@types/node": "16.3.2",
     "@types/react": "17.0.14",
     "@types/react-dom": "17.0.9",
+    "@types/react-table": "^7.7.2",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-typescript-prettier": "^4.2.0",
     "prettier": "^2.3.2",

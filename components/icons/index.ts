@@ -8,3 +8,6 @@ export * from "./HamburgerIcon";
 export * from "./CloseIcon";
 export * from "./DewaIcon";
 export * from "./DotsIcon";
+export * from "./MailIcon";
+export * from "./MapIcon";
+export * from "./TelephoneIcon";

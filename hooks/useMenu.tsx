@@ -1,6 +1,11 @@
-import { useContext } from "react";
+import { useContext, createContext } from "react";
 
-import { MenuContext } from "../contexts";
+export const MenuContext = createContext({
+  onClose: null,
+  onOpen: null,
+  isOpen: null,
+  onToggle: null,
+});
 
 const useMenu = () => {
   const { isOpen, onClose, onOpen, onToggle } = useContext(MenuContext);

@@ -4,12 +4,24 @@ export type ContentType =
   | "feluletkezeles"
   | "fenyezofulkek"
   | "tuzelestechnika"
-  | "szorastechnika";
+  | "szorastechnika"
+  | "kapcsolat";
 
 export type SeoType = {
   title: string;
   description: string;
 };
+
+export type ContactType = {
+  slug: string;
+  nev: string;
+  reszleg: string;
+  helyszin: string;
+  email?: string;
+  telefonszam?: string;
+};
+
+export type ContactKeys = keyof ContactType;
 
 export type PostType = {
   slug: string;
@@ -23,7 +35,7 @@ export type PostType = {
   seo: SeoType;
 };
 
-export type PostTypeKeys = keyof PostType;
+export type PostKeys = keyof PostType;
 
 export type ProductType = {
   nev: string;

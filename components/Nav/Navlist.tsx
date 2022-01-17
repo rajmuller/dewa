@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
 import { useCurrentBreakpoint, useMenu } from "../../hooks";
-import { MenuContext } from "../../contexts";
+// import { MenuContext } from "../../contexts";
 
 import {
   ChevronDownIcon,
@@ -28,6 +28,7 @@ import {
 
 import { headerPX } from "./consts";
 import Contact from "./Contact";
+import { MenuContext } from "../../hooks/useMenu";
 
 type LinkItemProps = {
   href: string;
@@ -193,21 +194,21 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
 
   if (children === "Karrier") {
     return (
-      <Flex align="center">
-        <ChakraLink
-          onClick={onClose}
-          isExternal
-          href={href}
-          color={["white", "white", "white", "black"]}
-          cursor="pointer"
-          _hover={{
-            transform: "scale(1.02)",
-          }}
-        >
+      <ChakraLink
+        onClick={onClose}
+        isExternal
+        href={href}
+        color={["white", "white", "white", "black"]}
+        cursor="pointer"
+        _hover={{
+          transform: "scale(1.02)",
+        }}
+      >
+        <Flex direction="row" align="center">
           {children}
           <OutsideIcon />
-        </ChakraLink>
-      </Flex>
+        </Flex>
+      </ChakraLink>
     );
   }
 

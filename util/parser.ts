@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { ProductKeys, ContentType, PostTypeKeys } from "../types";
+import { ProductKeys, ContentType, PostKeys, ContactKeys } from "../types";
 
 const getDirectory = (type: ContentType) => {
   switch (type) {
@@ -18,13 +18,15 @@ const getDirectory = (type: ContentType) => {
       return path.join(process.cwd(), "cms/termekek/tuzelestechnika");
     case "szorastechnika":
       return path.join(process.cwd(), "cms/termekek/szorastechnika");
+    case "kapcsolat":
+      return path.join(process.cwd(), "cms/kapcsolat");
 
     default:
       return null;
   }
 };
 
-type Fields = PostTypeKeys[] | ProductKeys[];
+type Fields = PostKeys[] | ProductKeys[] | ContactKeys[];
 
 export function getContentSlugs(type: ContentType) {
   return fs.readdirSync(getDirectory(type));

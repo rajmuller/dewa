@@ -13,6 +13,8 @@ import {
   Tbody,
   Td,
   chakra,
+  AspectRatio,
+  Heading,
 } from "@chakra-ui/react";
 import { useTable, useSortBy } from "react-table";
 
@@ -176,8 +178,9 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
               return (
                 <Th
                   display={
-                    (isMd,
-                    isMobile && column.id === "department" ? "none" : "th")
+                    isMd && isMobile && column.id === "department"
+                      ? "none"
+                      : "th"
                   }
                   key={headerGroup}
                   {...column.getHeaderProps(column.getSortByToggleProps())}
@@ -219,15 +222,12 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
               {...row.getRowProps()}
             >
               {row.cells.map((cell) => {
-                console.log({ cell });
-
                 return (
                   <Td
                     display={
-                      (isMd,
-                      isMobile && cell.column.id === "department"
+                      isMd && isMobile && cell.column.id === "department"
                         ? "none"
-                        : "td")
+                        : "td"
                     }
                     {...cell.getCellProps()}
                     // @ts-ignore
@@ -257,8 +257,8 @@ const Contact: FC<ContactProps> = ({ contacts }) => {
   );
 
   return (
-    <Flex direction="column" align="center">
-      <HStack w="100%" align="center" justify="center">
+    <Flex direction="column" align="center" mt={12}>
+      <HStack w="100%" align="center" justify="center" mb={8}>
         <Option value="budaors" active={active} onClick={onActivation}>
           Budaörs
         </Option>
@@ -266,8 +266,18 @@ const Contact: FC<ContactProps> = ({ contacts }) => {
           Békéscsaba
         </Option>
       </HStack>
-      <Text>GOOGLE MAP</Text>
+      {/* TODO: bekescsaba kozpont */}
       <ContactList contacts={selectedContacts} />
+      <Heading mt={32} mb={6} fontSize={24} fontWeight={400}>
+        2040 Budaörs, Gyár u. 2. (Budaörsi Ipari Park)
+      </Heading>
+      <AspectRatio w="100%" ratio={[1, 1, 31 / 9]}>
+        <iframe
+          loading="lazy"
+          title="Dewa HQ"
+          src="https://www.google.com/maps/embed/v1/search?q=dewa%20hungary&key=AIzaSyDGQJAOWTOczUfw4RU9YoRBdpD44Kas81Q"
+        />
+      </AspectRatio>
     </Flex>
   );
 };

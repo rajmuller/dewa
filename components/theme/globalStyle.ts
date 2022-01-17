@@ -8,6 +8,7 @@ const globalStyle = {
       margin: 0,
       padding: "0",
       background: "background",
+      color: "black",
     },
 
     "*, *:before, *:after": {

@@ -16,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import { useTable, useSortBy } from "react-table";
 
-import { useCurrentBreakpoint } from "../../hooks";
 import { getAllContents } from "../../util";
 import { ContactType } from "../../types";
 import {
@@ -24,6 +23,7 @@ import {
   MailIcon,
   TelephoneIcon,
 } from "../../components/icons";
+import { useCurrentBreakpoint } from "../../hooks";
 
 type ContactProps = {
   contacts: ContactType[];
@@ -45,6 +45,7 @@ const Option: FC<OptionProps> = ({ value, active, onClick, children }) => {
         borderRadius="none"
         h="32px"
         px={[4, 32, 32]}
+        color="black"
         value={value}
         _hover={{
           background: "none",
@@ -66,16 +67,6 @@ const Option: FC<OptionProps> = ({ value, active, onClick, children }) => {
       <Flex h="2px" w="100%" bg="grey.silver" borderRadius="full" />
     </Stack>
   );
-};
-
-const Selection: FC = () => {
-  const { isMdMinus } = useCurrentBreakpoint();
-
-  if (isMdMinus) {
-    return null;
-  }
-
-  return <Flex>SELECTION</Flex>;
 };
 
 const getIcon = (id: string) => {
@@ -105,6 +96,8 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
 
     return 0;
   });
+
+  const { isMd, isMobile } = useCurrentBreakpoint();
 
   const data = useMemo(
     () =>
@@ -149,6 +142,31 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
     // @ts-ignore
   } = useTable({ columns, data }, useSortBy);
 
+  if (isMobile) {
+    return (
+      <Flex direction="column" alignSelf="normal" mt={8}>
+        {contacts.map((contact) => {
+          return (
+            <Flex p={4} direction="column" mb={8} shadow="sm">
+              <Text fontWeight={500} fontSize="18" mb={2}>
+                {contact.nev}
+              </Text>
+              <Flex mb={1} align="center" justify="start">
+                <MailIcon />
+                <Text ml={2}>{contact.email}</Text>
+              </Flex>
+
+              <Flex align="center" justify="start">
+                <TelephoneIcon />
+                <Text ml={2}>{contact.telefonszam}</Text>
+              </Flex>
+            </Flex>
+          );
+        })}
+      </Flex>
+    );
+  }
+
   return (
     <Table {...getTableProps()}>
       <Thead>
@@ -156,30 +174,36 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
           <Tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => {
               return (
-                <>
-                  <Th
-                    // @ts-ignore
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                    isNumeric={column.isNumeric}
-                  >
-                    {getIcon(column.id)}
-                    {column.render("Header")}
-                    <chakra.span pl="4">
-                      {/* eslint-disable-next-line no-nested-ternary */}
-                      {column.isSorted ? (
-                        //  @ts-ignore
-                        column.isSortedDesc ? (
+                <Th
+                  display={
+                    (isMd,
+                    isMobile && column.id === "department" ? "none" : "th")
+                  }
+                  key={headerGroup}
+                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                  isNumeric={column.isNumeric}
+                >
+                  {getIcon(column.id)}
+                  {column.render("Header")}
+                  <>
+                    {/* eslint-disable-next-line no-nested-ternary */}
+                    {column.isSorted ? (
+                      //  @ts-ignore
+                      column.isSortedDesc ? (
+                        <chakra.span pl="4">
                           <ChevronDownIcon aria-label="sorted descending" />
-                        ) : (
+                        </chakra.span>
+                      ) : (
+                        <chakra.span pl="4">
                           <ChevronDownIcon
                             transform="rotate(180deg)"
                             aria-label="sorted ascending"
                           />
-                        )
-                      ) : null}
-                    </chakra.span>
-                  </Th>
-                </>
+                        </chakra.span>
+                      )
+                    ) : null}
+                  </>
+                </Th>
               );
             })}
           </Tr>
@@ -189,18 +213,30 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
         {rows.map((row, i) => {
           prepareRow(row);
           return (
-            <Tr bg={i % 2 === 0 && "primary.100"} {...row.getRowProps()}>
-              {row.cells.map((cell) => (
-                <>
+            <Tr
+              key={row}
+              bg={i % 2 === 0 && "primary.100"}
+              {...row.getRowProps()}
+            >
+              {row.cells.map((cell) => {
+                console.log({ cell });
+
+                return (
                   <Td
+                    display={
+                      (isMd,
+                      isMobile && cell.column.id === "department"
+                        ? "none"
+                        : "td")
+                    }
                     {...cell.getCellProps()}
                     // @ts-ignore
                     isNumeric={cell.column.isNumeric}
                   >
                     {cell.render("Cell")}
                   </Td>
-                </>
-              ))}
+                );
+              })}
             </Tr>
           );
         })}
@@ -216,7 +252,9 @@ const Contact: FC<ContactProps> = ({ contacts }) => {
     setActive(e.target.value);
   }, []);
 
-  // const selectedContacts = currentContacts ? currentContacts : contacts
+  const selectedContacts = contacts.filter(
+    (contact) => contact.helyszin === active
+  );
 
   return (
     <Flex direction="column" align="center">
@@ -224,13 +262,12 @@ const Contact: FC<ContactProps> = ({ contacts }) => {
         <Option value="budaors" active={active} onClick={onActivation}>
           Budaörs
         </Option>
-        <Option value="bekecsaba" active={active} onClick={onActivation}>
+        <Option value="bekescsaba" active={active} onClick={onActivation}>
           Békéscsaba
         </Option>
       </HStack>
       <Text>GOOGLE MAP</Text>
-      <Selection />
-      <ContactList contacts={contacts} />
+      <ContactList contacts={selectedContacts} />
     </Flex>
   );
 };

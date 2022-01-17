@@ -16,7 +16,6 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       as="button"
       d="inline-flex"
       alignItems="center"
-      justifyContent="center"
       lineHeight="1.2"
       transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
       textTransform="capitalize"

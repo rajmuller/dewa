@@ -27,10 +27,10 @@ fields:
   config:
     required: true
     options:
-    - kozpont
-    - szerviz
-    - tuzelestechnika
-    - raktar
+    - központ
+    - szervíz
+    - tüzeléstechnika
+    - raktár
     source:
       type: simple
       section: 

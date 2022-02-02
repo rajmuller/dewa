@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { Text, Heading, Flex, Box } from "@chakra-ui/react";
 
-import { PostType } from "../types/postTypes";
+import { PostType } from "../types";
 
 type PageHeaderProps = {
   post: PostType;

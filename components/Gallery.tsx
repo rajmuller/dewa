@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { Flex, AspectRatio, Heading } from "@chakra-ui/react";
 
-import { PostType } from "../types/postTypes";
+import { PostType } from "../types";
 
 import { Button } from "./uikit";
 

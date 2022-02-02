@@ -23,9 +23,9 @@ const breakpoints = createBreakpoints({
   xl,
 });
 
+// @ts-ignore
 const theme = extendTheme({
   fonts,
-  // @ts-ignore
   colors,
   shadows,
   space,

@@ -28,7 +28,7 @@ sections:
   templates:
   - tuzelestechnika-termek
 - type: directory
-  path: csm/termekek/szorastechnika
+  path: cms/termekek/szorastechnika
   label: Szorastechnika
   create: all
   match: "**/*"

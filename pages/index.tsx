@@ -1,10 +1,9 @@
 import { GetStaticProps } from "next";
 import { FC } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Image from "next/image";
 import { chakra, Flex, Heading, Text } from "@chakra-ui/react";
 
-import { ChevronLeftIcon } from "../components/icons";
 import { getContentSlugs } from "../util";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
@@ -13,8 +12,8 @@ type IndexProps = {
   slugs: string[];
 };
 
-const Index: FC<IndexProps> = ({ slugs }) => {
-  const router = useRouter();
+const Index: FC<IndexProps> = () => {
+  // const router = useRouter();
   const { onOpen } = useContact();
 
   return (

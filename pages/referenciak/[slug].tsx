@@ -10,7 +10,7 @@ import PageBody from "../../components/PageBody";
 import PageHeader from "../../components/PageHeader";
 import { getAllContents, getContentBySlug } from "../../util";
 
-import { PostType } from "../../types/postTypes";
+import { PostType } from "../../types";
 import Carousel from "../../components/Carousel";
 
 type PostProps = {

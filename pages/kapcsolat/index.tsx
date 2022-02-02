@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useState, useCallback, useMemo } from "react";
 import { GetStaticProps } from "next";
 import {
@@ -135,14 +136,8 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
     []
   );
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-    // @ts-ignore
-  } = useTable({ columns, data }, useSortBy);
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data }, useSortBy);
 
   if (isMobile) {
     return (
@@ -191,7 +186,6 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
                   <>
                     {/* eslint-disable-next-line no-nested-ternary */}
                     {column.isSorted ? (
-                      //  @ts-ignore
                       column.isSortedDesc ? (
                         <chakra.span pl="4">
                           <ChevronDownIcon aria-label="sorted descending" />
@@ -230,7 +224,6 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
                         : "td"
                     }
                     {...cell.getCellProps()}
-                    // @ts-ignore
                     isNumeric={cell.column.isNumeric}
                   >
                     {cell.render("Cell")}

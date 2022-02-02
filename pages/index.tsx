@@ -4,6 +4,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { chakra, Flex, Heading, Text } from "@chakra-ui/react";
 
+// import { ChevronLeftIcon } from "../components/icons";
 import { getContentSlugs } from "../util";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";

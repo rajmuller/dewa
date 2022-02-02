@@ -45,3 +45,5 @@ fields:
       file: 
       path: 
   label: alkategoria
+pages:
+- cms/termekek/tuzelestechnika/asd.md

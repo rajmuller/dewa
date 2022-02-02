@@ -12,15 +12,16 @@ import {
   ModalOverlay,
   Textarea,
   Text,
-  useDisclosure,
   Flex,
 } from "@chakra-ui/react";
+
+import { useContact } from "../../hooks";
 
 import { BaseButton, Button } from "../uikit";
 import { DewaIcon, DotsIcon } from "../icons";
 
 const Contact: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useContact();
   const initialRef = useRef();
 
   return (

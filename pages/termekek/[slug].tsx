@@ -131,7 +131,13 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             icon={<ChevronDownIcon fontSize={12} fill="none" />}
             variant="filled"
             placeholder="Összes alkategória"
+            sch
             onChange={onSubcategoryChange}
+            sx={{
+              option: {
+                background: "primary.100",
+              },
+            }}
           >
             {uniqueCategories.map((category) => {
               return <option value={category}>{category}</option>;

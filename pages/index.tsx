@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import { FC } from "react";
 // import { useRouter } from "next/router";
 import Image from "next/image";
@@ -16,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 
 // import { ChevronLeftIcon } from "../components/icons";
-import { getContentSlugs } from "../util";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
 import {
@@ -28,10 +26,6 @@ import {
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
-
-type IndexProps = {
-  slugs: string[];
-};
 
 type CardProps = {
   image: string;
@@ -386,7 +380,7 @@ const Products: FC = () => {
   );
 };
 
-const Index: FC<IndexProps> = ({ slugs }) => {
+const Index: FC = () => {
   // const router = useRouter();
   const { onOpen } = useContact();
 
@@ -420,15 +414,6 @@ const Index: FC<IndexProps> = ({ slugs }) => {
       <Products />
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const files = getContentSlugs("posts");
-  return {
-    props: {
-      slugs: files.map((filename) => filename.replace(".md", "")),
-    },
-  };
 };
 
 export default Index;

@@ -20,7 +20,7 @@ const Navbar: FC = () => {
       <Box cursor="pointer">
         <Link href="/">
           <a>
-            <DewaIcon w={20} h={10} />
+            <DewaIcon w={32} h={24} />
           </a>
         </Link>
       </Box>

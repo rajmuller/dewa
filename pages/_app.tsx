@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { Box, ChakraProvider, useDisclosure } from "@chakra-ui/react";
+import { ChakraProvider, useDisclosure } from "@chakra-ui/react";
 
 import { useHydrate, StoreProvider } from "../store";
 import theme from "../components/theme";
@@ -15,9 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <StoreProvider store={store}>
         <ContactContext.Provider value={{ isOpen, onClose, onOpen }}>
           <Navbar />
-          <Box px={[4, 4, 16, 32]} maxW="1536px" margin="auto">
-            <Component {...pageProps} />
-          </Box>
+          <Component {...pageProps} />
         </ContactContext.Provider>
       </StoreProvider>
     </ChakraProvider>

@@ -16,6 +16,7 @@ const Navbar: FC = () => {
       px={headerPX}
       py={4}
       maxW={headerMaxW}
+      mb={[8, 8, 0]}
     >
       <Box cursor="pointer">
         <Link href="/">

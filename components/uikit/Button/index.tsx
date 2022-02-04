@@ -29,12 +29,30 @@ const Secondary: FC<ButtonProps> = ({ children, ...props }) => {
   );
 };
 
+const Tertiary: FC<ButtonProps> = ({ children, ...props }) => {
+  return (
+    <BaseButton
+      color="black"
+      bg="tertiary.300"
+      borderBottomColor="tertiary.300"
+      _hover={{ bg: "tertiary.600" }}
+      _active={{ bg: "tertiary.700" }}
+      {...props}
+    >
+      {children}
+    </BaseButton>
+  );
+};
+
 const Button: FC<ButtonProps> = ({ side, ...props }) => {
   const { variant } = props;
 
   switch (variant) {
     case "secondary":
       return <Secondary side={side} {...props} />;
+
+    case "tertiary":
+      return <Tertiary side={side} {...props} />;
 
     default:
       return <Primary side={side} {...props} />;

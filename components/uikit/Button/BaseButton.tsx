@@ -22,6 +22,7 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       textAlign="center"
       borderWidth="1px"
       borderStyle="solid"
+      justifyContent="space-between"
       borderColor="transparent"
       p={["18px", "18px", "20px", "24px"]}
       borderRadius="lg"

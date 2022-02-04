@@ -20,6 +20,8 @@ import { useContact } from "../../hooks";
 import { BaseButton, Button } from "../uikit";
 import { DewaIcon, DotsIcon } from "../icons";
 
+// TODO: contact on mobile
+
 const Contact: FC = () => {
   const { isOpen, onOpen, onClose } = useContact();
   const initialRef = useRef();

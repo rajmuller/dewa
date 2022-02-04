@@ -1,0 +1,70 @@
+import React, { FC, useCallback, PointerEvent } from "react";
+import { Box, BoxProps, Flex, FlexProps } from "@chakra-ui/react";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+
+const PerspectiveHover = motion<BoxProps>(Box);
+const AnimationContainer = motion<FlexProps>(Flex);
+
+const isPointerMakesItCloser = true;
+const angleX = 9 * (isPointerMakesItCloser ? -1 : 1);
+const angleY = angleX * 1;
+
+const Perspective: FC = ({ children }) => {
+  const y = useMotionValue(0.5);
+  const x = useMotionValue(0.5);
+
+  const rotateY = useTransform(x, [0, 1], [-angleY, angleY], {
+    clamp: true,
+  });
+  const rotateX = useTransform(y, [0, 1], [angleX, -angleX], {
+    clamp: true,
+  });
+
+  const onMove = (e: PointerEvent) => {
+    // get position information for the card
+    const bounds = e.currentTarget?.getBoundingClientRect();
+
+    // set x,y local coordinates
+    const xValue = (e.clientX - bounds.x) / e.currentTarget.clientWidth;
+    const yValue = (e.clientY - bounds.y) / e.currentTarget.clientHeight;
+
+    // update MotionValues
+    x.set(xValue, true);
+    y.set(yValue, true);
+  };
+
+  const handleReset = useCallback(() => {
+    animate(rotateX, 0, {
+      type: "tween",
+      duration: 0.3,
+    });
+    animate(rotateY, 0, {
+      type: "tween",
+      duration: 0.3,
+    });
+  }, [rotateX, rotateY]);
+
+  return (
+    <Flex justify="center" align="center" position="relative">
+      <AnimationContainer
+        onPointerLeave={handleReset}
+        justify="center"
+        align="center"
+        style={{ perspective: "2000px" }}
+        animate
+      >
+        <PerspectiveHover
+          onPointerMove={onMove}
+          style={{
+            rotateX,
+            rotateY,
+          }}
+        >
+          {children}
+        </PerspectiveHover>
+      </AnimationContainer>
+    </Flex>
+  );
+};
+
+export default Perspective;

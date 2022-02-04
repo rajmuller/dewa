@@ -248,7 +248,7 @@ const Navlist: FC = () => {
   return (
     <MenuContext.Provider value={{ isOpen, onClose, onOpen, onToggle }}>
       <IconButton
-        alignSelf="flex-end"
+        alignSelf="center"
         bg="transparent !important"
         aria-label="Menu"
         onClick={onOpen}

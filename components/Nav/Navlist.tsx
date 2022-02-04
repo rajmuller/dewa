@@ -17,7 +17,6 @@ import { useRouter } from "next/router";
 
 import { getRemovedAccents } from "../../util/removeAccents";
 import { useCurrentBreakpoint, useMenu } from "../../hooks";
-// import { MenuContext } from "../../contexts";
 
 import {
   ChevronDownIcon,
@@ -245,6 +244,7 @@ const Navlist: FC = () => {
   if (isLg) {
     return <NavItems />;
   }
+
   return (
     <MenuContext.Provider value={{ isOpen, onClose, onOpen, onToggle }}>
       <IconButton

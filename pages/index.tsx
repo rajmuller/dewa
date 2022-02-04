@@ -92,7 +92,7 @@ const AboutUs: FC = () => {
           mt={[12, 12, 20]}
           alignSelf="flex-start"
           position="relative"
-          w={["100%", "95%"]}
+          w={["100%", "100%", "95%"]}
           h={["280px", "280px", "700px"]}
           zIndex={5}
           maxW="100%"

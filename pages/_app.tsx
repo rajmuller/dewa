@@ -5,6 +5,7 @@ import { useHydrate, StoreProvider } from "../store";
 import theme from "../components/theme";
 import Navbar from "../components/Nav/Navbar";
 import { ContactContext } from "../hooks/useContact";
+import Footer from "../components/Footer";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const store = useHydrate(pageProps.initialZustandState);
@@ -16,6 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <ContactContext.Provider value={{ isOpen, onClose, onOpen }}>
           <Navbar />
           <Component {...pageProps} />
+          <Footer />
         </ContactContext.Provider>
       </StoreProvider>
     </ChakraProvider>

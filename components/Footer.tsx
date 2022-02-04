@@ -43,7 +43,12 @@ const Footer = () => {
           <Heading fontSize={[24, 24, 36]} fontWeight={600}>
             Felkeltettük <br /> érdeklődését?
           </Heading>
-          <Button variant="tertiary" side="right" onClick={onOpen}>
+          <Button
+            mt={[8, 8, 0]}
+            variant="tertiary"
+            side="right"
+            onClick={onOpen}
+          >
             Írjon Nekünk
           </Button>
         </Flex>

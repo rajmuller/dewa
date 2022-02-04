@@ -13,7 +13,6 @@ import {
   IconProps,
 } from "@chakra-ui/react";
 
-// import { ChevronLeftIcon } from "../components/icons";
 import { Button } from "../components/uikit";
 import { useContact, useCurrentBreakpoint } from "../hooks";
 import {
@@ -226,7 +225,7 @@ const AboutUs: FC = () => {
 
 const Card: FC<CardProps> = ({ image, logo, description, location, date }) => {
   return (
-    <Link href="referenciak">
+    <Link href="/referenciak">
       <a>
         <Perspective>
           <Flex

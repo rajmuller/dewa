@@ -41,7 +41,7 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       {...props}
     >
       {!side ? (
-        <>{children}</>
+        { children }
       ) : side === "left" ? (
         <>
           <ChevronLeftIcon fontSize={[10, 10, 12, 15]} mr={m} />

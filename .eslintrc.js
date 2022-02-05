@@ -10,7 +10,16 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "import/prefer-default-export": "off",
+    "react/jsx-no-constructed-context-values": "off",
     "react/jsx-pascal-case": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

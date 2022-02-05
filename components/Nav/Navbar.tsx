@@ -14,6 +14,7 @@ import {
   ModalOverlay,
   Textarea,
   Text,
+  FormErrorMessage,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -87,26 +88,33 @@ const Navbar: FC = () => {
           </ModalHeader>
           <ModalCloseButton size="lg" />
           <ModalBody pb={6}>
-            <FormControl isRequired id="name">
-              <FormLabel>Név</FormLabel>
+            <FormControl isRequired id="subject">
+              <FormLabel htmlFor="subject">Tárgy</FormLabel>
               <Input
+                id="subject"
+                type="text"
                 ref={initialRef}
-                placeholder="Név"
+                placeholder="Targy"
                 backgroundColor="primary.100"
                 py={6}
                 fontSize="lg"
               />
+              <FormErrorMessage>Kötelező mező!</FormErrorMessage>
             </FormControl>
+
             <FormControl isRequired mt={6} id="email">
-              <FormLabel>Email</FormLabel>
+              <FormLabel htmlFor="email">Ön Emailje</FormLabel>
               <Input
+                id="email"
                 type="email"
                 placeholder="Email"
                 backgroundColor="primary.100"
                 py={6}
                 fontSize="lg"
               />
+              <FormErrorMessage>Kötelező mező!</FormErrorMessage>
             </FormControl>
+
             <FormControl isRequired mt={6} id="message">
               <FormLabel>Üzenet</FormLabel>
               <Textarea
@@ -116,10 +124,11 @@ const Navbar: FC = () => {
                 placeholder="Üzenet"
                 fontSize="lg"
               />
+              <FormErrorMessage>Kötelező mező!</FormErrorMessage>
             </FormControl>
           </ModalBody>
           <ModalFooter pb={8}>
-            <Button variant="primary" side="right">
+            <Button type="submit" variant="primary" side="right">
               Küldés
             </Button>
           </ModalFooter>

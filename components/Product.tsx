@@ -12,8 +12,6 @@ type ProductProps = {
 };
 
 const Product: FC<ProductProps> = ({ product, onOpen }) => {
-  console.log({ product });
-
   const { nev, leiras, boritokep, slug } = product;
   return (
     <Flex

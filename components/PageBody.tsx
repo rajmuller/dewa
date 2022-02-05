@@ -38,21 +38,17 @@ const A: FC<AProps> = ({ children, href }) => {
 };
 
 const Img: FC<ImgProps> = ({ src, alt, title }) => {
+  const validSrc = src.replace("public/", "");
+
   return (
-    <AspectRatio
-      ratio={16 / 9}
-      mx={[0, 0, -16, -16]}
-      position="relative"
-      borderRadius="2xl"
-      overflow="hidden"
-    >
-      <a target="_blank" href={src} rel="noreferrer">
+    <AspectRatio ratio={16 / 9} position="relative">
+      <a target="_blank" href={validSrc} rel="noreferrer">
         <Image
-          src={src}
+          src={validSrc}
           alt={alt}
           title={title}
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
         />
       </a>
     </AspectRatio>
@@ -80,7 +76,7 @@ const H3: FC = ({ children }) => {
 };
 
 const P: FC = ({ children }) => {
-  return <Text mb={4}>{children}</Text>;
+  return <Text my={4}>{children}</Text>;
 };
 
 const Ul: FC = ({ children }) => {
@@ -138,61 +134,35 @@ type PageBodyProps = {
   content: string;
 };
 
+const components = {
+  h1: H1,
+  h2: H2,
+  h3: H3,
+
+  p: P,
+  img: ({ title, alt, src }: { title: string; alt: string; src: string }) => {
+    return <Img title={title} alt={alt} src={src} />;
+  },
+  a: A,
+  ul: Ul,
+  ol: Ol,
+  li: Li,
+  blockquote: Blockqoute,
+};
+
 const PageBody: FC<PageBodyProps> = ({ content }) => {
-  const renderers = {
-    heading: ({ level, children }: { level: number; children: ReactNode }) => {
-      switch (level) {
-        case 1:
-          return <H1>{children}</H1>;
-        case 2:
-          return <H2>{children}</H2>;
-        case 3:
-          return <H3>{children}</H3>;
-        default:
-          return <H3>{children}</H3>;
-      }
-    },
-
-    paragraph: P,
-    image: ({
-      title,
-      alt,
-      src,
-    }: {
-      title: string;
-      alt: string;
-      src: string;
-    }) => {
-      return <Img title={title} alt={alt} src={src} />;
-    },
-    link: A,
-    list: ({
-      ordered,
-      children,
-    }: {
-      ordered: boolean;
-      children: ReactNode;
-    }) => {
-      if (ordered) {
-        return <Ol>{children}</Ol>;
-      }
-      return <Ul>{children}</Ul>;
-    },
-    listItem: Li,
-    blockquote: Blockqoute,
-  };
-
   return (
     <Box
       as="article"
       maxW="2xl"
+      px={[4, 4, 0]}
       color="grey.charcoal"
       fontSize="lg"
       margin="0 auto"
       lineHeight="2"
     >
       {/* @ts-ignore */}
-      <ReactMarkdown renderers={renderers}>{content}</ReactMarkdown>
+      <ReactMarkdown components={components}>{content}</ReactMarkdown>
     </Box>
   );
 };

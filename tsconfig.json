@@ -21,12 +21,13 @@
     "strict": true,
     "strictNullChecks": false,
     "strictFunctionTypes": false,
-    "target": "esnext"
+    "target": "esnext",
+    "incremental": true
   },
   "exclude": [
     "dist",
     ".next",
-    "out",
+    "out"
   ],
   "include": [
     "next-env.d.ts",

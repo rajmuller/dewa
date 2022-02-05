@@ -5,7 +5,6 @@ import { FC } from "react";
 
 import { Divider } from "@chakra-ui/react";
 
-import { Button } from "../../components/uikit";
 import PageBody from "../../components/PageBody";
 import PageHeader from "../../components/PageHeader";
 import { getAllContents, getContentBySlug } from "../../util";
@@ -20,7 +19,7 @@ type PostProps = {
 const Reference: FC<PostProps> = ({ reference }) => {
   const { seo, content, slug, gallery } = reference;
 
-  const { isFallback, back: onBack } = useRouter();
+  const { isFallback } = useRouter();
   if (!isFallback && !slug) {
     return <div>ERRORPAGE</div>;
   }
@@ -34,14 +33,6 @@ const Reference: FC<PostProps> = ({ reference }) => {
           <meta name="description" content={seo.description} />
         </Head>
 
-        <Button
-          variant="secondary"
-          mb={[8, 8, 12, 16]}
-          side="left"
-          onClick={onBack}
-        >
-          Vissza
-        </Button>
         <PageHeader post={reference} />
         <Divider
           my={12}
@@ -58,8 +49,6 @@ const Reference: FC<PostProps> = ({ reference }) => {
           borderBottomWidth="2px"
           orientation="horizontal"
         />
-        <Button>Elozo</Button>
-        <Button>Kovetkezo</Button>
       </>
     );
   }
@@ -72,14 +61,6 @@ const Reference: FC<PostProps> = ({ reference }) => {
         <meta name="description" content={seo.description} />
       </Head>
 
-      <Button
-        variant="secondary"
-        mb={[8, 8, 12, 16]}
-        side="left"
-        onClick={onBack}
-      >
-        Vissza
-      </Button>
       <PageHeader post={reference} />
       <Divider
         my={12}
@@ -96,8 +77,6 @@ const Reference: FC<PostProps> = ({ reference }) => {
         borderBottomWidth="2px"
         orientation="horizontal"
       />
-      <Button>Elozo</Button>
-      <Button>Kovetkezo</Button>
     </>
   );
 };

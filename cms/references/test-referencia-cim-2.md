@@ -63,8 +63,8 @@ lista pelda
 
 ***
 
-> ### Relevans cikk title
+> ## Relevans cikk ajanlo Title
 >
-> ![asdasdasdas](/public/uploads/blowtherm-moso-fulke.jpg "relevans cikk")
+> ![](/public/uploads/blowtherm-moso-fulke.jpg)
 >
-> [_Kattintson ide a megnyitashoz_](/referenciak/test-referencia-galeria-cim "Relevans cikk")
+> [Kattintson ide a megnyitashoz](/referenciak/test-referencia-galeria-cim "Link a relevans cikkre")

@@ -1,7 +1,7 @@
 ---
 type: hall-of-fame
 date: 2021/01/12
-title: Test referencia cim 2
+title: Test referencia cim UJ amin van ajanlas kovire
 companyName: Vector
 kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
   printing and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -26,6 +26,7 @@ excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting indust
   book. It has survived not only five centuries, but also the leap into electronic
   typesetting, remaining essentially unchanged. It was popularised in the 1960s with
   the release of Letrase
+companyname: ''
 
 ---
 kis bevezeto bullshit, pofazzal jobbra balra, linkelek majd fasza peldakat egy blogra ami nekem tetszik de te is konnyen talalsz majd. Hoppa itt egy [Bejamas blog pelda](https://bejamas.io/blog/website-performance-research/ "Ez a tooltip ha cursort fele viszi a balhere"). Legyen hosszabb ugyhogy atadom Eminemnek: Obie Trice, real name no gimmicks Two trailer park girls go round the outside Round the outside, round the outside Two trailer park girls go round the outside Round the outside, round the outside Guess who's back  
@@ -59,3 +60,11 @@ lista pelda
 * **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
 
 ![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+
+***
+
+> ### Relevans cikk link
+>
+> [![](/public/uploads/blowtherm-moso-fulke.jpg)]()
+>
+> [_Kattintson ide a megnyitashoz_](/referenciak/test-referencia-galeria-cim "Relevans cikk")

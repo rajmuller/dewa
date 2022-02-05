@@ -1,7 +1,6 @@
 import { FC, useRef } from "react";
 import {
   Box,
-  Button,
   Flex,
   FormControl,
   FormLabel,
@@ -23,6 +22,7 @@ import { DewaIcon, DotsIcon } from "../icons";
 import Navlist from "./Navlist";
 import { headerMaxW, headerPX } from "./consts";
 import { useContact } from "../../hooks";
+import { Button } from "../uikit";
 
 const Navbar: FC = () => {
   const { isOpen, onClose } = useContact();
@@ -92,7 +92,7 @@ const Navbar: FC = () => {
               <Input
                 ref={initialRef}
                 placeholder="Név"
-                backgroundColor="primary.50"
+                backgroundColor="primary.100"
                 py={6}
                 fontSize="lg"
               />
@@ -102,7 +102,7 @@ const Navbar: FC = () => {
               <Input
                 type="email"
                 placeholder="Email"
-                backgroundColor="primary.50"
+                backgroundColor="primary.100"
                 py={6}
                 fontSize="lg"
               />
@@ -110,7 +110,7 @@ const Navbar: FC = () => {
             <FormControl isRequired mt={6} id="message">
               <FormLabel>Üzenet</FormLabel>
               <Textarea
-                backgroundColor="primary.50"
+                backgroundColor="primary.100"
                 height={["150px", "150px", "2x", "2xs"]}
                 resize="vertical"
                 placeholder="Üzenet"

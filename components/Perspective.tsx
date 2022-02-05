@@ -6,17 +6,21 @@ const PerspectiveHover = motion<BoxProps>(Box);
 const AnimationContainer = motion<FlexProps>(Flex);
 
 const isPointerMakesItCloser = true;
-const angleX = 9 * (isPointerMakesItCloser ? -1 : 1);
-const angleY = angleX * 1;
+const ogAngle = 9 * (isPointerMakesItCloser ? -1 : 1);
 
-const Perspective: FC = ({ children }) => {
+type PerspectiveProps = {
+  intensity?: number;
+};
+
+const Perspective: FC<PerspectiveProps> = ({ children, intensity }) => {
+  const angle = ogAngle * intensity;
   const y = useMotionValue(0.5);
   const x = useMotionValue(0.5);
 
-  const rotateY = useTransform(x, [0, 1], [-angleY, angleY], {
+  const rotateY = useTransform(x, [0, 1], [-angle, angle], {
     clamp: true,
   });
-  const rotateX = useTransform(y, [0, 1], [angleX, -angleX], {
+  const rotateX = useTransform(y, [0, 1], [angle, -angle], {
     clamp: true,
   });
 

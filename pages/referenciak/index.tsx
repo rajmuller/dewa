@@ -8,6 +8,7 @@ import { PostType } from "../../types";
 
 import Reference from "../../components/Reference";
 import Gallery from "../../components/Gallery";
+import Perspective from "../../components/Perspective";
 
 type PostProps = {
   references: PostType[];
@@ -43,6 +44,7 @@ const References: FC<PostProps> = ({ references }) => {
     <>
       <Heading textAlign="center">Büszkeségfal</Heading>
       <Grid
+        px={[4, 4, 40]}
         mt={16}
         justifyContent="center"
         gridTemplateColumns={[
@@ -56,11 +58,13 @@ const References: FC<PostProps> = ({ references }) => {
       >
         {hallOfFames.map((hallOfFame) => {
           return (
-            <Reference
-              key={hallOfFame.slug}
-              post={hallOfFame}
-              onOpen={onOpen}
-            />
+            <Perspective intensity={0.5}>
+              <Reference
+                key={hallOfFame.slug}
+                post={hallOfFame}
+                onOpen={onOpen}
+              />
+            </Perspective>
           );
         })}
       </Grid>
@@ -69,6 +73,7 @@ const References: FC<PostProps> = ({ references }) => {
         Galériák
       </Heading>
       <Grid
+        px={[4, 4, 40]}
         justify="space-between"
         gridTemplateColumns={[
           "1fr",

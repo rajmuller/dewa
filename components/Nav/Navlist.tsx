@@ -227,11 +227,11 @@ const NavItems: FC = () => {
     >
       <NavItem href="/termekek">Termékek</NavItem>
       <NavItem href="/referenciak">Referenciák</NavItem>
+      <NavItem href="/cikkek">Cikkek</NavItem>
+      <NavItem href="/kapcsolat">Kapcsolat</NavItem>
       <NavItem href="https://www.profession.hu/allasok/dewa-zrt/1,0,0,0,0,0,0,0,0,0,38885">
         Karrier
       </NavItem>
-      <NavItem href="/cikkek">Cikkek</NavItem>
-      <NavItem href="/kapcsolat">Kapcsolat</NavItem>
       <Contact />
     </Stack>
   );

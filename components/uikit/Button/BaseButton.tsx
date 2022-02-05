@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import { FC } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, chakra } from "@chakra-ui/react";
 
 import { ButtonProps } from "./types";
 import { ChevronLeftIcon, ChevronRightIcon } from "../../icons";
@@ -41,7 +41,7 @@ const BaseButton: FC<ButtonProps> = ({ variant, side, children, ...props }) => {
       {...props}
     >
       {!side ? (
-        { children }
+        <chakra.span>{children}</chakra.span>
       ) : side === "left" ? (
         <>
           <ChevronLeftIcon fontSize={[10, 10, 12, 15]} mr={m} />

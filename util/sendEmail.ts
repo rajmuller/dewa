@@ -2,7 +2,13 @@ import fetch from "node-fetch";
 
 const SENDGRID_API = "https://api.sendgrid.com/v3/mail/send";
 
-const sendEmail = async ({ name, email }: { name: string; email: string }) => {
+export const sendEmail = async ({
+  name,
+  email,
+}: {
+  name: string;
+  email: string;
+}) => {
   await fetch(SENDGRID_API, {
     method: "POST",
     headers: {
@@ -33,5 +39,3 @@ const sendEmail = async ({ name, email }: { name: string; email: string }) => {
     }),
   });
 };
-
-export { sendEmail };

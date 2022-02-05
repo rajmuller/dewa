@@ -539,6 +539,7 @@ const Index: FC = () => {
             layout="fill"
             src="/hero.png"
             alt="Festekszoro kep"
+            priority
           />
         </Flex>
       </Flex>

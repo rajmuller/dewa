@@ -67,4 +67,6 @@ lista pelda
 >
 > ![](/public/uploads/blowtherm-moso-fulke.jpg)
 >
-> [Kattintson ide a megnyitashoz](/referenciak/test-referencia-galeria-cim "Link a relevans cikkre")
+> [_Kattintson ide a megnyitashoz_](/referenciak/test-referencia-galeria-cim "Link a relevans cikkre")
+
+![](/public/uploads/blowtherm-moso-fulke.jpg)

@@ -63,10 +63,12 @@ lista pelda
 
 ***
 
+itt egy szovegbe agyazott link pelda, [**_kattints ram_**](/referenciak/test-referencia-galeria-cim "asdasd")
+
+itt  egy block qoute pelda linkre
+
 > ## Relevans cikk ajanlo Title
 >
-> ![](/public/uploads/blowtherm-moso-fulke.jpg)
+> ![asd](/public/uploads/blowtherm-moso-fulke.jpg "asd")
 >
-> [_Kattintson ide a megnyitashoz_](/referenciak/test-referencia-galeria-cim "Link a relevans cikkre")
-
-![](/public/uploads/blowtherm-moso-fulke.jpg)
+> [**_Kattintson ide a megnyitashoz_**](/referenciak/test-referencia-galeria-cim "link title")

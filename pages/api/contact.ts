@@ -3,20 +3,20 @@ import nodemailer from "nodemailer";
 export default async (req: any, res: any) => {
   const { subject, email, message } = req.body;
   const transporter = nodemailer.createTransport({
-    service: "SendPulse",
+    host: "mail.dewa.hu",
+    port: 465,
+    secure: true,
     auth: {
-      user: "rajfta@gmail.com",
-      pass: "Dead7Field",
+      user: "b.patrick@dewa.hu",
+      pass: "z6t5r4e3w2q1",
     },
   });
 
   try {
-    const emailRes = await transporter.sendMail({
-      from: email,
-      to: "rajfta@gmail.com",
-      // TODO: change
-      // to: "dewa@dewa.hu",
-      subject: `Honlapon érdeklődés üzenet - ${subject}`,
+    await transporter.sendMail({
+      from: "dewa@dewa.hu",
+      to: "dewa@dewa.hu",
+      subject: `Honlapon érdeklődés targy: ${subject} | feladó: ${email}`,
       html: `<p>Honlapról érkező üzenet</p><br>
       <p>${message}</p><br>
 

@@ -39,6 +39,7 @@ const Navbar: FC = () => {
   const toast = useToast();
 
   const onSubmit = async (values: any) => {
+    onClose();
     let config = {
       method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
@@ -54,11 +55,11 @@ const Navbar: FC = () => {
       console.log(response);
       if (response.status == 200) {
         toast({
-          title: "Email sikeresen elkuldve!",
+          title: "Email sikeresen elküldve!",
           duration: 5000,
           isClosable: true,
           status: "success",
-          position: "top",
+          position: "bottom",
         });
       }
     } catch (err) {
@@ -69,7 +70,7 @@ const Navbar: FC = () => {
         duration: 5000,
         isClosable: true,
         status: "error",
-        position: "top",
+        position: "bottom",
       });
     }
   };

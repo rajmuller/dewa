@@ -8,7 +8,7 @@ leiras: "Növeljen produktivitását és biztonságát a Blowtherm Mixing box fe
   legkényelmesebb kivitelezését, valamint egy olyan légfrissítéssel ellátott teret
   hoz létre, amelyben színcserét és oldószer adagolást könnyen és gyorsan végezhetünk
   egyből az automata vagy kézi fényezést végző berendezések mellett.\nA konyhák és
-  festékkeverők kialakítása egyáni igények alapján alakítható - ebben a témában bátran
+  festékkeverők kialakítása egyéni igények alapján alakítható - ebben a témában bátran
   keresse szakembereinket!  "
 boritokep: "/uploads/blowtherm-mixing-box-festekkevero.jpg"
 

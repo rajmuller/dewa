@@ -77,12 +77,12 @@ const AboutUs: FC = () => {
           px={[12, 12, 0]}
           mb={[8, 8, 0]}
         >
-          Problemamegoldok, veteranok, szakemberek... <br /> Ezek vagyunk mi!
+          Problémamegoldók, úttörők, szakemberek... <br /> Ezek vagyunk mi!
         </Text>
         <Text maxW="360px" flex={1} fontWeight={500} fontSize="20px">
-          Egy gordulekenyen teljesito ceg, tobb mint 20 eves tapasztalattal a
-          hata mogott varja, hogy megvalositsa barmekkora lelegzetvetelu
-          projektet.
+          Egy dinamikusan teljesítő cég, amely több, mint 30 év tapasztalattal a
+          háta mögött készen áll, hogy megvalósítsa tetszőleges méretű
+          beruházását.
         </Text>
       </Flex>
 
@@ -117,14 +117,14 @@ const AboutUs: FC = () => {
               w={32}
               pb={8}
             >
-              <StarIcon boxSize={12} fill="tertiary.500" />
+              <StarIcon boxSize={12} fill="yellow.200" />
               <Text
                 lineHeight={1.5}
                 fontSize={36}
                 fontWeight={600}
                 color="white"
               >
-                25
+                31
               </Text>
               <Text lineHeight={1} fontWeight={500} fontSize={20}>
                 év
@@ -142,7 +142,7 @@ const AboutUs: FC = () => {
               w={32}
               pb={8}
             >
-              <GunIcon boxSize={12} fill="tertiary.500" />
+              <GunIcon boxSize={12} fill="gray.300" />
               <Text
                 lineHeight={1.5}
                 fontSize={36}
@@ -152,7 +152,7 @@ const AboutUs: FC = () => {
                 4
               </Text>
               <Text lineHeight={1} fontWeight={500} fontSize={20}>
-                divizio
+                divízió
               </Text>
             </Flex>
           </Flex>
@@ -178,7 +178,7 @@ const AboutUs: FC = () => {
         position="relative"
       >
         <Heading mt={[8, 8, 0]} fontSize={[24, 24, 36]} fontWeight={600}>
-          Vizio
+          Vízió
         </Heading>
         <Flex
           pb={[12, 20]}
@@ -196,18 +196,22 @@ const AboutUs: FC = () => {
             px={[8, 8, 0]}
             textAlign={["justify", "justify", "inherit"]}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna,
-            porttitor rhoncus dolor purus non enim praesent elementum facilisis
-            leo, vel fringilla est ullamcorper eget nulla facilisi etiam
-            dignissim diam quis enim lobortis scelerisque fermentum dui
+            <chakra.span display="block" mb={6}>
+              Személyre szabottan biztosítani a festőipar minden szereplőjének a
+              legjobb, leginnovatívabb technológia megoldást.
+            </chakra.span>
+            <chakra.span>
+              Egy biztonságos, kreatív és inspiráló teret létrehozni
+              dolgozóinknak, ahol professzionalitás és barátságos közvetlenség
+              egyaránt létezik.{" "}
+            </chakra.span>
           </Text>
           <Flex direction="column">
             <Text fontSize={[24, 24, 36]} fontWeight={300} maxW="420px">
-              War is God’s way of teaching Americans geography.
+              A szakértő olyasvalaki, aki már nem gondolkodik - tud!
             </Text>
             <Text fontSize={14} mt={6} fontWeight={600}>
-              – Ambrose Bierce
+              – Frank Lloyd Wright
             </Text>
           </Flex>
         </Flex>
@@ -345,7 +349,7 @@ const CTA = () => {
 const References = () => {
   return (
     <Flex mt={40} direction="column" justify="center" align="center">
-      <Heading>Referenciak</Heading>
+      <Heading>Referenciák</Heading>
       <Flex
         w={["auto", "auto", "550px"]}
         h="480px"
@@ -397,7 +401,7 @@ const References = () => {
           maxW="50%"
           zIndex={1}
         >
-          ugyfelnek tettuk szinesebbe a vallalkozasat!
+          ügyfélnek tettük színesebbé a vállalkozását
         </Text>
       </Flex>
 

@@ -497,23 +497,21 @@ const Index: FC = () => {
       <Flex
         pl={[4, 4, 16, 32]}
         pr={[4, 4, 0]}
-        direction={["column", "column", "row"]}
+        direction={["column", "column", "column", "row"]}
         w="100%"
-        h={["auto", "auto", "80vh"]}
+        h={[
+          "calc(100vh - 128px)",
+          "calc(100vh - 128px)",
+          "calc(100vh - 128px)",
+          "80vh",
+        ]}
         overflow="hidden"
-        pb={[32, 32, 0]}
       >
-        <Flex
-          flex={2}
-          direction="column"
-          h="100%"
-          justify="center"
-          textAlign={["center", "center", "left"]}
-        >
-          <Heading fontSize={[48, 48, 64]}>
+        <Flex flex={[1, 1, 1, 2]} direction="column" h="100%">
+          <Heading fontSize={64}>
             Mi festjük a jö<chakra.span color="red.500">w</chakra.span>őt
           </Heading>
-          <Text mt={4} px={[8, 8, 0]} fontSize={[14, 14, 16]} mb={[12, 12, 32]}>
+          <Text mt={4} color="gray.600" fontSize={24} mb={[12, 12, 12, 32]}>
             Magyarország piacvezető festékipari megoldásai
           </Text>
           <Button
@@ -521,16 +519,34 @@ const Index: FC = () => {
             onClick={onOpen}
             bg="primary.500"
             variant="primary"
+            mb={4}
           >
             Írjon Nekünk
           </Button>
+          <Link href="/kapcsolat">
+            <a>
+              <Button
+                side="right"
+                w="100%"
+                borderWidth={1}
+                borderColor="primary.500"
+                backgroundColor="transparent"
+                color="primary.500"
+                _hover={{
+                  backgroundColor: "gray.200",
+                }}
+              >
+                Kapcsolat
+              </Button>
+            </a>
+          </Link>
         </Flex>
 
         <Flex
-          display={["none", "none", "flex"]}
+          display="flex"
           zIndex={-1}
-          flex={5}
-          transform={["scale(1.0)", "scale(1.0)", "scale(1.3)", "scale(1.0)"]}
+          flex={[1, 1, 1, 5]}
+          w={["100vw", "100vw", "auto"]}
           h="100%"
           position="relative"
         >

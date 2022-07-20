@@ -1,22 +1,17 @@
 import { FC } from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import { UsersIcon } from "@heroicons/react/outline";
 import {
-  AspectRatio,
   chakra,
   Flex,
-  Heading,
   Text,
   Grid,
   ComponentWithAs,
   IconProps,
 } from "@chakra-ui/react";
 import { Button } from "../components/uikit";
-import { useContact, useCurrentBreakpoint } from "../hooks";
+import { useContact } from "../hooks";
 import {
-  DotsIcon,
   FeluletIcon,
   FestofulkekIcon,
   PaintGunIcon,
@@ -24,14 +19,6 @@ import {
   TuzelesIcon,
 } from "../components/icons";
 import Perspective from "../components/Perspective";
-
-type CardProps = {
-  image: string;
-  logo: string;
-  description: string;
-  location: string;
-  date: string;
-};
 
 const AboutUs: FC = () => {
   return (
@@ -96,125 +83,6 @@ const AboutUs: FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-const Card: FC<CardProps> = ({ image, logo, description, location, date }) => {
-  return (
-    <Link href="/referenciak">
-      <a>
-        <Perspective>
-          <Flex
-            borderRadius={16}
-            // w="100%"
-            overflow="hidden"
-            bg="primary.700"
-            direction="column"
-            w={[320, 320, 320, 420]}
-            color="#ccc"
-          >
-            <AspectRatio w="100%" ratio={16 / 9} position="relative">
-              <Image src={image} layout="fill" objectFit="cover" />
-            </AspectRatio>
-            <Flex
-              pt={6}
-              px={10}
-              pb={10}
-              justify="center"
-              align="center"
-              direction="column"
-            >
-              <Flex w="100%" h={16} position="relative">
-                <Image layout="fill" objectFit="contain" src={logo} />
-              </Flex>
-              <Text
-                textAlign="justify"
-                fontSize={18}
-                lineHeight={1.5}
-                mt={4}
-                mb={10}
-              >
-                {description}
-              </Text>
-              <Flex w="100%" justify="space-between">
-                <chakra.span fontSize={20} fontWeight="500">
-                  {location}
-                </chakra.span>
-                <chakra.span fontWeight="300" fontSize={20}>
-                  {date}
-                </chakra.span>
-              </Flex>
-            </Flex>
-          </Flex>
-        </Perspective>
-      </a>
-    </Link>
-  );
-};
-
-const CTA = () => {
-  const { isMdMinus } = useCurrentBreakpoint();
-  const router = useRouter();
-
-  return (
-    <Flex
-      transform="translateY(-250px)"
-      borderBottomLeftRadius={100}
-      position="relative"
-      w="100%"
-      h={[450, 450, "800px"]}
-      bg="primary.900"
-      direction="column"
-      // TODO: !!
-      justify="flex-end"
-      align="center"
-    >
-      {isMdMinus ? (
-        <Button
-          bg="tertiary.300"
-          variant="tertiary"
-          color="black"
-          transform="translateY(-50%)"
-          side="right"
-          onClick={() => router.push("/referenciak")}
-        >
-          Referenciák
-        </Button>
-      ) : (
-        <Grid
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -15%)"
-          gap={20}
-          gridTemplateColumns="1fr 1fr"
-        >
-          <Card
-            logo="/blizzard.png"
-            image="/uploads/medence_fujas.jpg"
-            date="2021.03.15"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim..."
-            location="Gyor"
-          />
-          <Card
-            logo="/blizzard.png"
-            image="/uploads/medence_fujas.jpg"
-            date="2021.03.15"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim..."
-            location="Gyor"
-          />
-        </Grid>
-      )}
-      <DotsIcon
-        color="white"
-        position="absolute"
-        zIndex={10}
-        boxSize={[24, 40]}
-        left={10}
-        bottom={10}
-        transform="rotate(90deg)"
-      />
-    </Flex>
   );
 };
 

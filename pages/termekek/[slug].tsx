@@ -77,15 +77,6 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
   });
 
   const router = useRouter();
-  const onOpen = useCallback(
-    (slugString: string) => {
-      router.push({
-        pathname: `/termekek/${slug}[${slugString}]`,
-        query: { slug, slugString },
-      });
-    },
-    [router, slug]
-  );
 
   const [currentSubcategory, setcurrentSubcategory] = useState("");
   const currentSubProducts = products.filter(

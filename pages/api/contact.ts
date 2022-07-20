@@ -23,9 +23,11 @@ export default async (req: any, res: any) => {
       `,
     });
 
+    // eslint-disable-next-line no-console
     console.log("Message Sent");
   } catch (err) {
-    console.log(err);
+    // eslint-disable-next-line no-console
+    console.error(err);
   }
 
   res.status(200).json(req.body);

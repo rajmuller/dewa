@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import { UsersIcon } from "@heroicons/react/outline";
 import {
   AspectRatio,
   chakra,
@@ -12,15 +13,12 @@ import {
   ComponentWithAs,
   IconProps,
 } from "@chakra-ui/react";
-
 import { Button } from "../components/uikit";
 import { useContact, useCurrentBreakpoint } from "../hooks";
 import {
   DotsIcon,
   FeluletIcon,
   FestofulkekIcon,
-  GunIcon,
-  StarIcon,
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
@@ -36,194 +34,61 @@ type CardProps = {
 
 const AboutUs: FC = () => {
   return (
-    <Flex
-      textAlign={["center", "center", "inherit"]}
-      w="100%"
-      pt={8}
-      mt={[0, 0, 24]}
-      direction="column"
-      justify="center"
-      align="center"
-      borderTopRightRadius={32}
-      boxShadow={[
-        "12px -9px 23px -1px rgba(0,0,0,0.1);",
-        "12px -9px 23px -1px rgba(0,0,0,0.1);",
-        "none",
-      ]}
-      position="relative"
-    >
-      <DotsIcon
-        color={["black", "black", "transparent"]}
-        position="absolute"
-        boxSize={20}
-        transform="rotate(-90deg)"
-        right={4}
-        top={4}
-      />
-      <Heading>Rólunk</Heading>
-      <Flex
-        mt={[6, 6, 20]}
-        justify="center"
-        align="center"
-        direction={["column", "column", "row"]}
-      >
-        <Text
-          flex={1}
-          maxW="420px"
-          mr={[0, 0, 40]}
-          fontWeight="600"
-          fontSize={[20, 20, 30]}
-          color="primary.600"
-          px={[12, 12, 0]}
-          mb={[8, 8, 0]}
-        >
-          Problémamegoldók, úttörők, szakemberek... <br /> Ezek vagyunk mi!
-        </Text>
-        <Text maxW="360px" flex={1} fontWeight={500} fontSize="20px">
-          Egy dinamikusan teljesítő cég, amely több, mint 30 év tapasztalattal a
-          háta mögött készen áll, hogy megvalósítsa tetszőleges méretű
-          beruházását.
-        </Text>
-      </Flex>
-
-      <Flex w="100%" overflow="hidden" pb={[0, 0, 64]}>
-        <Flex
-          mt={[12, 12, 20]}
-          alignSelf="flex-start"
-          position="relative"
-          w={["100%", "100%", "95%"]}
-          h={["280px", "280px", "700px"]}
-          zIndex={5}
-          maxW="100%"
-          borderTopLeftRadius={[32, 32, 0]}
-        >
-          <Image src="/graff.jpeg" layout="fill" objectFit="cover" />
-          <Flex
-            position="absolute"
-            bottom={0}
-            right={["50%", 0]}
-            transform="translate(0, 100%)"
-            color="white"
-          >
-            <Flex
-              mr={20}
-              direction="column"
-              justify="center"
-              align="center"
-              borderBottomLeftRadius="30%"
-              borderBottomRightRadius="30%"
-              bg="primary.800"
-              pt={2}
-              w={32}
-              pb={8}
-            >
-              <StarIcon boxSize={12} fill="yellow.200" />
-              <Text
-                lineHeight={1.5}
-                fontSize={36}
-                fontWeight={600}
-                color="white"
-              >
-                31
-              </Text>
-              <Text lineHeight={1} fontWeight={500} fontSize={20}>
-                év
-              </Text>
-            </Flex>
-
-            <Flex
-              direction="column"
-              justify="center"
-              align="center"
-              borderBottomLeftRadius="30%"
-              borderBottomRightRadius="30%"
-              bg="primary.800"
-              pt={2}
-              w={32}
-              pb={8}
-            >
-              <GunIcon boxSize={12} fill="gray.300" />
-              <Text
-                lineHeight={1.5}
-                fontSize={36}
-                fontWeight={600}
-                color="white"
-              >
-                4
-              </Text>
-              <Text lineHeight={1} fontWeight={500} fontSize={20}>
-                divízió
-              </Text>
-            </Flex>
-          </Flex>
-          <Flex
-            position="absolute"
-            left={0}
-            bottom={-64}
-            h="420px"
-            zIndex={-1}
-            bg="primary.600"
-            w="100vw"
-          />
-        </Flex>
-      </Flex>
-      <Flex
-        direction="column"
-        color="white"
-        align="center"
-        justify="center"
-        bg="primary.600"
-        w="100%"
-        borderBottomRightRadius={100}
-        position="relative"
-      >
-        <Heading mt={[8, 8, 0]} fontSize={[24, 24, 36]} fontWeight={600}>
-          Vízió
-        </Heading>
-        <Flex
-          pb={[12, 20]}
-          mt={[4, 4, 20]}
-          direction={["column", "column", "row"]}
-          justify="center"
-          align="center"
-        >
-          <Text
-            fontSize={[14, 14, 18]}
-            maxW="420px"
-            mb={[8, 8, 0]}
-            mr={[0, 0, 32]}
-            lineHeight="200%"
-            px={[8, 8, 0]}
-            textAlign={["justify", "justify", "inherit"]}
-          >
-            <chakra.span display="block" mb={6}>
-              Személyre szabottan biztosítani a festőipar minden szereplőjének a
-              legjobb, leginnovatívabb technológia megoldást.
-            </chakra.span>
-            <chakra.span>
-              Egy biztonságos, kreatív és inspiráló teret létrehozni
-              dolgozóinknak, ahol professzionalitás és barátságos közvetlenség
-              egyaránt létezik.{" "}
-            </chakra.span>
-          </Text>
-          <Flex direction="column">
-            <Text fontSize={[24, 24, 36]} fontWeight={300} maxW="420px">
-              A szakértő olyasvalaki, aki már nem gondolkodik - tud!
-            </Text>
-            <Text fontSize={14} mt={6} fontWeight={600}>
-              – Frank Lloyd Wright
-            </Text>
-          </Flex>
-        </Flex>
-        <DotsIcon
-          color="white"
-          position="absolute"
-          boxSize={[24, 40]}
-          right={10}
-          bottom={10}
+    <div className="relative bg-white">
+      <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+        <img
+          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          alt="Support team"
         />
-      </Flex>
-    </Flex>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+        <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
+          <div>
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <UsersIcon className="h-6 w-6" aria-hidden="true" />
+            </div>
+          </div>
+          <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Deliver what your customers want every time
+          </h2>
+          <p className="mt-6 text-lg text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
+            nihil ea rerum ipsa. Nostrum consectetur sequi culpa doloribus
+            omnis, molestiae esse placeat, exercitationem magnam quod molestias
+            quia aspernatur deserunt voluptatibus.
+          </p>
+          <div className="mt-8 overflow-hidden">
+            <dl className="-mx-8 -mt-8 flex flex-wrap">
+              <div className="flex flex-col px-8 pt-8">
+                <dt className="order-2 text-base font-medium text-gray-500">
+                  Delivery
+                </dt>
+                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
+                  24/7
+                </dd>
+              </div>
+              <div className="flex flex-col px-8 pt-8">
+                <dt className="order-2 text-base font-medium text-gray-500">
+                  Pepperoni
+                </dt>
+                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
+                  99.9%
+                </dd>
+              </div>
+              <div className="flex flex-col px-8 pt-8">
+                <dt className="order-2 text-base font-medium text-gray-500">
+                  Calories
+                </dt>
+                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
+                  100k+
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -492,77 +357,99 @@ const Products: FC = () => {
   );
 };
 
+const Divider = () => {
+  return (
+    <div className="relative my-4 lg:my-32">
+      <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        <div className="w-full border-t border-gray-300" />
+      </div>
+      <div className=" flex justify-center">
+        <span className="bg-background -scale-x-100 relative w-32 h-32 px-2 text-gray-500">
+          {/* TODO: original high q pic */}
+          <Image layout="fill" objectFit="cover" src="/robot.png" />
+        </span>
+      </div>
+    </div>
+  );
+};
+
 const Index: FC = () => {
   // const router = useRouter();
   const { onOpen } = useContact();
 
   return (
     <>
-      <Flex
-        pl={[4, 4, 16, 32]}
-        pr={[4, 4, 0]}
-        direction={["column", "column", "column", "row"]}
-        w="100%"
-        h={[
-          "calc(100vh - 128px)",
-          "calc(100vh - 128px)",
-          "calc(100vh - 128px)",
-          "80vh",
-        ]}
-        overflow="hidden"
-      >
-        <Flex flex={[1, 1, 1, 2]} direction="column" h="100%">
-          <Heading fontSize={64}>
-            Mi festjük a jö<chakra.span color="red.500">w</chakra.span>őt
-          </Heading>
-          <Text mt={4} color="gray.600" fontSize={24} mb={[12, 12, 12, 32]}>
-            Magyarország piacvezető festékipari megoldásai
-          </Text>
-          <Button
-            side="right"
-            onClick={onOpen}
-            bg="primary.500"
-            variant="primary"
-            mb={4}
-          >
-            Írjon Nekünk
-          </Button>
-          <Link href="/kapcsolat">
-            <a>
-              <Button
-                side="right"
-                w="100%"
-                borderWidth={1}
-                borderColor="primary.500"
-                backgroundColor="transparent"
-                color="primary.500"
-                _hover={{
-                  backgroundColor: "gray.200",
-                }}
-              >
-                Kapcsolat
-              </Button>
-            </a>
-          </Link>
-        </Flex>
+      <div className="relative bg-transparent overflow-hidden">
+        <div className="wrapper mx-auto">
+          <div className="relative z-10 h-full bg-background lg:max-w-2xl lg:w-full">
+            <svg
+              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2"
+              fill="currentColor"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <polygon points="50,0 100,0 50,100 0,100" />
+            </svg>
 
-        <Flex
-          display="flex"
-          zIndex={-1}
-          flex={[1, 1, 1, 5]}
-          w={["100vw", "100vw", "auto"]}
-          h="100%"
-          position="relative"
-        >
+            <div className="mx-auto h-full max-w-7xl py-4 sm:py-12 lg:py-16 xl:py-32">
+              <div className="sm:text-center h-full lg:text-left flex flex-col gap-12 justify-center">
+                <h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl">
+                  <span className="block xl:inline">
+                    Mi festjük a jö<span className="text-secondary-500">w</span>
+                    őt
+                  </span>
+                </h1>
+                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  Magyarország piacvezető festékipari megoldásai Magyarország
+                  piacvezető festékipari megoldásai Magyarország piacvezető
+                  festékipari megoldásai Magyarország piacvezető festékipari
+                  megoldásai
+                </p>
+                <div className="mt-5 sm:mt-8 sm:flex gap-4 sm:justify-center lg:justify-start">
+                  <Button
+                    side="right"
+                    onClick={onOpen}
+                    bg="primary.500"
+                    variant="primary"
+                    mb={4}
+                  >
+                    Írjon Nekünk
+                  </Button>
+                  <Link href="/kapcsolat">
+                    <a>
+                      <Button
+                        side="right"
+                        w="100%"
+                        borderWidth={1}
+                        borderColor="primary.500"
+                        backgroundColor="transparent"
+                        color="primary.500"
+                        _hover={{
+                          backgroundColor: "gray.200",
+                        }}
+                      >
+                        Kapcsolat
+                      </Button>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div className="h-56 relative w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" />
           <Image
-            objectFit="contain"
             layout="fill"
-            src="/hero.png"
-            alt="Festekszoro kep"
-            priority
+            objectFit="cover"
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+            alt="hero image"
           />
-        </Flex>
-      </Flex>
+        </div>
+      </div>
+
+      <Divider />
 
       <AboutUs />
       <References />

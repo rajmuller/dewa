@@ -4,6 +4,6 @@
 
 @layer components {
   .wrapper {
-    @apply mx-auto max-w-default px-4 md:px-8;
+    @apply mx-auto max-w-default px-4 md:px-8 xl:px-16;
   }
 }

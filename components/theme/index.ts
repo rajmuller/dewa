@@ -9,9 +9,9 @@ import { headingStyles, textStyles } from "./typoStyles";
 import Breakpoints from "../../util/breakpoints";
 
 const fonts = {
-  body: "'Montserrat', sans-serif",
-  heading: "'Montserrat', sans-serif",
-  mono: "'Montserrat', sans-serif",
+  body: "'Inter', sans-serif",
+  heading: "'Inter', sans-serif",
+  mono: "'Inter', sans-serif",
 };
 
 const { sm, md, lg, xl } = Breakpoints;

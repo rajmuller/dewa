@@ -40,7 +40,7 @@ const Navbar: FC = () => {
 
   const onSubmit = async (values: any) => {
     onClose();
-    let config = {
+    const config = {
       method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
       headers: {
@@ -53,7 +53,7 @@ const Navbar: FC = () => {
       // @ts-ignore
       const response = await axios(config);
       console.log(response);
-      if (response.status == 200) {
+      if (response.status === 200) {
         toast({
           title: "Email sikeresen elküldve!",
           duration: 5000,
@@ -76,15 +76,7 @@ const Navbar: FC = () => {
   };
 
   return (
-    <Flex
-      align="center"
-      justify="space-between"
-      m="auto"
-      px={headerPX}
-      py={4}
-      maxW={headerMaxW}
-      mb={[0, 8, 0]}
-    >
+    <div className="wrapper flex items-center justify-between mb-4">
       <Box cursor="pointer">
         <Link href="/">
           <a>
@@ -93,7 +85,6 @@ const Navbar: FC = () => {
         </Link>
       </Box>
       <Navlist />
-
       <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay backgroundColor="backdrop" />
         <ModalContent
@@ -212,7 +203,7 @@ const Navbar: FC = () => {
           </ModalBody>
         </ModalContent>
       </Modal>
-    </Flex>
+    </div>
   );
 };
 

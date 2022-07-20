@@ -218,70 +218,6 @@ const CTA = () => {
   );
 };
 
-const References = () => {
-  return (
-    <Flex mt={40} direction="column" justify="center" align="center">
-      <Heading>Referenciák</Heading>
-      <Flex
-        w={["auto", "auto", "550px"]}
-        h="480px"
-        position="relative"
-        mt={[8, 8, 24]}
-        justify="center"
-        align="center"
-        direction="column"
-        zIndex={10}
-      >
-        <Image layout="fill" objectFit="cover" src="/paint_spray.png" />
-        <Flex
-          display={["none", "none", "flex"]}
-          position="absolute"
-          top={0}
-          left={0}
-          transform="translate(-80%, -40%)"
-        >
-          <Flex position="relative" w={60} h={60}>
-            {/* TODO: original high q pic */}
-            <Image layout="fill" objectFit="cover" src="/robot.png" />
-          </Flex>
-        </Flex>
-        <Flex
-          display={["none", "none", "flex"]}
-          position="absolute"
-          top={0}
-          right={0}
-          transform="translate(80%, -40%) scaleX(-1)"
-        >
-          <Flex position="relative" w={60} h={60}>
-            <Image layout="fill" objectFit="cover" src="/robot.png" />
-          </Flex>
-        </Flex>
-        <Heading
-          fontWeight={700}
-          fontSize={64}
-          color="tertiary.500"
-          zIndex={1}
-          mb={4}
-        >
-          2500+
-        </Heading>
-        <Text
-          fontWeight={600}
-          fontSize={24}
-          color="white"
-          textAlign="center"
-          maxW="50%"
-          zIndex={1}
-        >
-          ügyfélnek tettük színesebbé a vállalkozását
-        </Text>
-      </Flex>
-
-      <CTA />
-    </Flex>
-  );
-};
-
 type DivisionProps = {
   Logo: ComponentWithAs<"svg", IconProps>;
   name: string;
@@ -322,10 +258,13 @@ const Products: FC = () => {
     >
       <Flex direction="column">
         <Flex direction="column" align="center" mb={12}>
-          <Heading mb={2}>Termékek</Heading>
-          <Text textAlign="center" fontSize={18}>
-            Bongessze termekeink <br />{" "}
-            <chakra.span color="secondary.500">diviziok </chakra.span>szerint
+          <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Termékek
+          </h1>
+          <Text textAlign="center" fontSize={22}>
+            Böngésszen
+            <br /> <chakra.span color="secondary.500">divízió </chakra.span>
+            szerint
           </Text>
         </Flex>
         <Grid
@@ -461,7 +400,9 @@ const Index: FC = () => {
       <Divider />
 
       <AboutUs />
-      <References />
+
+      <Divider />
+
       <Products />
     </>
   );

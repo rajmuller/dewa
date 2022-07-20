@@ -147,7 +147,7 @@ const Products: FC = () => {
         >
           <Division
             href="/termekek/fenyezofulkek"
-            name="Fényezofülkék"
+            name="Fényezőfülkék"
             Logo={FestofulkekIcon}
           />
           <Division
@@ -179,7 +179,6 @@ const Divider = () => {
       </div>
       <div className=" flex justify-center">
         <span className="bg-background -scale-x-100 relative h-24 w-24 lg:w-32 lg:h-32 px-2 text-gray-500">
-          {/* TODO: original high q pic */}
           <Image layout="fill" objectFit="cover" src="/robot.png" />
         </span>
       </div>
@@ -253,13 +252,15 @@ const Index: FC = () => {
             </div>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <div className="h-56 relative w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
+        <div className="lg:absolute z-2 lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div className="h-56 relative z-2 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
             <Image
               layout="fill"
               objectFit="cover"
+              className="z-2"
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
               alt="hero image"
+              priority
             />
           </div>
         </div>

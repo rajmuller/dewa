@@ -224,6 +224,7 @@ const NavItems: FC = () => {
       spacing={12}
       align={["flex-end", "flex-end", "flex-end", "baseline"]}
       direction={["column", "column", "column", "row"]}
+      zIndex={12}
     >
       <NavItem href="/termekek">Termékek</NavItem>
       <NavItem href="/referenciak">Referenciák</NavItem>

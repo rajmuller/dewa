@@ -23,7 +23,6 @@ import Link from "next/link";
 import { DewaIcon, DotsIcon } from "../icons";
 
 import Navlist from "./Navlist";
-import { headerMaxW, headerPX } from "./consts";
 import { useContact } from "../../hooks";
 import { Button } from "../uikit";
 

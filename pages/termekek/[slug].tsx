@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
@@ -98,12 +98,16 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
     setcurrentSubcategory(e.target.value);
   }, []);
 
+  useEffect(() => {
+    setcurrentSubcategory("");
+  }, [slug]);
+
   if (router.isFallback || !products) {
     return <div>ERRORPAGE</div>;
   }
 
   return (
-    <Flex direction="column">
+    <div className="flex flex-col wrapper">
       <Heading
         display="flex"
         alignItems="center"
@@ -140,7 +144,11 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             }}
           >
             {uniqueCategories.map((category) => {
-              return <option value={category}>{category}</option>;
+              return (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              );
             })}
           </Select>
         ) : (
@@ -155,6 +163,7 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             {uniqueCategories.map((category) => {
               return (
                 <SubCategory
+                  key={category}
                   currentSubcategory={currentSubcategory}
                   value={category}
                   onClick={onSubcategoryChange}
@@ -165,15 +174,13 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             })}
           </Stack>
         )}
-        <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={8}>
+        <SimpleGrid columns={[1, 2, 2, 3, 3]} spacing={8}>
           {selectedProducts.map((product) => {
-            return (
-              <Product key={product.slug} product={product} onOpen={onOpen} />
-            );
+            return <Product key={product.slug} product={product} />;
           })}
         </SimpleGrid>
       </Stack>
-    </Flex>
+    </div>
   );
 };
 

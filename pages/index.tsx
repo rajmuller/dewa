@@ -88,7 +88,7 @@ const AboutUs: FC = () => {
                   Sikeres Projekt
                 </dt>
                 <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
-                  1000+
+                  2500+
                 </dd>
               </div>
             </dl>

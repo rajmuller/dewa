@@ -9,7 +9,6 @@ import PageHeader from "../../components/PageHeader";
 import { getAllContents, getContentBySlug } from "../../util";
 
 import { PostType } from "../../types";
-import { Button } from "../../components/uikit";
 
 type PostProps = {
   post: PostType;
@@ -18,9 +17,9 @@ type PostProps = {
 const Post: FC<PostProps> = ({ post }) => {
   const { seo, content, slug } = post;
 
-  const { isFallback, back: onBack } = useRouter();
+  const { isFallback, push } = useRouter();
   if (!isFallback && !slug) {
-    return <div>ERRORPAGE</div>;
+    push("/cikkek");
   }
 
   return (
@@ -30,14 +29,6 @@ const Post: FC<PostProps> = ({ post }) => {
         <meta name="description" content={seo.description} />
       </Head>
 
-      <Button
-        variant="secondary"
-        mb={[8, 8, 12, 16]}
-        side="left"
-        onClick={onBack}
-      >
-        Vissza
-      </Button>
       <PageHeader post={post} />
       <Divider
         my={12}
@@ -54,8 +45,6 @@ const Post: FC<PostProps> = ({ post }) => {
         borderBottomWidth="2px"
         orientation="horizontal"
       />
-      <Button>Elozo</Button>
-      <Button>Kovetkezo</Button>
     </>
   );
 };

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
 
+import Link from "next/link";
 import { PostType } from "../types";
 
 import { Button } from "./uikit";
@@ -55,9 +56,22 @@ const Article: FC<ArticleProps> = ({
         >
           {excerpt}
         </Text>
-        <Button onClick={() => onOpen(slug)} variant="secondary" side="right">
-          Elolvasom
-        </Button>
+        <Link
+          href={{
+            pathname: "/cikkek/[slug]",
+            query: { slug },
+          }}
+        >
+          <a>
+            <Button
+              onClick={() => onOpen(slug)}
+              variant="secondary"
+              side="right"
+            >
+              Elolvasom
+            </Button>
+          </a>
+        </Link>
       </Flex>
     </Flex>
   );

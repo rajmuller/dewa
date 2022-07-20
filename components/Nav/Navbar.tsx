@@ -51,6 +51,7 @@ const Navbar: FC = () => {
     try {
       // @ts-ignore
       const response = await axios(config);
+      // eslint-disable-next-line no-console
       console.log(response);
       if (response.status === 200) {
         toast({
@@ -62,7 +63,8 @@ const Navbar: FC = () => {
         });
       }
     } catch (err) {
-      console.log({ err });
+      // eslint-disable-next-line no-console
+      console.error({ err });
       toast({
         title: "Sikertelen küldés!",
         description: `Hibaüzenet: ${err}`,

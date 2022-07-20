@@ -29,10 +29,9 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
   }
 
   return (
-    <>
+    <div className="wrapper">
       <Heading textAlign="center">Cikkek</Heading>
       <SimpleGrid
-        px={[4, 4, 40]}
         mt={16}
         justify="center"
         columns={[1, 2, 2, 3]}
@@ -42,7 +41,7 @@ const Cikkek: FC<CikkekType> = ({ posts }) => {
           return <Article key={post.slug} post={post} onOpen={onOpen} />;
         })}
       </SimpleGrid>
-    </>
+    </div>
   );
 };
 

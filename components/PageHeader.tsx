@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Text, Heading, Flex, Box } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
+import Link from "next/link";
 import { PostType } from "../types";
 
 import { Button } from "./uikit";
@@ -17,16 +18,7 @@ const PageHeader: FC<PageHeaderProps> = ({
   const { back: onBack } = useRouter();
 
   return (
-    <Flex direction="column" px={[4, 4, 4, 0]} mx="auto" maxW={1200}>
-      <Button
-        variant="secondary"
-        mb={[8, 8, 12, 16]}
-        side="left"
-        onClick={onBack}
-        alignSelf="flex-start"
-      >
-        Vissza
-      </Button>
+    <div className="wrapper">
       <Flex
         mx="auto"
         direction={["column", "row", "row", "row"]}
@@ -39,6 +31,19 @@ const PageHeader: FC<PageHeaderProps> = ({
           justify={[null, "center", "center", "center"]}
           maxW={[null, "40%", "40%", "40%"]}
         >
+          <Link href="/cikkek">
+            <a>
+              <Button
+                variant="secondary"
+                mb={[8, 8, 12, 16]}
+                side="left"
+                onClick={onBack}
+                alignSelf="flex-start"
+              >
+                Vissza
+              </Button>
+            </a>
+          </Link>
           <Heading variant="title" mb={[3, null, null, null]}>
             {title}
           </Heading>
@@ -71,7 +76,7 @@ const PageHeader: FC<PageHeaderProps> = ({
           />
         </Box>
       </Flex>
-    </Flex>
+    </div>
   );
 };
 

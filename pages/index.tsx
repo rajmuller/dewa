@@ -19,6 +19,7 @@ import {
   DotsIcon,
   FeluletIcon,
   FestofulkekIcon,
+  PaintGunIcon,
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
@@ -45,43 +46,49 @@ const AboutUs: FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
         <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
           <div>
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-              <UsersIcon className="h-6 w-6" aria-hidden="true" />
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-secondary-300 text-white">
+              <div className="h-6 w-6 relative">
+                {/* <UsersIcon className="h-6 w-6" aria-hidden="true" /> */}
+                <PaintGunIcon className="w-6 h-6" />
+              </div>
             </div>
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Deliver what your customers want every time
+            Problémamegoldók, úttörők, szakemberek... Ezek vagyunk mi!
           </h2>
           <p className="mt-6 text-lg text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-            nihil ea rerum ipsa. Nostrum consectetur sequi culpa doloribus
-            omnis, molestiae esse placeat, exercitationem magnam quod molestias
-            quia aspernatur deserunt voluptatibus.
+            <span className="block mb-4">
+              Személyre szabottan biztosítani a festőipar minden szereplőjének a
+              legjobb, leginnovatívabb technológia megoldást.
+            </span>
+            Egy biztonságos, kreatív és inspiráló teret létrehozni
+            dolgozóinknak, ahol professzionalitás és barátságos közvetlenség
+            egyaránt létezik.
           </p>
           <div className="mt-8 overflow-hidden">
             <dl className="-mx-8 -mt-8 flex flex-wrap">
               <div className="flex flex-col px-8 pt-8">
-                <dt className="order-2 text-base font-medium text-gray-500">
-                  Delivery
+                <dt className="order-2 capitalize text-base font-medium text-gray-500">
+                  év Tapasztalat
                 </dt>
-                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
-                  24/7
+                <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                  30+
                 </dd>
               </div>
               <div className="flex flex-col px-8 pt-8">
                 <dt className="order-2 text-base font-medium text-gray-500">
-                  Pepperoni
+                  Divízió
                 </dt>
-                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
-                  99.9%
+                <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                  4
                 </dd>
               </div>
               <div className="flex flex-col px-8 pt-8">
                 <dt className="order-2 text-base font-medium text-gray-500">
-                  Calories
+                  Sikeres Projekt
                 </dt>
-                <dd className="order-1 text-2xl font-extrabold text-indigo-600 sm:text-3xl">
-                  100k+
+                <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                  1000+
                 </dd>
               </div>
             </dl>
@@ -359,12 +366,12 @@ const Products: FC = () => {
 
 const Divider = () => {
   return (
-    <div className="relative my-4 lg:my-32">
+    <div className="relative my-16 lg:my-32">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
         <div className="w-full border-t border-gray-300" />
       </div>
       <div className=" flex justify-center">
-        <span className="bg-background -scale-x-100 relative w-32 h-32 px-2 text-gray-500">
+        <span className="bg-background -scale-x-100 relative h-24 w-24 lg:w-32 lg:h-32 px-2 text-gray-500">
           {/* TODO: original high q pic */}
           <Image layout="fill" objectFit="cover" src="/robot.png" />
         </span>
@@ -408,6 +415,7 @@ const Index: FC = () => {
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex gap-4 sm:justify-center lg:justify-start">
                   <Button
+                    w={["full", "auto", "auto"]}
                     side="right"
                     onClick={onOpen}
                     bg="primary.500"
@@ -439,13 +447,14 @@ const Index: FC = () => {
           </div>
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <div className="h-56 relative w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" />
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-            alt="hero image"
-          />
+          <div className="h-56 relative w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+              alt="hero image"
+            />
+          </div>
         </div>
       </div>
 

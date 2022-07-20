@@ -17,3 +17,4 @@ export * from "./TuzelesIcon";
 export * from "./FeluletIcon";
 export * from "./FestofulkekIcon";
 export * from "./TelephoneIcon";
+export * from "./PaintGunIcon";

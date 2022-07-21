@@ -9,6 +9,7 @@ import {
   ComponentWithAs,
   IconProps,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
 import {
@@ -89,89 +90,91 @@ const AboutUs: FC = () => {
   );
 };
 
-type DivisionProps = {
-  Logo: ComponentWithAs<"svg", IconProps>;
-  name: string;
-  href: string;
-};
+const divisions = [
+  {
+    href: "/termekek/fenyezofulkek",
+    name: "Fényezőfülkék",
+    Logo: FestofulkekIcon,
+    description:
+      "When you walked through the door. It was clear to me (Clear to me). You’re the one they adore. Who they came to see (Who they came to see). You’re a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really blame you? (Who can really blame you?). We’re the ones who made you.",
+  },
+  {
+    href: "/termekek/szorastechnika",
+    name: "Szórástechnika",
+    Logo: SzorasIcon,
+    description:
+      "We're gonna rock this house until we knock it down. So turn the volume loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let yourself go, let yourself go. Say before we kick the bucket. Life's too short to not go for broke. So everybody, everybody, go berserk, grab your vial, yeah.",
+  },
+  {
+    href: "/termekek/tuzelestechnika",
+    name: "Tüzeléstechnika",
+    Logo: TuzelesIcon,
+    description:
+      "Mom, I know I let you down. And though you say the days are happy. Why is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't you place the blame on me. As you pour yourself another drink, yeah. I guess we are who we are. Headlights shining in the dark night, I drive on. Maybe we took this too far.",
+  },
+  {
+    href: "/termekek/feluletkezeles",
+    name: "Felületkezelés",
+    Logo: FeluletIcon,
+    description:
+      "I never meant to give you mushrooms, girl. I never meant to bring you to my world. Now you sitting in the corner crying. And now it's my fault, my fault. I never meant to give you mushrooms, girl. I never meant to bring you to my world. Now you sitting in the corner crying. And now it's my fault, my fault.",
+  },
+];
 
-const Division: FC<DivisionProps> = ({ Logo, name, href }) => {
-  return (
-    <Link href={href}>
-      <a>
-        <Perspective>
-          <Flex
-            align="center"
-            direction="column"
-            p={8}
-            shadow="smallCard"
-            borderRadius={32}
-          >
-            <Logo boxSize={250} />
-            <Text fontSize={24} fontWeight={600} mt={6}>
-              {name}
-            </Text>
-          </Flex>
-        </Perspective>
-      </a>
-    </Link>
-  );
-};
-
-const Products: FC = () => {
+const Products = () => {
   return (
     <MotionWrapper>
-      <Flex
-        justify="center"
-        align="center"
-        direction="column"
-        py={12}
-        bg="primary.50"
-      >
-        <Flex direction="column">
-          <Flex direction="column" align="center" mb={12}>
-            <h1 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Termékek
-            </h1>
-            <Text textAlign="center" fontSize={22}>
-              Böngésszen
-              <br /> <chakra.span color="secondary.500">divízió </chakra.span>
-              szerint
-            </Text>
-          </Flex>
-          <Grid
-            gap={4}
-            gridTemplateColumns={[
-              "1fr",
-              "1fr",
-              "1fr",
-              "1fr 1fr",
-              "repeat(4, 1fr)",
-            ]}
-          >
-            <Division
-              href="/termekek/fenyezofulkek"
-              name="Fényezőfülkék"
-              Logo={FestofulkekIcon}
-            />
-            <Division
-              href="/termekek/szorastechnika"
-              name="Szórástechnika"
-              Logo={SzorasIcon}
-            />
-            <Division
-              href="/termekek/tuzelestechnika"
-              name="Tüzeléstechnika"
-              Logo={TuzelesIcon}
-            />
-            <Division
-              href="/termekek/feluletkezeles"
-              name="Felületkezelés"
-              Logo={FeluletIcon}
-            />
-          </Grid>
-        </Flex>
-      </Flex>
+      <div className="bg-background">
+        <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
+          <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
+            <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
+              <div>
+                <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+                  We built our business on great customer service
+                </h2>
+                <p className="mt-4 text-gray-500">
+                  At the beginning at least, but then we realized we could make
+                  a lot more money if we kinda stopped caring about that. Our
+                  new strategy is to write a bunch of things that look really
+                  good in the headlines, then clarify in the small print but
+                  hope people don't actually read it.
+                </p>
+              </div>
+              <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1618275340450-a684fa3d7743?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  alt=""
+                  className="object-center object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-16 grid grid-cols-1 gap-y-10 lg:grid-cols-4">
+              {divisions.map((division) => (
+                <Link key={division.name} href={division.href}>
+                  <a>
+                    <motion.div
+                      whileHover={{ y: -10 }}
+                      className="sm:flex hover:shadow-md rounded-md p-4 lg:block"
+                    >
+                      <div className="sm:flex-shrink-0">
+                        <division.Logo boxSize={32} />
+                      </div>
+                      <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
+                        <h3 className="text-md font-medium text-gray-900">
+                          {division.name}
+                        </h3>
+                        <p className="mt-2 text-sm text-gray-500">
+                          {division.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </MotionWrapper>
   );
 };

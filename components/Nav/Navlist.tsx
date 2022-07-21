@@ -61,8 +61,8 @@ const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
 };
 
 const productCategories = [
-  "Felületkezelés",
   "Fényezőfülkék",
+  "Felületkezelés",
   "Tüzeléstechnika",
   "Szórástechnika",
 ];

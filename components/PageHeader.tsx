@@ -18,7 +18,7 @@ const PageHeader: FC<PageHeaderProps> = ({
   const { back: onBack } = useRouter();
 
   return (
-    <div className="wrapper">
+    <div className="wrapper mt-4 lg:mt-16">
       <Flex
         mx="auto"
         direction={["column", "row", "row", "row"]}
@@ -44,13 +44,12 @@ const PageHeader: FC<PageHeaderProps> = ({
               </Button>
             </a>
           </Link>
-          <Heading variant="title" mb={[3, null, null, null]}>
-            {title}
-          </Heading>
+          <h1 className="mb-4 font-semibold text-5xl">{title}</h1>
           <Text
             fontSize={[null, null, null, 24]}
             mb={[3, null, null, null]}
             color="grey.iron"
+            noOfLines={12}
           >
             {excerpt}
           </Text>

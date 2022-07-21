@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { FC, useCallback, useMemo } from "react";
+import { FC, useMemo } from "react";
 import { Grid, Heading } from "@chakra-ui/react";
 
 import { getAllContents } from "../../util";
@@ -16,15 +16,6 @@ type PostProps = {
 
 const References: FC<PostProps> = ({ references }) => {
   const router = useRouter();
-  const onOpen = useCallback(
-    (slug: string) => {
-      router.push({
-        pathname: "/referenciak/[slug]",
-        query: { slug },
-      });
-    },
-    [router]
-  );
 
   const hallOfFames = useMemo(
     () => references.filter((reference) => reference.content),
@@ -46,12 +37,8 @@ const References: FC<PostProps> = ({ references }) => {
       <div className="grid mt-16 px-4 sm:px-4 gap-8 xl:gap-8 md:px-40 justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(2,_420px)]">
         {hallOfFames.map((hallOfFame) => {
           return (
-            <Perspective intensity={0.5}>
-              <Reference
-                key={hallOfFame.slug}
-                post={hallOfFame}
-                onOpen={onOpen}
-              />
+            <Perspective key={hallOfFame.slug} intensity={0.5}>
+              <Reference key={hallOfFame.slug} post={hallOfFame} />
             </Perspective>
           );
         })}
@@ -72,7 +59,7 @@ const References: FC<PostProps> = ({ references }) => {
         gap={[16, 16, 16, 20]}
       >
         {galleries.map((gallery) => {
-          return <Gallery key={gallery.slug} post={gallery} onOpen={onOpen} />;
+          return <Gallery key={gallery.slug} post={gallery} />;
         })}
       </Grid>
     </>

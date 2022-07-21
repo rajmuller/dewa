@@ -44,9 +44,7 @@ const LinkItem: FC<LinkItemProps> = ({ children, href, css }) => {
       <a>
         <Box
           onClick={onClose}
-          color={
-            currentPage ? "secondary.500" : ["white", "white", "white", "black"]
-          }
+          color={currentPage ? "secondary.500" : "black"}
           cursor="pointer"
           _hover={{
             transform: "scale(1.02)",
@@ -197,7 +195,7 @@ const NavItem: FC<NavItemProps> = ({ children, href }) => {
         onClick={onClose}
         isExternal
         href={href}
-        color={["white", "white", "white", "black"]}
+        color="black"
         cursor="pointer"
         _hover={{
           transform: "scale(1.02)",
@@ -257,7 +255,7 @@ const Navlist: FC = () => {
       />
       <Drawer size="xs" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay background="backdrop" />
-        <DrawerContent borderLeftRadius="xl" bg="primary.700" color="white">
+        <DrawerContent borderLeftRadius="md" bg="primary.100" color="black">
           <DrawerHeader d="flex" justifyContent="flex-end" px={headerPX}>
             <IconButton
               alignSelf="flex-end"

@@ -43,19 +43,7 @@ const References: FC<PostProps> = ({ references }) => {
   return (
     <>
       <Heading textAlign="center">Büszkeségfal</Heading>
-      <Grid
-        px={[4, 4, 40]}
-        mt={16}
-        justifyContent="center"
-        gridTemplateColumns={[
-          "1fr",
-          "repeat(2, 1fr)",
-          "repeat(2, 1fr)",
-          "repeat(2, 536px)",
-        ]}
-        columnGap={[16, 16, 16, 8]}
-        rowGap={[16, 16, 16, 20]}
-      >
+      <div className="grid mt-16 px-4 sm:px-4 gap-8 xl:gap-8 md:px-40 justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(2,_420px)]">
         {hallOfFames.map((hallOfFame) => {
           return (
             <Perspective intensity={0.5}>
@@ -67,7 +55,7 @@ const References: FC<PostProps> = ({ references }) => {
             </Perspective>
           );
         })}
-      </Grid>
+      </div>
 
       <Heading textAlign="center" my={16}>
         Galériák

@@ -19,7 +19,7 @@ const Article: FC<ArticleProps> = ({
   return (
     <Flex direction="column" as="article" align="flex-start">
       <AspectRatio
-        ratio={1}
+        ratio={3 / 2}
         position="relative"
         overflow="hidden"
         d="flex"
@@ -67,6 +67,7 @@ const Article: FC<ArticleProps> = ({
               onClick={() => onOpen(slug)}
               variant="secondary"
               side="right"
+              w={["100%", "auto"]}
             >
               Elolvasom
             </Button>

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { Text, Heading, Flex, Box } from "@chakra-ui/react";
+import { Text, Flex, Box } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 import Link from "next/link";

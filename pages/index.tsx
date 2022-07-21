@@ -1,14 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  chakra,
-  Flex,
-  Text,
-  Grid,
-  ComponentWithAs,
-  IconProps,
-} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
@@ -19,7 +11,6 @@ import {
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
-import Perspective from "../components/Perspective";
 import MotionWrapper from "../components/MotionWrapper";
 
 const AboutUs: FC = () => {
@@ -133,11 +124,11 @@ const Products = () => {
                   We built our business on great customer service
                 </h2>
                 <p className="mt-4 text-gray-500">
-                  At the beginning at least, but then we realized we could make
-                  a lot more money if we kinda stopped caring about that. Our
-                  new strategy is to write a bunch of things that look really
-                  good in the headlines, then clarify in the small print but
-                  hope people don't actually read it.
+                  I am beginning to feel like a Rap God, Rap God. All my people
+                  from the front to the back nod, back nod. The way I am racing
+                  around the track, call me NASCAR, NASCAR. Dale Earnhardt of
+                  the trailer park, the White Trash God. Kneel before General
+                  Zod. This planet Krypton – no, Asgard, Asgard.
                 </p>
               </div>
               <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">

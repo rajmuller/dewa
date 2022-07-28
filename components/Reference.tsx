@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Flex, AspectRatio, Heading, Text } from "@chakra-ui/react";
 
 import Link from "next/link";
@@ -14,6 +14,8 @@ type ReferenceProps = {
 const Reference: FC<ReferenceProps> = ({
   post: { slug, coverImage, title, date, excerpt },
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Link
       href={{
@@ -31,6 +33,8 @@ const Reference: FC<ReferenceProps> = ({
           shadow={[null, null, null, "lg"]}
           background={["transparent", "transparent", "transparent", "#fff"]}
           cursor="pointer"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <AspectRatio
             ratio={5 / 3}
@@ -71,7 +75,13 @@ const Reference: FC<ReferenceProps> = ({
             >
               {excerpt}
             </Text>
-            <Button variant="secondary" side="right">
+            <Button
+              variant="secondary"
+              side="right"
+              w="full"
+              color={isHovered ? "secondary.500" : "secondary.50"}
+              borderBottomColor={isHovered ? "secondary.500" : "secondary.50"}
+            >
               Elolvasom
             </Button>
           </Flex>

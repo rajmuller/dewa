@@ -56,7 +56,8 @@ const References: FC<PostProps> = ({ references }) => {
           "repeat(2, 1fr)",
           "repeat(3, 1fr)",
         ]}
-        gap={[16, 16, 16, 20]}
+        columnGap={[16, 16, 16, 20]}
+        rowGap={8}
       >
         {galleries.map((gallery) => {
           return <Gallery key={gallery.slug} post={gallery} />;

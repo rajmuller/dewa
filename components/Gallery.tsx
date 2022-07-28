@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Flex, AspectRatio, Heading } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
@@ -13,8 +13,15 @@ type GalleryProps = {
 };
 
 const Gallery: FC<GalleryProps> = ({ post: { slug, coverImage, title } }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <motion.div whileHover={{ y: -3 }}>
+    <motion.div
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      whileHover={{ y: -3 }}
+      className="hover:shadow-md"
+    >
       <Link
         href={{
           pathname: "/referenciak/[slug]",
@@ -27,7 +34,6 @@ const Gallery: FC<GalleryProps> = ({ post: { slug, coverImage, title } }) => {
             as="article"
             align="flex-start"
             key={slug}
-            background="#fff"
             borderRadius="xl"
             shadow={[null, null, null, "md"]}
             overflow="hidden"
@@ -68,6 +74,9 @@ const Gallery: FC<GalleryProps> = ({ post: { slug, coverImage, title } }) => {
                 p={0}
                 fontSize={["12px", "12px", "14px", "16px"]}
                 side="right"
+                w="full"
+                color={isHovered ? "secondary.500" : "secondary.50"}
+                borderBottomColor={isHovered ? "secondary.500" : "secondary.50"}
               >
                 Megnyitás
               </Button>

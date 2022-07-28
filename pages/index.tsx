@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
 import {
@@ -29,7 +29,6 @@ const AboutUs: FC = () => {
             <div>
               <div className="flex items-center justify-center h-12 w-12 rounded-md bg-secondary-300 text-white">
                 <div className="h-6 w-6 relative">
-                  {/* <UsersIcon className="h-6 w-6" aria-hidden="true" /> */}
                   <PaintGunIcon className="w-6 h-6" />
                 </div>
               </div>
@@ -185,13 +184,42 @@ const Divider = () => {
   );
 };
 
-const Index: FC = () => {
-  // const router = useRouter();
+const Hero = () => {
   const { onOpen } = useContact();
 
+  const titleRevealControls = useAnimationControls();
+  const titleMoveControls = useAnimationControls();
+  const subTitleRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const bgImageRef = useRef<HTMLDivElement>(null);
+
+  const sequence = useCallback(async () => {
+    await titleRevealControls.start({ height: 0 });
+
+    await titleMoveControls.start({
+      x: 0,
+    });
+
+    if (ctaRef.current) {
+      ctaRef.current.classList.add("clip-from-left");
+    }
+
+    if (subTitleRef.current) {
+      subTitleRef.current.classList.add("clip-from-bottom");
+    }
+
+    if (bgImageRef.current) {
+      bgImageRef.current.classList.add("clip-from-right");
+    }
+  }, [titleMoveControls, titleRevealControls]);
+
+  useEffect(() => {
+    sequence();
+  }, [sequence]);
+
   return (
-    <>
-      <MotionWrapper>
+    <div className="relative">
+      <div>
         <div className="relative bg-transparent overflow-hidden">
           <div className="wrapper mx-auto">
             <div className="relative z-10 h-full bg-background lg:max-w-2xl lg:w-full">
@@ -207,20 +235,53 @@ const Index: FC = () => {
 
               <div className="mx-auto h-full max-w-7xl py-4 sm:py-12 lg:py-16 xl:py-32">
                 <div className="sm:text-center h-full lg:text-left flex flex-col gap-12 justify-center">
-                  <h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl">
-                    <span className="block xl:inline">
-                      Mi festjük a jö
-                      <span className="text-secondary-500">w</span>
-                      őt
-                    </span>
-                  </h1>
-                  <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  <motion.h1
+                    className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl"
+                    initial={{
+                      x: "50%",
+                    }}
+                    animate={titleMoveControls}
+                    transition={{
+                      type: "spring",
+                      duration: 0.4,
+                    }}
+                  >
+                    <div className="w-full h-full relative">
+                      <motion.div
+                        transition={{ duration: 0.6 }}
+                        initial={{
+                          height: "110%",
+                        }}
+                        animate={titleRevealControls}
+                        className="absolute w-full right-0 top-0 z-10 bg-background"
+                      />
+                      <span className="block xl:inline">
+                        Mi festjük a jö
+                        <span className="text-secondary-500">w</span>
+                        őt
+                      </span>
+                    </div>
+                  </motion.h1>
+                  <h3
+                    ref={subTitleRef}
+                    className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+                    style={{
+                      clipPath:
+                        "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+                    }}
+                  >
                     Magyarország piacvezető festékipari megoldásai Magyarország
                     piacvezető festékipari megoldásai Magyarország piacvezető
                     festékipari megoldásai Magyarország piacvezető festékipari
                     megoldásai
-                  </p>
-                  <div className="mt-5 sm:mt-8 sm:flex gap-4 sm:justify-center lg:justify-start">
+                  </h3>
+                  <div
+                    ref={ctaRef}
+                    className="mt-5 sm:mt-8 sm:flex gap-4 sm:justify-center lg:justify-start"
+                    style={{
+                      clipPath: "polygon(0 0, 0 100%, 0 100%, 0 0)",
+                    }}
+                  >
                     <Button
                       w={["full", "auto", "auto"]}
                       side="right"
@@ -253,7 +314,13 @@ const Index: FC = () => {
               </div>
             </div>
           </div>
-          <div className="lg:absolute z-2 lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div
+            ref={bgImageRef}
+            className="lg:absolute z-2 lg:inset-y-0 lg:right-0 lg:w-1/2"
+            style={{
+              clipPath: "polygon(100% 100%, 100% 0, 100% 0, 100% 100%)",
+            }}
+          >
             <div className="h-56 relative z-2 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
               <Image
                 layout="fill"
@@ -266,7 +333,15 @@ const Index: FC = () => {
             </div>
           </div>
         </div>
-      </MotionWrapper>
+      </div>
+    </div>
+  );
+};
+
+const Index: FC = () => {
+  return (
+    <>
+      <Hero />
 
       <Divider />
 

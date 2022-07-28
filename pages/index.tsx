@@ -15,7 +15,10 @@ import MotionWrapper from "../components/MotionWrapper";
 
 const AboutUs: FC = () => {
   return (
-    <MotionWrapper>
+    <motion.div
+      whileInView={{ x: [100, 50, 0], opacity: [0, 0.5, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="relative bg-white">
         <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
           <img
@@ -76,7 +79,7 @@ const AboutUs: FC = () => {
           </div>
         </div>
       </div>
-    </MotionWrapper>
+    </motion.div>
   );
 };
 
@@ -113,7 +116,10 @@ const divisions = [
 
 const Products = () => {
   return (
-    <MotionWrapper>
+    <motion.div
+      whileInView={{ x: [-100, -50, 0], opacity: [0, 0.5, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="bg-background">
         <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
           <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
@@ -165,7 +171,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </MotionWrapper>
+    </motion.div>
   );
 };
 

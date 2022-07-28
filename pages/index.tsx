@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useRef } from "react";
+import { FC, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimationControls } from "framer-motion";

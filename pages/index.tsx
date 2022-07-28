@@ -11,7 +11,6 @@ import {
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
-import MotionWrapper from "../components/MotionWrapper";
 
 const AboutUs: FC = () => {
   return (
@@ -193,31 +192,37 @@ const Divider = () => {
 const Hero = () => {
   const { onOpen } = useContact();
 
-  const titleRevealControls = useAnimationControls();
-  const titleMoveControls = useAnimationControls();
-  const subTitleRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const bgImageRef = useRef<HTMLDivElement>(null);
+  const titleControls = useAnimationControls();
+  const subTitleControls = useAnimationControls();
+  const ctaControls = useAnimationControls();
+  const bgImageControls = useAnimationControls();
 
   const sequence = useCallback(async () => {
-    await titleRevealControls.start({ height: 0 });
-
-    await titleMoveControls.start({
-      x: 0,
+    await titleControls.start({
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      transition: { duration: 0.6 },
     });
 
-    if (ctaRef.current) {
-      ctaRef.current.classList.add("clip-from-left");
-    }
+    await titleControls.start({
+      x: 0,
+      transition: { duration: 0.4 },
+    });
 
-    if (subTitleRef.current) {
-      subTitleRef.current.classList.add("clip-from-bottom");
-    }
+    await ctaControls.start({
+      clipPath: "polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)",
+      transition: { duration: 0.4 },
+    });
 
-    if (bgImageRef.current) {
-      bgImageRef.current.classList.add("clip-from-right");
-    }
-  }, [titleMoveControls, titleRevealControls]);
+    subTitleControls.start({
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      transition: { duration: 0.4 },
+    });
+
+    bgImageControls.start({
+      clipPath: "polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%)",
+      transition: { duration: 0.4 },
+    });
+  }, [bgImageControls, ctaControls, subTitleControls, titleControls]);
 
   useEffect(() => {
     sequence();
@@ -240,52 +245,40 @@ const Hero = () => {
               </svg>
 
               <div className="mx-auto h-full max-w-7xl py-4 sm:py-12 lg:py-16 xl:py-32">
-                <div className="sm:text-center h-full lg:text-left flex flex-col gap-12 justify-center">
+                <div className="sm:text-center h-full lg:text-left flex flex-col gap-6 justify-center">
                   <motion.h1
-                    className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl"
+                    className="text-5xl pb-4 font-extrabold text-gray-900 sm:text-6xl md:text-7xl"
                     initial={{
                       x: "50%",
-                    }}
-                    animate={titleMoveControls}
-                    transition={{
-                      type: "spring",
-                      duration: 0.4,
-                    }}
-                  >
-                    <div className="w-full h-full relative">
-                      <motion.div
-                        transition={{ duration: 0.6 }}
-                        initial={{
-                          height: "110%",
-                        }}
-                        animate={titleRevealControls}
-                        className="absolute w-full right-0 top-0 z-10 bg-background"
-                      />
-                      <span className="block xl:inline">
-                        Mi festjük a jö
-                        <span className="text-secondary-500">w</span>
-                        őt
-                      </span>
-                    </div>
-                  </motion.h1>
-                  <h3
-                    ref={subTitleRef}
-                    className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-                    style={{
                       clipPath:
                         "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
                     }}
+                    animate={titleControls}
+                  >
+                    <span className="block xl:inline">
+                      Mi festjük a jö
+                      <span className="text-secondary-500">w</span>
+                      őt
+                    </span>
+                  </motion.h1>
+                  <motion.h3
+                    animate={subTitleControls}
+                    initial={{
+                      clipPath:
+                        "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+                    }}
+                    className="my-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                   >
                     Magyarország piacvezető festékipari megoldásai Magyarország
                     piacvezető festékipari megoldásai Magyarország piacvezető
                     festékipari megoldásai Magyarország piacvezető festékipari
                     megoldásai
-                  </h3>
-                  <div
-                    ref={ctaRef}
+                  </motion.h3>
+                  <motion.div
+                    animate={ctaControls}
                     className="mt-5 sm:mt-8 sm:flex gap-4 sm:justify-center lg:justify-start"
-                    style={{
-                      clipPath: "polygon(0 0, 0 100%, 0 100%, 0 0)",
+                    initial={{
+                      clipPath: "polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%)",
                     }}
                   >
                     <Button
@@ -315,16 +308,16 @@ const Hero = () => {
                         </Button>
                       </a>
                     </Link>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            ref={bgImageRef}
+          <motion.div
+            animate={bgImageControls}
             className="lg:absolute z-2 lg:inset-y-0 lg:right-0 lg:w-1/2"
-            style={{
-              clipPath: "polygon(100% 100%, 100% 0, 100% 0, 100% 100%)",
+            initial={{
+              clipPath: "polygon(100% 100%, 100% 0%, 100% 0%, 100% 100%)",
             }}
           >
             <div className="h-56 relative z-2 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
@@ -337,7 +330,7 @@ const Hero = () => {
                 priority
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

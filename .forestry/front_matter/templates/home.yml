@@ -2,15 +2,6 @@
 label: Hero
 hide_body: true
 fields:
-- name: title
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: title
 - name: subtitle
   type: textarea
   default: ''

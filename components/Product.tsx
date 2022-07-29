@@ -3,6 +3,7 @@ import { Dispatch, FC, Fragment, SetStateAction, useState } from "react";
 import { Flex, AspectRatio, Text } from "@chakra-ui/react";
 import { Dialog, Transition } from "@headlessui/react";
 
+import { motion } from "framer-motion";
 import { ProductType } from "../types";
 
 import { Button } from "./uikit";
@@ -71,10 +72,10 @@ const ProductModal = ({ open, setOpen, product }: ProductModalProps) => {
                     <Button
                       variant="secondary"
                       side="left"
-                      className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                      className="inline-flex justify-center w-full rounded-md border-transparent shadow-sm px-4 py-2text-base font-medium focus:outline-none focus:ring-transparent text-white sm:text-sm"
                       onClick={() => setOpen(false)}
                     >
-                      Vissza
+                      Bezár
                     </Button>
                   </div>
                 </div>
@@ -93,65 +94,61 @@ const Product: FC<ProductProps> = ({ product }) => {
   const { nev, leiras, boritokep } = product;
 
   return (
-    <Flex
-      direction="column"
-      as="article"
-      align="flex-start"
-      shadow="lg"
-      borderRadius="lg"
-      p={4}
-    >
-      <AspectRatio
-        ratio={1}
-        position="relative"
-        overflow="hidden"
-        d="flex"
-        w="100%"
-        mb={3}
-        borderRadius="lg"
+    <>
+      <motion.div
+        whileHover={{ y: -5 }}
+        className="hover:cursor-pointer shadow-lg hover:shadow-xl"
+        onClick={() => setOpen(true)}
       >
-        <Image
-          src={boritokep}
-          alt={`image of ${nev}`}
-          layout="fill"
-          objectFit="cover"
-        />
-      </AspectRatio>
-      <Flex
-        direction="column"
-        justify="space-between"
-        minH={[null, 64, 72, 80]}
-      >
-        <Text
-          textTransform="capitalize"
-          fontWeight="semibold"
-          mb={[3, null, null, null]}
-          noOfLines={2}
+        <Flex
+          direction="column"
+          as="article"
+          align="flex-start"
+          borderRadius="lg"
         >
-          {nev.toLowerCase()}
-        </Text>
-        <Text
-          fontSize="s"
-          noOfLines={8}
-          mb={[3, null, null, null]}
-          color="grey.iron"
-        >
-          {leiras}
-        </Text>
-        <Button
-          alignSelf="flex-start"
-          onClick={() => setOpen(true)}
-          variant="secondary"
-          side="right"
-          fontSize="md"
-          w={["100%", "auto"]}
-        >
-          Részletek
-        </Button>
-      </Flex>
-
+          <AspectRatio
+            ratio={1}
+            position="relative"
+            overflow="hidden"
+            d="flex"
+            w="100%"
+            mb={3}
+            borderRadius="lg"
+          >
+            <Image
+              src={boritokep}
+              alt={`image of ${nev}`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </AspectRatio>
+          <Flex
+            direction="column"
+            justify="space-between"
+            maxH={[null, 64, 72, 80]}
+            p={4}
+          >
+            <Text
+              textTransform="capitalize"
+              fontWeight="semibold"
+              mb={[3, null, null, null]}
+              noOfLines={2}
+            >
+              {nev.toLowerCase()}
+            </Text>
+            <Text
+              fontSize="s"
+              noOfLines={8}
+              mb={[3, null, null, null]}
+              color="grey.iron"
+            >
+              {leiras}
+            </Text>
+          </Flex>
+        </Flex>
+      </motion.div>
       <ProductModal product={product} open={open} setOpen={setOpen} />
-    </Flex>
+    </>
   );
 };
 

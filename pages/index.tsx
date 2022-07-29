@@ -356,8 +356,6 @@ const Hero = ({ subtitle, imageSrc }: HeroProps) => {
 };
 
 const Index = ({ data }: { data: HomePageType }) => {
-  console.log({ data });
-
   return (
     <>
       <Hero imageSrc={data["hero-image"]} subtitle={data["hero-subtitle"]} />

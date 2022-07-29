@@ -61,7 +61,8 @@ const Option: FC<OptionProps> = ({ value, active, onClick, children }) => {
         {children}
       </Button>
       <Flex
-        h={1}propsden"}
+        h={1}
+        visibility={active === value ? "visible" : "hidden"}
         w="100%"
         bg="secondary.500"
         borderRadius="full"

@@ -2,19 +2,19 @@
 label: rolunk
 hide_body: true
 fields:
-- name: title
+- name: about-title
   type: text
   config:
     required: true
-  label: title
+  label: about-title
   default: Rólunk
-- name: subtitle
+- name: about-subtitle
   type: text
   config:
     required: true
-  label: subtitle
-- name: kep
+  label: about-subtitle
+- name: about-kep
   type: file
   config:
     maxSize: 64
-  label: kep
+  label: about-kep

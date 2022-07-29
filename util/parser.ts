@@ -2,7 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { ProductKeys, ContentType, PostKeys, ContactKeys } from "../types";
+import {
+  ProductKeys,
+  ContentType,
+  PostKeys,
+  ContactKeys,
+  HomePageKeys,
+} from "../types";
 
 const getDirectory = (type: ContentType) => {
   switch (type) {
@@ -18,6 +24,8 @@ const getDirectory = (type: ContentType) => {
       return path.join(process.cwd(), "cms/termekek/tuzelestechnika");
     case "szorastechnika":
       return path.join(process.cwd(), "cms/termekek/szorastechnika");
+    case "fooldal":
+      return path.join(process.cwd(), "cms/pages");
     case "kapcsolat":
       return path.join(process.cwd(), "cms/kapcsolat");
 
@@ -26,7 +34,7 @@ const getDirectory = (type: ContentType) => {
   }
 };
 
-type Fields = PostKeys[] | ProductKeys[] | ContactKeys[];
+type Fields = PostKeys[] | ProductKeys[] | ContactKeys[] | HomePageKeys[];
 
 export function getContentSlugs(type: ContentType) {
   return fs.readdirSync(getDirectory(type));

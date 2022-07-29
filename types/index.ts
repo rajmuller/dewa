@@ -5,12 +5,30 @@ export type ContentType =
   | "fenyezofulkek"
   | "tuzelestechnika"
   | "szorastechnika"
+  | "fooldal"
   | "kapcsolat";
 
 export type SeoType = {
   title: string;
   description: string;
 };
+
+export type HomePageType = {
+  "hero-subtitle": string;
+  "hero-image": string;
+  "about-title": string;
+  "about-subtitle": string;
+  "about-kep": string;
+  "services-title": string;
+  "serv-image": string;
+  "services-subtitle": string;
+  "fenyezo-description": string;
+  "szoras-desc": string;
+  "tuzeles-desc": string;
+  "felulet-desc": string;
+};
+
+export type HomePageKeys = keyof HomePageType;
 
 export type ContactType = {
   slug: string;

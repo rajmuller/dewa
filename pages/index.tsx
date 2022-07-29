@@ -2,6 +2,8 @@ import { FC, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useAnimationControls } from "framer-motion";
+import { GetStaticProps } from "next";
+import { ComponentWithAs, IconProps } from "@chakra-ui/react";
 import { Button } from "../components/uikit";
 import { useContact } from "../hooks";
 import {
@@ -11,8 +13,16 @@ import {
   SzorasIcon,
   TuzelesIcon,
 } from "../components/icons";
+import { getAllContents } from "../util";
+import { HomePageType } from "../types";
 
-const AboutUs: FC = () => {
+type AboutUsProps = {
+  title: string;
+  description: string;
+  imageSrc: string;
+};
+
+const AboutUs: FC<AboutUsProps> = ({ title, description, imageSrc }) => {
   return (
     <motion.div
       whileInView={{ x: [100, 50, 0], opacity: [0, 0.5, 1] }}
@@ -22,7 +32,7 @@ const AboutUs: FC = () => {
         <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
           <img
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+            src={imageSrc}
             alt="Support team"
           />
         </div>
@@ -36,17 +46,9 @@ const AboutUs: FC = () => {
               </div>
             </div>
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Problémamegoldók, úttörők, szakemberek... Ezek vagyunk mi!
+              {title}
             </h2>
-            <p className="mt-6 text-lg text-gray-500">
-              <span className="block mb-4">
-                Személyre szabottan biztosítani a festőipar minden szereplőjének
-                a legjobb, leginnovatívabb technológia megoldást.
-              </span>
-              Egy biztonságos, kreatív és inspiráló teret létrehozni
-              dolgozóinknak, ahol professzionalitás és barátságos közvetlenség
-              egyaránt létezik.
-            </p>
+            <p className="my-6 text-lg text-gray-500">{description}</p>
             <div className="mt-8 overflow-hidden">
               <dl className="-mx-8 -mt-8 flex flex-wrap">
                 <div className="flex flex-col px-8 pt-8">
@@ -82,38 +84,53 @@ const AboutUs: FC = () => {
   );
 };
 
-const divisions = [
-  {
-    href: "/termekek/fenyezofulkek",
-    name: "Fényezőfülkék",
-    Logo: FestofulkekIcon,
-    description:
-      "When you walked through the door. It was clear to me (Clear to me). You’re the one they adore. Who they came to see (Who they came to see). You’re a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really blame you? (Who can really blame you?). We’re the ones who made you.",
-  },
-  {
-    href: "/termekek/szorastechnika",
-    name: "Szórástechnika",
-    Logo: SzorasIcon,
-    description:
-      "We're gonna rock this house until we knock it down. So turn the volume loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let yourself go, let yourself go. Say before we kick the bucket. Life's too short to not go for broke. So everybody, everybody, go berserk, grab your vial, yeah.",
-  },
-  {
-    href: "/termekek/tuzelestechnika",
-    name: "Tüzeléstechnika",
-    Logo: TuzelesIcon,
-    description:
-      "Mom, I know I let you down. And though you say the days are happy. Why is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't you place the blame on me. As you pour yourself another drink, yeah. I guess we are who we are. Headlights shining in the dark night, I drive on. Maybe we took this too far.",
-  },
-  {
-    href: "/termekek/feluletkezeles",
-    name: "Felületkezelés",
-    Logo: FeluletIcon,
-    description:
-      "I never meant to give you mushrooms, girl. I never meant to bring you to my world. Now you sitting in the corner crying. And now it's my fault, my fault. I never meant to give you mushrooms, girl. I never meant to bring you to my world. Now you sitting in the corner crying. And now it's my fault, my fault.",
-  },
-];
+type DivisionProps = {
+  href: string;
+  name: string;
+  description: string;
+  Logo: ComponentWithAs<"svg", IconProps>;
+};
 
-const Products = () => {
+const Division = ({ href, name, Logo, description }: DivisionProps) => {
+  return (
+    <Link href={href}>
+      <a>
+        <motion.div
+          whileHover={{ y: -10 }}
+          className="sm:flex hover:shadow-md rounded-md p-4 lg:block"
+        >
+          <div className="sm:flex-shrink-0">
+            <Logo boxSize={32} />
+          </div>
+          <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
+            <h3 className="text-md font-medium text-gray-900">{name}</h3>
+            <p className="mt-2 text-sm text-gray-500">{description}</p>
+          </div>
+        </motion.div>
+      </a>
+    </Link>
+  );
+};
+
+type ProductsProps = {
+  title: string;
+  description: string;
+  feny: string;
+  tuz: string;
+  felulet: string;
+  szoras: string;
+  imageSrc: string;
+};
+
+const Products = ({
+  title,
+  description,
+  feny,
+  tuz,
+  felulet,
+  szoras,
+  imageSrc,
+}: ProductsProps) => {
   return (
     <motion.div
       whileInView={{ x: [-100, -50, 0], opacity: [0, 0.5, 1] }}
@@ -125,47 +142,46 @@ const Products = () => {
             <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
               <div>
                 <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
-                  We built our business on great customer service
+                  {title}
                 </h2>
-                <p className="mt-4 text-gray-500">
-                  I am beginning to feel like a Rap God, Rap God. All my people
-                  from the front to the back nod, back nod. The way I am racing
-                  around the track, call me NASCAR, NASCAR. Dale Earnhardt of
-                  the trailer park, the White Trash God. Kneel before General
-                  Zod. This planet Krypton – no, Asgard, Asgard.
-                </p>
+                <p className="mt-4 text-gray-500">{description}</p>
               </div>
               <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1618275340450-a684fa3d7743?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  src={imageSrc}
                   alt=""
                   className="object-center object-cover"
                 />
               </div>
             </div>
             <div className="mt-16 grid grid-cols-1 gap-y-10 lg:grid-cols-4">
-              {divisions.map((division) => (
-                <Link key={division.name} href={division.href}>
-                  <a>
-                    <motion.div
-                      whileHover={{ y: -10 }}
-                      className="sm:flex hover:shadow-md rounded-md p-4 lg:block"
-                    >
-                      <div className="sm:flex-shrink-0">
-                        <division.Logo boxSize={32} />
-                      </div>
-                      <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                        <h3 className="text-md font-medium text-gray-900">
-                          {division.name}
-                        </h3>
-                        <p className="mt-2 text-sm text-gray-500">
-                          {division.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  </a>
-                </Link>
-              ))}
+              <Division
+                href="/termekek/fenyezofulkek"
+                name="Fényezőfülkék"
+                Logo={FestofulkekIcon}
+                description={feny}
+              />
+
+              <Division
+                href="/termekek/szorastechnika"
+                name="Szórástechnika"
+                Logo={SzorasIcon}
+                description={szoras}
+              />
+
+              <Division
+                href="/termekek/tuzelestechnika"
+                name="Tüzeléstechnika"
+                Logo={TuzelesIcon}
+                description={tuz}
+              />
+
+              <Division
+                href="/termekek/feluletkezeles"
+                name="Felületkezelés"
+                Logo={FeluletIcon}
+                description={felulet}
+              />
             </div>
           </div>
         </div>
@@ -189,7 +205,12 @@ const Divider = () => {
   );
 };
 
-const Hero = () => {
+type HeroProps = {
+  subtitle: string;
+  imageSrc: string;
+};
+
+const Hero = ({ subtitle, imageSrc }: HeroProps) => {
   const { onOpen } = useContact();
 
   const titleControls = useAnimationControls();
@@ -269,10 +290,7 @@ const Hero = () => {
                     }}
                     className="my-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                   >
-                    Magyarország piacvezető festékipari megoldásai Magyarország
-                    piacvezető festékipari megoldásai Magyarország piacvezető
-                    festékipari megoldásai Magyarország piacvezető festékipari
-                    megoldásai
+                    {subtitle}
                   </motion.h3>
                   <motion.div
                     animate={ctaControls}
@@ -325,7 +343,7 @@ const Hero = () => {
                 layout="fill"
                 objectFit="cover"
                 className="z-2"
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                src={imageSrc}
                 alt="hero image"
                 priority
               />
@@ -337,20 +355,59 @@ const Hero = () => {
   );
 };
 
-const Index: FC = () => {
+const Index = ({ data }: { data: HomePageType }) => {
+  console.log({ data });
+
   return (
     <>
-      <Hero />
+      <Hero imageSrc={data["hero-image"]} subtitle={data["hero-subtitle"]} />
 
       <Divider />
 
-      <AboutUs />
+      <AboutUs
+        description={data["about-subtitle"]}
+        title={data["about-title"]}
+        imageSrc={data["about-kep"]}
+      />
 
       <Divider />
 
-      <Products />
+      <Products
+        description={data["services-subtitle"]}
+        title={data["services-title"]}
+        felulet={data["felulet-desc"]}
+        feny={data["fenyezo-description"]}
+        tuz={data["tuzeles-desc"]}
+        szoras={data["szoras-desc"]}
+        imageSrc={data["serv-image"]}
+      />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const homepageProps = getAllContents("fooldal", [
+    "hero-subtitle",
+    "hero-image",
+    "about-title",
+    "about-subtitle",
+    "about-kep",
+    "services-title",
+    "services-subtitle",
+    "fenyezo-description",
+    "szoras-desc",
+    "tuzeles-desc",
+    "felulet-desc",
+    "serv-image",
+  ]) as HomePageType[];
+
+  const data = homepageProps[0];
+
+  return {
+    props: {
+      data,
+    },
+  };
 };
 
 export default Index;

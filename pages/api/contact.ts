@@ -8,14 +8,14 @@ export default async (req: any, res: any) => {
     secure: true,
     auth: {
       user: "b.patrick@dewa.hu",
-      pass: "z6t5r4e3w2q1",
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
   try {
     await transporter.sendMail({
       from: "dewa@dewa.hu",
-      to: "rajfta@gmail.com",
+      to: "dewa@dewa.hu",
       subject: `Honlapon érdeklődés targy: ${subject} | feladó: ${email} | telefon: ${telephone}`,
       html: `<p>Honlapról érkező üzenet</p><br>
       <p>${message}</p><br>

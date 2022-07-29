@@ -43,7 +43,7 @@ const Navbar: FC = () => {
     onClose();
     toast({
       status: "info",
-      title: "Kuldes...",
+      title: "Email küldés alatt...",
       duration: 15000,
       position: "bottom",
     });

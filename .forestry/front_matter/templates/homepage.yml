@@ -17,3 +17,5 @@ fields:
   config: {}
   template: services
   label: services
+pages:
+- cms/pages/edit-me-dont-change-me.md

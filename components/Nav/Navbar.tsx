@@ -74,10 +74,10 @@ const Navbar: FC = () => {
         });
       }
     } catch (err) {
+      setIsEmailSending(false);
       // eslint-disable-next-line no-console
       toast({
-        title: "Sikertelen küldés!",
-        description: `Hibaüzenet: ${err}`,
+        title: "Sikertelen küldés, kérjük próbálja meg újra!",
         duration: 5000,
         isClosable: true,
         status: "error",

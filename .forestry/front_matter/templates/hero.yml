@@ -2,14 +2,14 @@
 label: hero
 hide_body: true
 fields:
-- name: subtitle
+- name: hero-subtitle
   type: text
   config:
     required: true
   label: hero-subtitle
-- name: image
+- name: hero-image
   type: file
   config:
     maxSize: 64
-  label: image
+  label: hero-image
   default: "/uploads/akasha.jpg"

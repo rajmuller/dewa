@@ -1,5 +1,5 @@
 ---
-label: Hero
+label: hero
 hide_body: true
 fields:
 - name: subtitle

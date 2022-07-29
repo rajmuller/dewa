@@ -58,6 +58,8 @@ sections:
   label: Home
   create: all
   match: "**/*"
+  templates:
+  - home
 - type: directory
   path: cms/kapcsolat
   label: Kapcsolat

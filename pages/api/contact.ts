@@ -17,14 +17,10 @@ export default async (req: any, res: any) => {
       from: "dewa@dewa.hu",
       to: "dewa@dewa.hu",
       subject: `Honlapon érdeklődés targy: ${subject}`,
-      html: `<p>Honlapról érkező üzenet</p><br>
-      <p>email: ${email}</p><br>
-      <p>telefon: ${telephone}</p><br>
-      <br>
-      <br>
-      <p>---------------------------------------------</p>
-      <br>
-      <br>
+      html: `<p>Honlapról érkező üzenet</p>
+      <p>email: ${email}</p>
+      <p>telefon: ${telephone}</p>
+      <p>---------------------------------------------</p><br>
       <p>${message}</p><br>
 
       `,

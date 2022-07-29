@@ -52,3 +52,9 @@ fields:
     schema:
       format: markdown
   label: felulet-desc
+- name: serv-image
+  type: file
+  config:
+    maxSize: 64
+  label: serv-image
+  default: "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"

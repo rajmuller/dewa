@@ -1,0 +1,54 @@
+---
+label: services
+hide_body: true
+fields:
+- name: services-title
+  type: text
+  config:
+    required: true
+  label: services-title
+- name: services-subtitle
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: services-subtitle
+- name: fenyezo-description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: fenyezo-description
+- name: szoras-desc
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: szoras-desc
+- name: tuzeles-desc
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: tuzeles-desc
+- name: felulet-desc
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: felulet-desc

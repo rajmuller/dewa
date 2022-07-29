@@ -1,0 +1,21 @@
+---
+label: homepage
+hide_body: true
+fields:
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: hero
+- name: aboutus
+  type: include
+  config: {}
+  template: rolunk
+  label: aboutus
+- name: services
+  type: include
+  config: {}
+  template: services
+  label: services
+pages:
+- cms/pages/edit-me-dont-change-me.md

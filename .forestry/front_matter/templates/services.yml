@@ -2,12 +2,12 @@
 label: services
 hide_body: true
 fields:
-- name: title
+- name: services-title
   type: text
   config:
     required: true
-  label: title
-- name: subtitle
+  label: services-title
+- name: services-subtitle
   type: textarea
   default: ''
   config:
@@ -15,7 +15,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: subtitle
+  label: services-subtitle
 - name: fenyezo-description
   type: textarea
   default: ''

@@ -15,7 +15,7 @@ export default async (req: any, res: any) => {
   try {
     await transporter.sendMail({
       from: "dewa@dewa.hu",
-      to: "rajfta@gmail.com",
+      to: "dewa@dewa.hu",
       subject: `Honlapon érdeklődés targy: ${subject} | feladó: ${email} | telefon: ${telephone}`,
       html: `<p>Honlapról érkező üzenet</p><br>
       <p>${message}</p><br>

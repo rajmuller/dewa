@@ -1,4 +1,19 @@
 ---
 label: homepage
 hide_body: true
-fields: []
+fields:
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: hero
+- name: aboutus
+  type: include
+  config: {}
+  template: rolunk
+  label: aboutus
+- name: services
+  type: include
+  config: {}
+  template: services
+  label: services

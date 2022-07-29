@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export default async (req: any, res: any) => {
-  const { subject, email, message } = req.body;
+  const { subject, email, message, telephone } = req.body;
   const transporter = nodemailer.createTransport({
     host: "mail.dewa.hu",
     port: 465,
@@ -15,8 +15,8 @@ export default async (req: any, res: any) => {
   try {
     await transporter.sendMail({
       from: "dewa@dewa.hu",
-      to: "dewa@dewa.hu",
-      subject: `Honlapon érdeklődés targy: ${subject} | feladó: ${email}`,
+      to: "rajfta@gmail.com",
+      subject: `Honlapon érdeklődés targy: ${subject} | feladó: ${email} | telefon: ${telephone}`,
       html: `<p>Honlapról érkező üzenet</p><br>
       <p>${message}</p><br>
 

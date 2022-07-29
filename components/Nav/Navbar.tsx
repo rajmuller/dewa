@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import {
@@ -28,6 +28,8 @@ import { Button } from "../uikit";
 
 const Navbar: FC = () => {
   const { isOpen, onClose } = useContact();
+  const [isEmailSending, setIsEmailSending] = useState(false);
+
   const initialRef = useRef();
   const {
     handleSubmit,
@@ -39,9 +41,17 @@ const Navbar: FC = () => {
 
   const onSubmit = async (values: any) => {
     onClose();
+    toast({
+      status: "info",
+      title: "Kuldes...",
+      duration: 15000,
+      position: "bottom",
+    });
+    setIsEmailSending(true);
+
     const config = {
       method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      url: "/api/contact",
       headers: {
         "Content-Type": "application/json",
       },
@@ -51,8 +61,9 @@ const Navbar: FC = () => {
     try {
       // @ts-ignore
       const response = await axios(config);
+      toast.closeAll();
+      setIsEmailSending(false);
       // eslint-disable-next-line no-console
-      console.log(response);
       if (response.status === 200) {
         toast({
           title: "Email sikeresen elküldve!",
@@ -64,7 +75,6 @@ const Navbar: FC = () => {
       }
     } catch (err) {
       // eslint-disable-next-line no-console
-      console.error({ err });
       toast({
         title: "Sikertelen küldés!",
         description: `Hibaüzenet: ${err}`,
@@ -151,12 +161,30 @@ const Navbar: FC = () => {
               </FormControl>
 
               <FormControl
+                isInvalid={errors.telephone}
+                isRequired
+                mt={6}
+                id="telephone"
+              >
+                <FormLabel htmlFor="telephone">Telefonszám</FormLabel>
+                <Input
+                  id="telephone"
+                  type="number"
+                  placeholder="Telefonszám"
+                  backgroundColor="primary.100"
+                  py={6}
+                  fontSize="lg"
+                  {...register("telephone")}
+                />
+              </FormControl>
+
+              <FormControl
                 isInvalid={errors.email}
                 isRequired
                 mt={6}
                 id="email"
               >
-                <FormLabel htmlFor="email">Ön Emaile</FormLabel>
+                <FormLabel htmlFor="email">Email cím</FormLabel>
                 <Input
                   id="email"
                   type="email"
@@ -192,10 +220,14 @@ const Navbar: FC = () => {
               </FormControl>
               <Flex mt={8} w="100" justify="flex-end">
                 <Button
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || isEmailSending}
                   type="submit"
                   variant="primary"
                   side="right"
+                  backgroundColor={isEmailSending ? "gray.200" : null}
+                  _hover={{
+                    backgroundColor: isEmailSending ? "gray.200" : null,
+                  }}
                 >
                   Küldés
                 </Button>

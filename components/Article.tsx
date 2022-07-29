@@ -75,8 +75,16 @@ const Article: FC<ArticleProps> = ({
             <Button
               onClick={() => onOpen(slug)}
               variant="secondary"
-              color={isHovered ? "secondary.500" : "secondary.50"}
-              borderBottomColor={isHovered ? "secondary.500" : "secondary.50"}
+              color={[
+                "secondary.500",
+                "secondary.500",
+                isHovered ? "secondary.500" : "secondary.50",
+              ]}
+              borderBottomColor={[
+                "secondary.500",
+                "secondary.500",
+                isHovered ? "secondary.500" : "secondary.50",
+              ]}
               side="right"
               w="full"
             >

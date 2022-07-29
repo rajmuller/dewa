@@ -75,8 +75,16 @@ const Gallery: FC<GalleryProps> = ({ post: { slug, coverImage, title } }) => {
                 fontSize={["12px", "12px", "14px", "16px"]}
                 side="right"
                 w="full"
-                color={isHovered ? "secondary.500" : "secondary.50"}
-                borderBottomColor={isHovered ? "secondary.500" : "secondary.50"}
+                color={[
+                  "secondary.500",
+                  "secondary.500",
+                  isHovered ? "secondary.500" : "secondary.50",
+                ]}
+                borderBottomColor={[
+                  "secondary.500",
+                  "secondary.500",
+                  isHovered ? "secondary.500" : "secondary.50",
+                ]}
               >
                 Megnyitás
               </Button>

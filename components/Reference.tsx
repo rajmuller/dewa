@@ -79,8 +79,16 @@ const Reference: FC<ReferenceProps> = ({
               variant="secondary"
               side="right"
               w="full"
-              color={isHovered ? "secondary.500" : "secondary.50"}
-              borderBottomColor={isHovered ? "secondary.500" : "secondary.50"}
+              color={[
+                "secondary.500",
+                "secondary.500",
+                isHovered ? "secondary.500" : "secondary.50",
+              ]}
+              borderBottomColor={[
+                "secondary.500",
+                "secondary.500",
+                isHovered ? "secondary.500" : "secondary.50",
+              ]}
             >
               Elolvasom
             </Button>

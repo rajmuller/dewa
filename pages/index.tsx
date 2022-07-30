@@ -39,7 +39,7 @@ const AboutUs: FC<AboutUsProps> = ({ title, description, imageSrc }) => {
         <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
           <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
             <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-secondary-300 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
                 <div className="h-6 w-6 relative">
                   <PaintGunIcon className="w-6 h-6" />
                 </div>
@@ -266,20 +266,19 @@ const Hero = ({ subtitle, imageSrc }: HeroProps) => {
               </svg>
 
               <div className="mx-auto h-full max-w-7xl py-4 sm:py-12 lg:py-16 xl:py-32">
-                <div className="sm:text-center h-full lg:text-left flex flex-col gap-6 justify-center">
+                <div className="sm:text-center h-full lg:text-left flex flex-col justify-center">
                   <motion.h1
-                    className="text-5xl pb-4 font-extrabold text-gray-900 sm:text-6xl md:text-7xl"
                     initial={{
                       x: "50%",
                       clipPath:
                         "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
                     }}
                     animate={titleControls}
+                    className="text-4xl tracking-tight pb-2 font-extrabold sm:text-5xl md:text-6xl"
                   >
-                    <span className="block xl:inline">
-                      Mi festjük a jö
-                      <span className="text-secondary-500">w</span>
-                      őt
+                    <span className="block xl:inline">Professzionális</span>{" "}
+                    <span className="block text-primary-500 xl:inline">
+                      festékipari megoldások
                     </span>
                   </motion.h1>
                   <motion.h3

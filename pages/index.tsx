@@ -24,63 +24,68 @@ type AboutUsProps = {
 
 const AboutUs: FC<AboutUsProps> = ({ title, description, imageSrc }) => {
   return (
-    <motion.div
-      whileInView={{ x: [100, 50, 0], opacity: [0, 0.5, 1] }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="relative bg-white">
-        <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
-          <img
-            className="w-full h-full object-cover"
-            src={imageSrc}
-            alt="Support team"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
-          <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
-            <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                <div className="h-6 w-6 relative">
-                  <PaintGunIcon className="w-6 h-6" />
+    <div className="max-w-[100vw] overflow-hidden">
+      <motion.div
+        whileInView={{
+          x: [100, 50, 0],
+          opacity: [0, 0.5, 1],
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="relative bg-white">
+          <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+            <img
+              className="w-full h-full object-cover"
+              src={imageSrc}
+              alt="Support team"
+            />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+            <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
+              <div>
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                  <div className="h-6 w-6 relative">
+                    <PaintGunIcon className="w-6 h-6" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              {title}
-            </h2>
-            <p className="my-6 text-lg text-gray-500">{description}</p>
-            <div className="mt-8 overflow-hidden">
-              <dl className="-mx-8 -mt-8 flex flex-wrap">
-                <div className="flex flex-col px-8 pt-8">
-                  <dt className="order-2 capitalize text-base font-medium text-gray-500">
-                    év Tapasztalat
-                  </dt>
-                  <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
-                    30+
-                  </dd>
-                </div>
-                <div className="flex flex-col px-8 pt-8">
-                  <dt className="order-2 text-base font-medium text-gray-500">
-                    Divízió
-                  </dt>
-                  <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
-                    4
-                  </dd>
-                </div>
-                <div className="flex flex-col px-8 pt-8">
-                  <dt className="order-2 text-base font-medium text-gray-500">
-                    Sikeres Projekt
-                  </dt>
-                  <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
-                    2500+
-                  </dd>
-                </div>
-              </dl>
+              <h2 className="mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                {title}
+              </h2>
+              <p className="my-6 text-lg text-gray-500">{description}</p>
+              <div className="mt-8 overflow-hidden">
+                <dl className="-mx-8 -mt-8 flex flex-wrap">
+                  <div className="flex flex-col px-8 pt-8">
+                    <dt className="order-2 capitalize text-base font-medium text-gray-500">
+                      év Tapasztalat
+                    </dt>
+                    <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                      30+
+                    </dd>
+                  </div>
+                  <div className="flex flex-col px-8 pt-8">
+                    <dt className="order-2 text-base font-medium text-gray-500">
+                      Divízió
+                    </dt>
+                    <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                      4
+                    </dd>
+                  </div>
+                  <div className="flex flex-col px-8 pt-8">
+                    <dt className="order-2 text-base font-medium text-gray-500">
+                      Sikeres Projekt
+                    </dt>
+                    <dd className="order-1 text-2xl font-extrabold text-primary-500 sm:text-3xl">
+                      2500+
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
@@ -132,61 +137,63 @@ const Products = ({
   imageSrc,
 }: ProductsProps) => {
   return (
-    <motion.div
-      whileInView={{ x: [-100, -50, 0], opacity: [0, 0.5, 1] }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="bg-background">
-        <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
-          <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
-            <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
-              <div>
-                <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
-                  {title}
-                </h2>
-                <p className="mt-4 text-gray-500">{description}</p>
+    <div className="max-w-[100vw] overflow-hidden">
+      <motion.div
+        whileInView={{ x: [-100, -50, 0], opacity: [0, 0.5, 1] }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="bg-background">
+          <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
+            <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
+              <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
+                <div>
+                  <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+                    {title}
+                  </h2>
+                  <p className="mt-4 text-gray-500">{description}</p>
+                </div>
+                <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">
+                  <img
+                    src={imageSrc}
+                    alt=""
+                    className="object-center object-cover"
+                  />
+                </div>
               </div>
-              <div className="aspect-[3/2] bg-gray-100 rounded-lg overflow-hidden">
-                <img
-                  src={imageSrc}
-                  alt=""
-                  className="object-center object-cover"
+              <div className="mt-16 grid grid-cols-1 gap-y-10 lg:grid-cols-4">
+                <Division
+                  href="/termekek/fenyezofulkek"
+                  name="Fényezőfülkék"
+                  Logo={FestofulkekIcon}
+                  description={feny}
+                />
+
+                <Division
+                  href="/termekek/szorastechnika"
+                  name="Szórástechnika"
+                  Logo={SzorasIcon}
+                  description={szoras}
+                />
+
+                <Division
+                  href="/termekek/tuzelestechnika"
+                  name="Tüzeléstechnika"
+                  Logo={TuzelesIcon}
+                  description={tuz}
+                />
+
+                <Division
+                  href="/termekek/feluletkezeles"
+                  name="Felületkezelés"
+                  Logo={FeluletIcon}
+                  description={felulet}
                 />
               </div>
             </div>
-            <div className="mt-16 grid grid-cols-1 gap-y-10 lg:grid-cols-4">
-              <Division
-                href="/termekek/fenyezofulkek"
-                name="Fényezőfülkék"
-                Logo={FestofulkekIcon}
-                description={feny}
-              />
-
-              <Division
-                href="/termekek/szorastechnika"
-                name="Szórástechnika"
-                Logo={SzorasIcon}
-                description={szoras}
-              />
-
-              <Division
-                href="/termekek/tuzelestechnika"
-                name="Tüzeléstechnika"
-                Logo={TuzelesIcon}
-                description={tuz}
-              />
-
-              <Division
-                href="/termekek/feluletkezeles"
-                name="Felületkezelés"
-                Logo={FeluletIcon}
-                description={felulet}
-              />
-            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

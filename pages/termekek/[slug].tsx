@@ -126,7 +126,6 @@ const Products: FC<ProductProps> = ({ slug, products }) => {
             icon={<ChevronDownIcon fontSize={12} fill="none" />}
             variant="filled"
             placeholder="Összes alkategória"
-            sch
             onChange={onSubcategoryChange}
             sx={{
               option: {

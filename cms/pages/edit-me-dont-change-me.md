@@ -25,11 +25,11 @@ szoras-desc: 'A szórástechnika divízió az iparban előforduló festési, rag
   - Kremlin, Wagner, Sagola. Forgalmazott berendezéseink között megtalálhatóak levegőporlasztású
   kézi és automata pisztolyok, anyagellátó tartályok, szivattyúk - oldószeres és porfestésre
   egyaránt!  '
-tuzeles-desc: Mom, I know I let you down. And though you say the days are happy. Why
-  is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't
-  you place the blame on me. As you pour yourself another drink, yeah. I guess we
-  are who we are. Headlights shining in the dark night, I drive on. Maybe we took
-  this too far.
+tuzeles-desc: 'A Tüzeléstechnika divízió az olasz BLOWTHERM gyártmányú fűtő és légkezelő
+  berendezések kizárólagos magyarországi forgalmazásával foglalkozik. Berendezéseink
+  között a teljesség igénye nélkül az alábbiakat találjuk: falra szerelhető hőlégfúvó
+  berendezések, gáz és - olajfűtésű berendezések, melegvizes kazánok, gőzkazánok és
+  gőzfejlesztők. '
 felulet-desc: I never meant to give you mushrooms, girl. I never meant to bring you
   to my world. Now you sitting in the corner crying. And now it's my fault, my fault.
   I never meant to give you mushrooms, girl. I never meant to bring you to my world.

@@ -48,6 +48,7 @@ fields:
     required: true
   label: telefonszam
 pages:
+- cms/kapcsolat/Ursz József.md
 - cms/kapcsolat/bucilaci.md
 - cms/kapcsolat/kozponti1.md
 - cms/kapcsolat/test2.md

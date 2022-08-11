@@ -30,10 +30,12 @@ tuzeles-desc: 'A Tüzeléstechnika divízió az olasz BLOWTHERM gyártmányú f�
   között a teljesség igénye nélkül az alábbiakat találjuk: falra szerelhető hőlégfúvó
   berendezések, gáz és - olajfűtésű berendezések, melegvizes kazánok, gőzkazánok és
   gőzfejlesztők. '
-felulet-desc: I never meant to give you mushrooms, girl. I never meant to bring you
-  to my world. Now you sitting in the corner crying. And now it's my fault, my fault.
-  I never meant to give you mushrooms, girl. I never meant to bring you to my world.
-  Now you sitting in the corner crying. And now it's my fault, my fault.
+felulet-desc: 'Az Ipari felületkezelő és festőberendezések divízió különböző méretű
+  és festéstechnológiájú komplett festőműhelyeket, festősorokat tervez és kivitelez
+  az engedélyeztetéstől a berendezés beüzemeléséig. Telepített rendszereink között
+  található KTL és mártó típusú festés, a rendszerek része saját tervezésű anyagmozgató
+  pálya, vízleszárító és beégető kemence, hűtőzóna, automata porfestő robotok és más
+  egyéb!  '
 serv-image: "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
 
 ---

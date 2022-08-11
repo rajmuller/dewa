@@ -19,10 +19,12 @@ fenyezo-description: 'A Fényezőfülke divízió az olasz BLOWTHERM gyártmány
   foglalkozik. Fülkéink számos méretben és kialakításban elérhetőek: autóipari festés,
   buszfestés, vonatfestés, repülő festés, asztalos munkák fényezése, kisalkatrész
   festés és sok egyéb!  '
-szoras-desc: We're gonna rock this house until we knock it down. So turn the volume
-  loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let
-  yourself go, let yourself go. Say before we kick the bucket. Life's too short to
-  not go for broke. So everybody, everybody, go berserk, grab your vial, yeah.
+szoras-desc: 'A szórástechnika divízió az iparban előforduló festési, ragasztási,
+  és egyéb (a folyadékok elporlasztását igénylő) technológiákhoz kínál berendezéseket.
+  Ehhez több, viláviszonlyatban jelentős céggel állunk képviselői kapcsolatban: Sames
+  - Kremlin, Wagner, Sagola. Forgalmazott berendezéseink között megtalálhatóak levegőporlasztású
+  kézi és automata pisztolyok, anyagellátó tartályok, szivattyúk - oldószeres és porfestésre
+  egyaránt!  '
 tuzeles-desc: Mom, I know I let you down. And though you say the days are happy. Why
   is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't
   you place the blame on me. As you pour yourself another drink, yeah. I guess we

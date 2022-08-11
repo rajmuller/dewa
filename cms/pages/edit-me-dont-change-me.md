@@ -1,7 +1,8 @@
 ---
 hero-image: "/uploads/akasha.jpg"
 about-title: Problémamegoldók, úttörők, szakemberek... Ezek vagyunk mi!
-hero-subtitle: 'Magyarország piacvezető festőipari megoldásai '
+hero-subtitle: 'Fényező fülkék - Szűrők - Ipari festőberendezések - Szórástechnika
+  - Tüzeléstechnikai berendezések '
 about-subtitle: Személyre szabottan biztosítani a festőipar minden szereplőjének a
   legjobb, leginnovatívabb technológia megoldást. Egy biztonságos, kreatív és inspiráló
   teret létrehozni dolgozóinknak, ahol professzionalitás és barátságos közvetlenség

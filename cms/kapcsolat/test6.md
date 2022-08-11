@@ -1,8 +1,8 @@
 ---
-reszleg: kozpont
-nev: test6
+reszleg: központ
+nev: 'Központ '
 helyszin: bekescsaba
-email: dewa@dewa.hu
-telefonszam: "12346457543"
+email: dewabcs@dewa.hu
+telefonszam: "+36 66 546 500"
 
 ---

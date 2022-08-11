@@ -14,10 +14,11 @@ services-subtitle: 'A Dewa Zrt. kiemelt feladatának tartja az adott feladatra s
   és üzemeltetési folyamat során szaktanácsokkal, többször iterált tervekkel és rugalmas
   rendelkezésre állással támogatjuk megrendelőinket, programszerűen végigvezetve őket
   a beruházás folyamatán.   '
-fenyezo-description: When you walked through the door. It was clear to me (Clear to
-  me). You’re the one they adore. Who they came to see (Who they came to see). You’re
-  a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really
-  blame you? (Who can really blame you?). We’re the ones who made you.
+fenyezo-description: 'A Fényezőfülke divízió az olasz BLOWTHERM gyártmányú zárt fényezőfülkék
+  kizárólagos magyarországi forgalmazásával, karbantartásával és esetleges hibaelhárításával
+  foglalkozik. Fülkéink számos méretben és kialakításban elérhetőek: autóipari festés,
+  buszfestés, vonatfestés, repülő festés, asztalos munkák fényezése, kisalkatrész
+  festés és sok egyéb!  '
 szoras-desc: We're gonna rock this house until we knock it down. So turn the volume
   loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let
   yourself go, let yourself go. Say before we kick the bucket. Life's too short to

@@ -1,14 +1,13 @@
 ---
 hero-image: "/uploads/akasha.jpg"
-about-title: Problémamegoldók, úttörők, szakemberek... Ezek vagyunk mi!
-hero-subtitle: 'Fényező fülkék - Szűrők - Ipari festőberendezések - Szórástechnika
-  - Tüzeléstechnikai berendezések '
-about-subtitle: Személyre szabottan biztosítani a festőipar minden szereplőjének a
-  legjobb, leginnovatívabb technológia megoldást. Egy biztonságos, kreatív és inspiráló
-  teret létrehozni dolgozóinknak, ahol professzionalitás és barátságos közvetlenség
-  egyaránt létezik.
+about-title: Problémamegoldók, tanácsadók, szakemberek... Ezek vagyunk mi!
+hero-subtitle: Magyarország piacvezető festőipari megoldásai
+about-subtitle: 'A Dewa Zrt. több, mint 30 éve kulcsrakész technológiai megoldásokkal
+  látja el a hazai festőipar összes szereplőjét: a legkisebb műhelytől a komplex gyártósorokig.
+  Országszerte több, mint 2500 berendezést telepítettünk - partnereink számára állandó
+  készenlétben lévő alkatrészellátást, segítségnyújtást és szakmai tanácsadást biztosítunk. '
 about-kep: "/uploads/medence_fujas.jpg"
-services-title: Dj PatMan - La Cockarocho, more than 20 million downloads
+services-title: 'Missziónk - '
 services-subtitle: I am beginning to feel like a Rap God, Rap God. All my people from
   the front to the back nod, back nod. The way I am racing around the track, call
   me NASCAR, NASCAR. Dale Earnhardt of the trailer park, the White Trash God. Kneel

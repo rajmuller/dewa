@@ -7,11 +7,13 @@ about-subtitle: 'A Dewa Zrt. több, mint 30 éve kulcsrakész technológiai mego
   Országszerte több, mint 2500 berendezést telepítettünk - partnereink számára állandó
   készenlétben lévő alkatrészellátást, segítségnyújtást és szakmai tanácsadást biztosítunk. '
 about-kep: "/uploads/medence_fujas.jpg"
-services-title: 'Missziónk - '
-services-subtitle: I am beginning to feel like a Rap God, Rap God. All my people from
-  the front to the back nod, back nod. The way I am racing around the track, call
-  me NASCAR, NASCAR. Dale Earnhardt of the trailer park, the White Trash God. Kneel
-  before General Zod. This planet Krypton – no, Asgard, Asgard.
+services-title: Víziónk - Magyarország festőipari szereplőit világvezető technológiai
+  és gyártási fejlettségre emelni munkánkkal
+services-subtitle: 'A Dewa Zrt. kiemelt feladatának tartja az adott feladatra specializált
+  legjobb és leghatékonyabb technológia telepítését. A tervezési, kivitelezési, üzembehelyezési
+  és üzemeltetési folyamat során szaktanácsokkal, többször iterált tervekkel és rugalmas
+  rendelkezésre állással támogatjuk megrendelőinket, programszerűen végigvezetve őket
+  a beruházás folyamatán.   '
 fenyezo-description: When you walked through the door. It was clear to me (Clear to
   me). You’re the one they adore. Who they came to see (Who they came to see). You’re
   a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really

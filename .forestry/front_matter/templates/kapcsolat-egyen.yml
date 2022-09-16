@@ -48,5 +48,6 @@ fields:
     required: true
   label: telefonszam
 pages:
+- cms/kapcsolat/Ifj. Ursz József.md
 - cms/kapcsolat/Pintér László.md
 - cms/kapcsolat/Ursz József.md

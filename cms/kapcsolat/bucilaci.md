@@ -1,8 +1,8 @@
 ---
-reszleg: tuzelestechnika
-nev: BuciLaci
-helyszin: budaors
-email: asd@asd.de
-telefonszam: "2352345234523"
+reszleg: központ
+nev: 'Pintér László '
+helyszin: bekescsaba
+email: 'pinter@dewa.hu '
+telefonszam: "+36 30 935 9010"
 
 ---

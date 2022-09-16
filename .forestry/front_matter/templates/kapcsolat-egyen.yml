@@ -48,6 +48,7 @@ fields:
     required: true
   label: telefonszam
 pages:
+- cms/kapcsolat/Czahesz János.md
 - cms/kapcsolat/Ifj. Ursz József.md
 - cms/kapcsolat/Kellner Oszkár.md
 - cms/kapcsolat/Pintér László.md

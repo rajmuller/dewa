@@ -8,7 +8,7 @@ about-subtitle: 'A Dewa Zrt. több, mint 30 éve kulcsrakész technológiai mego
   készenlétben lévő alkatrészellátást, segítségnyújtást és szakmai tanácsadást biztosítunk. '
 about-kep: "/uploads/dsc_1454.jpg"
 services-title: Víziónk - Magyarország festőipari szereplőit világvezető technológiai
-  és gyártási fejlettségre emelni munkánkkal
+  fejlettségre emelni munkánkkal
 services-subtitle: 'A Dewa Zrt. kiemelt feladatának tartja az adott feladatra specializált
   legjobb és leghatékonyabb technológia telepítését. A tervezési, kivitelezési, üzembehelyezési
   és üzemeltetési folyamat során szaktanácsokkal, többször iterált tervekkel és rugalmas

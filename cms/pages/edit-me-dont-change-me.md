@@ -6,7 +6,7 @@ about-subtitle: 'A Dewa Zrt. több, mint 30 éve kulcsrakész technológiai mego
   látja el a hazai festőipar összes szereplőjét: a legkisebb műhelytől a komplex gyártósorokig.
   Országszerte több, mint 2500 berendezést telepítettünk - partnereink számára állandó
   készenlétben lévő alkatrészellátást, segítségnyújtást és szakmai tanácsadást biztosítunk. '
-about-kep: "/uploads/dsc_1454.jpg"
+about-kep: "/uploads/dsc_1570.jpg"
 services-title: Víziónk - Magyarország festőipari szereplőit világvezető technológiai
   fejlettségre emelni munkánkkal
 services-subtitle: 'A Dewa Zrt. kiemelt feladatának tartja az adott feladatra specializált
@@ -36,6 +36,6 @@ felulet-desc: 'Az Ipari felületkezelő és festőberendezések divízió külö
   található KTL és mártó típusú festés, a rendszerek része saját tervezésű anyagmozgató
   pálya, vízleszárító és beégető kemence, hűtőzóna, automata porfestő robotok és más
   egyéb!  '
-serv-image: "/uploads/dsc_1505.jpg"
+serv-image: "/uploads/dsc_1327.jpg"
 
 ---

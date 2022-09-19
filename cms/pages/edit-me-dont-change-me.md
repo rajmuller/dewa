@@ -1,5 +1,5 @@
 ---
-hero-image: "/uploads/akasha.jpg"
+hero-image: "/uploads/dsc_1420.jpg"
 about-title: Problémamegoldók, tanácsadók, szakemberek... Ezek vagyunk mi!
 hero-subtitle: Magyarország piacvezető festőipari megoldásai
 about-subtitle: 'A Dewa Zrt. több, mint 30 éve kulcsrakész technológiai megoldásokkal

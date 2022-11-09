@@ -3,6 +3,6 @@ reszleg: központ
 nev: Buczkó Patrick projektvezető
 helyszin: budaors
 email: b.patrick@dewa.hu
-telefonszam: "3623889774"
+telefonszam: "+36 23 889 774"
 
 ---

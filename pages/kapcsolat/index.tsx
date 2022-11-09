@@ -108,7 +108,7 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
         name: nev,
         department: reszleg,
         email,
-        telephone: parseInt(telefonszam, 10),
+        telephone: telefonszam,
       })),
     [contacts]
   );
@@ -225,6 +225,9 @@ const ContactList: FC<ContactProps> = ({ contacts }) => {
                 {row.cells.map((cell) => {
                   return (
                     <Td
+                      textTransform={
+                        cell.column.Header === "Részleg" ? "capitalize" : ""
+                      }
                       key={cell.value}
                       display={
                         isMd && isMobile && cell.column.id === "department"

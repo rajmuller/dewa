@@ -283,9 +283,9 @@ const Hero = ({ subtitle, imageSrc }: HeroProps) => {
                     animate={titleControls}
                     className="text-4xl tracking-tight pb-2 font-extrabold sm:text-5xl md:text-6xl"
                   >
-                    <span className="block xl:inline">Professzionális</span>{" "}
+                    <span className="block xl:inline">Kulcsrakész</span>{" "}
                     <span className="block text-primary-500 xl:inline">
-                      festékipari megoldások
+                      festőipari megoldások
                     </span>
                   </motion.h1>
                   <motion.h3

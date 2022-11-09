@@ -31,6 +31,9 @@ fields:
     - szervíz
     - tüzeléstechnika
     - raktár
+    - szórástechnika
+    - ipari festőberendezések
+    - festőfülkék
     source:
       type: simple
       section: 

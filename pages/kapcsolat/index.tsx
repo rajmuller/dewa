@@ -292,9 +292,10 @@ const Contact: FC<ContactProps> = ({ contacts }) => {
         ) : (
           <iframe
             title="Dewa Bekescsaba"
-            loading="lazy"
+            src="https://www.google.com/maps/embed/v1/place?q=dewa+bekescsaba&key=AIzaSyDGQJAOWTOczUfw4RU9YoRBdpD44Kas81Q&zoom=14"
             allowFullScreen
-            src="https://www.google.com/maps/embed/v1/place?q=Nagyr%C3%A9t%201422%2C%20B%C3%A9k%C3%A9scsaba%2C%205600&key=AIzaSyDGQJAOWTOczUfw4RU9YoRBdpD44Kas81Q&zoom=14"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           />
         )}
       </AspectRatio>

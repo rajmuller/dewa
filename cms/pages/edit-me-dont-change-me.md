@@ -21,8 +21,8 @@ fenyezo-description: 'A Fényezőfülke divízió az olasz BLOWTHERM gyártmány
   festés és sok egyéb!  '
 szoras-desc: 'A szórástechnika divízió az iparban előforduló festési, ragasztási,
   és egyéb (a folyadékok elporlasztását igénylő) technológiákhoz kínál berendezéseket.
-  Ehhez több, viláviszonlyatban jelentős céggel állunk képviselői kapcsolatban: Sames
-  - Kremlin, Wagner, Sagola. Forgalmazott berendezéseink között megtalálhatóak levegőporlasztású
+  Ehhez több, világviszonlyatban jelentős céggel állunk képviselői kapcsolatban: Sames,
+  Wagner, Sagola. Forgalmazott berendezéseink között megtalálhatóak levegőporlasztású
   kézi és automata pisztolyok, anyagellátó tartályok, szivattyúk - oldószeres és porfestésre
   egyaránt!  '
 tuzeles-desc: 'A Tüzeléstechnika divízió az olasz BLOWTHERM gyártmányú fűtő és légkezelő

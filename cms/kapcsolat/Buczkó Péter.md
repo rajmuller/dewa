@@ -1,8 +1,8 @@
 ---
 reszleg: központ
-nev: 'Buczkó Péter '
+nev: Buczkó Péter vezérigazgató
 helyszin: budaors
 email: 'buczko@dewa.hu '
-telefonszam: "3623889789"
+telefonszam: "+36 23 889 789"
 
 ---

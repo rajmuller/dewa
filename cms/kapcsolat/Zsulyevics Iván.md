@@ -1,8 +1,8 @@
 ---
-reszleg: központ
+reszleg: szórástechnika
 nev: Zsulyevics Iván szórástechnikai értékesítő
 helyszin: budaors
 email: 'zs.ivan@dewa.hu '
-telefonszam: "3623889779"
+telefonszam: "+36 23 889 779"
 
 ---

@@ -3,6 +3,6 @@ reszleg: szervíz
 nev: 'Kellner Oszkár '
 helyszin: bekescsaba
 email: szerviz.bcs@dewa.hu
-telefonszam: "305151963"
+telefonszam: "+36 30 515 1963"
 
 ---

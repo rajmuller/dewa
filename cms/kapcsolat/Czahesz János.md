@@ -1,8 +1,8 @@
 ---
 reszleg: raktár
-nev: 'Czahesz János központi raktár '
+nev: Czahesz János raktárvezető
 helyszin: budaors
 email: logisztika@dewa.hu
-telefonszam: "3623889781"
+telefonszam: "+36 23 889 781"
 
 ---

@@ -1,8 +1,8 @@
 ---
-reszleg: központ
+reszleg: ipari festőberendezések
 nev: Veres Zoltán projektvezető
 helyszin: budaors
 email: veres.z@dewa.hu
-telefonszam: "3623889787"
+telefonszam: "+36 23 889 787"
 
 ---

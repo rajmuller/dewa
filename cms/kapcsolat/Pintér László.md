@@ -1,5 +1,5 @@
 ---
-reszleg: központ
+reszleg: festőfülkék
 nev: Pintér László értékesítési vezető
 helyszin: bekescsaba
 email: 'pinter@dewa.hu '

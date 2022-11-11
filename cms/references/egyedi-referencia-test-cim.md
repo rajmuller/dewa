@@ -1,17 +1,23 @@
 ---
-date: 2021/02/02
-title: Egyedi referencia test cim
-excerpt: 'asd kaserthjnjkdgh naeotklhn aednkl;th aetkl;hn adtkl;hn aetklhn aekltnh
-  aetnjklh jklaetnh jkaenbh jkadefbg jkadfbg jkbadfkgjb adfkjbg jkadfbg bjkadfg asdfgh
-  adgh fgadh fasgh sfgh sfgh fgshfgshfsghfsghsfgh sfgh '
-coverImage: "/uploads/akasha.jpg"
+date: 2022/11/22
+title: Fényező fülkéink a Korda Filmstúdióban
+excerpt: "Cégünk két ütemben (2020 nyár és 2021 tél) telepített összesen 3 darab Blowtherm
+  World Special fényező fülkét az etyeki Korda Filmstúdió területén. \nA berendezések
+  elkülönített munkafolyamatokban nyújtanak segítséget a produkciós iroda különböző
+  egységeinek: jelmez készítés, kellék készítés és díszlet készítés. "
+coverImage: "/uploads/dsc_1384.jpg"
 gallery:
-- "/uploads/spray.png"
-- "/uploads/pick_fujas.jpg"
-- "/uploads/mountain.jpg"
+- "/uploads/dsc_1402.jpg"
+- "/uploads/dsc_1401.jpg"
+- "/uploads/dsc_1369.jpg"
+- "/uploads/dsc_1377.jpg"
+- "/uploads/dsc_1376.jpg"
+- "/uploads/dsc_1385.jpg"
+- "/uploads/dsc_1390.jpg"
 seo:
-  title: Best Cikk ever, minumum 20 chars
-  description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
-    rasiklik a szeme valakinek, meg is akarja nyitni!
+  title: 'Fényező fülkéink az etyeki  Korda Filmstúdióban '
+  description: Világhírű sorozatok díszletei, kellékei és jelmezei készülnek a Dewa
+    Zrt. által forgalmazott Blowtherm World Special fényező fülkékben
+companyname: ''
 
 ---

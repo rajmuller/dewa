@@ -1,22 +1,27 @@
 ---
-title: Test referencia galeria cim 2
-excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-  an unknown printer took a galley of type and scrambled it to make a type specimen
-  book. It has survived not only five centuries, but also the leap into electronic
-  typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-  the release of Letrase
-date: 2021/01/12
-coverImage: "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
+title: 'Blowtherm fényezőfülkék Európa legnagyobb e-busz gyárában '
+excerpt: 2017-ben megépült Komáromban Európa legnagyobb e-busz gyára, amelyhez a Dewa
+  Zrt több ütemben telepített buszfestő fülkéket. A különböző munkafázisoknak megfelelően
+  épült légkondíciónálással és 3D-s festőállvánnyal ellátott fényező - szárító fülke,
+  kisalkatrész festő fülke, alvázfestő és 2021-ben telepítésre került 2 db előkészítő
+  állás is.
+date: 2022/11/22
+coverImage: "/uploads/dsc_1465.jpg"
 gallery:
-- "/uploads/jap_garden.jpg"
-- "/uploads/spray.png"
-- "/uploads/pick_fujas.jpg"
-- "/uploads/mountain.jpg"
-- "/uploads/ptrick.jpg"
+- "/uploads/dsc_1467.jpg"
+- "/uploads/dsc_1472.jpg"
+- "/uploads/dsc_1470.jpg"
+- "/uploads/dsc_1463.jpg"
+- "/uploads/dsc_1449.jpg"
+- "/uploads/dsc_1445.jpg"
+- "/uploads/dsc_1440.jpg"
+- "/uploads/dsc_1451.jpg"
+- "/uploads/dsc_1480.jpg"
+- "/uploads/dsc_1435.jpg"
+- "/uploads/dsc_1454.jpg"
 seo:
-  title: Best Cikk ever, minumum 20 chars
-  description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
-    rasiklik a szeme valakinek, meg is akarja nyitni!
+  title: 'Buszfestő Blowtherm fülkék a komáromi e-busz gyárban '
+  description: 'Elektromos buszgyárban telepített 6 darab fényező fülke, alvázvédő,
+    kisalkatrész festő és előkészítő állások '
 
 ---

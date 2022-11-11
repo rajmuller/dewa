@@ -32,8 +32,8 @@ gallery:
 - "/uploads/dsc_1691.jpg"
 - "/uploads/dsc_1682.jpg"
 seo:
-  title: Best Cikk ever, minumum 20 chars
-  description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
-    iopadfubn piodosdfij nopjsdfnb opjisdfnb '
+  title: Komplett előkezelő és festősor Mezőberényben
+  description: 'Cégünk teljes körben egyedi, saját tervezésben készült kézi mozgatású
+    előzekelő és festősora. Blowtherm fényező fülkék, Filcar mobil porelszívók '
 
 ---

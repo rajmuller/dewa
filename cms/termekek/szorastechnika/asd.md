@@ -1,8 +1,8 @@
 ---
 divizio: SZÓRÁSTECHNIKA
 alkategoria: Airless berendezések
-nev: asd
-leiras: asd
-boritokep: "/uploads/ptrick.jpg"
+nev: 'AIRLESS kézi szórópisztoly '
+leiras: AIRLESS
+boritokep: "/uploads/airless-sames.tif"
 
 ---

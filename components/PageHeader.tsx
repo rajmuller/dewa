@@ -31,19 +31,15 @@ const PageHeader: FC<PageHeaderProps> = ({
           justify={[null, "center", "center", "center"]}
           maxW={[null, "40%", "40%", "40%"]}
         >
-          <Link href="/cikkek">
-            <a>
-              <Button
-                variant="secondary"
-                mb={[8, 8, 12, 16]}
-                side="left"
-                onClick={onBack}
-                alignSelf="flex-start"
-              >
-                Vissza
-              </Button>
-            </a>
-          </Link>
+          <Button
+            variant="secondary"
+            mb={[8, 8, 12, 16]}
+            side="left"
+            onClick={onBack}
+            alignSelf="flex-start"
+          >
+            Vissza
+          </Button>
           <h1 className="mb-4 font-semibold text-5xl">{title}</h1>
           <Text
             fontSize={[null, null, null, 24]}

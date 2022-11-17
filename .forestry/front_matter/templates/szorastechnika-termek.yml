@@ -47,6 +47,8 @@ fields:
       path: 
   label: alkategoria
 pages:
+- cms/termekek/szorastechnika/AIRLESS 30C50 pumpa.md
+- cms/termekek/szorastechnika/AIRLESS 30F60 Flowmax.md
 - cms/termekek/szorastechnika/AIRLESS ASB autómata szórópisztoly.md
 - cms/termekek/szorastechnika/AIRLESS ASC automata.md
 - cms/termekek/szorastechnika/AIRLESS Fine fúvóka.md

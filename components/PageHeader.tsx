@@ -1,9 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import { Text, Flex, Box } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-import Link from "next/link";
 import { PostType } from "../types";
 
 import { Button } from "./uikit";

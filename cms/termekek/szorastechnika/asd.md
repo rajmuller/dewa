@@ -1,8 +1,8 @@
 ---
 divizio: SZÓRÁSTECHNIKA
 alkategoria: Airless berendezések
-nev: 'AIRLESS kézi szórópisztoly '
-leiras: AIRLESS
-boritokep: "/uploads/airless-sames.tif"
+nev: 'SAMES - AIRLESS AS2 automata szórópisztoly  '
+leiras: AIRLESS AS2
+boritokep: "/uploads/airless-automata-as2.jpg"
 
 ---

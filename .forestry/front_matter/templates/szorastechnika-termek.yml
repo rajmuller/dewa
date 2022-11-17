@@ -47,5 +47,6 @@ fields:
       path: 
   label: alkategoria
 pages:
+- cms/termekek/szorastechnika/AIRLESS ASB autómata szórópisztoly.md
 - cms/termekek/szorastechnika/AIRLESS automata 1.md
 - cms/termekek/szorastechnika/asd.md

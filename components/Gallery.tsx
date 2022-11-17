@@ -20,7 +20,7 @@ const Gallery: FC<GalleryProps> = ({ post: { slug, coverImage, title } }) => {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ y: -3 }}
-      className="hover:shadow-md"
+      className="hover:shadow-md cursor-pointer"
     >
       <Link
         href={{

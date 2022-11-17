@@ -72,6 +72,7 @@ const PageHeader: FC<PageHeaderProps> = ({
             alt={`image of ${title}`}
             layout="fill"
             objectFit="cover"
+            priority
           />
         </Box>
       </Flex>

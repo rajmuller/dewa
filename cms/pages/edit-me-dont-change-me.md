@@ -36,6 +36,6 @@ felulet-desc: 'Az Ipari felületkezelő és festőberendezések divízió külö
   található KTL és mártó típusú festés, a rendszerek része saját tervezésű anyagmozgató
   pálya, vízleszárító és beégető kemence, hűtőzóna, automata porfestő robotok és más
   egyéb!  '
-serv-image: "/uploads/dsc_1327.jpg"
+serv-image: "/uploads/dsc_1327_3000x2000.jpeg"
 
 ---

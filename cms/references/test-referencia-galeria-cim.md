@@ -5,16 +5,15 @@ excerpt: Magyarország egyik legnagyobb Mercedes kereskedője is az új Blowther
   berendezése többek között érintőképernyős PLC vezérléssél és folyamatszabályzású
   direkt gázégővel felszerelt gépészettel rendelkezik.
 date: 2022/11/22
-coverImage: "/uploads/dsc_1329.jpg"
+coverImage: "/uploads/dsc_1329_3000x2000.jpeg"
 gallery:
-- "/uploads/dsc_1329.jpg"
-- "/uploads/dsc_1325.jpg"
-- "/uploads/dsc_1320.jpg"
-- "/uploads/dsc_1328.jpg"
-- "/uploads/dsc_1315.jpg"
-- "/uploads/dsc_1316.jpg"
-- "/uploads/dsc_1327.jpg"
-- "/uploads/dsc_1312.jpg"
+- "/uploads/dsc_1329_3000x2000.jpeg"
+- "/uploads/dsc_1325_3000x2000.jpeg"
+- "/uploads/dsc_1320_3000x2000.jpeg"
+- "/uploads/dsc_1318_3000x2000-1.jpeg"
+- "/uploads/dsc_1315_3000x2000.jpeg"
+- "/uploads/dsc_1327_3000x2000.jpeg"
+- "/uploads/dsc_1312_3000x2000.jpeg"
 seo:
   title: Blowtherm Extra fényezőfülke a Mercedes - Hoványnál
   description: Prémium kiépítettségű Blowtherm fényező - szárító fülke Magyarország

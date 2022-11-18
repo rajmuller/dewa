@@ -42,7 +42,6 @@ fields:
     label: seo
   label: seo
 pages:
-- cms/references/test-low-resolution.md
 - cms/references/test-referencia-cim-1.md
 - cms/references/test-referencia-galeria-cim-2.md
 - cms/references/test-referencia-galeria-cim.md

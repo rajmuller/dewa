@@ -46,4 +46,5 @@ fields:
       path: 
   label: alkategoria
 pages:
+- cms/termekek/tuzelestechnika/IHAR fekvő.md
 - cms/termekek/tuzelestechnika/IHAR álló.md

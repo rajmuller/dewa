@@ -7,7 +7,7 @@ leiras: "Az IH/AR ipari hőlégfúvók kis és nagy helyiségek fűtésére egya
   égővel kombinálva, alacsony NOx osztály besorolással nagyon magas hatásfokot és
   környezetbarát égést garantál.\n\nBerendezéseink válogatott minőségű centrifugális
   ventilátorokkal vannak felszerelve, amelyek garantálják a megfelelő légnyomásteljesítményt.\n\nTöbb
-  méretben, valamint vízszintes és kültéri kivitelben egyaránt elérhető. "
+  méretben és kültéri kivitelben egyaránt elérhető. "
 boritokep: "/uploads/ihar-allo.webp"
 
 ---

@@ -9,7 +9,7 @@ leiras: |-
 
   Berendezéseink válogatott minőségű centrifugális ventilátorokkal vannak felszerelve, amelyek garantálják a megfelelő légnyomásteljesítményt.
 
-  Több méretben elérhető.
+  Több méretben elérhető termék.
 boritokep: "/uploads/ihar-allo-kulteri.webp"
 
 ---

@@ -47,6 +47,7 @@ fields:
   label: alkategoria
 pages:
 - cms/termekek/tuzelestechnika/Alacsony NOx kibocsátású gázégők.md
+- cms/termekek/tuzelestechnika/Egyfokozatú olajégő (MKAL).md
 - cms/termekek/tuzelestechnika/GVAL család egyfokozatú.md
 - cms/termekek/tuzelestechnika/GVAL család kétfokozatú.md
 - cms/termekek/tuzelestechnika/IHAR fekvő kültéri.md

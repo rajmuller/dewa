@@ -46,6 +46,7 @@ fields:
       path: 
   label: alkategoria
 pages:
+- cms/termekek/tuzelestechnika/BLD-100.md
 - cms/termekek/tuzelestechnika/Blowherm hőcserélő.md
 - cms/termekek/tuzelestechnika/GM család egyfokozatú.md
 - cms/termekek/tuzelestechnika/GM család kétfokozatú.md

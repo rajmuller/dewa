@@ -1,7 +1,7 @@
 ---
 type: hall-of-fame
 date: 2021/01/12
-title: Test referencia cim UJ amin van ajanlas kovire
+title: 'Automata előkezelő és porfestő sor, GYŐR '
 companyName: Vector
 kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
   printing and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -9,30 +9,26 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   scrambled it to make a type specimen book. It has survived not only five centuries,
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
-coverImage: "/uploads/medence_fujas.jpg"
-gallery:
-- "/uploads/hero.png"
-- "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
-- "/uploads/spray.png"
-- "/uploads/mountain.jpg"
-- "/uploads/ptrick.jpg"
+coverImage: "/uploads/dsc04179-hdr.jpg"
+gallery: []
 seo:
-  title: Aquacomet pimpeles | Dewa | Ipari festes
-  description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
-    iopadfubn piodosdfij nopjsdfnb opjisdfnb '
-excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-  an unknown printer took a galley of type and scrambled it to make a type specimen
-  book. It has survived not only five centuries, but also the leap into electronic
-  typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-  the release of Letrase
-companyname: ''
+  title: Automata porfestő I Dewa Zrt
+  description: A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő
+    és porfestő sor. A beruházás részeként Blowtherm, Wagner és hazai gyártók berendezései
+excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország egyik legújabb
+  automata mártó -előkezelő és porfestő sorát. \n\nA munkafolyamatok teljes mértékben
+  automatizáltak, a rendszer az Ipar 4.0 elvárásainak megfelelően lett megtervezve
+  saját vezérlési programunk segítségével. \n\nA sor többfajta fémötvözet előkezelésére
+  és festésére is alkalmas, akár 3 műszakos 0-24 órás rendelkezésre állással, távolsági
+  felülvizsgálással és rugalmas programozhatósággal. \n"
+companyname: AQUACOMET Kft.
 
 ---
-kis bevezeto bullshit, pofazzal jobbra balra, linkelek majd fasza peldakat egy blogra ami nekem tetszik de te is konnyen talalsz majd. Hoppa itt egy [Bejamas blog pelda](https://bejamas.io/blog/website-performance-research/ "Ez a tooltip ha cursort fele viszi a balhere"). Legyen hosszabb ugyhogy atadom Eminemnek: Obie Trice, real name no gimmicks Two trailer park girls go round the outside Round the outside, round the outside Two trailer park girls go round the outside Round the outside, round the outside Guess who's back  
-Back again Shady's back Tell a friend Guess who's back, guess who's back...
+Megrendelőnk 30 éve az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket. 
 
-## Ez egy h2, header2 element
+A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az újonnan tervezett és telepített automata előkezelő és porfestő sornak is meg kellett felenie. A Dewa Zrt. feladata volt egy olyan rendszer megálmodása és kivitelezése , amely megfelel a multimetál technológia kihívásainak, a megrendelő által megkövetelt kiváló minőségnek, valamint az Ipar 4.0 elvárásainak. 
+
+## A rendszer ismertetése, működése 
 
 Itt a main bodyban (ez az egesz) ez a legnagyobb egyseg, a h1-et a main title visza(Sema egy jo blog postra), h3at hasznalnek meg, tobbi offos
 
@@ -48,13 +44,8 @@ Ki lehet emelni szoveget: **kiemelt szoveg**
 
 ***
 
-ez egy divider volt, jobb alul kis billentyuzet ikonnal latsz minden opciot
+**Overall Performance Score** - I think it is obvious why.
 
-`ez egy code sor, nemtom igazabol mire jo ha nem programozo vagy, mas fajta kiemelesre talan`
-
-lista pelda
-
-* **Overall Performance Score** - I think it is obvious why.
 * **Time to Interactive (TTI)** - because it marks the point at which your website is both visually rendered and capable of reliably responding to user input.
 * **First Meaningful Paint (FMP)** - because it influences potential user engagement,
 * **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.

@@ -46,7 +46,7 @@ fields:
       path: 
   label: alkategoria
 pages:
-- cms/termekek/tuzelestechnika/Alacsony NOx kibocsátású gázégők.md
+- cms/termekek/tuzelestechnika/GVAL család alacsony NOx kibocsátású.md
 - cms/termekek/tuzelestechnika/GVAL család egyfokozatú.md
 - cms/termekek/tuzelestechnika/GVAL család kétfokozatú.md
 - cms/termekek/tuzelestechnika/IHAR fekvő kültéri.md
@@ -58,6 +58,7 @@ pages:
 - cms/termekek/tuzelestechnika/IHPTM C  kültéri.md
 - cms/termekek/tuzelestechnika/IHPTM C.md
 - cms/termekek/tuzelestechnika/IHPTM H.md
+- cms/termekek/tuzelestechnika/MKAL család alacsony kibocsátású.md
 - cms/termekek/tuzelestechnika/MKAL család egyfokozatú.md
 - cms/termekek/tuzelestechnika/MKAL család kétfokozatú.md
 - cms/termekek/tuzelestechnika/PACK P IC.md

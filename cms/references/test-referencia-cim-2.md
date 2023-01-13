@@ -30,21 +30,15 @@ A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az 
 
 ## A rendszer ismertetése, működése 
 
-Itt a main bodyban (ez az egesz) ez a legnagyobb egyseg, a h1-et a main title visza(Sema egy jo blog postra), h3at hasznalnek meg, tobbi offos
+A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk és a hozzájuk tartozó speciális kéréseknek megfelelően alkottuk meg végső kialakításukat. 
 
-Ki lehet emelni szoveget: **kiemelt szoveg**
-
-> Itt valami nagyon okos hangzik eppen el es te brutal kiemeled (blockquote)
+> Berendezéseinket **minden esetben** megrendelőink egyéni kéréseinek és az adott gyártási folyamat sajátos kihívásainak megfelően tervezzük. Így tudjuk biztosítani a lehető legbiztosabb és leghatékonyabb működést partnereink számára. 
 >
-> I I I be on it all day Like my nigga Big Boy said That's the only thing that keeps me level Up in my crazy head Stoned on the run, run No fun if not It's Scotty from the hate mail read Man I swear to keep it 1 hundred If I ain't have it then I'd be dead My souls been fed tonight Everything that I choose Still can't forget Grey Goose Converse covered with mixer juice
->
-> lehet tobbsoros is
->
-> * lehet benne golyo is
+> Cégünk egyik alap célkitűzése az általunk kínált megoldások pontos személyre szabása a hosszútávú és biztos megoldások érdekében. 
 
 ***
 
-**Overall Performance Score** - I think it is obvious why.
+**Az automata átrakógépes mártó előkezelő és "Power &Free porszóró sor elemei:** 
 
 * **Time to Interactive (TTI)** - because it marks the point at which your website is both visually rendered and capable of reliably responding to user input.
 * **First Meaningful Paint (FMP)** - because it influences potential user engagement,

@@ -46,6 +46,7 @@ fields:
       path: 
   label: alkategoria
 pages:
+- cms/termekek/tuzelestechnika/GM család egyfokozatú.md
 - cms/termekek/tuzelestechnika/GVAL család alacsony NOx kibocsátású.md
 - cms/termekek/tuzelestechnika/GVAL család egyfokozatú.md
 - cms/termekek/tuzelestechnika/GVAL család kétfokozatú.md

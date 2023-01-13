@@ -46,7 +46,7 @@ fields:
       path: 
   label: alkategoria
 pages:
-- cms/termekek/tuzelestechnika/GVAL család.md
+- cms/termekek/tuzelestechnika/GVAL család egyfokozatú.md
 - cms/termekek/tuzelestechnika/IHAR fekvő kültéri.md
 - cms/termekek/tuzelestechnika/IHAR fekvő.md
 - cms/termekek/tuzelestechnika/IHAR hővisszanyerős.md

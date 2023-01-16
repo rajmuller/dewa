@@ -24,7 +24,7 @@ excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország e
 companyname: AQUACOMET Kft.
 
 ---
-Megrendelőnk évtizeedek óta az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket.
+Megrendelőnk évtizedek óta az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket.
 
 A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az újonnan tervezett és telepített automata előkezelő és porfestő sornak is meg kellett felenie. A Dewa Zrt. feladata volt egy olyan rendszer megálmodása és kivitelezése , amely megfelel a multimetál technológia kihívásainak, a megrendelő által megkövetelt kiváló minőségnek, valamint az Ipar 4.0 elvárásainak.
 
@@ -41,8 +41,10 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 **Az automata átrakógépes mártó előkezelő és "Power &Free porszóró sor elemei:**
 
 * **Előkezelés** - A mártó rendszerű előkezelő sor a telepített multi-metál technológiának köszönhetően képes alumínium+vas/acél+horganyzott lemez termék előkezelésére. Az ezt megelőző felrakó/leszedő állomást ergonómiailag is megfelelőre terveztük, vamint cél volt a lehető legkevesebb személyzettel való működtethetőség.  A vízleszárító berendezés és az előkezelő sor biztosítja a festésre kész állapotot, a profilok belsejében nem marad előkezelő anyag és az alkatrészek teljesen szárazak.
+
+
 * **Anyagmozgatás** - Az anyagmozgató technológia egy Power&Free automata anyagmozgató sor és automata átrakó rendszer. Ez azt jelenti, hogy felrakást követően a kész munkadarabok minden egyéb manuális többletmunka nélkül készen levehetők a festő sorról.
-* **Festés** - A porfestő soron két különböző helyen történik festés. Az egyik egy [Wagner](https://www.wagner-group.com/en/industry/ "Wagner honlap  - ipari") automata porszóró robot, ciklon típusú porvisszanyerő rendszerrel és automata porkonyhával. Itt történik a munkadarabok nagy mennyiségű festése. A másik egy saját tervezésű kézi porszóró fülke az egyedi alkatrészek számára, lepuffogtató patronos elszívással a gazdaságos üzemeltetés céljában. A konvejor pálya a két állás előtt ágazik ketté, a különböző technológiák műszaki/vegyi folyamatai nem zavarják egymást.
+* **Festés** - A porfestő soron két különböző helyen történik festés. Az egyik egy [**_Wagner_**](https://www.wagner-group.com/en/industry/ "Wagner honlap  - ipari") automata porszóró robot, ciklon típusú porvisszanyerő rendszerrel és automata porkonyhával. Itt történik a munkadarabok nagy mennyiségű festése. A másik egy saját tervezésű kézi porszóró fülke az egyedi alkatrészek számára, lepuffogtató patronos elszívással a gazdaságos üzemeltetés céljában. A konvejor pálya a két állás előtt ágazik ketté, a különböző technológiák műszaki/vegyi folyamatai nem zavarják egymást.
 * **Beégetés** - A beégető kemencét a technológiának és a különböző porfestékeknek megfelelően 160-220°C- os hőmérsékletkre fokozatmentesen lehet állítani. A tervezés fontos legfontosabb pontja volt a hatékony hőeloszlás-hőátvitel, valamint a kemence gazdaságos működtetése: gyors felfűtés, jó szigetelésnek (ásványgyapot) köszönhető hőntartás, gyors pneumatikus ajtónyitás és zárás.
 * **Hűtés** - A beégetés után saját tervezésű hűtőzónánk biztosítja az alkatrészek visszahűtését, így a kezelő személyzet azonnal le tudja venni a kész munkadarabokat a sorról.
 * **Szennyvízkezelés** - A szennyvizek kezelése folyamatos üzem mellett 500 l/óra mennyiségben történik. Az elfolyó szennyvíz egy nagy gyűjtőtartályba kerül, innen a szennyvízkezelő rendszer dolgozik teljesen automatikusan, emberi felügyeletet csak a szűrőprés kezelése igényel. Főbb egységek: kezelő reaktor, ferdelemezes ülepítő, puffer tartályok, kavicsszűrő, szűrőprés, vegyszeradagoló, automatikus vezérlő.
@@ -52,12 +54,12 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 
 ***
 
-### Az előkezelő és porfestő sorról készült videót [itt lehet megtekinteni! ](https://www.youtube.com/watch?v=7yMr4K64bUo&ab_channel=RobertKovacs "Aquacomet porfestő üzem videó")
+### **Az előkezelő és porfestő sorról készült videót** [_itt lehet megtekinteni!_](https://www.youtube.com/watch?v=7yMr4K64bUo&ab_channel=RobertKovacs "Aquacomet porfestő üzem videó") 
 
-##### Amennyiben szeretné hasonló munkáinkat megtekinteni, alábbi referenciánkat ajánljuk!
+### Amennyiben szeretné hasonló munkáinkat megtekinteni, alábbi referenciánkat ajánljuk!
 
 > Automata KTL és porfestő sor - 2020
 >
 > ![](/public/uploads/dsc_1493.webp)
 >
-> [**_Kattintson ide a megnyitashoz_**](/referenciak/automata-ktl-es-porfesto-sor "link title")
+> [**_Kattintson ide a megnyitáshoz_**](/referenciak/automata-ktl-es-porfesto-sor "BUMET referencia")

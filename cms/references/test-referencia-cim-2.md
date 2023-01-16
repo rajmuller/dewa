@@ -16,11 +16,11 @@ seo:
   description: A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő
     és porfestő sor a győri Aquacomet Kft. -nél. Blowtherm, Wagner
 excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország egyik legújabb
-  automata mártó -előkezelő és porfestő sorát. \n\nA munkafolyamatok teljes mértékben
-  automatizáltak, a rendszer az Ipar 4.0 elvárásainak megfelelően lett megtervezve
+  automata mártó rendszerű előkezelő és porfestő sorát. \n\nA munkafolyamatok teljes
+  mértékben automatizáltak, a rendszer az Ipar 4.0 elvárásainak megfelelően lett megtervezve
   saját vezérlési programunk segítségével. \n\nA sor többfajta fémötvözet előkezelésére
-  és festésére is alkalmas, akár 3 műszakos 0-24 órás rendelkezésre állással, távolsági
-  felülvizsgálással és rugalmas programozhatósággal. \n"
+  és festésére is alkalmas, akár 3 műszakos 0-24 órás távolsági felülvizsgálással
+  és rugalmas programozhatósággal. \n"
 companyname: AQUACOMET Kft.
 
 ---
@@ -42,9 +42,11 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 
 * **Előkezelés** - A mártó rendszerű előkezelő sor a telepített multi-metál technológiának köszönhetően képes alumínium+vas/acél+horganyzott lemez termék előkezelésére. Az ezt megelőző felrakó/leszedő állomást ergonómiailag is megfelelőre terveztük, vamint cél volt a lehető legkevesebb személyzettel való működtethetőség.  A vízleszárító berendezés és az előkezelő sor biztosítja a festésre kész állapotot, a profilok belsejében nem marad előkezelő anyag és az alkatrészek teljesen szárazak.
 * **Anyagmozgatás** - Az anyagmozgató technológia egy Power&Free automata anyagmozgató sor és automata átrakó rendszer. Ez azt jelenti, hogy felrakást követően a kész munkadarabok minden egyéb manuális többletmunka nélkül készen levehetők a festő sorról.
-* **Festés** - A porfestő soron két különböző helyen történik festés. Az egyik egy [Wagner](https://www.wagner-group.com/en/industry/ "Wagner honlap  - ipari") automata porszóró robot, ciklon típusú porvisszanyerő rendszerrel. Itt történik a munkadarabok nagy mennyiségű festése. A másik egy saját tervezésű kézi porszóró fülke az egyedi alkatrészek számára, lepuffogtató patronos elszívással a gazdaságos üzemeltetés céljában. A konvejor pálya a két állás előtt ágazik ketté, a különböző technológiák műszaki/vegyi folyamatai nem zavarják egymást. 
-* **Beégetés** - A beégető kemencét a technológiának és a különböző porfestékeknek megfelelően 160-220°C- os hőmérsékletkre fokozatmentesen lehet állítani. A tervezés fontos legfontosabb pontja volt a hatékony hőeloszlás-hőátvitel, valamint a kemence gazdaságos működtetése: gyors felfűtés, jó szigetelésnek köszönhető hőntartás, gyors ajtónyitás. 
-* 
+* **Festés** - A porfestő soron két különböző helyen történik festés. Az egyik egy [Wagner](https://www.wagner-group.com/en/industry/ "Wagner honlap  - ipari") automata porszóró robot, ciklon típusú porvisszanyerő rendszerrel és automata porkonyhával. Itt történik a munkadarabok nagy mennyiségű festése. A másik egy saját tervezésű kézi porszóró fülke az egyedi alkatrészek számára, lepuffogtató patronos elszívással a gazdaságos üzemeltetés céljában. A konvejor pálya a két állás előtt ágazik ketté, a különböző technológiák műszaki/vegyi folyamatai nem zavarják egymást. 
+* **Beégetés** - A beégető kemencét a technológiának és a különböző porfestékeknek megfelelően 160-220°C- os hőmérsékletkre fokozatmentesen lehet állítani. A tervezés fontos legfontosabb pontja volt a hatékony hőeloszlás-hőátvitel, valamint a kemence gazdaságos működtetése: gyors felfűtés, jó szigetelésnek (ásványgyapot) köszönhető hőntartás, gyors pneumatikus ajtónyitás és zárás. 
+* **Hűtés** - A beégetés után saját tervezésű hűtőzónánk biztosítja az alkatrészek visszahűtését, így a kezelő személyzet azonnal le tudja venni a kész munkadarabokat a sorról. 
+* **Szennyvízkezelés** - A szennyvizek kezelése folyamatos üzem mellett 500 l/óra mennyiségben történik. Az elfolyó szennyvíz egy nagy gyűjtőtartályba kerül, innen a szennyvízkezelő rendszer dolgozik teljesen automatikusan, emberi felügyeletet csak a szűrőprés kezelése igényel. Főbb egységek: kezelő reaktor, ferdelemezes ülepítő, puffer tartályok, kavicsszűrő, szűrőprés, vegyszeradagoló, automatikus vezérlő. 
+* **Vezérlés** - A vezérlésnek adatokat kell szolgáltatnia megrendelő felé, hol vannak az akasztékok, mennyit gyártottunk, hőmérsékletadatok,..stb a modern kor követelményeinek megfelelően érintőképernyőn, amin be is tudunk avatkozni a folyamatba. Távfelügyelet elengedhetetlen, hogy esetleges hiba estén a szállító segítséget tudjon nyújtani. A berendezésről magyar nyelvű leírást, használati útmutatót, alkatrészlistát, karbantartási útmutatót rajzokkal, tehát egy teljes műszaki dokumentációt várunk el.
 
 ***
 

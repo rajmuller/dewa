@@ -1,7 +1,7 @@
 ---
 type: hall-of-fame
 date: 2021/01/12
-title: 'Automata előkezelő és porfestő sor, GYŐR '
+title: Automata előkezelő és porfestő sor
 companyName: Vector
 kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
   printing and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -14,7 +14,7 @@ gallery: []
 seo:
   title: Automata porfestő I Dewa Zrt
   description: A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő
-    és porfestő sor. A beruházás részeként Blowtherm, Wagner és hazai gyártók berendezései
+    és porfestő sor a győri Aquacomet Kft. -nél. Blowtherm, Wagner
 excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország egyik legújabb
   automata mártó -előkezelő és porfestő sorát. \n\nA munkafolyamatok teljes mértékben
   automatizáltak, a rendszer az Ipar 4.0 elvárásainak megfelelően lett megtervezve
@@ -24,27 +24,26 @@ excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország e
 companyname: AQUACOMET Kft.
 
 ---
-Megrendelőnk 30 éve az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket. 
+Megrendelőnk évtizeedek óta az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket.
 
-A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az újonnan tervezett és telepített automata előkezelő és porfestő sornak is meg kellett felenie. A Dewa Zrt. feladata volt egy olyan rendszer megálmodása és kivitelezése , amely megfelel a multimetál technológia kihívásainak, a megrendelő által megkövetelt kiváló minőségnek, valamint az Ipar 4.0 elvárásainak. 
+A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az újonnan tervezett és telepített automata előkezelő és porfestő sornak is meg kellett felenie. A Dewa Zrt. feladata volt egy olyan rendszer megálmodása és kivitelezése , amely megfelel a multimetál technológia kihívásainak, a megrendelő által megkövetelt kiváló minőségnek, valamint az Ipar 4.0 elvárásainak.
 
-## A rendszer ismertetése, működése 
+## A rendszer ismertetése, működése
 
-A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk és a hozzájuk tartozó speciális kéréseknek megfelelően alkottuk meg végső kialakításukat. 
+A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk és a hozzájuk tartozó speciális kéréseknek megfelelően alkottuk meg végső kialakításukat.
 
-> Berendezéseinket **minden esetben** megrendelőink egyéni kéréseinek és az adott gyártási folyamat sajátos kihívásainak megfelően tervezzük. Így tudjuk biztosítani a lehető legbiztosabb és leghatékonyabb működést partnereink számára. 
+> ##### Berendezéseinket **minden esetben** megrendelőink egyéni kéréseinek és az adott gyártási folyamat sajátos kihívásainak megfelően tervezzük. Így tudjuk biztosítani a lehető legbiztosabb és leghatékonyabb működést partnereink számára.
 >
-> Cégünk egyik alap célkitűzése az általunk kínált megoldások pontos személyre szabása a hosszútávú és biztos megoldások érdekében. 
+> ##### Cégünk egyik alap célkitűzése az általunk kínált megoldások pontos személyre szabása a hosszútávú és biztos megoldások érdekében.
 
 ***
 
-**Az automata átrakógépes mártó előkezelő és "Power &Free porszóró sor elemei:** 
+**Az automata átrakógépes mártó előkezelő és "Power &Free porszóró sor elemei:**
 
-* **Time to Interactive (TTI)** - because it marks the point at which your website is both visually rendered and capable of reliably responding to user input.
-* **First Meaningful Paint (FMP)** - because it influences potential user engagement,
-* **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
-
-![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+* **Előkezelés** - A mártó rendszerű előkezelő sor a telepített multi-metál technológiának köszönhetően képes alumínium+vas/acél+horganyzott lemez termék előkezelésére. Az ezt megelőző felrakó/leszedő állomást ergonómiailag is megfelelőre terveztük, vamint cél volt a lehető legkevesebb személyzettel való működtethetőség.  A vízleszárító berendezés és az előkezelő sor biztosítja a festésre kész állapotot, a profilok belsejében nem marad előkezelő anyag és az alkatrészek teljesen szárazak.
+* **Anyagmozgatás** - Az anyagmozgató technológia egy Power&Free automata anyagmozgató sor és automata átrakó rendszer. Ez azt jelenti, hogy felrakást követően a kész munkadarabok minden egyéb manuális többletmunka nélkül készen levehetők a festő sorról.
+* **Festés** - A porfestő soron két különböző helyen történik festés, az egyik egy automata porszóró rendszer festő robotokkal a profiljaink festésére (de tudnia kell a 0,8m széles darabokat is festeni!), a másik egy kézi porszóró fülke az egyedi alkatrészek számára (vas-acél-horgany 0,8m szélesség). A konvejor sorok festőkabinok felé történő leágazásának, pályavezetésének, elhelyezésének a leggazdaságosabb megtervezése és működtetése szállító feladata. A különböző technológiák műszaki/vegyi folyamatai nem zavarhatják egymást! (pl: az előkezelő páraképződése nem befolyásolhatja a festés minőségét, de ez érvényes a beégető kemence hőképződésére is!) Az automata festő részen porvisszanyerő rendszert kérünk, a kézi részen pedig úgy kérjük kialakítani a kabint, hogy gazdaságosan lehessen üzemeltetni egyedi festéskor. A technológia beállításakor szállítónak figyelembe kell vennie, hogy porfestett profiljainkat hajlítjuk. A festést-előkezelést úgy kell meghatározni, hogy ez később ne jelentsen garanciális problémát megrendelő felé.
+* 
 
 ***
 

@@ -60,4 +60,4 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 >
 > ![](/public/uploads/dsc_1493.webp)
 >
-> [**_Kattintson ide a megnyitashoz_**](references-automata-ktl-es-porfesto-sor-md/ "link title")
+> [**_Kattintson ide a megnyitashoz_**](/referenciak/automata-ktl-es-porfesto-sor "link title")

@@ -9,7 +9,7 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   scrambled it to make a type specimen book. It has survived not only five centuries,
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
-coverImage: "/uploads/img_20220530_114706.webp"
+coverImage: "/uploads/dsc_1362.webp"
 gallery: []
 seo:
   title: Karosszéria festő műhely | Dewa Zrt.

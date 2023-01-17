@@ -29,17 +29,21 @@ companyname: 'M1 Flotta '
 
 Megrendelőnk igénye egy teljes, minden részfeladat megoldására képes munkatér volt. Ennek megfelelően az alábbi berendezések kerültek telepítésre: 2db **Blowtherm Extra fényezőfülke**, 1db két állásos **Blowtherm Genius előkészítő**, 1db négy állásos, motoros függönnyel és emelővel felszerelt **Blowtherm Genius+ előkészítő**, valamint 1db **Blowtherm Mixing Box** festékkonyha.
 
-A márkaszervíz festőműhelyének tervezése során három fő  szempontot tartottunk szigorúan szem előtt: környezettudatosság, energiahatékonyság és technológiai folyamatok. 
+A márkaszervíz festőműhelyének tervezése során három fő  szempontot tartottunk szigorúan szem előtt: környezettudatosság, energiahatékonyság és technológiai folyamatok.
 
-Az előző kettőt az általunk forgalmazott prémium olasz márka (Blowtherm) berendezései biztosítják: 
+Az előző kettőt az általunk forgalmazott prémium olasz márka (Blowtherm) berendezései biztosítják:
 
-* **Aktívszenes utószűrő egység:** a festési térből távozó mellészórt festékkel teli levegőt először az üvegszálas Paint Stop szűrők tisztítják meg, míg a munkadarab felületéről elpárolgó oldószereket a speciális utószűrő egység köti meg, ezzel megakadályozva a környezetkárosító kipárolgások kijutását.   
-* **Folyamatszabályzású, közvetlen tüzelésű gázégő:** a Blowtherm GV/VA gázégő sorozat egészen különleges. Első sorban folyamatszabályzásának köszönhetően _25%-kal kevesebb gázt fogyaszt_ a hagyományos égőkhöz képest. Másrészről közel tökéletes égésének köszönhetően nincs szükség füstgázkémény kiépítésére, további pontforrások engedélyeztetésére. 
+* **Aktívszenes utószűrő egység:** a festési térből távozó mellészórt festékkel teli levegőt először az üvegszálas Paint Stop szűrők tisztítják meg, míg a munkadarab felületéről elpárolgó oldószereket a speciális utószűrő egység köti meg, ezzel megakadályozva a környezetkárosító kipárolgások kijutását.
+* **Folyamatszabályzású, közvetlen tüzelésű gázégő:** a Blowtherm GV/VA gázégő sorozat egészen különleges. Első sorban folyamatszabályzásának köszönhetően _25%-kal kevesebb gázt fogyaszt_ a hagyományos égőkhöz képest. Másrészről közel tökéletes égésének köszönhetően nincs szükség füstgázkémény kiépítésére, további pontforrások engedélyeztetésére.
 
 > A fenti két kiegészítőt **minden fényezőfülkénkre** és **előkészítő állásunkra** igény szerint lehet szállítani. Kifejezetten ajánljuk folyamatos gyártást folytató partnereinknek - valamint mindenkinek, akinek fontos az alacsony működtetési költség és a környezettudatoság!
 
-A harmadik szemponthoz megrendelőnkkel szoros együttműködésben terveztük meg a fényező műhely pontos folyamatait, számításba vettük a különböző autók méretét és az elvárt technológiai időket. Ezt követően úgy terveztük meg a munkateret, hogy az egymásra épülő folyamatok gördülékenyen történhessenek, míg nem hátráltatják az egyéb fényezési, polírozási, előkészítési munkákat.  
+A harmadik szemponthoz megrendelőnkkel szoros együttműködésben terveztük meg a fényező műhely pontos folyamatait, számításba vettük a különböző autók méretét és az elvárt technológiai időket. Ezt követően úgy terveztük meg a munkateret, hogy az egymásra épülő folyamatok gördülékenyen történhessenek, míg nem hátráltatják az egyéb fényezési, polírozási, előkészítési munkákat.
 
 ***
 
-Tekintse meg a beruházásunkhoz tartozó galériat! 
+Tekintse meg a beruházásunkhoz tartozó galériat!
+
+> Komplett karosszéria fényező műhely
+>
+> ![](/public/uploads/img_20220530_114641.webp "Pneumatikus emelő")[Galéria megnyitásához kattintson ide!](/referenciak/komplett-auto-karosszeria-fenyezo-muhely "Komplett fényező műhely")

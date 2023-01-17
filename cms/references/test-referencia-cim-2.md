@@ -10,7 +10,8 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
 coverImage: "/uploads/dsc04179-hdr.jpg"
-gallery: []
+gallery:
+- "/uploads/dsc04242.jpg"
 seo:
   title: Automata porfestő I Dewa Zrt
   description: A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő
@@ -53,6 +54,8 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 ***
 
 #### **Az előkezelő és porfestő sorról készült videót** [_itt lehet megtekinteni!_](https://www.youtube.com/watch?v=7yMr4K64bUo&ab_channel=RobertKovacs "Aquacomet porfestő üzem videó")
+
+![](/public/uploads/dsc04242.jpg)![](/public/uploads/dsc04125-hdr.jpg)![](/public/uploads/aquacomet.jpg)
 
 #### Amennyiben szeretné hasonló munkáinkat megtekinteni, alábbi referenciánkat ajánljuk!
 

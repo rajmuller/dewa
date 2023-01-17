@@ -57,6 +57,8 @@ A teljes rendszer tervezése alatt a sort különböző alkotóelemkre osztottuk
 
 ![](/public/uploads/dsc04242.jpg)![](/public/uploads/dsc04125-hdr.jpg)![](/public/uploads/aquacomet.jpg)
 
+![](/public/uploads/dsc04182-hdr.jpg)
+
 #### Amennyiben szeretné hasonló munkáinkat megtekinteni, alábbi referenciánkat ajánljuk!
 
 > Automata KTL és porfestő sor - 2020

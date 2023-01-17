@@ -23,11 +23,19 @@ excerpt: 'Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az
 companyname: 'M1 Flotta '
 
 ---
-2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda és Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.  
+2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda és Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.
 
 ## Komplett festőműhely, prémium kiépítésben
 
-Itt a main bodyban (ez az egesz) ez a legnagyobb egyseg, a h1-et a main title visza(Sema egy jo blog postra), h3at hasznalnek meg, tobbi offos
+Megrendelőnk igénye egy teljes, minden részfeladat megoldására képes munkatér volt. Ennek megfelelően az alábbi berendezések kerültek telepítésre: 2db **Blowtherm Extra fényezőfülke**, 1db két állásos **Blowtherm Genius előkészítő**, 1db négy állásos, motoros függönnyel és emelővel felszerelt **Blowtherm Genius+ előkészítő**, valamint 1db **Blowtherm Mixing Box** festékkonyha.
+
+  márkaszervíz festőműhelyének tervezése során három fő  szempontot tartottunk szigorúan szem előtt: környezettudatosság, energiahatékonyság és helytakarékosság. 
+
+Az előző kettőt az általunk forgalmazott Blowtherm márka prémium kiépítései biztosítják: 
+
+* Aktívszenes utószűrő egység: a festési térből távozó mellészórt festékkel teli levegőt  
+
+  
 
 Ki lehet emelni szoveget: **kiemelt szoveg**
 

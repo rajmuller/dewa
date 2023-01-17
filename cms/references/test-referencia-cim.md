@@ -23,41 +23,23 @@ excerpt: 'Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az
 companyname: 'M1 Flotta '
 
 ---
-2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda és Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.
+2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda/Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.
 
 ## Komplett festőműhely, prémium kiépítésben
 
 Megrendelőnk igénye egy teljes, minden részfeladat megoldására képes munkatér volt. Ennek megfelelően az alábbi berendezések kerültek telepítésre: 2db **Blowtherm Extra fényezőfülke**, 1db két állásos **Blowtherm Genius előkészítő**, 1db négy állásos, motoros függönnyel és emelővel felszerelt **Blowtherm Genius+ előkészítő**, valamint 1db **Blowtherm Mixing Box** festékkonyha.
 
-  márkaszervíz festőműhelyének tervezése során három fő  szempontot tartottunk szigorúan szem előtt: környezettudatosság, energiahatékonyság és helytakarékosság. 
+A márkaszervíz festőműhelyének tervezése során három fő  szempontot tartottunk szigorúan szem előtt: környezettudatosság, energiahatékonyság és technológiai folyamatok. 
 
-Az előző kettőt az általunk forgalmazott Blowtherm márka prémium kiépítései biztosítják: 
+Az előző kettőt az általunk forgalmazott prémium olasz márka (Blowtherm) berendezései biztosítják: 
 
-* Aktívszenes utószűrő egység: a festési térből távozó mellészórt festékkel teli levegőt  
+* **Aktívszenes utószűrő egység:** a festési térből távozó mellészórt festékkel teli levegőt először az üvegszálas Paint Stop szűrők tisztítják meg, míg a munkadarab felületéről elpárolgó oldószereket a speciális utószűrő egység köti meg, ezzel megakadályozva a környezetkárosító kipárolgások kijutását.   
+* **Folyamatszabályzású, közvetlen tüzelésű gázégő:** a Blowtherm GV/VA gázégő sorozat egészen különleges. Első sorban folyamatszabályzásának köszönhetően _25%-kal kevesebb gázt fogyaszt_ a hagyományos égőkhöz képest. Másrészről közel tökéletes égésének köszönhetően nincs szükség füstgázkémény kiépítésére, további pontforrások engedélyeztetésére. 
 
-  
+> A fenti két kiegészítőt **minden fényezőfülkénkre** és **előkészítő állásunkra** igény szerint lehet szállítani. Kifejezetten ajánljuk folyamatos gyártást folytató partnereinknek - valamint mindenkinek, akinek fontos az alacsony működtetési költség és a környezettudatoság!
 
-Ki lehet emelni szoveget: **kiemelt szoveg**
-
-> Itt valami nagyon okos hangzik eppen el es te brutal kiemeled (blockquote)
->
-> I I I be on it all day Like my nigga Big Boy said That's the only thing that keeps me level Up in my crazy head Stoned on the run, run No fun if not It's Scotty from the hate mail read Man I swear to keep it 1 hundred If I ain't have it then I'd be dead My souls been fed tonight Everything that I choose Still can't forget Grey Goose Converse covered with mixer juice
->
-> lehet tobbsoros is
->
-> * lehet benne golyo is
+A harmadik szemponthoz megrendelőnkkel szoros együttműködésben terveztük meg a fényező műhely pontos folyamatait, számításba vettük a különböző autók méretét és az elvárt technológiai időket. Ezt követően úgy terveztük meg a munkateret, hogy az egymásra épülő folyamatok gördülékenyen történhessenek, míg nem hátráltatják az egyéb fényezési, polírozási, előkészítési munkákat.  
 
 ***
 
-ez egy divider volt, jobb alul kis billentyuzet ikonnal latsz minden opciot
-
-`ez egy code sor, nemtom igazabol mire jo ha nem programozo vagy, mas fajta kiemelesre talan`
-
-lista pelda
-
-* **Overall Performance Score** - I think it is obvious why.
-* **Time to Interactive (TTI)** - because it marks the point at which your website is both visually rendered and capable of reliably responding to user input.
-* **First Meaningful Paint (FMP)** - because it influences potential user engagement,
-* **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
-
-![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+Tekintse meg a beruházásunkhoz tartozó galériat! 

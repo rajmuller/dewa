@@ -10,31 +10,22 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
 coverImage: "/uploads/img_20220530_114706.webp"
-gallery:
-- "/uploads/dsc_1341.webp"
-- "/uploads/dsc_1359.webp"
-- "/uploads/dsc_1360.webp"
-- "/uploads/dsc_1363.webp"
-- "/uploads/dsc_1362.webp"
-- "/uploads/dsc_1364.webp"
-- "/uploads/dsc_1368.webp"
-- "/uploads/img_20220530_114641.webp"
+gallery: []
 seo:
   title: Karosszéria festő műhely | Dewa Zrt.
   description: 'Mészáros&Mészáros Flotta telephelyén 2021-ben telepített Blowtherm
     fényezőfülke, festékkeverő és előkészítőállás '
 excerpt: 'Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az újonnan
-  épült budaörsi Skoda és Volkwagen márkaszervíz részére. A műhelyben különböző méretű
+  épült budaörsi Skoda és Volkswagen márkaszervíz részére. A műhelyben különböző méretű
   fényezőfülkék és emelővel ellátott előkészítő állások kerültek kialakításra, valamint
   egy központi festékkeverő konyha segíti a munkát. A technológiai teret a festési
   folyamatok optimálizált és gördülékeny elvégzésére terveztük. '
 companyname: 'M1 Flotta '
 
 ---
-kis bevezeto bullshit, pofazzal jobbra balra, linkelek majd fasza peldakat egy blogra ami nekem tetszik de te is konnyen talalsz majd. Hoppa itt egy [Bejamas blog pelda](https://bejamas.io/blog/website-performance-research/ "Ez a tooltip ha cursort fele viszi a balhere"). Legyen hosszabb ugyhogy atadom Eminemnek: Obie Trice, real name no gimmicks Two trailer park girls go round the outside Round the outside, round the outside Two trailer park girls go round the outside Round the outside, round the outside Guess who's back  
-Back again Shady's back Tell a friend Guess who's back, guess who's back...
+2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda és Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.  
 
-## Ez egy h2, header2 element
+## Komplett festőműhely, prémium kiépítésben
 
 Itt a main bodyban (ez az egesz) ez a legnagyobb egyseg, a h1-et a main title visza(Sema egy jo blog postra), h3at hasznalnek meg, tobbi offos
 

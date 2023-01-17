@@ -46,4 +46,6 @@ Tekintse meg a beruházásunkhoz tartozó galériat!
 
 > Komplett karosszéria fényező műhely
 >
-> ![](/public/uploads/img_20220530_114641.webp "Pneumatikus emelő")[Galéria megnyitásához kattintson ide!](/referenciak/komplett-auto-karosszeria-fenyezo-muhely "Komplett fényező műhely")
+> ![](/public/uploads/img_20220530_114641.webp "Pneumatikus emelő")[Kattintson ide a megnyitáshoz!](/referenciak/komplett-auto-karosszeria-fenyezo-muhely "Komplett fényező műhely galéria")
+
+Felmerülő kérdés esetén, [_keresse bizalommal kollégáinkat!_](/kapcsolat "Kapcsolati felület")

@@ -9,8 +9,16 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   scrambled it to make a type specimen book. It has survived not only five centuries,
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
-coverImage: "/uploads/medence_fujas.jpg"
-gallery: []
+coverImage: "/uploads/img_20220530_114706.webp"
+gallery:
+- "/uploads/dsc_1341.webp"
+- "/uploads/dsc_1359.webp"
+- "/uploads/dsc_1360.webp"
+- "/uploads/dsc_1363.webp"
+- "/uploads/dsc_1362.webp"
+- "/uploads/dsc_1364.webp"
+- "/uploads/dsc_1368.webp"
+- "/uploads/img_20220530_114641.webp"
 seo:
   title: Karosszéria festő műhely | Dewa Zrt.
   description: 'Mészáros&Mészáros Flotta telephelyén 2021-ben telepített Blowtherm

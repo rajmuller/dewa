@@ -1,7 +1,7 @@
 ---
 type: hall-of-fame
-date: 2021/01/12
-title: Test referencia cim
+date: 2021/09/02
+title: 'Komplett karosszéria fényező műhely '
 companyName: Sterbinskiyyy
 kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
   printing and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -10,22 +10,17 @@ kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of t
   but also the leap into electronic typesetting, remaining essentially unchanged.
   It was popularised in the 1960s with the release of Letrase
 coverImage: "/uploads/medence_fujas.jpg"
-gallery:
-- "/uploads/hero.png"
-- "/uploads/emiliano-vittoriosi-7chv29vnnom-unsplash-1.png"
-- "/uploads/spray.png"
-- "/uploads/mountain.jpg"
-- "/uploads/ptrick.jpg"
+gallery: []
 seo:
-  title: Aquacomet pimpeles | Dewa | Ipari festes
-  description: 'Best Description ever, minumum 100 chars dojiksfngopadjfnbopadf jnasdjiopbn
-    iopadfubn piodosdfij nopjsdfnb opjisdfnb '
-excerpt: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-  an unknown printer took a galley of type and scrambled it to make a type specimen
-  book. It has survived not only five centuries, but also the leap into electronic
-  typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-  the release of Letrase
+  title: Karosszéria festő műhely | Dewa Zrt.
+  description: 'Mészáros&Mészáros Flotta telephelyén 2021-ben telepített Blowtherm
+    fényezőfülke, festékkeverő és előkészítőállás '
+excerpt: 'Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az újonnan
+  épült budaörsi Skoda és Volkwagen márkaszervíz részére. A műhelyben különböző méretű
+  fényezőfülkék és emelővel ellátott előkészítő állások kerültek kialakításra, valamint
+  egy központi festékkeverő konyha segíti a munkát. A technológiai teret a festési
+  folyamatok optimálizált és gördülékeny elvégzésére terveztük. '
+companyname: 'M1 Flotta '
 
 ---
 kis bevezeto bullshit, pofazzal jobbra balra, linkelek majd fasza peldakat egy blogra ami nekem tetszik de te is konnyen talalsz majd. Hoppa itt egy [Bejamas blog pelda](https://bejamas.io/blog/website-performance-research/ "Ez a tooltip ha cursort fele viszi a balhere"). Legyen hosszabb ugyhogy atadom Eminemnek: Obie Trice, real name no gimmicks Two trailer park girls go round the outside Round the outside, round the outside Two trailer park girls go round the outside Round the outside, round the outside Guess who's back  

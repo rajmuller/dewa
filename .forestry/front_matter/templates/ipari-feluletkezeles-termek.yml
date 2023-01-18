@@ -49,9 +49,11 @@ fields:
   label: alkategoria
 pages:
 - cms/termekek/feluletkezeles/Anyagmozgató berendezések.md
+- cms/termekek/feluletkezeles/Ciklon.md
 - cms/termekek/feluletkezeles/Festék beégető.md
 - cms/termekek/feluletkezeles/KTL festősor.md
 - cms/termekek/feluletkezeles/Mártó előkezelő.md
+- cms/termekek/feluletkezeles/Patronos leválasztó.md
 - cms/termekek/feluletkezeles/Porszóró kabin.md
 - cms/termekek/feluletkezeles/Porszóró pisztoly.md
 - cms/termekek/feluletkezeles/Szóró előkezelő.md

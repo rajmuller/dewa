@@ -11,19 +11,18 @@ seo:
 ---
 Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink személyes igényeinek megfelelő megoldásokat kínáljunk. 
 
-## Ez egy h2, header2 element
+## Kulcsrakész berendezések - minden méretben
 
-Itt a main bodyban (ez az egesz) ez a legnagyobb egyseg, a h1-et a main title visza(Sema egy jo blog postra), h3at hasznalnek meg, tobbi offos
+Foglalkozási területünk rendkívül kiterjedt, jelenleg 4 divízió között osztjuk meg a felmerülő feladatokat:
 
-Ki lehet emelni szoveget: **kiemelt szoveg**
+* [**Festőfülke Divízió**](https://dewa-zeta.vercel.app/termekek/fenyezofulkek "Fényezőfülkék") - Blowtherm ipari fényező fülkék és előkészítő állások telepítése
+* [**Szórástechnika Divízió**](https://dewa-zeta.vercel.app/termekek/szorastechnika "Szórástechnika") - Sames-Kremlin, Sagola és Wagner szórópisztolyok, pumpák és festékkeverők forgalmazása
+* [**Felületkezelés Divízió**](https://dewa-zeta.vercel.app/termekek/feluletkezeles "Felületkezelés") - Saját tervezésű kézi és automata porfestő, KTL és nedves festő sorok telepítése
+* [**Tüzeléstechnika Divízió**](https://dewa-zeta.vercel.app/termekek/tuzelestechnika "Tüzeléstechnika") - Blowtherm ipari hőlégfúvók, gőzfejlesztők, gáz-és olajégők forgalmazása
 
-> Itt valami nagyon okos hangzik eppen el es te brutal kiemeled (blockquote)
->
-> I I I be on it all day Like my nigga Big Boy said That's the only thing that keeps me level Up in my crazy head Stoned on the run, run No fun if not It's Scotty from the hate mail read Man I swear to keep it 1 hundred If I ain't have it then I'd be dead My souls been fed tonight Everything that I choose Still can't forget Grey Goose Converse covered with mixer juice
->
-> lehet tobbsoros is
->
-> * lehet benne golyo is
+Az iparágban szerzett több, mint 30 éves tapasztalattal gyakorlottan megértjük az ügyfeleink előtt álló egyedi kihívásokat. Éppen ezért minden ügyfelünkkel szorosan együttműködünk, hogy megoldásainkat az ő egyedi igényeikre szabjuk. Legyen szó kisvállalkozásról, amely a berendezéseinek korszerűsítését kívánja, vagy egy nagyvállalatról, amely a termelési folyamatok ésszerűsítését kívánja elérni, mi rendelkezünk a megfelelő szakértelemmel és technológiával a munka megfelelő elvégzéséhez.
+
+> A Dewa Zrt-nél hiszünk abban, hogy a siker kulcsa az ügyfelek elégedettsége. Csapatunk elkötelezett a kiemelt szolgáltatás nyújtása iránt: partnereinket a kezdeti konzultációtól a végső beüzemelésig végigkísérjük, lépésről lépésre vezetve projektjeinket. Akár segítségre van szüksége a megfelelő berendezés kiválasztásában, akár telepítési és karbantartási támogatásra van szüksége, készséggel állunk rendelkezésére. 
 
 ***
 

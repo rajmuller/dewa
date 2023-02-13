@@ -9,7 +9,7 @@ seo:
     termék skálán! Fényezőfülkék, festőpisztolyok, szűrők, gáz-és olajtüzelésű berendezések. '
 
 ---
-Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink személyes igényeinek megfelelő megoldásokat kínáljunk. 
+Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink egyéni igényeinek megfelelő megoldásokat kínáljunk. 
 
 ## Kulcsrakész berendezések - minden méretben
 
@@ -26,15 +26,6 @@ Az iparágban szerzett több, mint 30 éves tapasztalattal gyakorlottan megértj
 
 ***
 
-ez egy divider volt, jobb alul kis billentyuzet ikonnal latsz minden opciot
+Amennyiben ipari festőberendezésre van szüksége, ne keressen tovább! 
 
-`ez egy code sor, nemtom igazabol mire jo ha nem programozo vagy, mas fajta kiemelesre talan`
-
-lista pelda
-
-* **Overall Performance Score** - I think it is obvious why.
-* **Time to Interactive (TTI)** - because it marks the point at which your website is both visually rendered and capable of reliably responding to user input.
-* **First Meaningful Paint (FMP)** - because it influences potential user engagement,
-* **Estimated Input Latency (EIL)** - because it measures the time you click on a button and the time something actually happens. It measures “a lag”. It measures the level of the user’s frustration. You don’t want to have everything rendered, but you click and nothing happens. Sometimes it’s better to delay the first contentful paint to optimize input latency.
-
-![Kep ahol ratyik kezetfognak a foratyi engedelyevel a hatterben](/uploads/ptrick.jpg "Kezfogasa a ratyiknak")
+[Lépjen kapcsolatba velünk még ma](https://dewa-zeta.vercel.app/kapcsolat "Kapcsolatfelvétel"), hogy többet megtudjon arról, hogyan segíthetünk! 

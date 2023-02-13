@@ -1,13 +1,12 @@
 ---
-title: Sema egy jo blog postra. Tudd meg mitol doglik a Pěty!
-date: 2021/01/11
-excerpt: Nyiss meg, hogy megtudd, hogyan lehet jol tagolni, szerkezteni egy cikket.
-  Peldak, otletek, formazas, tiszta vizualis kaland.
-coverImage: "/uploads/mountain.jpg"
+title: 'Bemutatkozás: kik vagyunk mi? '
+date: 2023/02/01
+excerpt: 'Cégünk és szolgáltatásaink rövid bemutatása. Ismerjen meg Minket közelebbről! '
+coverImage: "/uploads/robotkezt.png"
 seo:
-  title: Google searchnel megjeleno resz | Dewa | Ipari festes
-  description: Legjobb leiras amit el tudsz kepzelni, hogy ha felugrik googlen es
-    rasiklik a szeme valakinek, meg is akarja nyitni!
+  title: Bemutatkozás | Dewa Zrt. | Ipari festőberendezések
+  description: 'Kulcsrakész ipari festőberendezések személyes igényeire szabva, széles
+    termék skálán! Fényezőfülkék, festőpisztolyok, szűrők, gáz-és olajtüzelésű berendezések. '
 
 ---
 kis bevezeto bullshit, pofazzal jobbra balra, linkelek majd fasza peldakat egy blogra ami nekem tetszik de te is konnyen talalsz majd. Hoppa itt egy [Bejamas blog pelda](https://bejamas.io/blog/website-performance-research/ "Ez a tooltip ha cursort fele viszi a balhere"). Legyen hosszabb ugyhogy atadom Eminemnek: Obie Trice, real name no gimmicks Two trailer park girls go round the outside Round the outside, round the outside Two trailer park girls go round the outside Round the outside, round the outside Guess who's back  

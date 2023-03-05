@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Hőlégfúvók
+alkategoria: Hőlégfúvók
 nev: IH/AR álló ipari hőlégfúvó KÜLTÉRI
 leiras: |-
   Az IH/AR ipari hőlégfúvók kis és nagy helyiségek fűtésére egyaránt alkalmasak.

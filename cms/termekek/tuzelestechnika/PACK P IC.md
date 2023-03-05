@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Melegvizes és gőzkazánok
+alkategoria: Melegvizes és gőzkazánok
 nev: 'PACK P - IC '
 leiras: "Nyomástüzelésű, alacsony NOx-kibocsátású, háromtérfogatú, egyblokkos kazán
   átmenő lángos tűztérrel. \n\nTeljes egészében rozsdamentes acélból készült, hogy

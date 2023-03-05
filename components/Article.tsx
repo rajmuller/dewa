@@ -46,7 +46,7 @@ const Article: FC<ArticleProps> = ({
               src={coverImage}
               alt={`image of ${title}`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </AspectRatio>
           <Flex

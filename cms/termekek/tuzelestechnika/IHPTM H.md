@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Hőlégfúvók
+alkategoria: Hőlégfúvók
 nev: IHPTM H fali hőlégfúvó
 leiras: "Az IHPTM fali hőlégfúvókat kis és közepes helyiségek fűtésére tervezték.
   \n\nA cső alakú hőcserélő és a többfázisú atmoszférikus égő magas hatásfokot és

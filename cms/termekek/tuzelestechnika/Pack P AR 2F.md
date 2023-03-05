@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Melegvizes és gőzkazánok
+alkategoria: Melegvizes és gőzkazánok
 nev: 'PACK P AR 2F dupla égős kazán '
 leiras: |-
   Kettős tűzterű kazán két egymásra épített testből, igény szerint négylángos üzemre (két kétfokozatú égőkkel).

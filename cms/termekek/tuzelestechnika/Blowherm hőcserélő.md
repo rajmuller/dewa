@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Hőcserélők
+alkategoria: Hőcserélők
 nev: 'BLOWTHERM hőcserélő/tűztér '
 leiras: |-
   A levegőkezeléshez, illetve a szárításhoz szükséges ipari folyamatok különböző rendszereket igényelnek, amelyekben levegőt használnak hőátadó közegként.

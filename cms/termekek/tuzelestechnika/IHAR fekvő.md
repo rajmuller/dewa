@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Hőlégfúvók
+alkategoria: Hőlégfúvók
 nev: 'IH/AR vízszintes ipari hőlégfúvó '
 leiras: "Az IH/AR ipari hőlégfúvók kis és nagy helyiségek fűtésére egyaránt alkalmasak.\n\nA
   fő elem a közvetett hőcserélő átmenő lánggal,  amely egy kétfokozatú vagy folyamatszabályzású

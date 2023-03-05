@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Blokkégők
+alkategoria: Blokkégők
 nev: Kétfokozatú duálégő (BLOWTHERM GM család)
 leiras: "A Blowtherm GM égő családba tartozó berendezések gáz- és olajtüzelésű berendezések
   egyaránt, rugalmas megoldásokhoz kiváló választásnak bizonyulnak. \n\nKétfokozatú

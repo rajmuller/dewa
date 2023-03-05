@@ -88,6 +88,21 @@ const ProductModal = ({ open, setOpen, product }: ProductModalProps) => {
   );
 };
 
+const ParsedText = ({ text }: { text: string }) => {
+  const textArray = text.split("\n").filter((line) => line !== "");
+
+  return (
+    <>
+      {textArray.map((line, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Text mb={index !== textArray.length ? 2 : 0} fontSize="s" key={index}>
+          {line}
+        </Text>
+      ))}
+    </>
+  );
+};
+
 const Product: FC<ProductProps> = ({ product }) => {
   const [open, setOpen] = useState(false);
 
@@ -110,7 +125,7 @@ const Product: FC<ProductProps> = ({ product }) => {
             ratio={1}
             position="relative"
             overflow="hidden"
-            d="flex"
+            display="flex"
             w="100%"
             mb={3}
             borderRadius="lg"
@@ -120,6 +135,7 @@ const Product: FC<ProductProps> = ({ product }) => {
               alt={`image of ${nev}`}
               layout="fill"
               objectFit="cover"
+              priority
             />
           </AspectRatio>
           <Flex
@@ -129,21 +145,21 @@ const Product: FC<ProductProps> = ({ product }) => {
             p={4}
           >
             <Text
-              textTransform="capitalize"
               fontWeight="semibold"
               mb={[3, null, null, null]}
               noOfLines={2}
             >
-              {nev.toLowerCase()}
+              {nev}
             </Text>
-            <Text
-              fontSize="s"
+            <Flex
               noOfLines={8}
               mb={[3, null, null, null]}
               color="grey.iron"
+              gap={12}
+              flexDir="column"
             >
-              {leiras}
-            </Text>
+              <ParsedText text={leiras} />
+            </Flex>
           </Flex>
         </Flex>
       </motion.div>

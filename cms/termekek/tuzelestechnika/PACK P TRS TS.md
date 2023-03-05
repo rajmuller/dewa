@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Melegvizes és gőzkazánok
+alkategoria: Melegvizes és gőzkazánok
 nev: PACK - P TRS TS
 leiras: |-
   Háromkörös túlnyomásos tüzelésű, alacsony NOx kibocsátású, egyblokkos kazán nagy átmenő lángos tűztérrel, rozsdamentes acél páncélozott belső réteggel.

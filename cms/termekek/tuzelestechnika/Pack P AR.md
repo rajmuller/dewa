@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Melegvizes és gőzkazánok
+alkategoria: Melegvizes és gőzkazánok
 nev: 'Pack P AR kazán '
 leiras: |-
   Egyrészes, három körös (kettő az égéstérben), túlnyomásos égésterű kazán, nagy, fordított lángú tűztérrel felszerelve.

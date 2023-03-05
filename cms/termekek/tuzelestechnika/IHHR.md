@@ -1,6 +1,6 @@
 ---
 divizio: TÜZELÉSTECHNIKA
-alk: Hőlégfúvók
+alkategoria: Hőlégfúvók
 nev: IHHR speciális hőlégfúvó
 leiras: |-
   Az IH/HR speciális hőlégfúvók használhatók nagy és közepes méretű ipari és kereskedelmi épületek fűtésére, valamint olyan ipari fűtési eljárásokhoz, amelyek nagy légáramlást és nagy nyomást igényelnek, mint például szárítási folyamatok vagy szabályozott termelési ciklusok.

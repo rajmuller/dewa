@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import {
@@ -65,8 +65,6 @@ const SubCategory: FC<SubCategoryProps> = ({
 };
 
 const Products: FC<ProductProps> = ({ slug, products }) => {
-  // console.log({ slug });
-  // console.log({ products });
   const { isLgMinus } = useCurrentBreakpoint();
 
   const uniqueCategories: string[] = [];

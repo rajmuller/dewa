@@ -28,10 +28,15 @@ type ImgProps = {
 const A: FC<AProps> = ({ children, href }) => {
   return href.startsWith("/") || href === "" ? (
     <Link href={href}>
-      <a>{children}</a>
+      <a className="text-primary-500 hover:underline">{children}</a>
     </Link>
   ) : (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      className="text-primary-500 hover:underline"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {children}
     </a>
   );
@@ -76,7 +81,7 @@ const H3: FC = ({ children }) => {
 };
 
 const P: FC = ({ children }) => {
-  return <Text my={4}>{children}</Text>;
+  return <Text my={1}>{children}</Text>;
 };
 
 const Ul: FC = ({ children }) => {
@@ -97,7 +102,7 @@ const Ol: FC = ({ children }) => {
 
 const Li: FC = ({ children }) => {
   return (
-    <ListItem>
+    <ListItem display="flex" alignItems="baseline">
       <ListIcon
         mr={5}
         verticalAlign="initial"
@@ -105,7 +110,7 @@ const Li: FC = ({ children }) => {
         fontSize="xs"
         as={TriangleIcon}
       />
-      {children}
+      <span>{children}</span>
     </ListItem>
   );
 };

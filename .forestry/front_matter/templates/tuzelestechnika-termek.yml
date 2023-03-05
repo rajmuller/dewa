@@ -27,7 +27,7 @@ fields:
     required: false
   label: divizio
   default: TÜZELÉSTECHNIKA
-- name: alk
+- name: alkategoria
   type: select
   default: []
   config:
@@ -38,7 +38,6 @@ fields:
     - Blokkégők
     - Fan-coilok
     - Hőcserélők
-    - Hősugárzók
     source:
       type: simple
       section: 

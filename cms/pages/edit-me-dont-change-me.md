@@ -15,10 +15,10 @@ services-subtitle: 'A Dewa Zrt. kiemelt feladatának tartja az adott feladatra s
   rendelkezésre állással támogatjuk megrendelőinket, programszerűen végigvezetve őket
   a beruházás folyamatán.   '
 fenyezo-description: 'A Fényezőfülke divízió az olasz BLOWTHERM gyártmányú zárt fényezőfülkék
-  kizárólagos magyarországi forgalmazásával, karbantartásával és esetleges hibaelhárításával
-  foglalkozik. Fülkéink számos méretben és kialakításban elérhetőek: autóipari festés,
-  buszfestés, vonatfestés, repülő festés, asztalos munkák fényezése, kisalkatrész
-  festés és sok egyéb!  '
+  kizárólagos magyarországi forgalmazásával, karbantartásával és telepítésével foglalkozik.
+  Fülkéink számos méretben és kialakításban elérhetőek: autóipari festés, buszfestés,
+  vonatfestés, repülő festés, asztalos munkák fényezése, kisalkatrész festés és sok
+  egyéb!  '
 szoras-desc: 'A szórástechnika divízió az iparban előforduló festési, ragasztási,
   és egyéb (a folyadékok elporlasztását igénylő) technológiákhoz kínál berendezéseket.
   Ehhez több, világviszonlyatban jelentős céggel állunk képviselői kapcsolatban: Sames,

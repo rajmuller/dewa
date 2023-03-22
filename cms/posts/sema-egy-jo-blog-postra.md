@@ -9,7 +9,7 @@ seo:
     termék skálán! Fényezőfülkék, festőpisztolyok, szűrők, gáz-és olajtüzelésű berendezések. '
 
 ---
-Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink egyéni igényeinek megfelelő megoldásokat kínáljunk. 
+Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink egyéni igényeinek megfelelő megoldásokat kínáljunk.
 
 ## Kulcsrakész berendezések - minden méretben
 
@@ -22,10 +22,10 @@ Foglalkozási területünk rendkívül kiterjedt, jelenleg 4 divízió között 
 
 Az iparágban szerzett több, mint 30 éves tapasztalattal gyakorlottan megértjük az ügyfeleink előtt álló egyedi kihívásokat. Éppen ezért minden ügyfelünkkel szorosan együttműködünk, hogy megoldásainkat az ő egyedi igényeikre szabjuk. Legyen szó kisvállalkozásról, amely a berendezéseinek korszerűsítését kívánja, vagy egy nagyvállalatról, amely a termelési folyamatok ésszerűsítését kívánja elérni, mi rendelkezünk a megfelelő szakértelemmel és technológiával a munka megfelelő elvégzéséhez.
 
-> A Dewa Zrt-nél hiszünk abban, hogy a siker kulcsa az ügyfelek elégedettsége. Csapatunk elkötelezett a kiemelt szolgáltatás nyújtása iránt: partnereinket a kezdeti konzultációtól a végső beüzemelésig végigkísérjük, lépésről lépésre vezetve projektjeinket. Akár segítségre van szüksége a megfelelő berendezés kiválasztásában, akár telepítési és karbantartási támogatásra van szüksége, készséggel állunk rendelkezésére. 
+> A Dewa Zrt-nél hiszünk abban, hogy a siker kulcsa az ügyfelek elégedettsége. Csapatunk elkötelezett a kiemelt szolgáltatás nyújtása iránt: partnereinket a kezdeti konzultációtól a végső beüzemelésig végigkísérjük, lépésről lépésre vezetve projektjeinket. Akár segítségre van szüksége a megfelelő berendezés kiválasztásában, akár telepítési és karbantartási támogatásra van szüksége, készséggel állunk rendelkezésére.
 
 ***
 
-Amennyiben ipari festőberendezésre van szüksége, ne keressen tovább! 
+Magyarországon Budaörsön és Békéscsabán is megtalálja központjainkat!
 
-[Lépjen kapcsolatba velünk még ma](https://dewa-zeta.vercel.app/kapcsolat "Kapcsolatfelvétel"), hogy többet megtudjon arról, hogyan segíthetünk! 
+[Lépjen kapcsolatba velünk még ma](https://dewa-zeta.vercel.app/kapcsolat "Kapcsolatfelvétel"), hogy többet megtudjon arról, hogyan segíthetünk!

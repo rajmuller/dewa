@@ -18,7 +18,7 @@ fenyezo-description: 'A Fényezőfülke divízió az olasz BLOWTHERM gyártmány
   kizárólagos magyarországi forgalmazásával, karbantartásával és telepítésével foglalkozik.
   Fülkéink számos méretben és kialakításban elérhetőek: autóipari festés, buszfestés,
   vonatfestés, repülő festés, asztalos munkák fényezése, kisalkatrész festés és sok
-  egyéb!  '
+  egyéb! '
 szoras-desc: 'A szórástechnika divízió az iparban előforduló festési, ragasztási,
   és egyéb (a folyadékok elporlasztását igénylő) technológiákhoz kínál berendezéseket.
   Ehhez több, világviszonlyatban jelentős céggel állunk képviselői kapcsolatban: Sames,

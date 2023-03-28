@@ -11,12 +11,11 @@ excerpt: Sikeres projektzárással kezdődött a 2023-as év. A legújabb Autóp
 date: 2023/03/28
 coverImage: "/uploads/2.jpg"
 gallery:
-- "/uploads/1.jpg"
-- "/uploads/img_2377.JPG"
-- "/uploads/img_2369.JPG"
-- "/uploads/img_2378.jpg"
-- "/uploads/img_2367.jpg"
-- "/uploads/img_2360.JPG"
+- "/uploads/img_2356.webp"
+- "/uploads/img_2369.webp"
+- "/uploads/img_2386.webp"
+- "/uploads/img_2400.webp"
+- "/uploads/img_2360.webp"
 seo:
   title: Új Blowtherm Extra fülke az M4 Autópálya Mérnökség részére
   description: Átadásra került legújabb beruházásunk Monoron. Blowtherm Extra fényezőfülke,

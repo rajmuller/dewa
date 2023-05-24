@@ -3,26 +3,32 @@ type: hall-of-fame
 date: 2021/09/02
 title: 'Komplett karosszéria fényező műhely '
 companyName: Sterbinskiyyy
-kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
-  printing and typesetting industry. Lorem Ipsum has been the industry's standard
-  dummy text ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five centuries,
-  but also the leap into electronic typesetting, remaining essentially unchanged.
-  It was popularised in the 1960s with the release of Letrase
-coverImage: "/uploads/dsc_1362.webp"
+kivonat: >-
+  Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
+  printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a
+  galley of type and scrambled it to make a type specimen book. It has survived
+  not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in the 1960s with the
+  release of Letrase
+coverImage: /uploads/dsc_1362.webp
 gallery: []
 seo:
   title: Karosszéria festő műhely | Dewa Zrt.
-  description: 'Mészáros&Mészáros Flotta telephelyén 2021-ben telepített Blowtherm
-    fényezőfülke, festékkeverő és előkészítőállás '
-excerpt: 'Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az újonnan
-  épült budaörsi Skoda és Volkswagen márkaszervíz részére. A műhelyben különböző méretű
-  fényezőfülkék és emelővel ellátott előkészítő állások kerültek kialakításra, valamint
-  egy központi festékkeverő konyha segíti a munkát. A technológiai teret a festési
-  folyamatok optimálizált és gördülékeny elvégzésére terveztük. '
+  description: >-
+    Mészáros&Mészáros Flotta telephelyén 2021-ben telepített Blowtherm
+    fényezőfülke, festékkeverő és előkészítőállás 
+excerpt: >-
+  Cégünk 2021-ben épített egy teljes karosszéria festő műhelyt az újonnan épült
+  budaörsi Skoda és Volkswagen márkaszervíz részére. A műhelyben különböző
+  méretű fényezőfülkék és emelővel ellátott előkészítő állások kerültek
+  kialakításra, valamint egy központi festékkeverő konyha segíti a munkát. A
+  technológiai teret a festési folyamatok optimálizált és gördülékeny
+  elvégzésére terveztük. 
 companyname: 'M1 Flotta '
-
+_template: referencia
 ---
+
 2021-ben Budaörsön zöldmezős beruházás részeként egy teljesen új Skoda/Volkswagen márkaszervíz és kereskedés épült. A szervíz a karosszéria javítás minden pontját lefedi, a Dewa Zrt. feladata a festőműhely megtervezése és megvalósítása volt.
 
 ## Komplett festőműhely, prémium kiépítésben

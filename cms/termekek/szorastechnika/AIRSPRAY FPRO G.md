@@ -3,6 +3,7 @@ divizio: SZÓRÁSTECHNIKA
 alkategoria: Sűrített levegős berendezések
 nev: SAMES - AIRSPRAY FPro G kézi szórópisztoly
 leiras: További információért keresse a Szórástechnika Divízió kollégáit
-boritokep: "/uploads/airspray-kezi-pisztoly-fpro-g.tif"
-
+boritokep: /uploads/airspray-kezi-pisztoly-fpro-g.tif
+_template: szorastechnika_termek
 ---
+

@@ -2,13 +2,16 @@
 title: 'Bemutatkozás: kik vagyunk mi? '
 date: 2023/02/01
 excerpt: 'Cégünk és szolgáltatásaink rövid bemutatása. Ismerjen meg Minket közelebbről! '
-coverImage: "/uploads/robotkezt.png"
+coverImage: /uploads/robotkezt.png
 seo:
   title: Bemutatkozás | Dewa Zrt. | Ipari festőberendezések
-  description: 'Kulcsrakész ipari festőberendezések személyes igényeire szabva, széles
-    termék skálán! Fényezőfülkék, festőpisztolyok, szűrők, gáz-és olajtüzelésű berendezések. '
-
+  description: >-
+    Kulcsrakész ipari festőberendezések személyes igényeire szabva, széles
+    termék skálán! Fényezőfülkék, festőpisztolyok, szűrők, gáz-és olajtüzelésű
+    berendezések. 
+_template: cikk_withbigcontentarea_template
 ---
+
 Üdvözöljük a Dewa Zrt honlapján, ahol minden ipari festőberendezéssel kapcsolatos ügyintézésre talál megoldást!  Csapatunk elkötelezett amellett, hogy kiváló minőségű, hatékony és ügyfeleink egyéni igényeinek megfelelő megoldásokat kínáljunk.
 
 ## Kulcsrakész berendezések - minden méretben

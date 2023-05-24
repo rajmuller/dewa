@@ -3,6 +3,7 @@ reszleg: tüzeléstechnika
 nev: Szijártó Roland tüzeléstechnikai értékesítő
 helyszin: budaors
 email: 'szroland@dewa.hu '
-telefonszam: "+36 23 889 775"
-
+telefonszam: +36 23 889 775
+_template: kapcsolat_egyen
 ---
+

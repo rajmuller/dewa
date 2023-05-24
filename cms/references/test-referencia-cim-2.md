@@ -3,28 +3,39 @@ type: hall-of-fame
 date: 2021/01/12
 title: Automata előkezelő és porfestő sor
 companyName: Vector
-kivonat: Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
-  printing and typesetting industry. Lorem Ipsum has been the industry's standard
-  dummy text ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five centuries,
-  but also the leap into electronic typesetting, remaining essentially unchanged.
-  It was popularised in the 1960s with the release of Letrase
-coverImage: "/uploads/dsc04179-hdr.jpg"
+kivonat: >-
+  Kivonat ami megjelenik atadom **Lorem Ipsum** is simply dummy text of the
+  printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a
+  galley of type and scrambled it to make a type specimen book. It has survived
+  not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in the 1960s with the
+  release of Letrase
+coverImage: /uploads/dsc04179-hdr.jpg
 gallery:
-- "/uploads/dsc04242.jpg"
+  - /uploads/dsc04242.jpg
 seo:
   title: Automata porfestő I Dewa Zrt
-  description: A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő
-    és porfestő sor a győri Aquacomet Kft. -nél. Blowtherm, Wagner
-excerpt: "A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország egyik legújabb
-  automata mártó rendszerű előkezelő és porfestő sorát. \n\nA munkafolyamatok teljes
-  mértékben automatizáltak, a rendszer az Ipar 4.0 elvárásainak megfelelően lett megtervezve
-  saját vezérlési programunk segítségével. \n\nA sor többfajta fémötvözet előkezelésére
-  és festésére is alkalmas, akár 3 műszakos 0-24 órás távolsági felülvizsgálással
-  és rugalmas programozhatósággal. \n"
-companyname: AQUACOMET Kft.
+  description: >-
+    A Dewa Zrt. által tervezett és kivitelezett automata mártó - előkezelő és
+    porfestő sor a győri Aquacomet Kft. -nél. Blowtherm, Wagner
+excerpt: >
+  A Dewa Zrt. 2018-ban tervezte és építette fel Győrben az ország egyik legújabb
+  automata mártó rendszerű előkezelő és porfestő sorát. 
 
+
+  A munkafolyamatok teljes mértékben automatizáltak, a rendszer az Ipar 4.0
+  elvárásainak megfelelően lett megtervezve saját vezérlési programunk
+  segítségével. 
+
+
+  A sor többfajta fémötvözet előkezelésére és festésére is alkalmas, akár 3
+  műszakos 0-24 órás távolsági felülvizsgálással és rugalmas
+  programozhatósággal. 
+companyname: AQUACOMET Kft.
+_template: referencia
 ---
+
 Megrendelőnk évtizedek óta az európai uszodatechnika élvonalában mozog. Termékeik bővelkednek a kényelmes és biztonságos használatot kínáló technikai megoldásokban. 30 év gyártási tapasztalattal, 50.000 m3 gyártási területtel 24 országba exportálnak medencéket és medence fedéseket.
 
 A nemzetközi hírnév nemzetközi elvásárokat is hoz magával, amelyeknek az újonnan tervezett és telepített automata előkezelő és porfestő sornak is meg kellett felenie. A Dewa Zrt. feladata volt egy olyan rendszer megálmodása és kivitelezése , amely megfelel a multimetál technológia kihívásainak, a megrendelő által megkövetelt kiváló minőségnek, valamint az Ipar 4.0 elvárásainak.

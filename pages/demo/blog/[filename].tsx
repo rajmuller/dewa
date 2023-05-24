@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable react/destructuring-assignment */

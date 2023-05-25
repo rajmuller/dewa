@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { FC, useMemo } from "react";
@@ -18,12 +19,16 @@ const References: FC<PostProps> = ({ references }) => {
   const router = useRouter();
 
   const hallOfFames = useMemo(
-    () => references.filter((reference) => reference.content),
+    () =>
+      references.filter((reference) => reference._template === "referencia"),
     [references]
   );
 
   const galleries = useMemo(
-    () => references.filter((reference) => !reference.content),
+    () =>
+      references.filter(
+        (reference) => reference._template === "reference_gallery"
+      ),
     [references]
   );
 

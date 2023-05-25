@@ -83,6 +83,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "companyName",
     "seo",
     "slug",
+    "_template",
   ]);
 
   return {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -17,15 +18,18 @@ type PostProps = {
 };
 
 const Reference: FC<PostProps> = ({ reference }) => {
-  const { seo, content, slug, gallery } = reference;
+  const { seo, content, slug, gallery, _template } = reference;
 
   const { isFallback } = useRouter();
   if (!isFallback && !slug) {
     return <div>ERRORPAGE</div>;
   }
+  console.log("reference", reference);
 
   // gallery
-  if (!content) {
+  if (_template === "reference_gallery") {
+    console.log("gallery", gallery);
+
     return (
       <>
         <Head>
@@ -91,6 +95,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
     "gallery",
     "seo",
     "title",
+    "_template",
   ]);
 
   return {

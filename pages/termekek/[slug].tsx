@@ -186,17 +186,10 @@ export const getStaticProps: GetStaticProps = async ({
     "slug",
   ]);
 
-  const serializedProducts = products.map((product) => {
-    return {
-      ...product,
-      date: product.date.toString(),
-    };
-  });
-
   return {
     props: {
       slug,
-      products: serializedProducts,
+      products,
     },
   };
 };

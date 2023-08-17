@@ -18,7 +18,7 @@ const Post: FC<PostProps> = ({ post }) => {
   const { seo, content, slug } = post;
 
   const { isFallback } = useRouter();
-  if (!isFallback || !slug || !post.title) {
+  if (isFallback || !slug || !post.title) {
     return <div>ERRORPAGE</div>;
   }
 

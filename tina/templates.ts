@@ -33,6 +33,7 @@ export function postFields() {
       type: "object",
       name: "seo",
       label: "seo",
+      required: true,
       fields: [...seoFields()],
     },
   ] as TinaField[];
@@ -180,6 +181,7 @@ export function reference_galleryFields() {
       type: "object",
       name: "seo",
       label: "seo",
+      required: true,
       fields: [...seoFields()],
     },
   ] as TinaField[];
@@ -226,6 +228,7 @@ export function reference_hall_of_fameFields() {
     {
       type: "object",
       name: "seo",
+      required: true,
       label: "seo",
       fields: [...seoFields()],
     },

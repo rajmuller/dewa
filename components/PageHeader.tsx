@@ -49,7 +49,11 @@ const PageHeader: FC<PageHeaderProps> = ({
             {excerpt}
           </Text>
           <Text variant="meta" mb={[3, null, null, null]}>
-            {date}
+            {new Date(date).toLocaleDateString("hu-HU", {
+              year: "numeric",
+              month: "long",
+              day: "2-digit",
+            })}
           </Text>
         </Flex>
         <Box

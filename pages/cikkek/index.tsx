@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const serializedPosts = posts.map((post) => {
     return {
       ...post,
-      date: new Date(post.date).toString(),
+      date: post.date.toString(),
     };
   });
 

@@ -61,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   ]);
   const serializedPost = {
     ...post,
-    date: new Date(post.date).toString(),
+    date: post.date.toString(),
   };
 
   return {

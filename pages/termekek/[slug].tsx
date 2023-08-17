@@ -189,7 +189,7 @@ export const getStaticProps: GetStaticProps = async ({
   const serializedProducts = products.map((product) => {
     return {
       ...product,
-      date: new Date(product.date).toString(),
+      date: product.date.toString(),
     };
   });
 

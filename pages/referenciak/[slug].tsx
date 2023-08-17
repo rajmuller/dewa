@@ -102,7 +102,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
 
   const serializedReference: { [key: string]: string } = {
     ...reference,
-    date: new Date(reference.date).toString(),
+    date: reference.date.toString(),
   };
 
   return {

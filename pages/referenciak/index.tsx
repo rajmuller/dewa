@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const serializedReferences = references.map((reference) => {
     return {
       ...reference,
-      date: new Date(reference.date).toString(),
+      date: reference.date.toString(),
     };
   });
 

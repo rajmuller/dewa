@@ -11,9 +11,13 @@ gallery:
   - /DSC_1387.jpg
   - /DSC_1390.jpg
 _template: reference_gallery
+seo:
+  title: test
+  description: >-
+    test
 ---
 
 
-Cégünk két ütemben (2020 nyár és 2021 tél) telepített összesen 3 darab Blowtherm World Special fényező fülkét az etyeki Korda Filmstúdió területén. 
+Cégünk két ütemben (2020 nyár és 2021 tél) telepített összesen 3 darab Blowtherm World Special fényező fülkét az etyeki Korda Filmstúdió területén.
 
-A berendezések elkülönített munkafolyamatokban nyújtanak segítséget a produkciós iroda különböző egységeinek: jelmez készítés, kellék készítés és díszlet készítés. 
+A berendezések elkülönített munkafolyamatokban nyújtanak segítséget a produkciós iroda különböző egységeinek: jelmez készítés, kellék készítés és díszlet készítés.

@@ -12,6 +12,10 @@ gallery:
   - /IMG_4118.jpg
   - /IMG_4132.jpg
 _template: reference_gallery
+seo:
+  title: test
+  description: >-
+    test
 ---
 
 
@@ -25,10 +29,3 @@ maximálisan kielégítse a környezetvédelmi előírásokat is (aktívszenes o
 leválasztó). Egyes gépészetek sajátossága, hogy DUÁL-ÉGŐVEL lettek szerelve,
 melyek lehetővé teszik a tüzelőanyag váltását (gáz, olaj) anélkül, hogy
 égőfejet cserélnénk.
-
-
-
-
-
-
-

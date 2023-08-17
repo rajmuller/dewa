@@ -17,9 +17,9 @@ type PostProps = {
 const Post: FC<PostProps> = ({ post }) => {
   const { seo, content, slug } = post;
 
-  const { isFallback, push } = useRouter();
+  const { isFallback } = useRouter();
   if (!isFallback || !slug || !post.title) {
-    push("/cikkek");
+    return <div>ERRORPAGE</div>;
   }
 
   return (

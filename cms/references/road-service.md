@@ -17,8 +17,12 @@ gallery:
   - /IMG_4118.jpg
   - /IMG_4132.jpg
 seo:
-  title: test
-  description: test
+  title: Blowtherm Extra fülkék és Genius előkészítő állás Debrecenben.
+  description: >-
+    Új Blowtherm berendezések Debrecenben. A két fülke és az előkészítő állás
+    speciális fűtési technológiákkal lettek felszerelve: duál égő (olaj és gáz
+    tüzelésére egyaránt alkalmas), valamint direkt gázégő biztosítja a
+    berendezések fűtését.
 _template: reference_gallery
 ---
 

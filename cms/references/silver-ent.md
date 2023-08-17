@@ -16,8 +16,11 @@ gallery:
   - /DSC_1387.jpg
   - /DSC_1390.jpg
 seo:
-  title: test
-  description: test
+  title: 'Blowtherm World Special festőfülkék a Korda Filmstúdióban. '
+  description: >-
+    Több ütemben épített festőfülke beruházás az etyeki Korda Filmstúdió
+    területén. Összesen 3 festőberendezés biztosítja a munkafolyamatok
+    fennakadás mentes elvégzését. 
 _template: reference_gallery
 ---
 

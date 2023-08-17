@@ -19,17 +19,13 @@ type PostProps = {
 
 const Reference: FC<PostProps> = ({ reference }) => {
   const { seo, content, slug, gallery, _template } = reference;
-
   const { isFallback } = useRouter();
-  if (!isFallback && !slug) {
+  if (!isFallback || !slug || !reference.title) {
     return <div>ERRORPAGE</div>;
   }
-  console.log("reference", reference);
 
   // gallery
   if (_template === "reference_gallery") {
-    console.log("gallery", gallery);
-
     return (
       <>
         <Head>
@@ -98,9 +94,14 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
     "_template",
   ]);
 
+  const serializedReference: { [key: string]: string } = {
+    ...reference,
+    date: new Date(reference.date).toString(),
+  };
+
   return {
     props: {
-      reference,
+      reference: serializedReference,
     },
   };
 };

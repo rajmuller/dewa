@@ -85,10 +85,16 @@ export const getStaticProps: GetStaticProps = async () => {
     "slug",
     "_template",
   ]);
+  const serializedReferences = references.map((reference) => {
+    return {
+      ...reference,
+      date: new Date(reference.date).toString(),
+    };
+  });
 
   return {
     props: {
-      references,
+      references: serializedReferences,
     },
   };
 };

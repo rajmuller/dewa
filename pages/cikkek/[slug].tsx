@@ -18,7 +18,7 @@ const Post: FC<PostProps> = ({ post }) => {
   const { seo, content, slug } = post;
 
   const { isFallback, push } = useRouter();
-  if (!isFallback && !slug) {
+  if (!isFallback || !slug || !post.title) {
     push("/cikkek");
   }
 
@@ -59,10 +59,14 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
     "seo",
     "title",
   ]);
+  const serializedPost = {
+    ...post,
+    date: new Date(post.date).toString(),
+  };
 
   return {
     props: {
-      post,
+      post: serializedPost,
     },
   };
 };

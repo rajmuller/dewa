@@ -54,10 +54,16 @@ export const getStaticProps: GetStaticProps = async () => {
     "seo",
     "slug",
   ]);
+  const serializedPosts = posts.map((post) => {
+    return {
+      ...post,
+      date: new Date(post.date).toString(),
+    };
+  });
 
   return {
     props: {
-      posts,
+      posts: serializedPosts,
     },
   };
 };

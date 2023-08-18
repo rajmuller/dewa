@@ -1,12 +1,11 @@
 ---
-title: Új telepítés TOYOTA&Lexus márkakereskedésben
+title: Új telepítés Toyota&Lexus márkakereskedésben
 excerpt: >-
   Nyáron sem lazítunk! Legújabb sikeres projektünk a debreceni Road Service Kft.
   - TOYOTA és LEXUS márkakereskedésben valósult meg. Tervezéstől az átadásig
-  maximális együttműködés jellemezte a munkafolyamatokat. Gratulálunk az új
-  fényezőüzemhez és köszönjük a bizalmat! A kompromisszummentes berendezéseket
-  úgy terveztük, hogy maximálisan kielégítse a környezetvédelmi előírásokat is
-  (aktívszenes oldószer leválasztó). Egyes gépészetek sajátossága, hogy
+  maximális együttműködés jellemezte a munkafolyamatokat. A kompromisszummentes
+  berendezéseket úgy terveztük, hogy kielégítse a környezetvédelmi előírásokat
+  is (aktívszenes oldószer leválasztó). Egyes gépészetek sajátossága, hogy
   DUÁL-ÉGŐVEL lettek szerelve, melyek lehetővé teszik a tüzelőanyag váltását
   (gáz, olaj) anélkül, hogy égőfejet cserélnénk.
 date: 2023-07-31T22:00:00.000Z

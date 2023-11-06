@@ -1,5 +1,5 @@
 ---
-nev: Szabó Szilárd
+nev: Szabó Szilárd szerviztechnikus
 helyszin: bekescsaba
 reszleg: szervíz
 email: szerviz.bcs@dewa.hu

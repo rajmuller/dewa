@@ -7,7 +7,7 @@ excerpt: >-
   A farmernadrág története már több mint 150 éves, és mára a világ egyik
   legikonikusabb ruhadarabjává vált. De tudtad, hogy ennek a sikertörténetnek
   egy magyar vállalat, a Dewa is részese volt?
-coverImage: /farmerfestés.jpg
+coverImage: /IMG_4958.jpg
 seo:
   title: Szovjet Panel
   description: Rinoceros

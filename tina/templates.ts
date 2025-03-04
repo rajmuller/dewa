@@ -264,13 +264,13 @@ export function seoFields() {
       type: "string",
       name: "title",
       label: "title",
-      required: true,
+      required: false,
     },
     {
       type: "string",
       name: "description",
       label: "description",
-      required: true,
+      required: false,
     },
   ] as TinaField[];
 }

@@ -29,7 +29,7 @@ const Article: FC<ArticleProps> = ({
       <a>
         <motion.article
           whileHover={{ y: -5 }}
-          className="flex items-start flex-col hover:shadow-md rounded-md p-4"
+          className="flex flex-col items-start p-4 rounded-md hover:shadow-md"
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
         >
@@ -62,7 +62,11 @@ const Article: FC<ArticleProps> = ({
               {title}
             </Heading>
             <Text variant="meta" mb={[3, null, null, null]}>
-              {date}
+              {new Date(date).toLocaleDateString("hu-HU", {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+              })}
             </Text>
             <Text
               noOfLines={[100, 4, 4, 4]}

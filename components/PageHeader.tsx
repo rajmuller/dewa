@@ -17,7 +17,7 @@ const PageHeader: FC<PageHeaderProps> = ({
   const { back: onBack } = useRouter();
 
   return (
-    <div className="wrapper mt-4 lg:mt-16">
+    <div className="mt-4 wrapper lg:mt-16">
       <Flex
         mx="auto"
         direction={["column", "row", "row", "row"]}
@@ -39,7 +39,7 @@ const PageHeader: FC<PageHeaderProps> = ({
           >
             Vissza
           </Button>
-          <h1 className="mb-4 font-semibold text-5xl">{title}</h1>
+          <h1 className="mb-4 text-5xl font-semibold">{title}</h1>
           <Text
             fontSize={[null, null, null, 24]}
             mb={[3, null, null, null]}
